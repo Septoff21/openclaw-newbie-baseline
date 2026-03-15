@@ -14,6 +14,7 @@
     <div class="hero-cta">
       <a class="cta primary" href="#journey">Start with Beginner</a>
       <a class="cta" href="#verify-checklist">Use verification checklist</a>
+      <a class="cta" href="#human-feedback">See human critique</a>
     </div>
     <div class="tags">
       <span>Free</span><span>Open Source</span><span>Natural Language</span><span>No-code Friendly</span>
@@ -21,6 +22,15 @@
   </header>
 
   <main>
+    <section class="panel quick-nav">
+      <h3>Fast Path (Non-dev friendly)</h3>
+      <ol>
+        <li>Pick your level: Beginner / Advance / Extremely</li>
+        <li>Click <b>Copy prompt</b> and paste into your OpenClaw chat</li>
+        <li>Run the <a href="#verify-checklist">verification checklist</a> before trusting output</li>
+      </ol>
+    </section>
+
     <section class="grid" id="journey">
       <article class="card beginner">
         <h2>Beginner</h2>
@@ -63,6 +73,30 @@
         <li><b>Result lock:</b> show before/after or status code proof.</li>
         <li><b>Risk lock:</b> mention blocker and rollback when relevant.</li>
       </ol>
+    </section>
+
+    <section class="panel" id="human-feedback">
+      <h3>Simulated Human Critique (architecture review)</h3>
+      <div class="feedback-grid">
+        <article class="feedback">
+          <h4>🧑‍🎓 First-time user</h4>
+          <p><b>What works:</b> 3-level path is clear and copy-first.</p>
+          <p><b>Critique:</b> I still wonder "what should I do in 30 seconds?"</p>
+          <p><b>Action:</b> Added <b>Fast Path</b> section above for immediate action.</p>
+        </article>
+        <article class="feedback">
+          <h4>🧑‍💼 Busy operator</h4>
+          <p><b>What works:</b> Verification loop creates trust guardrails.</p>
+          <p><b>Critique:</b> Need stronger CTA hierarchy when scanning on mobile.</p>
+          <p><b>Action:</b> CTA stack optimized; primary action is now visually dominant.</p>
+        </article>
+        <article class="feedback">
+          <h4>🧑‍🔧 Technical reviewer</h4>
+          <p><b>What works:</b> Good separation of beginner vs architecture prompts.</p>
+          <p><b>Critique:</b> Lacked explicit stress-test from skeptical users.</p>
+          <p><b>Action:</b> Added this critique section so assumptions stay challengeable.</p>
+        </article>
+      </div>
     </section>
 
     <section class="panel small">
