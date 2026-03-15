@@ -1,0 +1,200 @@
+[
+  {
+    "repo": "openclaw/openclaw",
+    "stars": 313459,
+    "url": "https://docs.openclaw.ai",
+    "tag": "docs"
+  },
+  {
+    "repo": "siyuan-note/siyuan",
+    "stars": 41859,
+    "url": "https://b3log.org/siyuan",
+    "tag": "site"
+  },
+  {
+    "repo": "CherryHQ/cherry-studio",
+    "stars": 41509,
+    "url": "https://openaitx.github.io/view.html?user=CherryHQ&project=cherry-studio&lang=en",
+    "tag": "site"
+  },
+  {
+    "repo": "farion1231/cc-switch",
+    "stars": 28214,
+    "url": "https://tauri.app/",
+    "tag": "site"
+  },
+  {
+    "repo": "zeroclaw-labs/zeroclaw",
+    "stars": 27080,
+    "url": "https://www.zeroclawlabs.ai/",
+    "tag": "site"
+  },
+  {
+    "repo": "qwibitai/nanoclaw",
+    "stars": 22950,
+    "url": "https://nanoclaw.dev/blog/nanoclaw-docker-sandboxes",
+    "tag": "blog"
+  },
+  {
+    "repo": "langbot-app/LangBot",
+    "stars": 15575,
+    "url": "https://langbot.app",
+    "tag": "site"
+  },
+  {
+    "repo": "RightNow-AI/openfang",
+    "stars": 14428,
+    "url": "https://openfang.sh/docs",
+    "tag": "docs"
+  },
+  {
+    "repo": "NevaMind-AI/memU",
+    "stars": 12923,
+    "url": "https://badge.fury.io/py/memu-py",
+    "tag": "site"
+  },
+  {
+    "repo": "volcengine/OpenViking",
+    "stars": 10913,
+    "url": "https://openviking.ai",
+    "tag": "site"
+  },
+  {
+    "repo": "nearai/ironclaw",
+    "stars": 10027,
+    "url": "https://www.ironclaw.com",
+    "tag": "site"
+  },
+  {
+    "repo": "cloudflare/moltworker",
+    "stars": 9614,
+    "url": "https://blog.cloudflare.com/moltworker-self-hosted-ai-agent/",
+    "tag": "blog"
+  },
+  {
+    "repo": "NousResearch/hermes-agent",
+    "stars": 7186,
+    "url": "https://hermes-agent.nousresearch.com/docs/",
+    "tag": "docs"
+  },
+  {
+    "repo": "refly-ai/refly",
+    "stars": 6992,
+    "url": "https://refly.ai",
+    "tag": "site"
+  },
+  {
+    "repo": "openclaw/clawhub",
+    "stars": 5920,
+    "url": "https://clawhub.ai",
+    "tag": "site"
+  },
+  {
+    "repo": "MervinPraison/PraisonAI",
+    "stars": 5665,
+    "url": "https://docs.praison.ai",
+    "tag": "docs"
+  },
+  {
+    "repo": "BlockRunAI/ClawRouter",
+    "stars": 5501,
+    "url": "https://typescriptlang.org",
+    "tag": "site"
+  },
+  {
+    "repo": "ValueCell-ai/ClawX",
+    "stars": 4363,
+    "url": "https://claw-x.com",
+    "tag": "site"
+  },
+  {
+    "repo": "vllm-project/semantic-router",
+    "stars": 3395,
+    "url": "https://vllm-semantic-router.com",
+    "tag": "site"
+  },
+  {
+    "repo": "clawdbot-ai/awesome-openclaw-skills-zh",
+    "stars": 3190,
+    "url": "https://clawdhub.com/skills",
+    "tag": "site"
+  },
+  {
+    "repo": "WeThinkIn/AIGC-Interview-Book",
+    "stars": 3175,
+    "url": "https://mp.weixin.qq.com/s/ssEJjHBoJDB4y5CfQIWYvw",
+    "tag": "site"
+  },
+  {
+    "repo": "libukai/awesome-agent-skills",
+    "stars": 3033,
+    "url": "https://platform.composio.dev/?utm_source=Github&utm_medium=Youtube&utm_campaign=2025-11&utm_content=AwesomeSkills",
+    "tag": "site"
+  },
+  {
+    "repo": "openclaw/skills",
+    "stars": 2857,
+    "url": "https://clawhub.ai",
+    "tag": "site"
+  },
+  {
+    "repo": "builderz-labs/mission-control",
+    "stars": 2532,
+    "url": "https://mc.builderz.dev",
+    "tag": "site"
+  },
+  {
+    "repo": "moltis-org/moltis",
+    "stars": 2195,
+    "url": "https://moltis.org",
+    "tag": "site"
+  },
+  {
+    "repo": "KimYx0207/Claude-Code-x-OpenClaw-Guide-Zh",
+    "stars": 1976,
+    "url": "https://www.aiking.dev/",
+    "tag": "site"
+  },
+  {
+    "repo": "alibaba/hiclaw",
+    "stars": 1915,
+    "url": "https://hiclaw.io",
+    "tag": "site"
+  },
+  {
+    "repo": "DingTalk-Real-AI/dingtalk-openclaw-connector",
+    "stars": 1741,
+    "url": "https://openclaw.ai",
+    "tag": "site"
+  },
+  {
+    "repo": "LeoYeAI/openclaw-master-skills",
+    "stars": 1732,
+    "url": "https://myclaw.ai",
+    "tag": "site"
+  },
+  {
+    "repo": "wanikua/boluobobo-ai-court-tutorial",
+    "stars": 1640,
+    "url": "https://www.xiaohongshu.com/user/profile/5a169df34eacab2bc9a7a22d",
+    "tag": "site"
+  },
+  {
+    "repo": "RTGS2017/NagaAgent",
+    "stars": 1485,
+    "url": "https://nerq.ai/badge/RTGS2017/NagaAgent",
+    "tag": "site"
+  },
+  {
+    "repo": "soimy/openclaw-channel-dingtalk",
+    "stars": 1376,
+    "url": "https://registry.npmmirror.com",
+    "tag": "site"
+  },
+  {
+    "repo": "YouMind-OpenLab/nano-banana-pro-prompts-recommend-skill",
+    "stars": 1227,
+    "url": "https://youmind.com/nano-banana-pro-prompts",
+    "tag": "site"
+  }
+]
