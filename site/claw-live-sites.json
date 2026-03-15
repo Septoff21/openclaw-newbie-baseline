@@ -3,198 +3,264 @@
     "repo": "openclaw/openclaw",
     "stars": 313459,
     "url": "https://docs.openclaw.ai",
-    "tag": "docs"
+    "domain": "docs.openclaw.ai",
+    "type": "docs",
+    "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 "
   },
   {
     "repo": "siyuan-note/siyuan",
     "stars": 41859,
     "url": "https://b3log.org/siyuan",
-    "tag": "site"
+    "domain": "b3log.org",
+    "type": "site",
+    "description": ""
   },
   {
     "repo": "CherryHQ/cherry-studio",
     "stars": 41509,
     "url": "https://openaitx.github.io/view.html?user=CherryHQ&project=cherry-studio&lang=en",
-    "tag": "site"
+    "domain": "openaitx.github.io",
+    "type": "site",
+    "description": ""
   },
   {
     "repo": "farion1231/cc-switch",
     "stars": 28214,
     "url": "https://tauri.app/",
-    "tag": "site"
+    "domain": "tauri.app",
+    "type": "site",
+    "description": "A cross-platform desktop All-in-One assistant tool for Claude Code, Codex, OpenCode, openclaw & Gemini CLI."
   },
   {
     "repo": "zeroclaw-labs/zeroclaw",
     "stars": 27080,
     "url": "https://www.zeroclawlabs.ai/",
-    "tag": "site"
+    "domain": "www.zeroclawlabs.ai",
+    "type": "site",
+    "description": ""
   },
   {
     "repo": "qwibitai/nanoclaw",
     "stars": 22950,
     "url": "https://nanoclaw.dev/blog/nanoclaw-docker-sandboxes",
-    "tag": "blog"
+    "domain": "nanoclaw.dev",
+    "type": "blog",
+    "description": "A lightweight alternative to OpenClaw that runs in containers for security. Connects to WhatsApp, Telegram, Slack, Discord, Gmail and other messaging apps,, has memory, scheduled j"
   },
   {
     "repo": "langbot-app/LangBot",
     "stars": 15575,
     "url": "https://langbot.app",
-    "tag": "site"
+    "domain": "langbot.app",
+    "type": "site",
+    "description": "Production-grade platform for building agentic IM bots - 生产级多平台智能机器人开发平台. 提供 Agent、知识库编排、插件系统 / Bots for Discord / Slack / LINE / Telegram / WeChat(企业微信, 企微智能机器人, 公众号) / 飞书 / 钉钉 / "
   },
   {
     "repo": "RightNow-AI/openfang",
     "stars": 14428,
     "url": "https://openfang.sh/docs",
-    "tag": "docs"
+    "domain": "openfang.sh",
+    "type": "docs",
+    "description": ""
   },
   {
     "repo": "NevaMind-AI/memU",
     "stars": 12923,
     "url": "https://badge.fury.io/py/memu-py",
-    "tag": "site"
+    "domain": "badge.fury.io",
+    "type": "site",
+    "description": "Memory for 24/7 proactive agents like openclaw (moltbot, clawdbot)."
   },
   {
     "repo": "volcengine/OpenViking",
     "stars": 10913,
     "url": "https://openviking.ai",
-    "tag": "site"
+    "domain": "openviking.ai",
+    "type": "site",
+    "description": "OpenViking is an open-source context database designed specifically for AI Agents(such as openclaw). OpenViking unifies the management of context (memory, resources, and skills) th"
   },
   {
     "repo": "nearai/ironclaw",
     "stars": 10027,
     "url": "https://www.ironclaw.com",
-    "tag": "site"
+    "domain": "www.ironclaw.com",
+    "type": "site",
+    "description": "IronClaw is OpenClaw inspired implementation in Rust focused on privacy and security"
   },
   {
     "repo": "cloudflare/moltworker",
     "stars": 9614,
     "url": "https://blog.cloudflare.com/moltworker-self-hosted-ai-agent/",
-    "tag": "blog"
+    "domain": "blog.cloudflare.com",
+    "type": "blog",
+    "description": "Run OpenClaw, (formerly Moltbot, formerly Clawdbot) on Cloudflare Workers"
   },
   {
     "repo": "NousResearch/hermes-agent",
     "stars": 7186,
     "url": "https://hermes-agent.nousresearch.com/docs/",
-    "tag": "docs"
+    "domain": "hermes-agent.nousresearch.com",
+    "type": "docs",
+    "description": ""
   },
   {
     "repo": "refly-ai/refly",
     "stars": 6992,
     "url": "https://refly.ai",
-    "tag": "site"
+    "domain": "refly.ai",
+    "type": "site",
+    "description": "The first open-source agent skills builder. Define skills by vibe workflow, run on Claude Code, Cursor, Codex & more. Build Clawdbot 🦞· APIs for Lovable · Bots for Slack & Lark/Fei"
   },
   {
     "repo": "openclaw/clawhub",
     "stars": 5920,
     "url": "https://clawhub.ai",
-    "tag": "site"
+    "domain": "clawhub.ai",
+    "type": "site",
+    "description": "Skill Directory for OpenClaw"
   },
   {
     "repo": "MervinPraison/PraisonAI",
     "stars": 5665,
     "url": "https://docs.praison.ai",
-    "tag": "docs"
+    "domain": "docs.praison.ai",
+    "type": "docs",
+    "description": ""
   },
   {
     "repo": "BlockRunAI/ClawRouter",
     "stars": 5501,
     "url": "https://typescriptlang.org",
-    "tag": "site"
+    "domain": "typescriptlang.org",
+    "type": "site",
+    "description": "The agent-native LLM router for OpenClaw. 41+ models, <1ms routing, USDC payments on Base & Solana via x402."
   },
   {
     "repo": "ValueCell-ai/ClawX",
     "stars": 4363,
     "url": "https://claw-x.com",
-    "tag": "site"
+    "domain": "claw-x.com",
+    "type": "site",
+    "description": "ClawX is a desktop app that provides a graphical interface for OpenClaw AI agents. It turns CLI-based AI orchestration into a desktop experience without using the terminal. China w"
   },
   {
     "repo": "vllm-project/semantic-router",
     "stars": 3395,
     "url": "https://vllm-semantic-router.com",
-    "tag": "site"
+    "domain": "vllm-semantic-router.com",
+    "type": "site",
+    "description": ""
   },
   {
     "repo": "clawdbot-ai/awesome-openclaw-skills-zh",
     "stars": 3190,
     "url": "https://clawdhub.com/skills",
-    "tag": "site"
+    "domain": "clawdhub.com",
+    "type": "site",
+    "description": "OpenClaw 中文官方技能库 | 翻译自 Clawdbot 官方技能，按场景分类整理，支持中文自然语言调用"
   },
   {
     "repo": "WeThinkIn/AIGC-Interview-Book",
     "stars": 3175,
     "url": "https://mp.weixin.qq.com/s/ssEJjHBoJDB4y5CfQIWYvw",
-    "tag": "site"
+    "domain": "mp.weixin.qq.com",
+    "type": "site",
+    "description": ""
   },
   {
     "repo": "libukai/awesome-agent-skills",
     "stars": 3033,
     "url": "https://platform.composio.dev/?utm_source=Github&utm_medium=Youtube&utm_campaign=2025-11&utm_content=AwesomeSkills",
-    "tag": "site"
+    "domain": "platform.composio.dev",
+    "type": "site",
+    "description": ""
   },
   {
     "repo": "openclaw/skills",
     "stars": 2857,
     "url": "https://clawhub.ai",
-    "tag": "site"
+    "domain": "clawhub.ai",
+    "type": "site",
+    "description": "All versions of all skills that are on clawhub.com archived"
   },
   {
     "repo": "builderz-labs/mission-control",
     "stars": 2532,
     "url": "https://mc.builderz.dev",
-    "tag": "site"
+    "domain": "mc.builderz.dev",
+    "type": "site",
+    "description": ""
   },
   {
     "repo": "moltis-org/moltis",
     "stars": 2195,
     "url": "https://moltis.org",
-    "tag": "site"
+    "domain": "moltis.org",
+    "type": "site",
+    "description": ""
   },
   {
     "repo": "KimYx0207/Claude-Code-x-OpenClaw-Guide-Zh",
     "stars": 1976,
     "url": "https://www.aiking.dev/",
-    "tag": "site"
+    "domain": "www.aiking.dev",
+    "type": "site",
+    "description": "从零到企业实战：Claude Code 官方编程神器 + OpenClaw 224K Stars 开源AI助手 | 双顶流中文教程 | 21篇教程 130000+字"
   },
   {
     "repo": "alibaba/hiclaw",
     "stars": 1915,
     "url": "https://hiclaw.io",
-    "tag": "site"
+    "domain": "hiclaw.io",
+    "type": "site",
+    "description": ""
   },
   {
     "repo": "DingTalk-Real-AI/dingtalk-openclaw-connector",
     "stars": 1741,
     "url": "https://openclaw.ai",
-    "tag": "site"
+    "domain": "openclaw.ai",
+    "type": "site",
+    "description": "将 钉钉机器人 / 钉钉 DEAP Agent 连接到 OpenClaw Gateway 的OpenClaw Plugin，支持 AI Card 流式响应"
   },
   {
     "repo": "LeoYeAI/openclaw-master-skills",
     "stars": 1732,
     "url": "https://myclaw.ai",
-    "tag": "site"
+    "domain": "myclaw.ai",
+    "type": "site",
+    "description": "🧠 Curated collection of 339+ best OpenClaw skills — weekly updated by MyClaw.ai from ClawHub, GitHub & community. AI, productivity, dev, marketing, finance & more."
   },
   {
     "repo": "wanikua/boluobobo-ai-court-tutorial",
     "stars": 1640,
     "url": "https://www.xiaohongshu.com/user/profile/5a169df34eacab2bc9a7a22d",
-    "tag": "site"
+    "domain": "www.xiaohongshu.com",
+    "type": "site",
+    "description": ""
   },
   {
     "repo": "RTGS2017/NagaAgent",
     "stars": 1485,
     "url": "https://nerq.ai/badge/RTGS2017/NagaAgent",
-    "tag": "site"
+    "domain": "nerq.ai",
+    "type": "site",
+    "description": ""
   },
   {
     "repo": "soimy/openclaw-channel-dingtalk",
     "stars": 1376,
     "url": "https://registry.npmmirror.com",
-    "tag": "site"
+    "domain": "registry.npmmirror.com",
+    "type": "site",
+    "description": "A dingtalk bot channel plugin for clawdbot"
   },
   {
     "repo": "YouMind-OpenLab/nano-banana-pro-prompts-recommend-skill",
     "stars": 1227,
     "url": "https://youmind.com/nano-banana-pro-prompts",
-    "tag": "site"
+    "domain": "youmind.com",
+    "type": "site",
+    "description": "AI skill for OpenClaw & Claude Code — recommend from 10000+ Nano Banana Pro (Gemini) image prompts. Smart search by use case, content remix, sample images."
   }
 ]
