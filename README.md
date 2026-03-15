@@ -1,10 +1,23 @@
 # OpenClaw Newbie Baseline
 
-Minimal, general-purpose starter baseline for new OpenClaw users.
+A beginner-first, copy-and-run OpenClaw project.
 
-## Included
-- `UHX-newbie-doc.md`
-- `claw-newbie/UHX-newbie-doc.md`
+## Quick Links
+- Live site: `https://septoff21.github.io/openclaw-newbie-baseline/`
+- Live claw directory: `https://septoff21.github.io/openclaw-newbie-baseline/claw-live-sites.html`
 
-## Goal
-Provide a simple, safe default setup checklist (plugins, memory, skill baseline, validation flow) before advanced personalization.
+## Repository Structure
+- `site/` → published static frontend
+- `docs/guides/` → starter/blueprint guides
+- `docs/research/` → ecosystem research outputs
+- `docs/` → operating docs, maintenance, playbooks
+- `frontend-kit/` → style cards + copy prompts + image prompts
+- `scripts/` → refresh/update automation
+- `claw-analysis/` → source analysis files and snapshots
+- `beginner/` → beginner copy prompts
+- `claw-newbie/` → sharing scaffold copy set
+
+## Maintenance
+- Update data: `scripts/update-live-sites.py`
+- Smart refresh: `scripts/proactive-refresh.sh`
+- Publish: GitHub Pages from `gh-pages` (generated from `site/`)
