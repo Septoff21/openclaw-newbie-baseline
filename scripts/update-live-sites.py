@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import json,re,urllib.parse
+import json,re,urllib.parse,hashlib
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -59,14 +59,21 @@ for r in sorted(best.values(), key=lambda x:x['stars'], reverse=True)[:120]:
     elif 'app.' in ul or '/app' in ul: t='app'
     items.append({'repo':r['repo'],'stars':r['stars'],'url':u,'domain':host,'type':t,'description':(desc_map.get(r['repo']) or '')[:180]})
 
-out_json.write_text(json.dumps(items,ensure_ascii=False,indent=2),encoding='utf-8')
+payload=json.dumps(items,ensure_ascii=False,indent=2)
+out_json.write_text(payload,encoding='utf-8')
 
-prev=[]
-if out_md.exists():
-    prev=out_md.read_text(encoding='utf-8').splitlines()
-with out_md.open('a',encoding='utf-8') as f:
-    if not prev:
-        f.write('# Live Sites Update Log\n\n')
-    f.write(f'- update: total {len(items)} curated entries\n')
+hash_file=ROOT/'docs'/'.live-sites-hash'
+new_hash=hashlib.sha256(payload.encode('utf-8')).hexdigest()
+old_hash=hash_file.read_text(encoding='utf-8').strip() if hash_file.exists() else ''
+changed=(new_hash!=old_hash)
+if changed:
+    hash_file.write_text(new_hash,encoding='utf-8')
+    prev=[]
+    if out_md.exists():
+        prev=out_md.read_text(encoding='utf-8').splitlines()
+    with out_md.open('a',encoding='utf-8') as f:
+        if not prev:
+            f.write('# Live Sites Update Log\n\n')
+        f.write(f'- update: total {len(items)} curated entries\n')
 
-print(f'updated {out_json} with {len(items)} entries')
+print(f'updated {out_json} with {len(items)} entries; changed={changed}')
