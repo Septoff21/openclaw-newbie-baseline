@@ -14,7 +14,7 @@ a{color:#3b5cff;text-decoration:none}
 <p class="small">Filtered cards for style reference and beginner-friendly iteration.</p>
 <div id="grid" class="grid"></div>
 <script>
-fetch('../claw-analysis/claw-directory.json').then(r=>r.json()).then(data=>{
+fetch('./claw-directory.json').then(r=>r.json()).then(data=>{
   const grid=document.getElementById('grid');
   data.forEach(item=>{
     const el=document.createElement('article');
