@@ -3,78 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OpenClaw Playground — Zero to Autonomous</title>
+  <title>OpenClaw Playground — From Zero to Autonomous</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="hero">
-    <p class="eyebrow">OpenClaw for everyone</p>
-    <h1>From “I don’t know” → “I can run it” → “I can customize it”</h1>
-    <p class="sub">Copy one prompt, run it in OpenClaw, verify results, and level up.</p>
-    <div class="cta-row">
-      <button class="primary" data-copy="beginner">Start Beginner (Copy)</button>
-      <button class="ghost" data-copy="verify">Copy Verification Prompt</button>
+    <h1>OpenClaw Playground</h1>
+    <p>From <b>“I don’t know”</b> → <b>“I can run it”</b> → <b>“I can customize it”</b></p>
+    <div class="tags">
+      <span>Free</span><span>Open Source</span><span>Natural Language</span><span>No-code Friendly</span>
     </div>
-    <div class="tags"><span>Free</span><span>Open Source</span><span>No-code Friendly</span><span>Youth-friendly</span></div>
   </header>
 
   <main>
-    <section class="progress">
-      <div class="step done">1. Beginner</div>
-      <div class="step">2. Advance</div>
-      <div class="step">3. Extremely</div>
-    </section>
-
     <section class="grid">
       <article class="card beginner">
         <h2>Beginner</h2>
-        <p>Safe defaults + quick wins. Ideal first week.</p>
+        <p>Quick start with copy-ready prompts and safe defaults.</p>
         <button data-copy="beginner">Copy prompt</button>
       </article>
       <article class="card advance">
         <h2>Advance</h2>
-        <p>Add trust checks, context warnings, and automation loops.</p>
+        <p>Add verification, context warnings, and workflow automation.</p>
         <button data-copy="advance">Copy prompt</button>
       </article>
       <article class="card extreme">
         <h2>Extremely</h2>
-        <p>Multi-agent routing, memory governance, audit trails.</p>
+        <p>Multi-agent, routing, memory strategy, and governance.</p>
         <button data-copy="extreme">Copy prompt</button>
       </article>
     </section>
 
     <section class="panel">
-      <h3>Copied Prompt</h3>
-      <pre id="out">Click any “Copy prompt” button.</pre>
+      <h3>Copy-first Prompts (for OpenClaw)</h3>
+      <pre id="out">Click any "Copy prompt" button above.</pre>
     </section>
 
-    <section class="panel verify">
-      <h3>Verification Checklist (anti-hallucination)</h3>
-      <ol>
-        <li>Require: <b>plan → progress → blocker → final summary</b>.</li>
-        <li>Ask for command evidence for critical actions.</li>
-        <li>Use context warning ladder: <b>70% / 85% / 95%</b>.</li>
-        <li>If output is unverifiable, ask for retry with checks.</li>
-      </ol>
-      <button class="ghost" data-copy="verify">Copy verification prompt</button>
+    <section class="panel">
+      <h3>Verification Loop (anti-hallucination)</h3>
+      <ul>
+        <li>Always require: plan → progress → blocker → final summary.</li>
+        <li>Require command-level evidence for critical actions.</li>
+        <li>Context warning policy: 70% / 85% / 95%.</li>
+        <li>If unverifiable, ask for retry with explicit checks.</li>
+      </ul>
     </section>
 
     <section class="panel small">
-      <h3>Reference docs</h3>
-      <p>
-        <a href="https://github.com/Septoff21/openclaw-newbie-baseline/blob/master/UHX-newbie-doc.md">Newbie Doc</a> ·
-        <a href="https://github.com/Septoff21/openclaw-newbie-baseline/blob/master/OPENCLAW-SETUP-STEPS-EN.md">Setup Steps</a> ·
-        <a href="https://github.com/Septoff21/openclaw-newbie-baseline/blob/master/OPENCLAW-AGENT-BLUEPRINT-EN.md">Agent Blueprint</a>
-      </p>
+      <h3>Project references</h3>
+      <p><a href="../UHX-newbie-doc.md">UHX newbie doc</a> · <a href="../OPENCLAW-SETUP-STEPS-EN.md">Setup steps EN</a> · <a href="../OPENCLAW-AGENT-BLUEPRINT-EN.md">Agent blueprint</a></p>
     </section>
+  
+    <section class="panel small">
+      <h3>Community directory</h3>
+      <p><a href="./directory-cards.html">Open claw website cards</a> · style references for iteration.</p>
+    </section>
+
   </main>
 
   <script>
     const prompts = {
-      beginner: `You are my OpenClaw beginner copilot.\nGoal: safe baseline + quick wins.\nDo now:\n1) Keep only safe core plugins\n2) Enable one memory plugin with autoCapture + autoRecall + smartExtraction\n3) Install beginner-friendly general skills\n4) Return validation commands and expected outputs\nAlways report: plan/progress/blocker/final summary.`,
-      advance: `You are my OpenClaw operations copilot.\nGoal: trust + reliability.\nDo now:\n1) Add context warning ladder (70/85/95)\n2) Add anti-hallucination verification checklist\n3) Add role/agent/tool baseline notes\n4) Add install-order and rollback docs\nOutput actionable markdown and verification commands only.`,
-      extreme: `You are my OpenClaw architecture copilot.\nGoal: autonomous but governed operation.\nDo now:\n1) Multi-agent routing policy\n2) Memory scopes + lifecycle\n3) Approval gates for risky actions\n4) Incident response + audit trail\nReturn architecture map and phased rollout checklist.`,
-      verify: `Before final answer, provide:\n1) What commands were run\n2) What changed (files/services)\n3) How to verify independently\n4) Confidence + unknowns\nIf anything is unverified, clearly say so and provide retry steps.`
+      beginner: `You are my OpenClaw setup copilot.\nGoal: beginner-safe baseline.\nDo now:\n1) Audit enabled plugins and keep only safe core\n2) Enable one memory plugin with autoCapture+autoRecall+smartExtraction\n3) Install general beginner skills\n4) Return: verification commands + expected outputs\nAlways report: plan/progress/blocker/final summary.`,
+      advance: `You are my OpenClaw operations copilot.\nGoal: improve reliability and trust.\nDo now:\n1) Add context warning ladder (70/85/95)\n2) Add anti-hallucination verification checklist\n3) Add role/agent/tool baseline doc\n4) Add install-order and rollback docs\nReturn only actionable markdown + validation commands.`,
+      extreme: `You are my OpenClaw architecture copilot.\nGoal: autonomous but governed operation.\nDo now:\n1) Design multi-agent routing policy\n2) Define memory scopes and lifecycle\n3) Define approval gates for risky actions\n4) Define incident response + audit trails\nReturn: architecture map + phased rollout checklist.`
     };
     const out = document.getElementById('out');
     document.querySelectorAll('button[data-copy]').forEach(btn => {
@@ -82,9 +73,8 @@
         const text = prompts[btn.dataset.copy];
         out.textContent = text;
         await navigator.clipboard.writeText(text);
-        const old = btn.textContent;
         btn.textContent = 'Copied!';
-        setTimeout(() => btn.textContent = old, 1000);
+        setTimeout(() => btn.textContent = 'Copy prompt', 1200);
       });
     });
   </script>
