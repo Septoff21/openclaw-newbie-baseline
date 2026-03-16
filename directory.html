@@ -33,21 +33,20 @@
     <a href="./fork.html"><span class="mobnav-icon">🔧</span>Fork</a>
   </nav>
   <header class="hero">
-    <p class="eyebrow">OpenClaw Playground</p>
-    <h1>🦞 Claw Directory</h1>
-    <p class="subtitle">Verified live sites and repos — cards with one-click open, repo link, and copy prompt.</p>
+    <p class="eyebrow">Community Directory / 社区目录</p>
+    <h1>🦞 Claw Directory<br/><span style="font-size:0.5em;color:var(--muted)">龙虾项目目录</span></h1>
+    <p class="subtitle">Verified live sites and repos — see what others are building. / 已验证的线上项目和仓库——看看别人在造什么。</p>
     <div class="hero-cta">
-      <a class="cta primary" href="./">Back to Home</a>
-      <a class="cta" href="./models.html">Model Watch</a>
-      <a class="cta" href="./diary.html">Diary</a>
+      <a class="cta primary" href="./">Back Home / 回首页</a>
+      <a class="cta" href="./models.html">Model Watch / 模型监控</a>
     </div>
   </header>
   <main>
     <section class="panel">
-      <h3>Filters</h3>
+      <h3>Filter / 筛选</h3>
       <div class="filter-row">
-        <button class="filter active" data-tag="all">All</button>
-        <button class="filter" data-tag="verified">✅ Verified Live</button>
+        <button class="filter active" data-tag="all">All / 全部</button>
+        <button class="filter" data-tag="verified">✅ Verified / 已验证</button>
         <button class="filter" data-tag="repo-only">📦 Repo Only</button>
         <button class="filter" data-tag="skills">🔧 Skills</button>
         <button class="filter" data-tag="diary">📖 Diary</button>
@@ -55,12 +54,12 @@
       </div>
     </section>
 
-    <section class="panel">
-      <h3>Submit Your Project</h3>
-      <p>Have an OpenClaw project with a live URL? Open a PR against <code>api/claw-directory.json</code> in the repo.</p>
-    </section>
-
     <div id="directory-grid" class="dir-grid"></div>
+
+    <section class="panel cta-final">
+      <h3>➕ Submit Your Project / 提交你的项目</h3>
+      <p>Have an OpenClaw project with a live URL? Open a PR against <code>api/claw-directory.json</code>.<br/>有 OpenClaw 项目且有线上地址？提交 PR 到 <code>api/claw-directory.json</code>。</p>
+    </section>
   </main>
   <script src="./js/directory-page.js"></script>
 
