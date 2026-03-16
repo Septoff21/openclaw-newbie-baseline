@@ -54,12 +54,28 @@
 
     <section class="panel" id="checklist">
       <h3>4-Lock Verification</h3>
-      <ol>
-        <li><b>🔒 Scope Lock:</b> Restate the goal in one sentence before execution</li>
-        <li><b>🔍 Evidence Lock:</b> Require exact commands, URLs, or file paths used</li>
-        <li><b>📊 Result Lock:</b> Show before/after or status code proof</li>
-        <li><b>⚠️ Risk Lock:</b> State blockers and rollback plan when relevant</li>
-      </ol>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:12px 0">
+        <div style="padding:14px;border-radius:12px;border:2px solid var(--green);background:var(--green-light)">
+          <div style="font-size:24px;margin-bottom:6px">🔒</div>
+          <b>Scope Lock</b>
+          <p style="font-size:12px;color:var(--muted);margin:4px 0 0">Restate the goal in one sentence</p>
+        </div>
+        <div style="padding:14px;border-radius:12px;border:2px solid var(--blue);background:var(--blue-light)">
+          <div style="font-size:24px;margin-bottom:6px">🔍</div>
+          <b>Evidence Lock</b>
+          <p style="font-size:12px;color:var(--muted);margin:4px 0 0">Exact commands, URLs, file paths</p>
+        </div>
+        <div style="padding:14px;border-radius:12px;border:2px solid #e67e22;background:#fef3e2">
+          <div style="font-size:24px;margin-bottom:6px">📊</div>
+          <b>Result Lock</b>
+          <p style="font-size:12px;color:var(--muted);margin:4px 0 0">Before/after or status code proof</p>
+        </div>
+        <div style="padding:14px;border-radius:12px;border:2px solid var(--red);background:var(--red-light)">
+          <div style="font-size:24px;margin-bottom:6px">⚠️</div>
+          <b>Risk Lock</b>
+          <p style="font-size:12px;color:var(--muted);margin:4px 0 0">Blockers and rollback plan</p>
+        </div>
+      </div>
     </section>
 
     <section class="panel">
@@ -87,8 +103,8 @@ If any lock is missing, say "INCOMPLETE" and explain what's missing.</pre>
       </table>
     </section>
 
-    <section class="panel">
-      <h3>Red Flags (immediately re-verify if you see these)</h3>
+    <section class="panel" style="border-left:4px solid var(--red);background:linear-gradient(90deg,rgba(192,57,43,0.04),var(--bg-card))">
+      <h3>🚩 Red Flags (immediately re-verify)</h3>
       <ul>
         <li>❌ Agent claims a URL is live but won't show status code</li>
         <li>❌ Agent says "it works" without showing output</li>
@@ -98,5 +114,11 @@ If any lock is missing, say "INCOMPLETE" and explain what's missing.</pre>
       </ul>
     </section>
   </main>
+
+  <footer style="text-align:center;padding:24px;color:var(--muted);font-size:12px;border-top:1px solid var(--stroke-light);margin-top:24px">
+    Built with 🦞 <a href="https://github.com/openclaw/openclaw" style="color:var(--blue)">OpenClaw</a> · 
+    <a href="https://github.com/Septoff21/openclaw-newbie-baseline" style="color:var(--blue)">GitHub</a> · 
+    MIT License
+  </footer>
 </body>
 </html>

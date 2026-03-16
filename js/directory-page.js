@@ -2,6 +2,15 @@
   const grid=document.getElementById('directory-grid');
   const data=await fetch('./api/claw-directory.json').then(r=>r.json());
 
+  // Count header
+  const total=data.items.length;
+  const verified=data.items.filter(i=>i.status==='verified').length;
+  const repoOnly=total-verified;
+  const header=document.createElement('div');
+  header.className='panel';
+  header.innerHTML=`<p class="help">Showing <b>${total}</b> projects (${verified} verified live, ${repoOnly} repo-only)</p>`;
+  grid.before(header);
+
   function render(items){
     grid.innerHTML=items.map(it=>`
       <article class="dir-card ${it.status}">

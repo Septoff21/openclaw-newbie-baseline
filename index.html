@@ -115,6 +115,8 @@
     </section>
   </main>
 
+  <div class="toast" id="toast">✅ Prompt copied! Paste it in your AI chat.</div>
+
   <script>
     const prompts = {
       beginner: `Set up my OpenClaw with safe defaults.\n1) Keep only core plugins\n2) Enable one memory plugin\n3) Install beginner skills\n4) Show me verification commands\nReport: plan → progress → summary.`,
@@ -128,6 +130,8 @@
         out.textContent = text;
         await navigator.clipboard.writeText(text);
         btn.textContent = 'Copied!';
+        const toast=document.getElementById('toast');
+        if(toast){toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2000);}
         setTimeout(() => btn.textContent = 'Copy prompt', 1200);
       });
     });
@@ -180,5 +184,11 @@
     if(tipEl) tipEl.textContent=tips[new Date().getDate()%tips.length];
   })();
   </script>
+
+  <footer style="text-align:center;padding:24px;color:var(--muted);font-size:12px;border-top:1px solid var(--stroke-light);margin-top:24px">
+    Built with 🦞 <a href="https://github.com/openclaw/openclaw" style="color:var(--blue)">OpenClaw</a> · 
+    <a href="https://github.com/Septoff21/openclaw-newbie-baseline" style="color:var(--blue)">GitHub</a> · 
+    MIT License
+  </footer>
 </body>
 </html>
