@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quick Start — OpenClaw Playground</title>
+  <meta name="description" content="Get your AI agent running in 5 minutes. Step by step, copy-paste, no coding required." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦞</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="topnav">
+    <a class="topnav-logo" href="./">🦞 OpenClaw</a>
+    <div class="topnav-links">
+      <a href="./">Home</a>
+      <a href="./quickstart.html" class="active">Quick Start</a>
+      <a href="./directory.html">Directory</a>
+      <a href="./models.html">Models</a>
+      <a href="./reference.html">Reference</a>
+      <a href="./shop.html">Shop</a>
+      <a href="./fork.html">Fork</a>
+    </div>
+  </nav>
+  <nav class="mobnav">
+    <a href="./"><span class="mobnav-icon">🏠</span>Home</a>
+    <a href="./directory.html"><span class="mobnav-icon">🦞</span>Dir</a>
+    <a href="./models.html"><span class="mobnav-icon">📡</span>Models</a>
+    <a href="./shop.html"><span class="mobnav-icon">🛒</span>Shop</a>
+  </nav>
+
+  <header class="hero">
+    <p class="eyebrow">5 Minutes / 5 分钟</p>
+    <h1>🚀 Quick Start<br/><span style="font-size:0.5em;color:var(--muted)">快速开始</span></h1>
+    <p class="subtitle">From zero to AI agent in 5 minutes. Copy, paste, done.<br/>从零到 AI agent 只需 5 分钟。复制、粘贴、完成。</p>
+  </header>
+
+  <main>
+    <!-- Step 1 -->
+    <section class="panel" id="step1">
+      <h3>Step 1: Install OpenClaw / 安装 OpenClaw <span style="float:right;color:var(--muted)">⏱ 2 min</span></h3>
+      <p class="help">Open your terminal (Terminal on Mac/Linux, PowerShell on Windows) and paste this:<br/>打开终端（Mac/Linux 用 Terminal，Windows 用 PowerShell）并粘贴：</p>
+      <pre>npm install -g openclaw && openclaw doctor</pre>
+      <p class="help">This installs OpenClaw and checks your system. If you see ✅, you're good.<br/>这会安装 OpenClaw 并检查系统。如果看到 ✅ 就没问题。</p>
+      <details>
+        <summary style="cursor:pointer;font-weight:600;color:var(--blue)">🔧 Troubleshooting / 常见问题</summary>
+        <ul style="margin-top:8px;font-size:13px">
+          <li><b>"command not found"</b> — Install Node.js first from <a href="https://nodejs.org" target="_blank">nodejs.org</a></li>
+          <li><b>Permission denied</b> — Try <code>sudo npm install -g openclaw</code></li>
+          <li><b>Windows errors</b> — Run PowerShell as Administrator</li>
+        </ul>
+      </details>
+    </section>
+
+    <!-- Step 2 -->
+    <section class="panel" id="step2">
+      <h3>Step 2: Configure / 配置 <span style="float:right;color:var(--muted)">⏱ 1 min</span></h3>
+      <p class="help">Set up your API key. We recommend OpenRouter (one key for all models):<br/>设置 API 密钥。推荐 OpenRouter（一个密钥用所有模型）：</p>
+      <pre>openclaw config set model.provider openrouter
+openclaw config set model.apiKey "your-api-key-here"</pre>
+      <p class="help">Get a free API key at <a href="https://openrouter.ai/keys" target="_blank">openrouter.ai/keys</a> 🔑<br/>免费获取密钥：<a href="https://openrouter.ai/keys" target="_blank">openrouter.ai/keys</a></p>
+    </section>
+
+    <!-- Step 3 -->
+    <section class="panel" id="step3">
+      <h3>Step 3: Give It a Soul / 给它一个灵魂 <span style="float:right;color:var(--muted)">⏱ 1 min</span></h3>
+      <p class="help">Copy this prompt and paste it into your AI chat. This sets up your agent's personality:<br/>复制此提示词并粘贴到 AI 聊天中。这会设置你 agent 的人格：</p>
+      <pre id="soul-prompt">Set up my OpenClaw agent with these files:
+
+SOUL.md:
+- Name: [Your choice]
+- Vibe: Helpful but not sycophantic
+- Boundaries: Private data stays private, ask before external actions
+- Style: Concise when needed, thorough when it matters
+
+AGENTS.md:
+- Read memory files each session
+- Daily notes in memory/YYYY-MM-DD.md
+- Long-term memory in MEMORY.md
+- Don't exfiltrate private data
+- trash > rm (recoverable beats gone forever)
+
+USER.md:
+- Name: [Your name]
+- Timezone: [Your timezone]
+- Preferences: [Your preferences]
+
+Create these files and show me the result.</pre>
+      <button class="cta" onclick="navigator.clipboard.writeText(document.getElementById('soul-prompt').textContent);this.textContent='Copied!'">Copy prompt / 复制提示词</button>
+    </section>
+
+    <!-- Step 4 -->
+    <section class="panel" id="step4">
+      <h3>Step 4: Verify / 验证 <span style="float:right;color:var(--muted)">⏱ 30 sec</span></h3>
+      <p class="help">Run these commands to make sure everything works:<br/>运行这些命令确保一切正常：</p>
+      <pre>openclaw status        # Should show "running"
+openclaw chat "Hello"  # Should get a response</pre>
+      <p class="help">If both work → 🎉 your agent is alive!<br/>如果两个都工作 → 🎉 你的 agent 活了！</p>
+    </section>
+
+    <!-- Step 5 -->
+    <section class="panel" id="step5">
+      <h3>Step 5: Connect / 连接 <span style="float:right;color:var(--muted)">⏱ 1 min</span></h3>
+      <p class="help">Connect your agent to a messaging platform:<br/>将你的 agent 连接到消息平台：</p>
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr))">
+        <article class="card beginner" style="padding:16px">
+          <h4>📱 Telegram</h4>
+          <code style="font-size:11px">openclaw connect telegram</code>
+        </article>
+        <article class="card advance" style="padding:16px">
+          <h4>💬 WhatsApp</h4>
+          <code style="font-size:11px">openclaw connect whatsapp</code>
+        </article>
+        <article class="card advance" style="padding:16px">
+          <h4>🎮 Discord</h4>
+          <code style="font-size:11px">openclaw connect discord</code>
+        </article>
+        <article class="card extreme" style="padding:16px">
+          <h4>🍎 iMessage</h4>
+          <code style="font-size:11px">openclaw connect imessage</code>
+        </article>
+      </div>
+    </section>
+
+    <!-- What's Next -->
+    <section class="panel cta-final">
+      <h3>🦞 What's Next? / 接下来做什么？</h3>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:16px">
+        <a class="cta primary" href="./reference.html">📖 Read Reference / 读参考</a>
+        <a class="cta" href="./verification.html">✅ Learn Verification / 学验证</a>
+        <a class="cta" href="./shop.html">🛒 Monetize / 变现</a>
+        <a class="cta" href="./fork.html">🍴 Fork This Site / Fork 站点</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Built with 🦞 <a href="https://github.com/openclaw/openclaw">OpenClaw</a> ·
+    <a href="https://github.com/Septoff21/openclaw-newbie-baseline">GitHub</a> ·
+    MIT License ·
+    By DM 👤 × UHX 🌌
+  </footer>
+</body>
+</html>
