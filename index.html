@@ -29,7 +29,7 @@
 
   <header class="hero">
     <p class="eyebrow">OpenClaw Playground</p>
-    <h1 style="background:linear-gradient(135deg,#c0392b,#2874a6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Learn by Copying</h1>
+    <h1>Learn by <span style="color:var(--red);position:relative">Copying<span style="position:absolute;bottom:-2px;left:0;right:0;height:3px;background:var(--red);border-radius:2px;opacity:.6"></span></span></h1>
     <p class="subtitle">Pick a prompt, paste it into any AI chat, and get a working OpenClaw setup. No install guide needed — just copy and go.</p>
     <div class="tags">
       <span>Free</span><span>Open Source</span><span>Natural Language</span><span>No-code Friendly</span>
@@ -86,7 +86,7 @@
     <section class="panel">
       <h3>📡 New Models Today</h3>
       <p class="help">Auto-updated daily. <a href="./models.html">See full list →</a></p>
-      <div id="home-models" class="model-cards"></div>
+      <div id="home-models" class="model-cards"><p class="help">Loading latest models...</p></div>
     </section>
 
     <!-- SECTION 4: Explore ecosystem -->
@@ -112,9 +112,9 @@
 
   <script>
     const prompts = {
-      beginner: `You are my OpenClaw setup copilot.\nGoal: beginner-safe baseline.\nDo now:\n1) Audit enabled plugins and keep only safe core\n2) Enable one memory plugin with autoCapture+autoRecall+smartExtraction\n3) Install general beginner skills\n4) Return: verification commands + expected outputs\nAlways report: plan/progress/blocker/final summary.`,
-      advance: `You are my OpenClaw operations copilot.\nGoal: improve reliability and trust.\nDo now:\n1) Add context warning ladder (70/85/95)\n2) Add anti-hallucination verification checklist\n3) Add role/agent/tool baseline doc\n4) Add install-order and rollback docs\nReturn only actionable markdown + validation commands.`,
-      extreme: `You are my OpenClaw architecture copilot.\nGoal: autonomous but governed operation.\nDo now:\n1) Design multi-agent routing policy\n2) Define memory scopes and lifecycle\n3) Define approval gates for risky actions\n4) Define incident response + audit trails\nReturn: architecture map + phased rollout checklist.`
+      beginner: `Set up my OpenClaw with safe defaults.\n1) Keep only core plugins\n2) Enable one memory plugin\n3) Install beginner skills\n4) Show me verification commands\nReport: plan → progress → summary.`,
+      advance: `Make my OpenClaw more reliable.\n1) Add context warnings (70/85/95%)\n2) Add verification checklist\n3) Document roles and tools\n4) Add rollback steps\nReturn actionable steps only.`,
+      extreme: `Design my OpenClaw for autonomous operation.\n1) Multi-agent routing policy\n2) Memory scopes and lifecycle\n3) Approval gates for risky actions\n4) Incident response plan\nReturn: architecture + rollout checklist.`
     };
     const out = document.getElementById('out');
     document.querySelectorAll('button[data-copy]').forEach(btn => {
@@ -133,13 +133,28 @@
       const d=await fetch('./api/models-daily.json').then(r=>r.json());
       const el=document.getElementById('home-models');
       if(!el||!d.models) return;
+      const useCase=m=>{
+        const p=parseFloat(m.pPrice);
+        if(p===0) return 'Free!';
+        if(m.ctx>=1000000) return 'Long context';
+        if(p<0.000001) return 'Ultra cheap';
+        return 'General';
+      };
+      const modIcon=m=>{
+        const mod=m.modality||'';
+        if(mod.includes('image')&&mod.includes('video')) return '🎬';
+        if(mod.includes('image')) return '🖼️';
+        return '📄';
+      };
       el.innerHTML=d.models.slice(0,3).map(m=>`
         <article class="model-card">
           <div class="model-card-head">
+            <span class="model-icon">${modIcon(m)}</span>
             <div><h4>${m.name||m.id}</h4><code class="model-id">${m.id}</code></div>
           </div>
           <div class="model-meta">
             <span>CTX: ${(m.ctx||0).toLocaleString()}</span>
+            <span style="color:var(--green);font-weight:700">${useCase(m)}</span>
           </div>
         </article>
       `).join('');

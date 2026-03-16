@@ -214,7 +214,10 @@ li{margin:7px 0;font-size:14px;line-height:1.7}
 .badge{font-size:10px;padding:4px 10px;border-radius:999px;font-weight:800}
 .badge.verified{background:var(--green-light);color:var(--green)}
 .badge.unverified{background:#eee;color:var(--muted)}
-.filter-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}
+.filter-row{display:flex;gap:8px;margin-bottom:8px;overflow-x:auto;padding-bottom:6px;-webkit-overflow-scrolling:touch}
+.filter-row::-webkit-scrollbar{height:3px}
+.filter-row::-webkit-scrollbar-thumb{background:var(--stroke);border-radius:2px}
+.filter{white-space:nowrap;flex-shrink:0}
 .filter{
   border:1.5px solid var(--stroke);border-radius:999px;
   padding:7px 16px;background:transparent;color:var(--fg2);
