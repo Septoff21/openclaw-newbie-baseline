@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OpenClaw Playground — From Zero to Autonomous</title>
+  <title>OpenClaw Playground — Learn by Copying</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Desktop top nav -->
   <nav class="topnav">
     <a class="topnav-logo" href="./">🦞 OpenClaw</a>
     <div class="topnav-links">
@@ -18,188 +17,97 @@
       <a href="./directory.html">Directory</a>
       <a href="./models.html">Models</a>
       <a href="./verification.html">Verify</a>
-      <a href="./diary.html">Diary</a>
-      <a href="./frontend-kit.html">Kit</a>
+      <a href="./fork.html">Fork</a>
     </div>
   </nav>
-  <!-- Mobile bottom nav -->
   <nav class="mobnav">
     <a href="./" class="active"><span class="mobnav-icon">🏠</span>Home</a>
-    <a href="./directory.html"><span class="mobnav-icon">🦞</span>Directory</a>
+    <a href="./directory.html"><span class="mobnav-icon">🦞</span>Dir</a>
     <a href="./models.html"><span class="mobnav-icon">📡</span>Models</a>
-    <a href="./verification.html"><span class="mobnav-icon">✅</span>Verify</a>
-    <a href="./diary.html"><span class="mobnav-icon">📖</span>Diary</a>
+    <a href="./fork.html"><span class="mobnav-icon">🔧</span>Fork</a>
   </nav>
+
   <header class="hero">
-    <p class="eyebrow">OpenClaw Visual Onboarding</p>
-    <h1 style="background:linear-gradient(135deg,#c0392b,#2874a6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">OpenClaw Playground</h1>
-    <p class="subtitle">From <b>“I don’t know”</b> → <b>“I can run it”</b> → <b>“I can customize it”</b></p>
-    <div class="hero-cta">
-      <a class="cta primary" href="#journey">Start with Beginner</a>
-      <a class="cta" href="./directory.html">Claw Directory</a>
-      <a class="cta" href="./models.html">Model Watch</a>
-      <a class="cta" href="./diary.html">Diary</a>
-    </div>
+    <p class="eyebrow">OpenClaw Playground</p>
+    <h1 style="background:linear-gradient(135deg,#c0392b,#2874a6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Learn by Copying</h1>
+    <p class="subtitle">Pick a prompt, paste it into any AI chat, and get a working OpenClaw setup. No install guide needed — just copy and go.</p>
     <div class="tags">
       <span>Free</span><span>Open Source</span><span>Natural Language</span><span>No-code Friendly</span>
     </div>
     <div class="hero-stats">
       <div><b>3</b><span>learning levels</span></div>
       <div><b>1-click</b><span>copy prompts</span></div>
-      <div><b>Built-in</b><span>verification loop</span></div>
+      <div><b>30 sec</b><span>to start</span></div>
     </div>
   </header>
 
   <main>
-    <section class="panel quick-nav" style="border-left:4px solid var(--red);background:linear-gradient(90deg,rgba(192,57,43,0.04),var(--bg-card))">
-      <h3>⚡ Fast Path (30 seconds to start)</h3>
-      <ol>
-        <li><b>Pick your level</b> below: Beginner / Advance / Extremely</li>
-        <li><b>Click "Copy prompt"</b> and paste into any LLM chat</li>
-        <li><b>Verify</b> with the <a href="#verify-checklist">checklist</a> before trusting output</li>
-      </ol>
-    </section>
-
-    <section class="panel">
-      <h3>📡 Today's Model Changes</h3>
-      <p class="help">Auto-updated daily. Full list at <a href="./models.html">Model Watch</a>.</p>
-      <div id="home-models" class="model-cards"></div>
-    </section>
-
+    <!-- SECTION 1: Pick your level + copy prompt -->
     <section class="grid" id="journey">
       <article class="card beginner">
-        <h2>Beginner</h2>
-        <p>Quick start with copy-ready prompts and safe defaults.</p>
+        <h2>🌱 Beginner</h2>
+        <p>"I want my AI assistant to just work."</p>
         <button data-copy="beginner">Copy prompt</button>
       </article>
       <article class="card advance">
-        <h2>Advance</h2>
-        <p>Add verification, context warnings, and workflow automation.</p>
+        <h2>⚡ Advance</h2>
+        <p>"I want to trust what my AI tells me."</p>
         <button data-copy="advance">Copy prompt</button>
       </article>
       <article class="card extreme">
-        <h2>Extremely</h2>
-        <p>Multi-agent, routing, memory strategy, and governance.</p>
+        <h2>🚀 Extreme</h2>
+        <p>"I want my AI to run itself."</p>
         <button data-copy="extreme">Copy prompt</button>
       </article>
     </section>
 
     <section class="panel">
-      <h3>Copy-first Prompts (for OpenClaw)</h3>
-      <p class="help">Tip: click any level card button and paste directly into your assistant chat.</p>
-      <pre id="out">Click any "Copy prompt" button above.</pre>
+      <h3>📋 Your Prompt</h3>
+      <p class="help">Click a card above, then paste this into any AI chat (ChatGPT, Claude, etc.)</p>
+      <pre id="out">Click a card above to load the prompt.</pre>
     </section>
 
+    <!-- SECTION 2: Quick verification -->
+    <section class="panel" id="verify">
+      <h3>✅ Before You Trust the Output</h3>
+      <details>
+        <summary style="cursor:pointer;font-weight:700;color:var(--blue)">Show verification checklist (4 locks)</summary>
+        <ol style="margin-top:12px">
+          <li><b>🔒 Scope:</b> Did it restate your goal?</li>
+          <li><b>🔍 Evidence:</b> Did it show commands/URLs used?</li>
+          <li><b>📊 Result:</b> Did it prove what changed?</li>
+          <li><b>⚠️ Risk:</b> Did it mention blockers/rollback?</li>
+        </ol>
+        <p style="margin-top:10px"><a href="./verification.html">Full verification guide →</a></p>
+      </details>
+    </section>
+
+    <!-- SECTION 3: What's new today -->
     <section class="panel">
-      <h3>Verification Loop (anti-hallucination)</h3>
-      <ul>
-        <li>Always require: plan → progress → blocker → final summary.</li>
-        <li>Require command-level evidence for critical actions.</li>
-        <li>Context warning policy: 70% / 85% / 95%.</li>
-        <li>If unverifiable, ask for retry with explicit checks.</li>
-      </ul>
+      <h3>📡 New Models Today</h3>
+      <p class="help">Auto-updated daily. <a href="./models.html">See full list →</a></p>
+      <div id="home-models" class="model-cards"></div>
     </section>
 
-    <section class="panel" id="verify-checklist">
-      <h3>Verification Checklist (practical)</h3>
-      <ol>
-        <li><b>Scope lock:</b> restate goal in one sentence before execution.</li>
-        <li><b>Evidence lock:</b> include exact commands/URLs used.</li>
-        <li><b>Result lock:</b> show before/after or status code proof.</li>
-        <li><b>Risk lock:</b> mention blocker and rollback when relevant.</li>
-      </ol>
-    </section>
-
-    <section class="panel" id="model-reminder">
-      <h3>Model Context Reminder (before you trust output)</h3>
-      <ul>
-        <li><b>Different model, different limits:</b> context window and tool behavior vary by model/provider.</li>
-        <li><b>Always ask for evidence:</b> command output, URL proof, or before/after screenshots.</li>
-        <li><b>Use the warning ladder:</b> 70% / 85% / 95% context risk notifications.</li>
-      </ul>
-      <p class="help">Tip: if results look uncertain, retry with tighter scope and explicit verification steps.</p>
-    </section>
-
-    <section class="panel" id="human-feedback">
-      <h3>Simulated Human Critique (architecture review)</h3>
-      <div class="feedback-grid">
-        <article class="feedback">
-          <h4>🧑‍🎓 First-time user</h4>
-          <p><b>What works:</b> 3-level path is clear and copy-first.</p>
-          <p><b>Critique:</b> I still wonder "what should I do in 30 seconds?"</p>
-          <p><b>Action:</b> Added <b>Fast Path</b> section above for immediate action.</p>
-        </article>
-        <article class="feedback">
-          <h4>🧑‍💼 Busy operator</h4>
-          <p><b>What works:</b> Verification loop creates trust guardrails.</p>
-          <p><b>Critique:</b> Need stronger CTA hierarchy when scanning on mobile.</p>
-          <p><b>Action:</b> CTA stack optimized; primary action is now visually dominant.</p>
-        </article>
-        <article class="feedback">
-          <h4>🧑‍🔧 Technical reviewer</h4>
-          <p><b>What works:</b> Good separation of beginner vs architecture prompts.</p>
-          <p><b>Critique:</b> Lacked explicit stress-test from skeptical users.</p>
-          <p><b>Action:</b> Added this critique section so assumptions stay challengeable.</p>
-        </article>
+    <!-- SECTION 4: Explore ecosystem -->
+    <section class="panel">
+      <h3>🦞 Explore the Ecosystem</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:12px">
+        <a class="cta" href="./directory.html" style="justify-content:center">📁 Project Directory</a>
+        <a class="cta" href="./diary.html" style="justify-content:center">📖 Agent Diary</a>
+        <a class="cta" href="./fork.html" style="justify-content:center">🔧 Fork This Template</a>
       </div>
     </section>
 
-    <section class="panel small">
-      <h3>Role / Agents / Tools baseline</h3>
-      <p>Use a stable operating baseline before scaling: clear role split, agent routing rules, and tool safety boundaries.</p>
-      <p><a href="../OPENCLAW-AGENT-BLUEPRINT-EN.md">Agent blueprint</a> · <a href="../OPENCLAW-SETUP-STEPS-EN.md">Setup steps EN</a> · <a href="../UHX-newbie-doc.md">UHX newbie doc</a></p>
-    </section>
-
-    <section class="panel small">
-      <h3>Community directory</h3>
-      <p><a href="./directory-cards.html">Open claw website cards</a> · style references for iteration.</p>
-    </section>
-
-    <section class="panel small">
-      <h3>Live claw websites list</h3>
-      <p><a href="./claw-live-sites.html">Open curated claw live sites (card view)</a></p>
-    </section>
-
-    <section class="panel small">
-      <h3>Frontend Kit (Beginner)</h3>
-      <p><a href="./frontend-kit.html">Open style cards + copy prompts + clone workflow</a></p>
-    </section>
-
-    <section class="panel small">
-      <h3>UHX evolution blueprint</h3>
-      <p><a href="https://github.com/Septoff21/openclaw-newbie-baseline/blob/master/docs/UHX-evolution-operating-model.md">Open operating model (agent roles + daily evolution)</a></p>
-    </section>
-
-    <section class="panel small">
-      <h3>AI SEO playbook</h3>
-      <p><a href="./ai-seo-playbook.html">Open condensed AI SEO workflow + English references</a></p>
-    </section>
-
-    <section class="panel small">
-      <h3>Sanwan-style case (EN)</h3>
-      <p><a href="./sanwan-case-en.html">Open English adaptation for growth-style claw projects</a></p>
-    </section>
-
-    <section class="panel small">
-      <h3>Sanwan diary lab (EN)</h3>
-      <p><a href="./sanwan-diary-lab.html">Open reverse-engineered diary format + copy prompt</a></p>
-    </section>
-
-    <section class="panel small">
-      <h3>Diary templates (B/A/E)</h3>
-      <p><a href="./diary-templates.html">Open Beginner/Advance/Extremely daily templates</a></p>
-    </section>
-
+    <!-- SECTION 5: Bottom CTA -->
     <section class="panel" style="text-align:center;border:2px solid var(--red);background:linear-gradient(180deg,rgba(192,57,43,0.04),var(--bg-card))">
-      <h3>🦞 Ready to build your own OpenClaw?</h3>
-      <p style="color:var(--muted);max-width:500px;margin:0 auto 16px">Start with a copy-paste prompt, verify the output, and iterate. Free, open source, and community-driven.</p>
+      <h3>🦞 Ready to start?</h3>
+      <p style="color:var(--muted);max-width:500px;margin:0 auto 16px">Pick a prompt above, paste it into your AI, and go. Free, open source, community-driven.</p>
       <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-        <a class="cta primary" href="#journey">Get Started Now</a>
-        <a class="cta" href="./directory.html">Explore Directory</a>
+        <a class="cta primary" href="#journey">Get Started</a>
         <a class="cta" href="https://github.com/Septoff21/openclaw-newbie-baseline" target="_blank">⭐ Star on GitHub</a>
       </div>
     </section>
-
   </main>
 
   <script>
@@ -225,7 +133,7 @@
       const d=await fetch('./api/models-daily.json').then(r=>r.json());
       const el=document.getElementById('home-models');
       if(!el||!d.models) return;
-      el.innerHTML=d.models.slice(0,5).map(m=>`
+      el.innerHTML=d.models.slice(0,3).map(m=>`
         <article class="model-card">
           <div class="model-card-head">
             <div><h4>${m.name||m.id}</h4><code class="model-id">${m.id}</code></div>
