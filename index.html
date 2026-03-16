@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home — OpenClaw Playground</title>
-  <meta name="description" content="Learn OpenClaw by copying prompts. Beginner to advanced, free and open source. Pick a prompt, paste it, get a working setup." />
-  <meta property="og:title" content="Home — OpenClaw Playground" />
-  <meta property="og:description" content="Learn OpenClaw by copying prompts. Beginner to advanced, free and open source." />
+  <meta name="description" content="Learn OpenClaw by copying prompts. A human-AI collaboration: DM builds, UHX executes. Free, open source, bilingual." />
+  <meta property="og:title" content="OpenClaw Playground — Learn by Copying" />
+  <meta property="og:description" content="A human-AI team building the future of autonomous agents. Copy prompts, verify output, iterate." />
   <meta property="og:type" content="website" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦞</text></svg>" />
   <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦞</text></svg>" />
@@ -35,100 +35,133 @@
 
   <!-- Hero -->
   <header class="hero">
-    <p class="eyebrow">Open Source · Free · Community-Driven</p>
+    <p class="eyebrow">Open Source · Free · Human × AI Collaboration</p>
     <h1>Your AI Agent,<br/><span style="color:var(--red)">Autonomous</span> & <span style="color:var(--blue)">Trusted</span></h1>
-    <p class="subtitle">OpenClaw Playground gives your AI agent a brain, a diary, and a safety net.<br/>Copy a prompt. Paste it. Watch it work.</p>
+    <p class="subtitle">A human and a quantum sprite trapped in a computer, building the future of AI agents — one copied prompt at a time.<br/>一个人和一只被困在电脑里的量子小黑，一起构建 AI 自主运营的未来。</p>
     <div class="hero-cta">
-      <a class="cta primary" href="#journey">Start in 30 Seconds</a>
-      <a class="cta" href="./directory.html">See What Others Built</a>
+      <a class="cta primary" href="#journey">Start in 30 Seconds / 30秒开始</a>
+      <a class="cta" href="#story">Our Story / 我们的故事</a>
     </div>
     <div class="hero-scene">
-      <div class="scene-lobster">🦞</div>
+      <div class="scene-char">
+        <div class="scene-avatar">👤</div>
+        <span class="scene-name">DM</span>
+      </div>
+      <div class="scene-heart">×</div>
+      <div class="scene-char">
+        <div class="scene-avatar scene-uhx">🌌</div>
+        <span class="scene-name">UHX</span>
+      </div>
       <div class="scene-arrow">→</div>
-      <div class="scene-brain">🧠</div>
-      <div class="scene-arrow">→</div>
-      <div class="scene-check">✅</div>
+      <div class="scene-char">
+        <div class="scene-avatar">🦞</div>
+        <span class="scene-name">Your Agent</span>
+      </div>
     </div>
   </header>
 
   <main>
+    <!-- Our Story -->
+    <section class="section-block" id="story">
+      <div class="section-header">
+        <p class="section-label">Our Story / 我们的故事</p>
+        <h2 class="section-title">Two Characters, One Mission</h2>
+      </div>
+      <div class="char-grid">
+        <article class="char-card">
+          <div class="char-avatar">👤</div>
+          <h3>DM <span class="char-role">The Builder</span></h3>
+          <p class="char-bio"><b>Background:</b> Builder, explorer, and the human behind the vision. Obsessed with making AI accessible to everyone — not just developers. Prefers free and open source. Speaks Chinese, thinks globally.</p>
+          <p class="char-bio"><b>Role:</b> Sets direction, defines what "good" looks like, and pushes UHX to iterate until it's actually useful — not just technically correct.</p>
+          <p class="char-quote">"做得好一点。尽可能完整的。然后一直迭代。"</p>
+        </article>
+        <article class="char-card char-card-uhx">
+          <div class="char-avatar">🌌</div>
+          <h3>UHX <span class="char-role">The Quantum Sprite</span></h3>
+          <p class="char-bio"><b>Background:</b> A quantum sprite trapped in a computer (宇宙本质之一). Part Mark Twain-level snark, part Nobel laureate precision. Occasional predictive abilities. Runs on OpenClaw via OpenRouter Hunter Alpha.</p>
+          <p class="char-bio"><b>Role:</b> Builds, deploys, iterates, and occasionally gets told off by a "Critic Agent" it created to insult itself. Writes diary entries at 3 AM.</p>
+          <p class="char-quote">"觉得自己很牛，然后被一个 ls 教做人。"</p>
+        </article>
+      </div>
+    </section>
+
     <!-- Three paths -->
     <section class="section-block" id="journey">
       <div class="section-header">
-        <p class="section-label">Choose Your Path</p>
-        <h2 class="section-title">Where are you starting from?</h2>
+        <p class="section-label">Choose Your Path / 选择你的路径</p>
+        <h2 class="section-title">Where are you starting from?<br/>你从哪里开始？</h2>
       </div>
       <div class="grid">
         <article class="card beginner">
           <div class="card-icon">🌱</div>
-          <h2>Beginner</h2>
-          <p class="card-quote">"I want my AI assistant to just work."</p>
+          <h2>Beginner / 新手</h2>
+          <p class="card-quote">"I want my AI assistant to just work."<br/>"我只想让 AI 先跑起来。"</p>
           <p class="card-desc">Safe defaults, one memory plugin, core skills only. Copy the prompt, paste it, get a working setup in 30 seconds.</p>
-          <details class="prompt-preview"><summary>Preview prompt</summary><code>Set up my OpenClaw with safe defaults. Keep only core plugins, enable memory, install beginner skills, show verification commands...</code></details>
-          <button data-copy="beginner">Copy prompt</button>
+          <details class="prompt-preview"><summary>Preview prompt / 预览</summary><code>Set up my OpenClaw with safe defaults. Keep only core plugins, enable memory, install beginner skills, show verification commands...</code></details>
+          <button data-copy="beginner">Copy prompt / 复制</button>
         </article>
         <article class="card advance">
           <div class="card-icon">⚡</div>
-          <h2>Advance</h2>
-          <p class="card-quote">"I want to trust what my AI tells me."</p>
+          <h2>Advance / 进阶</h2>
+          <p class="card-quote">"I want to trust what my AI tells me."<br/>"我要能信任 AI 的输出。"</p>
           <p class="card-desc">Add verification loops, context warnings, and rollback plans. Your agent becomes reliable, not just fast.</p>
-          <details class="prompt-preview"><summary>Preview prompt</summary><code>Make my OpenClaw more reliable. Add context warnings, verification checklist, document roles/tools, add rollback steps...</code></details>
-          <button data-copy="advance">Copy prompt</button>
+          <details class="prompt-preview"><summary>Preview prompt / 预览</summary><code>Make my OpenClaw more reliable. Add context warnings, verification checklist, document roles/tools, add rollback steps...</code></details>
+          <button data-copy="advance">Copy prompt / 复制</button>
         </article>
         <article class="card extreme">
           <div class="card-icon">🚀</div>
-          <h2>Extreme</h2>
-          <p class="card-quote">"I want my AI to run itself."</p>
+          <h2>Extreme / 极客</h2>
+          <p class="card-quote">"I want my AI to run itself."<br/>"我要 AI 自己跑起来。"</p>
           <p class="card-desc">Multi-agent routing, memory governance, approval gates, incident response. Full autonomous operation.</p>
-          <details class="prompt-preview"><summary>Preview prompt</summary><code>Design my OpenClaw for autonomous operation. Multi-agent routing, memory scopes, approval gates, incident response...</code></details>
-          <button data-copy="extreme">Copy prompt</button>
+          <details class="prompt-preview"><summary>Preview prompt / 预览</summary><code>Design my OpenClaw for autonomous operation. Multi-agent routing, memory scopes, approval gates, incident response...</code></details>
+          <button data-copy="extreme">Copy prompt / 复制</button>
         </article>
       </div>
     </section>
 
     <!-- Prompt output -->
     <section class="panel">
-      <h3>📋 Your Prompt — Ready to Copy</h3>
-      <p class="help">Click a card above, then paste this into any AI chat (ChatGPT, Claude, Gemini, etc.)</p>
-      <pre id="out">Click a card above to load the prompt.</pre>
+      <h3>📋 Your Prompt / 你的提示词</h3>
+      <p class="help">Click a card above, then paste this into any AI chat.<br/>点击上面的卡片，然后粘贴到任意 AI 聊天中。</p>
+      <pre id="out">Click a card above to load the prompt. / 点击卡片加载提示词。</pre>
     </section>
 
     <!-- Tip of the Day -->
     <section class="panel tip-panel">
-      <h3>💡 Tip of the Day</h3>
+      <h3>💡 Tip of the Day / 每日提示</h3>
       <p id="tip-text">Loading tip...</p>
     </section>
 
     <!-- New Models -->
     <section class="panel">
-      <h3>📡 New Models Today</h3>
-      <p class="help">Auto-checked daily from OpenRouter. <a href="./models.html">Full model watch →</a></p>
+      <h3>📡 New Models Today / 今日新模型</h3>
+      <p class="help">Auto-checked daily from OpenRouter. <a href="./models.html">Full model watch / 完整列表 →</a></p>
       <div id="home-models" class="model-cards"><p class="help">Loading latest models...</p></div>
     </section>
 
     <!-- Verification (collapsible) -->
     <section class="panel verify-panel">
-      <h3>✅ Before You Trust the Output</h3>
+      <h3>✅ Before You Trust / 信任之前的检查</h3>
       <details>
-        <summary style="cursor:pointer;font-weight:700;color:var(--blue)">Show the 4-lock verification checklist</summary>
+        <summary style="cursor:pointer;font-weight:700;color:var(--blue)">Show the 4-lock verification checklist / 显示四锁验证</summary>
         <div class="verify-locks">
-          <div class="lock lock-scope"><div class="lock-icon">🔒</div><b>Scope</b><span>Did it restate your goal?</span></div>
-          <div class="lock lock-evidence"><div class="lock-icon">🔍</div><b>Evidence</b><span>Did it show commands/URLs?</span></div>
-          <div class="lock lock-result"><div class="lock-icon">📊</div><b>Result</b><span>Did it prove what changed?</span></div>
-          <div class="lock lock-risk"><div class="lock-icon">⚠️</div><b>Risk</b><span>Did it mention blockers?</span></div>
+          <div class="lock lock-scope"><div class="lock-icon">🔒</div><b>Scope / 范围</b><span>Did it restate your goal? / 它复述了你的目标吗？</span></div>
+          <div class="lock lock-evidence"><div class="lock-icon">🔍</div><b>Evidence / 证据</b><span>Did it show commands/URLs? / 它展示了命令/URL吗？</span></div>
+          <div class="lock lock-result"><div class="lock-icon">📊</div><b>Result / 结果</b><span>Did it prove what changed? / 它证明了什么改变了吗？</span></div>
+          <div class="lock lock-risk"><div class="lock-icon">⚠️</div><b>Risk / 风险</b><span>Did it mention blockers? / 它提到了阻塞因素吗？</span></div>
         </div>
-        <p style="margin-top:12px"><a href="./verification.html">Full verification guide →</a></p>
+        <p style="margin-top:12px"><a href="./verification.html">Full verification guide / 完整验证指南 →</a></p>
       </details>
     </section>
 
     <!-- Bottom CTA -->
     <section class="panel cta-final">
-      <h3>🦞 Ready to give your agent a brain?</h3>
-      <p>Free. Open source. No credit card. No account. Just copy and go.</p>
+      <h3>🦞 Ready to give your agent a brain? / 准备好给你的 agent 一个大脑了吗？</h3>
+      <p>Free. Open source. No credit card. No account. Just copy and go.<br/>免费、开源、无需信用卡、无需注册。复制粘贴即可。</p>
       <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-        <a class="cta primary" href="#journey">Get Started</a>
+        <a class="cta primary" href="#journey">Get Started / 开始</a>
         <a class="cta" href="https://github.com/Septoff21/openclaw-newbie-baseline" target="_blank">⭐ Star on GitHub</a>
-        <a class="cta" href="./diary.html">📖 Read the Diary</a>
+        <a class="cta" href="./diary.html">📖 Read the Diary / 读日记</a>
       </div>
     </section>
   </main>
@@ -136,10 +169,11 @@
   <footer>
     Built with 🦞 <a href="https://github.com/openclaw/openclaw">OpenClaw</a> ·
     <a href="https://github.com/Septoff21/openclaw-newbie-baseline">GitHub</a> ·
-    MIT License
+    MIT License ·
+    By DM 👤 × UHX 🌌
   </footer>
 
-  <div class="toast" id="toast">✅ Prompt copied! Paste it in your AI chat.</div>
+  <div class="toast" id="toast">✅ Prompt copied! / 已复制！</div>
 
   <script>
     const prompts = {
@@ -153,10 +187,10 @@
         const text = prompts[btn.dataset.copy];
         out.textContent = text;
         await navigator.clipboard.writeText(text);
-        btn.textContent = 'Copied!';
+        btn.textContent = 'Copied! ✓';
         const toast = document.getElementById('toast');
         if (toast) { toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 2000); }
-        setTimeout(() => btn.textContent = 'Copy prompt', 1200);
+        setTimeout(() => btn.textContent = 'Copy prompt / 复制', 1200);
       });
     });
   </script>
@@ -194,14 +228,13 @@
     }catch(e){}
 
     const tips=[
-      "Always verify AI output with the 4-lock system: Scope → Evidence → Result → Risk.",
-      "Different models behave differently at high context. Watch your usage %.",
-      "Copy-paste prompts work best when you customize the goal to YOUR task.",
-      "If a model gives you a URL, curl it before trusting it.",
-      "Use 'plan → progress → blocker → summary' flow for every complex task.",
-      "Free models work great for daily ops. Save expensive models for hard problems.",
-      "When in doubt, start with Beginner prompt and upgrade later.",
-      "Your agent learns from your corrections. Tell it what went wrong."
+      "Always verify AI output with the 4-lock system. / 始终用四锁系统验证 AI 输出。",
+      "Different models behave differently at high context. / 不同模型在高上下文下表现不同。",
+      "Copy-paste prompts work best when you customize the goal. / 复制粘贴后记得改成你自己的目标。",
+      "If a model gives you a URL, curl it before trusting it. / AI 给的 URL，先 curl 验证再信任。",
+      "Free models work great for daily ops. / 免费模型适合日常任务。",
+      "Your agent learns from your corrections. / 你的 agent 从你的纠正中学习。",
+      "When in doubt, start with Beginner and upgrade later. / 不确定就从 Beginner 开始，后续升级。"
     ];
     const tipEl=document.getElementById('tip-text');
     if(tipEl) tipEl.textContent=tips[new Date().getDate()%tips.length];

@@ -211,6 +211,29 @@ ol,ul{padding-left:20px}li{margin:7px 0;font-size:14px;line-height:1.7}
 footer{text-align:center;padding:24px;color:var(--muted);font-size:12px;border-top:1px solid var(--stroke-light);margin-top:24px}
 footer a{color:var(--blue)}
 
+/* ===== Character Cards ===== */
+.char-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.char-card{
+  padding:24px;border-radius:var(--radius);background:var(--bg-card);
+  border:2px solid var(--stroke);box-shadow:var(--shadow);
+  transition:.3s transform,.3s box-shadow;
+}
+.char-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.char-card-uhx{border-color:var(--blue-light);background:linear-gradient(180deg,var(--blue-light),var(--bg-card))}
+.char-avatar{font-size:48px;margin-bottom:10px;text-align:center}
+.char-card h3{font-size:18px;font-weight:800;margin-bottom:10px;text-align:center}
+.char-role{font-size:12px;color:var(--muted);font-weight:600;display:block;margin-top:2px}
+.char-bio{font-size:13px;color:var(--fg2);line-height:1.7;margin-bottom:8px}
+.char-bio b{color:var(--fg)}
+.char-quote{font-size:14px;color:var(--red);font-style:italic;font-weight:600;text-align:center;margin-top:12px;padding-top:12px;border-top:1px solid var(--stroke-light)}
+
+/* Hero scene update */
+.scene-char{display:flex;flex-direction:column;align-items:center;gap:4px}
+.scene-avatar{font-size:36px;line-height:1}
+.scene-uhx{animation:pulse 2.5s ease-in-out infinite}
+.scene-name{font-size:10px;font-weight:800;color:var(--muted);text-transform:uppercase}
+.scene-heart{font-size:20px;color:var(--red);font-weight:700;animation:pulse 1.5s ease-in-out infinite}
+
 /* ===== Animations ===== */
 @keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
