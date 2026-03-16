@@ -21,6 +21,7 @@
       const rendered = md
         .split('\n')
         .map(line => {
+          if (line.startsWith('![')) { const m = line.match(/!\[([^\]]*)\]\(([^)]+)\)/); if (m) return `<img src="${m[2]}" alt="${m[1]}" style="width:100%;border-radius:12px;margin:0 0 12px;object-fit:cover;max-height:180px" loading="lazy" />`; }
           if (line.startsWith('## ')) return `<h3 style="margin:0 0 8px;font-size:16px;color:var(--red)">${line.slice(3)}</h3>`;
           if (line.startsWith('### ')) return `<h4 style="margin:16px 0 6px;font-size:14px;color:var(--blue)">${line.slice(4)}</h4>`;
           if (line.startsWith('- ')) return `<li style="margin:4px 0;font-size:13px;line-height:1.6">${line.slice(2)}</li>`;

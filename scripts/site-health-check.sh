@@ -4,8 +4,8 @@
 # Exit code: 0 = all OK, 1 = one or more pages down
 
 BASE="https://septoff21.github.io/openclaw-newbie-baseline"
-PAGES=("" "directory.html" "models.html" "verification.html" "diary.html" "fork.html")
-LABELS=("Home" "Directory" "Models" "Verification" "Diary" "Fork")
+PAGES=("" "directory.html" "models.html" "verification.html" "diary.html" "fork.html" "shop.html" "quickstart.html" "reference.html")
+LABELS=("Home" "Directory" "Models" "Verification" "Diary" "Fork" "Shop" "QuickStart" "Reference")
 
 FAIL=0
 RESULTS=""
