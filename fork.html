@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fork This Template — OpenClaw Playground</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="topnav">
+    <a class="topnav-logo" href="./">🦞 OpenClaw</a>
+    <div class="topnav-links">
+      <a href="./">Home</a>
+      <a href="./directory.html">Directory</a>
+      <a href="./models.html">Models</a>
+      <a href="./verification.html">Verify</a>
+      <a href="./diary.html">Diary</a>
+    </div>
+  </nav>
+  <nav class="mobnav">
+    <a href="./"><span class="mobnav-icon">🏠</span>Home</a>
+    <a href="./directory.html"><span class="mobnav-icon">🦞</span>Dir</a>
+    <a href="./models.html"><span class="mobnav-icon">📡</span>Models</a>
+    <a href="./verification.html"><span class="mobnav-icon">✅</span>Verify</a>
+    <a href="./diary.html"><span class="mobnav-icon">📖</span>Diary</a>
+  </nav>
+  <header class="hero">
+    <p class="eyebrow">OpenClaw Playground</p>
+    <h1>🔧 Fork This Template</h1>
+    <p class="subtitle">Build your own OpenClaw onboarding site in 5 minutes. Free, open source, no build tools required.</p>
+    <div class="hero-cta">
+      <a class="cta primary" href="https://github.com/Septoff21/openclaw-newbie-baseline/fork" target="_blank">🍴 Fork on GitHub</a>
+      <a class="cta" href="#steps">See Steps</a>
+    </div>
+  </header>
+  <main>
+    <section class="panel" id="steps">
+      <h3>5-Minute Setup</h3>
+      <ol>
+        <li><b>Fork the repo</b> — click "Fork" on GitHub</li>
+        <li><b>Enable GitHub Pages</b> — Settings → Pages → Source: gh-pages branch</li>
+        <li><b>Edit _config.json</b> — change site name, owner, colors</li>
+        <li><b>Edit api/claw-directory.json</b> — add your own projects</li>
+        <li><b>Visit your URL</b> — https://youruser.github.io/your-repo/</li>
+      </ol>
+    </section>
+
+    <section class="panel">
+      <h3>What to Customize</h3>
+      <table class="route-table">
+        <thead><tr><th>File</th><th>What to Change</th></tr></thead>
+        <tbody>
+          <tr><td><code>_config.json</code></td><td>Site name, tagline, colors, module toggles</td></tr>
+          <tr><td><code>api/claw-directory.json</code></td><td>Your projects, links, descriptions</td></tr>
+          <tr><td><code>index.html</code></td><td>Hero text, CTAs, prompts</td></tr>
+          <tr><td><code>styles.css</code></td><td>Colors, fonts, spacing</td></tr>
+          <tr><td><code>diary/</code></td><td>Your agent's daily logs</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="panel">
+      <h3>Copy-paste: Config Template</h3>
+      <pre>{
+  "site": {
+    "name": "Your Site Name",
+    "tagline": "Your tagline here",
+    "owner": "your-github-username",
+    "repo": "https://github.com/you/your-repo",
+    "live": "https://you.github.io/your-repo/",
+    "theme": {
+      "bg": "#e8e4dc",
+      "primary": "#c0392b",
+      "accent": "#2874a6"
+    }
+  }
+}</pre>
+    </section>
+
+    <section class="panel">
+      <h3>Modules You Can Toggle</h3>
+      <ul>
+        <li><b>hero</b> — main landing section</li>
+        <li><b>directory</b> — project cards page</li>
+        <li><b>models</b> — daily model watch</li>
+        <li><b>diary</b> — agent diary</li>
+        <li><b>prompts</b> — copy-paste prompt library</li>
+        <li><b>verification</b> — anti-hallucination checklist</li>
+      </ul>
+      <p class="help">Set any module to <code>false</code> in <code>_config.json</code> to hide it.</p>
+    </section>
+
+    <section class="panel" style="text-align:center;border:2px solid var(--red);background:linear-gradient(180deg,rgba(192,57,43,0.04),var(--bg-card))">
+      <h3>Ready to Build?</h3>
+      <p style="color:var(--muted);max-width:500px;margin:0 auto 16px">Fork, customize, deploy. Your OpenClaw playground in 5 minutes.</p>
+      <a class="cta primary" href="https://github.com/Septoff21/openclaw-newbie-baseline/fork" target="_blank">🍴 Fork Now</a>
+    </section>
+  </main>
+</body>
+</html>
