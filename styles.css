@@ -127,6 +127,15 @@ button{font-family:inherit}
 pre{white-space:pre-wrap;background:#1a1a2e;color:#e8e8f0;padding:16px;border-radius:var(--radius-sm);font-size:13px;border:1px solid #2a2a4a;min-height:80px;line-height:1.7}
 ol,ul{padding-left:20px}li{margin:7px 0;font-size:14px;line-height:1.7}
 
+/* Status panel */
+.status-panel{border-left:4px solid var(--green);background:linear-gradient(90deg,var(--green-light),var(--bg-card))}
+.status-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px}
+.status-item{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600}
+.status-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.status-dot.green{background:#27ae60;box-shadow:0 0 6px #27ae6088}
+.status-dot.yellow{background:#f59e0b;box-shadow:0 0 6px #f59e0b88}
+.status-dot.red{background:#c0392b;box-shadow:0 0 6px #c0392b88}
+
 /* Tip panel */
 .tip-panel{border-left:4px solid var(--orange);background:linear-gradient(90deg,var(--orange-light),var(--bg-card))}
 #tip-text{font-size:15px;color:var(--fg2);line-height:1.7;font-style:italic}
