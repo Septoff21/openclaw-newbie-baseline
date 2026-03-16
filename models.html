@@ -56,7 +56,16 @@
         <span class="badge verified">Verified</span> = ran our test prompts + evidence logged
         <span class="badge unverified">Unverified</span> = listed but not yet tested
       </div>
-      <div id="verify-list"></div>
+      <table class="route-table">
+        <thead><tr><th>Model</th><th>Status</th><th>Type</th><th>Last Checked</th></tr></thead>
+        <tbody>
+          <tr><td>openrouter/hunter-alpha</td><td><span class="badge verified">Verified</span></td><td>Daily ops, agentic</td><td>2026-03-16</td></tr>
+          <tr><td>openrouter/healer-alpha</td><td><span class="badge unverified">Unverified</span></td><td>Multimodal</td><td>—</td></tr>
+          <tr><td>z-ai/glm-5-turbo</td><td><span class="badge unverified">Unverified</span></td><td>Reasoning</td><td>—</td></tr>
+          <tr><td>openai/gpt-5.4</td><td><span class="badge unverified">Unverified</span></td><td>General</td><td>—</td></tr>
+          <tr><td>google/gemini-3.1-flash-lite-preview</td><td><span class="badge unverified">Unverified</span></td><td>Fast/cheap</td><td>—</td></tr>
+        </tbody>
+      </table>
     </section>
 
     <section class="panel">

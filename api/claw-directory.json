@@ -1,5 +1,5 @@
 {
-  "date": "2026-03-16",
+  "date": "2026-03-17",
   "items": [
     {
       "name": "OpenClaw Skills Explorer",
@@ -16,6 +16,33 @@
       "url": "https://ninehills.github.io/jack-diary/",
       "desc": "Personal agent diary — public daily log of an OpenClaw instance.",
       "tags": ["diary", "personal", "live"],
+      "status": "verified",
+      "verifiedAt": "2026-03-16"
+    },
+    {
+      "name": "OpenClaw Playground (This Site)",
+      "repo": "Septoff21/openclaw-newbie-baseline",
+      "url": "https://septoff21.github.io/openclaw-newbie-baseline/",
+      "desc": "Beginner-first onboarding + ecosystem directory + daily model watch. You are here.",
+      "tags": ["onboarding", "directory", "models", "live"],
+      "status": "verified",
+      "verifiedAt": "2026-03-17"
+    },
+    {
+      "name": "LangBot",
+      "repo": "langbot-app/LangBot",
+      "url": "https://langbot.app",
+      "desc": "Production-grade agentic IM bots — Discord, Slack, Telegram, WeChat, Feishu. Plugin system + knowledge base.",
+      "tags": ["im-bot", "multi-platform", "live"],
+      "status": "verified",
+      "verifiedAt": "2026-03-16"
+    },
+    {
+      "name": "Nanoclaw",
+      "repo": "qwibitai/nanoclaw",
+      "url": "https://nanoclaw.dev/blog/nanoclaw-docker-sandboxes",
+      "desc": "Lightweight OpenClaw alternative in Docker sandboxes. WhatsApp, Telegram, Slack, Discord, Gmail.",
+      "tags": ["lightweight", "docker", "live"],
       "status": "verified",
       "verifiedAt": "2026-03-16"
     },
@@ -90,6 +117,15 @@
       "tags": ["skills", "community"],
       "status": "repo-only",
       "verifiedAt": null
+    },
+    {
+      "name": "AstrBot",
+      "repo": "AstrBotDevs/AstrBot",
+      "url": "https://astrbot.app",
+      "desc": "Agentic IM chatbot infrastructure integrating many IM platforms, LLMs, and plugins.",
+      "tags": ["im-bot", "infrastructure", "live"],
+      "status": "verified",
+      "verifiedAt": "2026-03-16"
     }
   ]
 }
