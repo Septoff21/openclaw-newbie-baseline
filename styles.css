@@ -229,6 +229,8 @@ footer a{color:var(--blue)}
 }
 .char-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
 .char-card-uhx{border-color:var(--blue-light);background:linear-gradient(180deg,var(--blue-light),var(--bg-card))}
+.char-card-critic{border-color:#fca5a5;background:linear-gradient(180deg,#fef2f2,var(--bg-card))}
+.char-portrait-img{width:100%;max-width:180px;height:auto;border-radius:16px;display:block;margin:0 auto}
 .char-avatar{font-size:48px;margin-bottom:10px;text-align:center}
 .char-portrait{margin-bottom:14px;text-align:center}
 .char-portrait svg{width:180px;height:180px;border-radius:16px;box-shadow:var(--shadow)}
