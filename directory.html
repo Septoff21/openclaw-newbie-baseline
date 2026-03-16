@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Claw Directory — OpenClaw Playground</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <p class="eyebrow">OpenClaw Playground</p>
+    <h1>🦞 Claw Directory</h1>
+    <p class="subtitle">Verified live sites and repos — cards with one-click open, repo link, and copy prompt.</p>
+    <div class="hero-cta">
+      <a class="cta primary" href="./">Back to Home</a>
+      <a class="cta" href="./models.html">Model Watch</a>
+      <a class="cta" href="./diary.html">Diary</a>
+    </div>
+  </header>
+  <main>
+    <section class="panel">
+      <h3>Filters</h3>
+      <div class="filter-row">
+        <button class="filter active" data-tag="all">All</button>
+        <button class="filter" data-tag="verified">✅ Verified Live</button>
+        <button class="filter" data-tag="repo-only">📦 Repo Only</button>
+        <button class="filter" data-tag="skills">🔧 Skills</button>
+        <button class="filter" data-tag="diary">📖 Diary</button>
+        <button class="filter" data-tag="security">🛡️ Security</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h3>Submit Your Project</h3>
+      <p>Have an OpenClaw project with a live URL? Open a PR against <code>api/claw-directory.json</code> in the repo.</p>
+    </section>
+
+    <div id="directory-grid" class="dir-grid"></div>
+  </main>
+  <script src="./js/directory-page.js"></script>
+</body>
+</html>

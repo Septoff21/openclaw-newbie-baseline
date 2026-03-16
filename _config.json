@@ -1,0 +1,35 @@
+{
+  "site": {
+    "name": "OpenClaw Playground",
+    "tagline": "From "I don't know" → "I can run it" → "I can customize it"",
+    "owner": "Septoff21",
+    "repo": "https://github.com/Septoff21/openclaw-newbie-baseline",
+    "live": "https://septoff21.github.io/openclaw-newbie-baseline/",
+    "theme": {
+      "bg": "#0b1021",
+      "primary": "#6a5cff",
+      "accent": "#00d4ff",
+      "pink": "#ff4aa5"
+    },
+    "modules": {
+      "hero": true,
+      "directory": true,
+      "models": true,
+      "diary": true,
+      "prompts": true,
+      "verification": true
+    }
+  },
+  "directory": {
+    "sources": {
+      "live": "./api/claw-live-sites.json",
+      "models": "./api/models-daily.json"
+    },
+    "refresh": "auto via scripts/model-watch-openrouter.sh"
+  },
+  "diary": {
+    "enabled": true,
+    "source": "./diary/",
+    "template": "./diary/template.md"
+  }
+}

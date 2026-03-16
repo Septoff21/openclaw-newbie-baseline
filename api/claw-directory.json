@@ -1,0 +1,95 @@
+{
+  "date": "2026-03-16",
+  "items": [
+    {
+      "name": "OpenClaw Skills Explorer",
+      "repo": "Cluka-399/openclaw-skills-explorer",
+      "url": "https://Cluka-399.github.io/openclaw-skills-explorer/",
+      "desc": "Browse and discover OpenClaw skills — card-based directory.",
+      "tags": ["directory", "skills", "live"],
+      "status": "verified",
+      "verifiedAt": "2026-03-16"
+    },
+    {
+      "name": "Jack Diary",
+      "repo": "ninehills/jack-diary",
+      "url": "https://ninehills.github.io/jack-diary/",
+      "desc": "Personal agent diary — public daily log of an OpenClaw instance.",
+      "tags": ["diary", "personal", "live"],
+      "status": "verified",
+      "verifiedAt": "2026-03-16"
+    },
+    {
+      "name": "OpenClaw Console",
+      "repo": "xigpz/openclaw-console",
+      "url": "",
+      "desc": "Visual admin panel for OpenClaw — config, model, and skills management.",
+      "tags": ["admin", "dashboard"],
+      "status": "repo-only",
+      "verifiedAt": null
+    },
+    {
+      "name": "Lobster Guard",
+      "repo": "zhuowater/lobster-guard",
+      "url": "",
+      "desc": "AI Agent security gateway — prompt injection detection, content audit, user-ID routing.",
+      "tags": ["security", "gateway"],
+      "status": "repo-only",
+      "verifiedAt": null
+    },
+    {
+      "name": "EverMemOS",
+      "repo": "EverMind-AI/EverMemOS",
+      "url": "",
+      "desc": "Long-term memory for 24/7 OpenClaw agents across LLMs and platforms.",
+      "tags": ["memory", "infrastructure"],
+      "status": "repo-only",
+      "verifiedAt": null
+    },
+    {
+      "name": "Awesome OpenClaw Skills",
+      "repo": "VoltAgent/awesome-openclaw-skills",
+      "url": "",
+      "desc": "5,400+ skills filtered and categorized from the official OpenClaw Skills Registry.",
+      "tags": ["skills", "directory", "awesome-list"],
+      "status": "repo-only",
+      "verifiedAt": null
+    },
+    {
+      "name": "Awesome OpenClaw Tutorial (CN)",
+      "repo": "xianyu110/awesome-openclaw-tutorial",
+      "url": "",
+      "desc": "Comprehensive Chinese tutorial — install, config, real cases, and pitfalls.",
+      "tags": ["tutorial", "chinese"],
+      "status": "repo-only",
+      "verifiedAt": null
+    },
+    {
+      "name": "OpenClaw Self-Healing Monitor",
+      "repo": "Garygaoxiang/openclaw-self-healing-monitor",
+      "url": "",
+      "desc": "Auto-recovery monitoring script for OpenClaw with Telegram notifications.",
+      "tags": ["monitoring", "reliability"],
+      "status": "repo-only",
+      "verifiedAt": null
+    },
+    {
+      "name": "Nanobot",
+      "repo": "HKUDS/nanobot",
+      "url": "",
+      "desc": "Ultra-lightweight OpenClaw alternative — minimal footprint.",
+      "tags": ["lightweight", "alternative"],
+      "status": "repo-only",
+      "verifiedAt": null
+    },
+    {
+      "name": "ProSkills.md",
+      "repo": "ProSkillsMD/proskills",
+      "url": "",
+      "desc": "Community-curated OpenClaw skill listings — browse, submit, and contribute.",
+      "tags": ["skills", "community"],
+      "status": "repo-only",
+      "verifiedAt": null
+    }
+  ]
+}
