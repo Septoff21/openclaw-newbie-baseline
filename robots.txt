@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://septoff21.github.io/openclaw-newbie-baseline/sitemap.xml

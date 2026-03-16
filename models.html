@@ -71,8 +71,23 @@
       </table>
     </section>
 
+    <section class="panel" style="border-left:4px solid #e67e22;background:linear-gradient(90deg,#fef3e2,var(--bg-card))">
+      <h3>⚠️ Context Warning: Different Models Behave Differently</h3>
+      <p class="help">Not all models handle high context the same way. Watch for these behaviors:</p>
+      <table class="route-table">
+        <thead><tr><th>Model Type</th><th>Context Limit</th><th>Behavior at 70%+</th><th>Behavior at 90%+</th></tr></thead>
+        <tbody>
+          <tr><td>Free (Hunter Alpha)</td><td>200k</td><td>Generally stable</td><td>May truncate older context</td></tr>
+          <tr><td>Premium (GPT-5.4, Claude)</td><td>128k-1M</td><td>Good retention</td><td>Graceful degradation</td></tr>
+          <tr><td>Flash (Gemini Lite)</td><td>1M+</td><td>Fast but shallow</td><td>May hallucinate details</td></tr>
+          <tr><td>Reasoning (GLM-5, O-series)</td><td>64k-200k</td><td>Best for analysis</td><td>Slower, more careful</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:10px"><b>Rule / 规则：</b> Always check context % before long tasks. Use <code>/status</code> to see your current usage.<br/>长时间任务前始终检查上下文使用率。用 <code>/status</code> 查看当前用量。</p>
+    </section>
+
     <section class="panel">
-      <h3>Task Routing (Verified Only)</h3>
+      <h3>Task Routing (Verified Only) / 任务路由（仅已验证）</h3>
       <table class="route-table">
         <thead><tr><th>Task Type</th><th>Preferred Model</th><th>Status</th></tr></thead>
         <tbody id="route-body">
