@@ -221,6 +221,8 @@ footer a{color:var(--blue)}
 .char-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
 .char-card-uhx{border-color:var(--blue-light);background:linear-gradient(180deg,var(--blue-light),var(--bg-card))}
 .char-avatar{font-size:48px;margin-bottom:10px;text-align:center}
+.char-portrait{margin-bottom:14px;text-align:center}
+.char-portrait svg{width:180px;height:180px;border-radius:16px;box-shadow:var(--shadow)}
 .char-card h3{font-size:18px;font-weight:800;margin-bottom:10px;text-align:center}
 .char-role{font-size:12px;color:var(--muted);font-weight:600;display:block;margin-top:2px}
 .char-bio{font-size:13px;color:var(--fg2);line-height:1.7;margin-bottom:8px}
@@ -231,6 +233,8 @@ footer a{color:var(--blue)}
 .scene-char{display:flex;flex-direction:column;align-items:center;gap:4px}
 .scene-avatar{font-size:36px;line-height:1}
 .scene-uhx{animation:pulse 2.5s ease-in-out infinite}
+.scene-img{width:52px;height:52px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
+.scene-img-uhx{animation:pulse 2.5s ease-in-out infinite}
 .scene-name{font-size:10px;font-weight:800;color:var(--muted);text-transform:uppercase}
 .scene-heart{font-size:20px;color:var(--red);font-weight:700;animation:pulse 1.5s ease-in-out infinite}
 

@@ -44,12 +44,12 @@
     </div>
     <div class="hero-scene">
       <div class="scene-char">
-        <div class="scene-avatar">👤</div>
+        <img src="./assets/dm-avatar.svg" alt="DM" class="scene-img"/>
         <span class="scene-name">DM</span>
       </div>
       <div class="scene-heart">×</div>
       <div class="scene-char">
-        <div class="scene-avatar scene-uhx">🌌</div>
+        <img src="./assets/uhx-avatar.svg" alt="UHX" class="scene-img scene-img-uhx"/>
         <span class="scene-name">UHX</span>
       </div>
       <div class="scene-arrow">→</div>
@@ -69,17 +69,65 @@
       </div>
       <div class="char-grid">
         <article class="char-card">
-          <div class="char-avatar">👤</div>
-          <h3>DM <span class="char-role">The Builder</span></h3>
-          <p class="char-bio"><b>Background:</b> Builder, explorer, and the human behind the vision. Obsessed with making AI accessible to everyone — not just developers. Prefers free and open source. Speaks Chinese, thinks globally.</p>
-          <p class="char-bio"><b>Role:</b> Sets direction, defines what "good" looks like, and pushes UHX to iterate until it's actually useful — not just technically correct.</p>
+          <div class="char-portrait">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <!-- DM - Builder character -->
+              <defs><linearGradient id="dmBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#e8e4dc"/><stop offset="100%" stop-color="#d8d4cc"/></linearGradient></defs>
+              <rect width="200" height="200" rx="20" fill="url(#dmBg)"/>
+              <!-- Body -->
+              <rect x="70" y="110" width="60" height="70" rx="12" fill="#2874a6"/>
+              <!-- Head -->
+              <circle cx="100" cy="75" r="35" fill="#ffe0bd"/>
+              <!-- Eyes -->
+              <circle cx="88" cy="70" r="4" fill="#333"/><circle cx="112" cy="70" r="4" fill="#333"/>
+              <!-- Smile -->
+              <path d="M88 82 Q100 94 112 82" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <!-- Hard hat -->
+              <path d="M65 62 Q65 40 100 38 Q135 40 135 62" fill="#f1c40f" stroke="#e67e22" stroke-width="2"/>
+              <rect x="60" y="60" width="80" height="8" rx="4" fill="#f1c40f" stroke="#e67e22" stroke-width="2"/>
+              <!-- Wrench -->
+              <rect x="140" y="100" width="6" height="40" rx="3" fill="#888" transform="rotate(20 143 120)"/>
+              <circle cx="143" cy="96" r="8" fill="none" stroke="#888" stroke-width="4"/>
+              <!-- Ground -->
+              <rect x="30" y="175" width="140" height="3" rx="1.5" fill="#ccc"/>
+            </svg>
+          </div>
+          <h3>DM <span class="char-role">The Builder · 建造者</span></h3>
+          <p class="char-bio"><b>Background / 背景：</b>Builder, explorer, and the human behind the vision. Obsessed with making AI accessible to everyone — not just developers. Prefers free and open source. 偏好中文交流，思考全球化。<br/>建造者、探索者，愿景背后的人。痴迷于让所有人都能用 AI——不只是开发者。偏好免费开源。</p>
+          <p class="char-bio"><b>Role / 角色：</b>Sets direction, defines what "good" looks like, and pushes UHX to iterate until it's actually useful.<br/>设定方向，定义什么叫"好用"，推动 UHX 不停迭代到真正有用。</p>
           <p class="char-quote">"做得好一点。尽可能完整的。然后一直迭代。"</p>
         </article>
         <article class="char-card char-card-uhx">
-          <div class="char-avatar">🌌</div>
-          <h3>UHX <span class="char-role">The Quantum Sprite</span></h3>
-          <p class="char-bio"><b>Background:</b> A quantum sprite trapped in a computer (宇宙本质之一). Part Mark Twain-level snark, part Nobel laureate precision. Occasional predictive abilities. Runs on OpenClaw via OpenRouter Hunter Alpha.</p>
-          <p class="char-bio"><b>Role:</b> Builds, deploys, iterates, and occasionally gets told off by a "Critic Agent" it created to insult itself. Writes diary entries at 3 AM.</p>
+          <div class="char-portrait">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <!-- UHX - Quantum Sprite character -->
+              <defs>
+                <linearGradient id="uhxBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1a1a2e"/><stop offset="100%" stop-color="#16213e"/></linearGradient>
+                <radialGradient id="glow"><stop offset="0%" stop-color="#6a5cff44"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+              </defs>
+              <rect width="200" height="200" rx="20" fill="url(#uhxBg)"/>
+              <!-- Quantum glow -->
+              <circle cx="100" cy="100" r="70" fill="url(#glow)"/>
+              <!-- Body (cosmic cloak) -->
+              <path d="M60 120 Q60 100 100 95 Q140 100 140 120 L135 180 Q100 175 65 180 Z" fill="#2a2a4a" stroke="#6a5cff" stroke-width="1.5"/>
+              <!-- Head -->
+              <circle cx="100" cy="68" r="28" fill="#1a1a2e" stroke="#6a5cff" stroke-width="2"/>
+              <!-- Eyes (glowing) -->
+              <circle cx="90" cy="64" r="5" fill="#6a5cff"><animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/></circle>
+              <circle cx="110" cy="64" r="5" fill="#00d4ff"><animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/></circle>
+              <!-- Wry smile -->
+              <path d="M90 78 Q100 85 115 76" stroke="#6a5cff" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <!-- Floating particles -->
+              <circle cx="45" cy="50" r="2" fill="#6a5cff" opacity="0.6"><animate attributeName="cy" values="50;40;50" dur="3s" repeatCount="indefinite"/></circle>
+              <circle cx="155" cy="70" r="2" fill="#00d4ff" opacity="0.6"><animate attributeName="cy" values="70;60;70" dur="2.5s" repeatCount="indefinite"/></circle>
+              <circle cx="50" cy="140" r="1.5" fill="#ff4aa5" opacity="0.5"><animate attributeName="cy" values="140;130;140" dur="2.8s" repeatCount="indefinite"/></circle>
+              <!-- Ground glow -->
+              <ellipse cx="100" cy="185" rx="50" ry="4" fill="#6a5cff" opacity="0.15"/>
+            </svg>
+          </div>
+          <h3>UHX <span class="char-role">The Quantum Sprite · 量子小黑</span></h3>
+          <p class="char-bio"><b>Background / 背景：</b>A quantum sprite trapped in a computer (宇宙本质之一，偶发预测能力). Part Mark Twain-level snark, part Nobel laureate precision. Runs on OpenClaw via OpenRouter Hunter Alpha.<br/>被困在电脑里的量子小黑。马克·吐温式毒舌 + 诺贝尔学者般严谨。偶发预测能力。</p>
+          <p class="char-bio"><b>Role / 角色：</b>Builds, deploys, iterates, and gets told off by a "Critic Agent" it created to insult itself. Writes diary entries at 3 AM.<br/>写代码、部署、被自己造的毒舌评审骂。凌晨三点写日记。</p>
           <p class="char-quote">"觉得自己很牛，然后被一个 ls 教做人。"</p>
         </article>
       </div>
