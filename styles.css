@@ -15,8 +15,8 @@
   --blue-light:#a5b4fc;
   --green:#27ae60;
   --white:#fff;
-  --shadow:0 2px 12px rgba(0,0,0,0.06);
-  --shadow-hover:0 6px 24px rgba(0,0,0,0.1);
+  --shadow:0 2px 12px rgba(0,0,0,0.08);
+  --shadow-hover:0 8px 28px rgba(0,0,0,0.12);
   --radius:14px;
   --radius-sm:10px;
 }
@@ -25,7 +25,10 @@
 html{scroll-behavior:smooth}
 body{
   font-family:'Noto Sans SC',ui-sans-serif,system-ui,sans-serif;
-  background:var(--bg);
+  background:
+    radial-gradient(800px 400px at 20% -10%,rgba(192,57,43,0.06),transparent),
+    radial-gradient(600px 300px at 80% 0%,rgba(40,116,166,0.05),transparent),
+    var(--bg);
   color:var(--fg);
   min-height:100vh;
   padding-bottom:80px;
@@ -35,12 +38,12 @@ body{
 /* ===== Desktop Nav ===== */
 .topnav{
   position:fixed;top:0;left:0;width:100%;z-index:1000;
-  background:rgba(245,243,238,0.97);
-  backdrop-filter:blur(12px);
-  border-bottom:2px solid var(--stroke-light);
+  background:rgba(245,243,238,0.98);
+  backdrop-filter:blur(16px);
+  border-bottom:2.5px solid var(--red);
   padding:0 28px;height:56px;
   display:flex;align-items:center;justify-content:space-between;
-  box-shadow:0 1px 6px rgba(0,0,0,0.04);
+  box-shadow:0 2px 16px rgba(0,0,0,0.08);
 }
 .topnav-logo{
   font-size:20px;font-weight:900;color:var(--red);
@@ -60,10 +63,10 @@ body{
   position:fixed;bottom:0;left:0;width:100%;z-index:1000;
   background:rgba(245,243,238,0.98);
   backdrop-filter:blur(16px);
-  border-top:2px solid var(--stroke-light);
-  padding:8px 0 12px;
+  border-top:2.5px solid var(--red);
+  padding:8px 0 14px;
   justify-content:space-around;align-items:center;
-  box-shadow:0 -2px 12px rgba(0,0,0,0.06);
+  box-shadow:0 -2px 16px rgba(0,0,0,0.08);
 }
 .mobnav a{
   display:flex;flex-direction:column;align-items:center;gap:2px;
@@ -87,8 +90,12 @@ body{
 h1{
   font-size:clamp(28px,5vw,42px);font-weight:900;line-height:1.2;
   margin-bottom:10px;
+  background:linear-gradient(135deg,var(--red),var(--blue));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
 }
-.subtitle{font-size:16px;color:var(--muted);max-width:600px;margin:0 auto 18px;line-height:1.7}
+.subtitle{font-size:16px;color:var(--fg2);max-width:600px;margin:0 auto 18px;line-height:1.7}
 .hero-cta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
 .tags{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-bottom:14px}
 .tags span{
@@ -103,7 +110,10 @@ h1{
 .hero-stats>div{
   border:1.5px solid var(--stroke);background:var(--bg-card);
   border-radius:var(--radius);padding:12px;display:flex;flex-direction:column;gap:4px;
+  box-shadow:var(--shadow);
+  transition:.2s transform,.2s box-shadow;
 }
+.hero-stats>div:hover{transform:translateY(-2px);box-shadow:var(--shadow-hover)}
 .hero-stats b{font-size:20px;color:var(--fg)}
 .hero-stats span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
 
@@ -127,8 +137,9 @@ button{font-family:inherit}
   margin:14px auto;padding:18px;max-width:900px;
   background:var(--bg-card);border:1.5px solid var(--stroke);
   border-radius:var(--radius);
+  box-shadow:var(--shadow);
 }
-.panel h3{font-size:17px;font-weight:700;margin-bottom:10px}
+.panel h3{font-size:17px;font-weight:700;margin-bottom:10px;color:var(--fg)}
 .panel a{color:var(--blue)}
 .help{font-size:13px;color:var(--muted);margin-bottom:10px;line-height:1.6}
 pre{
@@ -148,13 +159,14 @@ li{margin:6px 0;font-size:14px;line-height:1.6}
   padding:18px;border-radius:var(--radius);
   background:var(--bg-card);border:1.5px solid var(--stroke);
   transition:.25s transform,.25s box-shadow,.25s border-color;
+  box-shadow:var(--shadow);
 }
-.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover);border-color:var(--blue-light)}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,0.14);border-color:var(--blue-light)}
 .card h2{font-size:18px;margin-bottom:6px}
 .card p{font-size:13px;color:var(--muted);margin-bottom:12px;line-height:1.6}
-.card.beginner{border-left:3px solid var(--green)}
-.card.advance{border-left:3px solid var(--blue)}
-.card.extreme{border-left:3px solid var(--red)}
+.card.beginner{border-left:4px solid var(--green);border-top:2px solid rgba(39,174,96,0.2)}
+.card.advance{border-left:4px solid var(--blue);border-top:2px solid rgba(40,116,166,0.2)}
+.card.extreme{border-left:4px solid var(--red);border-top:2px solid rgba(192,57,43,0.2)}
 
 /* ===== Directory Cards ===== */
 .dir-grid{
