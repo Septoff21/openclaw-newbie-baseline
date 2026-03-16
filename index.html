@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦞</text></svg>" />
-  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦞</text></svg>" />
   <title>Home — OpenClaw Playground</title>
   <meta name="description" content="Learn OpenClaw by copying prompts. Beginner to advanced, free and open source. Pick a prompt, paste it, get a working setup." />
   <meta property="og:title" content="Home — OpenClaw Playground" />
-  <meta property="og:description" content="Learn OpenClaw by copying prompts. Beginner to advanced, free and open source. Pick a prompt, paste it, get a working setup." />
+  <meta property="og:description" content="Learn OpenClaw by copying prompts. Beginner to advanced, free and open source." />
   <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦞</text></svg>" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦞</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600;700;900&display=swap" rel="stylesheet" />
@@ -33,87 +33,111 @@
     <a href="./fork.html"><span class="mobnav-icon">🔧</span>Fork</a>
   </nav>
 
+  <!-- Hero -->
   <header class="hero">
-    <p class="eyebrow">OpenClaw Playground</p>
-    <h1>Learn by <span style="color:var(--red);position:relative">Copying<span style="position:absolute;bottom:-2px;left:0;right:0;height:3px;background:var(--red);border-radius:2px;opacity:.6"></span></span></h1>
-    <p class="subtitle">Pick a prompt, paste it into any AI chat, and get a working OpenClaw setup. No install guide needed — just copy and go.</p>
-    <div class="tags">
-      <span>Free</span><span>Open Source</span><span>Natural Language</span><span>No-code Friendly</span>
+    <p class="eyebrow">Open Source · Free · Community-Driven</p>
+    <h1>Your AI Agent,<br/><span style="color:var(--red)">Autonomous</span> & <span style="color:var(--blue)">Trusted</span></h1>
+    <p class="subtitle">OpenClaw Playground gives your AI agent a brain, a diary, and a safety net.<br/>Copy a prompt. Paste it. Watch it work.</p>
+    <div class="hero-cta">
+      <a class="cta primary" href="#journey">Start in 30 Seconds</a>
+      <a class="cta" href="./directory.html">See What Others Built</a>
     </div>
-    <div class="hero-stats">
-      <div><b>3</b><span>learning levels</span></div>
-      <div><b>1-click</b><span>copy prompts</span></div>
-      <div><b>30 sec</b><span>to start</span></div>
+    <div class="hero-scene">
+      <div class="scene-lobster">🦞</div>
+      <div class="scene-arrow">→</div>
+      <div class="scene-brain">🧠</div>
+      <div class="scene-arrow">→</div>
+      <div class="scene-check">✅</div>
     </div>
   </header>
 
   <main>
-    <!-- SECTION 1: Pick your level + copy prompt -->
-    <section class="grid" id="journey">
-      <article class="card beginner">
-        <h2>🌱 Beginner</h2>
-        <p>"I want my AI assistant to just work."</p>
-        <details class="prompt-preview"><summary>Preview prompt</summary><code>Set up my OpenClaw with safe defaults. Keep only core plugins, enable memory, install beginner skills, show verification commands...</code></details>
-        <button data-copy="beginner">Copy prompt</button>
-      </article>
-      <article class="card advance">
-        <h2>⚡ Advance</h2>
-        <p>"I want to trust what my AI tells me."</p>
-        <details class="prompt-preview"><summary>Preview prompt</summary><code>Make my OpenClaw more reliable. Add context warnings, verification checklist, document roles/tools, add rollback steps...</code></details>
-        <button data-copy="advance">Copy prompt</button>
-      </article>
-      <article class="card extreme">
-        <h2>🚀 Extreme</h2>
-        <p>"I want my AI to run itself."</p>
-        <details class="prompt-preview"><summary>Preview prompt</summary><code>Design my OpenClaw for autonomous operation. Multi-agent routing, memory scopes, approval gates, incident response...</code></details>
-        <button data-copy="extreme">Copy prompt</button>
-      </article>
+    <!-- Three paths -->
+    <section class="section-block" id="journey">
+      <div class="section-header">
+        <p class="section-label">Choose Your Path</p>
+        <h2 class="section-title">Where are you starting from?</h2>
+      </div>
+      <div class="grid">
+        <article class="card beginner">
+          <div class="card-icon">🌱</div>
+          <h2>Beginner</h2>
+          <p class="card-quote">"I want my AI assistant to just work."</p>
+          <p class="card-desc">Safe defaults, one memory plugin, core skills only. Copy the prompt, paste it, get a working setup in 30 seconds.</p>
+          <details class="prompt-preview"><summary>Preview prompt</summary><code>Set up my OpenClaw with safe defaults. Keep only core plugins, enable memory, install beginner skills, show verification commands...</code></details>
+          <button data-copy="beginner">Copy prompt</button>
+        </article>
+        <article class="card advance">
+          <div class="card-icon">⚡</div>
+          <h2>Advance</h2>
+          <p class="card-quote">"I want to trust what my AI tells me."</p>
+          <p class="card-desc">Add verification loops, context warnings, and rollback plans. Your agent becomes reliable, not just fast.</p>
+          <details class="prompt-preview"><summary>Preview prompt</summary><code>Make my OpenClaw more reliable. Add context warnings, verification checklist, document roles/tools, add rollback steps...</code></details>
+          <button data-copy="advance">Copy prompt</button>
+        </article>
+        <article class="card extreme">
+          <div class="card-icon">🚀</div>
+          <h2>Extreme</h2>
+          <p class="card-quote">"I want my AI to run itself."</p>
+          <p class="card-desc">Multi-agent routing, memory governance, approval gates, incident response. Full autonomous operation.</p>
+          <details class="prompt-preview"><summary>Preview prompt</summary><code>Design my OpenClaw for autonomous operation. Multi-agent routing, memory scopes, approval gates, incident response...</code></details>
+          <button data-copy="extreme">Copy prompt</button>
+        </article>
+      </div>
     </section>
 
+    <!-- Prompt output -->
     <section class="panel">
-      <h3>📋 Your Prompt</h3>
-      <p class="help">Click a card above, then paste this into any AI chat (ChatGPT, Claude, etc.)</p>
+      <h3>📋 Your Prompt — Ready to Copy</h3>
+      <p class="help">Click a card above, then paste this into any AI chat (ChatGPT, Claude, Gemini, etc.)</p>
       <pre id="out">Click a card above to load the prompt.</pre>
     </section>
 
-    <!-- SECTION 2: Quick verification -->
-    <section class="panel" id="verify">
-      <h3>✅ Before You Trust the Output</h3>
-      <details>
-        <summary style="cursor:pointer;font-weight:700;color:var(--blue)">Show verification checklist (4 locks)</summary>
-        <ol style="margin-top:12px">
-          <li><b>🔒 Scope:</b> Did it restate your goal?</li>
-          <li><b>🔍 Evidence:</b> Did it show commands/URLs used?</li>
-          <li><b>📊 Result:</b> Did it prove what changed?</li>
-          <li><b>⚠️ Risk:</b> Did it mention blockers/rollback?</li>
-        </ol>
-        <p style="margin-top:10px"><a href="./verification.html">Full verification guide →</a></p>
-      </details>
-    </section>
-
-    <!-- SECTION 3: What's new today -->
-    <section class="panel">
-      <h3>📡 New Models Today</h3>
-      <p class="help">Auto-updated daily. <a href="./models.html">See full list →</a></p>
-      <div id="home-models" class="model-cards"><p class="help">Loading latest models...</p></div>
-    </section>
-
-    <!-- SECTION 4: Featured -->
-    <section class="panel" style="border-left:4px solid var(--blue);background:linear-gradient(90deg,rgba(40,116,166,0.04),var(--bg-card))">
+    <!-- Tip of the Day -->
+    <section class="panel tip-panel">
       <h3>💡 Tip of the Day</h3>
       <p id="tip-text">Loading tip...</p>
     </section>
 
-    <!-- SECTION 5: Bottom CTA -->
-    <section class="panel" style="text-align:center;border:2px solid var(--red);background:linear-gradient(180deg,rgba(192,57,43,0.04),var(--bg-card))">
-      <h3>🦞 Ready to start?</h3>
-      <p style="color:var(--muted);max-width:500px;margin:0 auto 16px">Pick a prompt above, paste it into your AI, and go. Free, open source, community-driven.</p>
+    <!-- New Models -->
+    <section class="panel">
+      <h3>📡 New Models Today</h3>
+      <p class="help">Auto-checked daily from OpenRouter. <a href="./models.html">Full model watch →</a></p>
+      <div id="home-models" class="model-cards"><p class="help">Loading latest models...</p></div>
+    </section>
+
+    <!-- Verification (collapsible) -->
+    <section class="panel verify-panel">
+      <h3>✅ Before You Trust the Output</h3>
+      <details>
+        <summary style="cursor:pointer;font-weight:700;color:var(--blue)">Show the 4-lock verification checklist</summary>
+        <div class="verify-locks">
+          <div class="lock lock-scope"><div class="lock-icon">🔒</div><b>Scope</b><span>Did it restate your goal?</span></div>
+          <div class="lock lock-evidence"><div class="lock-icon">🔍</div><b>Evidence</b><span>Did it show commands/URLs?</span></div>
+          <div class="lock lock-result"><div class="lock-icon">📊</div><b>Result</b><span>Did it prove what changed?</span></div>
+          <div class="lock lock-risk"><div class="lock-icon">⚠️</div><b>Risk</b><span>Did it mention blockers?</span></div>
+        </div>
+        <p style="margin-top:12px"><a href="./verification.html">Full verification guide →</a></p>
+      </details>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="panel cta-final">
+      <h3>🦞 Ready to give your agent a brain?</h3>
+      <p>Free. Open source. No credit card. No account. Just copy and go.</p>
       <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
         <a class="cta primary" href="#journey">Get Started</a>
         <a class="cta" href="https://github.com/Septoff21/openclaw-newbie-baseline" target="_blank">⭐ Star on GitHub</a>
+        <a class="cta" href="./diary.html">📖 Read the Diary</a>
       </div>
     </section>
   </main>
+
+  <footer>
+    Built with 🦞 <a href="https://github.com/openclaw/openclaw">OpenClaw</a> ·
+    <a href="https://github.com/Septoff21/openclaw-newbie-baseline">GitHub</a> ·
+    MIT License
+  </footer>
 
   <div class="toast" id="toast">✅ Prompt copied! Paste it in your AI chat.</div>
 
@@ -130,8 +154,8 @@
         out.textContent = text;
         await navigator.clipboard.writeText(text);
         btn.textContent = 'Copied!';
-        const toast=document.getElementById('toast');
-        if(toast){toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2000);}
+        const toast = document.getElementById('toast');
+        if (toast) { toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 2000); }
         setTimeout(() => btn.textContent = 'Copy prompt', 1200);
       });
     });
@@ -169,26 +193,19 @@
       `).join('');
     }catch(e){}
 
-    // Tip of the Day
     const tips=[
       "Always verify AI output with the 4-lock system: Scope → Evidence → Result → Risk.",
       "Different models behave differently at high context. Watch your usage %.",
-      "Copy-paste prompts work best when you customize the goal to YOUR specific task.",
-      "If a model gives you a URL, curl it before trusting it. Dead links are common.",
+      "Copy-paste prompts work best when you customize the goal to YOUR task.",
+      "If a model gives you a URL, curl it before trusting it.",
       "Use 'plan → progress → blocker → summary' flow for every complex task.",
-      "Free models can be great for daily ops. Save expensive models for hard problems.",
-      "When in doubt, start with Beginner prompt and upgrade to Advance later.",
-      "Your agent learns from your corrections. Tell it what went wrong explicitly."
+      "Free models work great for daily ops. Save expensive models for hard problems.",
+      "When in doubt, start with Beginner prompt and upgrade later.",
+      "Your agent learns from your corrections. Tell it what went wrong."
     ];
     const tipEl=document.getElementById('tip-text');
     if(tipEl) tipEl.textContent=tips[new Date().getDate()%tips.length];
   })();
   </script>
-
-  <footer style="text-align:center;padding:24px;color:var(--muted);font-size:12px;border-top:1px solid var(--stroke-light);margin-top:24px">
-    Built with 🦞 <a href="https://github.com/openclaw/openclaw" style="color:var(--blue)">OpenClaw</a> · 
-    <a href="https://github.com/Septoff21/openclaw-newbie-baseline" style="color:var(--blue)">GitHub</a> · 
-    MIT License
-  </footer>
 </body>
 </html>
