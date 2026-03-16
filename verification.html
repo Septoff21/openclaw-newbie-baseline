@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verification Checklist — OpenClaw Playground</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="topnav">
+    <a class="topnav-logo" href="./">🦞 OpenClaw</a>
+    <div class="topnav-links">
+      <a href="./">Home</a>
+      <a href="./directory.html">Directory</a>
+      <a href="./models.html">Models</a>
+      <a href="./verification.html" class="active">Verify</a>
+      <a href="./diary.html">Diary</a>
+    </div>
+  </nav>
+  <nav class="mobnav">
+    <a href="./"><span class="mobnav-icon">🏠</span>Home</a>
+    <a href="./directory.html"><span class="mobnav-icon">🦞</span>Dir</a>
+    <a href="./models.html"><span class="mobnav-icon">📡</span>Models</a>
+    <a href="./verification.html" class="active"><span class="mobnav-icon">✅</span>Verify</a>
+    <a href="./diary.html"><span class="mobnav-icon">📖</span>Diary</a>
+  </nav>
+  <header class="hero">
+    <p class="eyebrow">OpenClaw Playground</p>
+    <h1>✅ Verification Checklist</h1>
+    <p class="subtitle">Don't trust output until you verify it. This checklist helps you catch hallucinations, missing steps, and false claims.</p>
+    <div class="hero-cta">
+      <a class="cta primary" href="./">Back to Home</a>
+      <a class="cta" href="#checklist">Jump to Checklist</a>
+    </div>
+  </header>
+  <main>
+    <section class="panel">
+      <h3>Why Verify?</h3>
+      <p>AI agents can sound confident while being wrong. This checklist adds a verification layer so you can trust the output.</p>
+      <ul>
+        <li><b>Hallucination risk:</b> models may invent URLs, commands, or facts</li>
+        <li><b>Context limits:</b> different models behave differently at high usage</li>
+        <li><b>Tool failures:</b> tool calls can silently fail or produce partial results</li>
+      </ul>
+    </section>
+
+    <section class="panel" id="checklist">
+      <h3>4-Lock Verification</h3>
+      <ol>
+        <li><b>🔒 Scope Lock:</b> Restate the goal in one sentence before execution</li>
+        <li><b>🔍 Evidence Lock:</b> Require exact commands, URLs, or file paths used</li>
+        <li><b>📊 Result Lock:</b> Show before/after or status code proof</li>
+        <li><b>⚠️ Risk Lock:</b> State blockers and rollback plan when relevant</li>
+      </ol>
+    </section>
+
+    <section class="panel">
+      <h3>Copy-paste: Verification Prompt</h3>
+      <pre id="verify-prompt">After completing the task, provide:
+1. Scope lock: What was the original goal?
+2. Evidence lock: List all commands/URLs used with exact output
+3. Result lock: What changed? Show before/after proof
+4. Risk lock: Any blockers? What's the rollback plan?
+
+If any lock is missing, say "INCOMPLETE" and explain what's missing.</pre>
+      <button class="cta primary" onclick="navigator.clipboard.writeText(document.getElementById('verify-prompt').textContent);this.textContent='Copied!';setTimeout(()=>this.textContent='Copy verification prompt',1200)">Copy verification prompt</button>
+    </section>
+
+    <section class="panel">
+      <h3>Context Warning Ladder</h3>
+      <p class="help">When your context usage hits these thresholds, take action:</p>
+      <table class="route-table">
+        <thead><tr><th>Level</th><th>Threshold</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td>🟡 Caution</td><td>70%</td><td>Start summarizing, prepare to compress</td></tr>
+          <tr><td>🟠 Warning</td><td>85%</td><td>Compress context, drop non-essential history</td></tr>
+          <tr><td>🔴 Critical</td><td>95%</td><td>Stop, save state, start fresh session</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="panel">
+      <h3>Red Flags (immediately re-verify if you see these)</h3>
+      <ul>
+        <li>❌ Agent claims a URL is live but won't show status code</li>
+        <li>❌ Agent says "it works" without showing output</li>
+        <li>❌ Agent skips the plan/progress/blocker/summary flow</li>
+        <li>❌ Agent uses vague phrases like "should be fine" or "probably works"</li>
+        <li>❌ Agent refuses to provide verification commands</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
