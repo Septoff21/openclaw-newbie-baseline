@@ -181,6 +181,9 @@ li{margin:7px 0;font-size:14px;line-height:1.7}
 .card:hover::before{opacity:1}
 .card h2{font-size:20px;margin-bottom:8px;font-weight:800}
 .card p{font-size:13px;color:var(--muted);margin-bottom:14px;line-height:1.7}
+.prompt-preview{margin-bottom:10px}
+.prompt-preview summary{font-size:11px;color:var(--blue);cursor:pointer;font-weight:700;padding:4px 0}
+.prompt-preview code{display:block;font-size:11px;color:var(--muted);background:var(--bg2);padding:8px;border-radius:8px;margin-top:6px;line-height:1.5;border:1px solid var(--stroke-light)}
 .card.beginner{border-left:4px solid var(--green)}
 .card.advance{border-left:4px solid var(--blue)}
 .card.extreme{border-left:4px solid var(--red)}
