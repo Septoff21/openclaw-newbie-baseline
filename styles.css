@@ -83,9 +83,9 @@ main{max-width:960px;margin:0 auto;padding:0 20px}
 .panel{
   background:var(--bg-card);border-radius:var(--radius);padding:24px;
   margin:20px 0;box-shadow:var(--shadow);border:1px solid var(--stroke);
-  transition:.3s;
+  transition:.35s cubic-bezier(.4,0,.2,1);
 }
-.panel:hover{box-shadow:var(--shadow-md)}
+.panel:hover{box-shadow:var(--shadow-md);transform:translateY(-1px)}
 .panel h3{font-size:17px;font-weight:800;margin-bottom:12px}
 .help{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.6}
 
@@ -99,7 +99,7 @@ main{max-width:960px;margin:0 auto;padding:0 20px}
 }
 .cta:hover,.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);border-color:var(--blue);color:var(--blue)}
 .cta.primary,.btn.primary{background:var(--red);color:var(--white);border-color:var(--red)}
-.cta.primary:hover{background:var(--red-dark);border-color:var(--red-dark);box-shadow:0 6px 24px rgba(192,57,43,0.25);color:var(--white)}
+.cta.primary:hover{background:var(--red-dark);border-color:var(--red-dark);box-shadow:0 8px 28px rgba(192,57,43,0.3);color:var(--white);transform:translateY(-3px)}
 .cta:active,.btn:active{transform:scale(0.97);transition:.1s}
 button{font-family:inherit}
 
@@ -110,9 +110,12 @@ button{font-family:inherit}
 .card{
   background:var(--bg-card);border-radius:var(--radius);padding:24px;
   box-shadow:var(--shadow);border:1px solid var(--stroke);
-  transition:.3s transform,.3s box-shadow;
+  transition:.35s cubic-bezier(.4,0,.2,1);
+  position:relative;overflow:hidden;
 }
-.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--blue));opacity:0;transition:.3s}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.card:hover::before{opacity:1}
 .card-icon{font-size:32px;margin-bottom:10px}
 .card h2{font-size:17px;font-weight:800;margin-bottom:8px}
 .card-quote{font-size:14px;color:var(--fg2);font-style:italic;margin-bottom:8px;line-height:1.6}
