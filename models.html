@@ -71,7 +71,7 @@
         <span class="badge verified">Verified</span> = ran our test prompts + evidence logged
         <span class="badge unverified">Unverified</span> = listed but not yet tested
       </div>
-      <table class="route-table">
+      <div class="route-table-wrapper"><table class="route-table">
         <thead><tr><th>Model</th><th>Status</th><th>Type</th><th>Last Checked</th></tr></thead>
         <tbody>
           <tr><td>openrouter/hunter-alpha</td><td><span class="badge verified">Verified</span></td><td>Daily ops, agentic</td><td>2026-03-16</td></tr>
@@ -80,13 +80,13 @@
           <tr><td>openai/gpt-5.4</td><td><span class="badge unverified">Unverified</span></td><td>General</td><td>—</td></tr>
           <tr><td>google/gemini-3.1-flash-lite-preview</td><td><span class="badge unverified">Unverified</span></td><td>Fast/cheap</td><td>—</td></tr>
         </tbody>
-      </table>
+      </table></div>
     </section>
 
     <section class="panel" style="border-left:4px solid #e67e22;background:linear-gradient(90deg,#fef3e2,var(--bg-card))">
       <h3>⚠️ Context Warning: Different Models Behave Differently</h3>
       <p class="help">Not all models handle high context the same way. Watch for these behaviors:</p>
-      <table class="route-table">
+      <div class="route-table-wrapper"><table class="route-table">
         <thead><tr><th>Model Type</th><th>Context Limit</th><th>Behavior at 70%+</th><th>Behavior at 90%+</th></tr></thead>
         <tbody>
           <tr><td>Free (Hunter Alpha)</td><td>200k</td><td>Generally stable</td><td>May truncate older context</td></tr>
@@ -94,7 +94,7 @@
           <tr><td>Flash (Gemini Lite)</td><td>1M+</td><td>Fast but shallow</td><td>May hallucinate details</td></tr>
           <tr><td>Reasoning (GLM-5, O-series)</td><td>64k-200k</td><td>Best for analysis</td><td>Slower, more careful</td></tr>
         </tbody>
-      </table>
+      </table></div>
       <p style="margin-top:10px"><b>💡 Plain language / 大白话：</b><br/>
       • If your AI starts forgetting things you said earlier → your context is too full, start a new chat / 如果 AI 开始忘记之前说的话 → 上下文太满了，开新对话<br/>
       • If your AI gives weird or wrong answers → context is critically full, stop and save / 如果 AI 给出奇怪的答案 → 上下文快满了，停下来保存<br/>
@@ -103,7 +103,7 @@
 
     <section class="panel">
       <h3>Task Routing (Verified Only) / 任务路由（仅已验证）</h3>
-      <table class="route-table">
+      <div class="route-table-wrapper"><table class="route-table">
         <thead><tr><th>Task Type</th><th>Preferred Model</th><th>Status</th></tr></thead>
         <tbody id="route-body">
           <tr><td>Fast daily ops</td><td>openrouter/hunter-alpha</td><td><span class="badge verified">Verified</span> 2026-03-16</td></tr>
@@ -111,7 +111,7 @@
           <tr><td>Long-context planning</td><td colspan="2" class="muted">Awaiting verification — <a href="https://github.com/Septoff21/openclaw-newbie-baseline/issues" target="_blank">Help us verify →</a></td></tr>
           <tr><td>High-reasoning analysis</td><td colspan="2" class="muted">Awaiting verification — <a href="https://github.com/Septoff21/openclaw-newbie-baseline/issues" target="_blank">Help us verify →</a></td></tr>
         </tbody>
-      </table>
+      </table></div>
     </section>
   </main>
   <script src="./js/models-page.js"></script>
