@@ -126,6 +126,60 @@
       "tags": ["im-bot", "infrastructure", "live"],
       "status": "verified",
       "verifiedAt": "2026-03-16"
+    },
+    {
+      "name": "Awesome OpenClaw Use Cases (CN)",
+      "repo": "hesamsheikh/awesome-openclaw-usecases",
+      "url": "",
+      "desc": "Community collection of 40+ real use cases: automation, content creation, server ops, personal assistant.",
+      "tags": ["use-cases", "chinese", "awesome-list"],
+      "status": "repo-only",
+      "verifiedAt": null
+    },
+    {
+      "name": "OpenClaw Docker China IM",
+      "repo": "justlovemaki/openclaw-docker-cn-im",
+      "url": "",
+      "desc": "Docker version with Chinese IM platforms pre-configured: Feishu, DingTalk, QQ, WeCom.",
+      "tags": ["docker", "chinese", "im-bot"],
+      "status": "repo-only",
+      "verifiedAt": null
+    },
+    {
+      "name": "OpenClaw Installer",
+      "repo": "miaoxworld/OpenClawInstaller",
+      "url": "",
+      "desc": "One-click deployment tool for OpenClaw. Simplifies initial setup.",
+      "tags": ["installer", "beginner-friendly"],
+      "status": "repo-only",
+      "verifiedAt": null
+    },
+    {
+      "name": "OpenClaw Mission Control",
+      "repo": "abhi1693/openclaw-mission-control",
+      "url": "",
+      "desc": "AI Agent Orchestration Dashboard — manage agents, assign tasks, coordinate multi-agent collaboration.",
+      "tags": ["dashboard", "multi-agent"],
+      "status": "repo-only",
+      "verifiedAt": null
+    },
+    {
+      "name": "OpenClaw 101 (CN)",
+      "repo": "mengjian-github/openclaw101",
+      "url": "",
+      "desc": "7-day learning course for OpenClaw. Comprehensive Chinese tutorial with daily exercises.",
+      "tags": ["tutorial", "chinese", "beginner-friendly"],
+      "status": "repo-only",
+      "verifiedAt": null
+    },
+    {
+      "name": "OpenClaw Use Cases (CN)",
+      "repo": "AlexAnys/awesome-openclaw-usecases-zh",
+      "url": "",
+      "desc": "40+ real Chinese scenarios: office automation, content creation, server maintenance, knowledge management.",
+      "tags": ["use-cases", "chinese", "beginner-friendly"],
+      "status": "repo-only",
+      "verifiedAt": null
     }
   ]
 }
