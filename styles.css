@@ -359,5 +359,30 @@ body{animation:page-in .4s ease}
   .verify-locks{grid-template-columns:1fr}
 }
 
-/* Print */
+/* ===== Hover glow on cards ===== */
+.card:hover,.dir-card:hover,.model-card:hover{border-color:var(--blue-light)}
+.char-card:hover{border-color:var(--blue)}
+.agent-card:hover{border-color:var(--blue-light)}
+
+/* ===== Gradient text helper ===== */
+.gradient-text{background:linear-gradient(135deg,var(--red),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+/* ===== Smooth section dividers ===== */
+.section-block+.section-block{border-top:1px solid var(--stroke-light);margin-top:0;padding-top:48px}
+
+/* ===== Better pre/code blocks ===== */
+pre{background:var(--bg);border:1px solid var(--stroke);border-radius:var(--radius-sm);padding:16px;font-size:13px;line-height:1.6;overflow-x:auto;margin:12px 0}
+code{font-family:'SF Mono',Consolas,monospace;font-size:0.9em}
+p code,li code{background:var(--bg);padding:2px 6px;border-radius:4px;border:1px solid var(--stroke-light)}
+
+/* ===== Selection color ===== */
+::selection{background:var(--red);color:var(--white)}
+
+/* ===== Smooth scrollbar ===== */
+::-webkit-scrollbar{width:8px;height:8px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--stroke);border-radius:4px}
+::-webkit-scrollbar-thumb:hover{background:var(--muted)}
+
+/* ===== Print ===== */
 @media print{.topnav,.mobnav,.hero-cta,.cta-final,.toast,#theme-toggle,.search-wrap{display:none!important}body{background:#fff;color:#000}}
