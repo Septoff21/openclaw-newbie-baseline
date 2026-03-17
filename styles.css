@@ -52,8 +52,8 @@ body{
 
 /* ===== Hero ===== */
 .hero{
-  padding:calc(var(--nav-h) + 48px) 24px 40px;
-  text-align:center;max-width:900px;margin:0 auto;
+  padding:calc(var(--nav-h) + 56px) 32px 48px;
+  text-align:center;max-width:800px;margin:0 auto;
 }
 .eyebrow{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--red);margin-bottom:12px}
 .hero h1{font-size:clamp(32px,5vw,52px);font-weight:900;line-height:1.15;letter-spacing:-1.5px;margin-bottom:16px;color:var(--fg)}
@@ -70,16 +70,17 @@ body{
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
 
 /* ===== Sections ===== */
-main{max-width:960px;margin:0 auto;padding:0 16px}
-.section-block{padding:48px 0}
-.section-header{text-align:center;margin-bottom:32px}
+main{max-width:960px;margin:0 auto;padding:0 20px}
+@media(min-width:769px){main{padding:0 32px}}
+.section-block{padding:56px 0}
+.section-header{text-align:center;margin-bottom:36px;max-width:600px;margin-left:auto;margin-right:auto}
 .section-label{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--red);margin-bottom:8px}
 .section-title{font-size:clamp(24px,3.5vw,36px);font-weight:900;letter-spacing:-1px;line-height:1.2}
 
 /* ===== Panels ===== */
 .panel{
-  background:var(--bg-card);border-radius:var(--radius);padding:28px;
-  margin:20px 0;box-shadow:var(--shadow);border:1px solid var(--stroke);
+  background:var(--bg-card);border-radius:var(--radius);padding:28px 32px;
+  margin:24px 0;box-shadow:var(--shadow);border:1px solid var(--stroke);
   transition:.3s;
 }
 .panel:hover{box-shadow:var(--shadow-md)}
@@ -201,8 +202,8 @@ button{font-family:inherit}
 
 /* ===== Status Panel ===== */
 .status-panel{border-left:4px solid var(--green);background:linear-gradient(90deg,var(--green-light),var(--bg-card))}
-.status-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px}
-.status-item{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600}
+.status-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
+.status-item{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;padding:4px 0}
 .status-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
 .status-dot.green{background:#27ae60;box-shadow:0 0 6px #27ae6088}
 .status-dot.yellow{background:#f59e0b;box-shadow:0 0 6px #f59e0b88}
