@@ -79,8 +79,8 @@ main{max-width:960px;margin:0 auto;padding:0 20px}
 
 /* ===== Panels ===== */
 .panel{
-  background:var(--bg-card);border-radius:var(--radius);padding:28px 32px;
-  margin:24px 0;box-shadow:var(--shadow);border:1px solid var(--stroke);
+  background:var(--bg-card);border-radius:var(--radius);padding:24px;
+  margin:20px 0;box-shadow:var(--shadow);border:1px solid var(--stroke);
   transition:.3s;
 }
 .panel:hover{box-shadow:var(--shadow-md)}
@@ -335,24 +335,45 @@ body{animation:page-in .4s ease}
   body{padding-bottom:96px!important}
   html{scroll-padding-bottom:96px}
   .search-wrap{display:none!important}
-  .hero{padding:48px 16px 24px}
-  h1{font-size:28px!important}
-  .subtitle{font-size:14px!important}
-  .panel{margin:12px 8px;padding:16px;border-radius:14px}
-  .section-block{padding:32px 0}
-  .card{padding:16px}
-  .char-grid{grid-template-columns:1fr}
+  .hero{padding:48px 16px 32px}
+  h1{font-size:26px!important}
+  .subtitle{font-size:14px!important;line-height:1.6}
+  .panel{margin:8px 4px;padding:16px 14px;border-radius:14px}
+  .section-block{padding:24px 0}
+  .card{padding:14px}
+  .char-grid{grid-template-columns:1fr;gap:12px}
+  .char-card{padding:16px}
+  .char-card h3{font-size:15px}
+  .char-bio{font-size:12px}
+  .char-quote{font-size:13px}
   .tour-steps{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:8px}
-  .tour-step{min-width:80px;flex-shrink:0}
+  .tour-step{min-width:70px;flex-shrink:0;padding:12px 6px}
   .agent-row{flex-direction:column;gap:2px}
   .agent-label{min-width:auto;font-size:12px}
+  .agent-card{padding:14px}
+  .agent-card-header{gap:10px}
+  .agent-avatar{width:44px;height:44px}
   .dir-card{padding:14px}
   .model-card{padding:14px}
   footer{font-size:11px;padding:16px}
-  .grid{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr;gap:12px}
   .hero-cta{flex-direction:column;align-items:stretch}
-  .hero-cta .cta{text-align:center}
+  .hero-cta .cta{text-align:center;min-height:48px}
   .verify-locks{grid-template-columns:repeat(2,1fr)}
+  .status-grid{grid-template-columns:repeat(2,1fr);gap:8px}
+  .status-item{font-size:12px}
+  .journey-progress{gap:0;padding:12px 0}
+  .journey-step{min-width:60px}
+  .journey-step span{font-size:10px}
+  .journey-dot{width:16px;height:16px}
+  .journey-line{max-width:30px}
+  .hero-scene{max-width:280px;padding:14px;gap:8px}
+  .scene-img{width:40px;height:40px}
+  .scene-name{font-size:9px}
+  .dir-grid{grid-template-columns:1fr}
+  .model-cards{grid-template-columns:1fr}
+  pre{font-size:12px;padding:12px}
+  .cta,.btn{min-height:44px;font-size:13px;padding:10px 16px}
 }
 @media(max-width:600px){
   .mobnav a{padding:6px 8px;min-width:56px;font-size:9px}
