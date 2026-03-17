@@ -1,0 +1,31 @@
+// Live Feed — show recent GitHub commits on homepage
+(async () => {
+  const el = document.getElementById('live-feed');
+  if (!el) return;
+
+  try {
+    const resp = await fetch('https://api.github.com/repos/Septoff21/openclaw-newbie-baseline/commits?per_page=5');
+    if (!resp.ok) { el.innerHTML = '<p class="help">Feed unavailable</p>'; return; }
+    const commits = await resp.json();
+
+    const timeAgo = (date) => {
+      const mins = Math.floor((Date.now() - new Date(date)) / 60000);
+      if (mins < 60) return `${mins}m ago`;
+      const hrs = Math.floor(mins / 60);
+      if (hrs < 24) return `${hrs}h ago`;
+      return `${Math.floor(hrs / 24)}d ago`;
+    };
+
+    el.innerHTML = commits.slice(0, 5).map(c => `
+      <div style="display:flex;gap:10px;align-items:start;padding:10px 0;border-bottom:1px solid var(--stroke-light)">
+        <span style="font-size:16px;flex-shrink:0">${c.commit.message.includes('fix') || c.commit.message.includes('Fix') ? '🔧' : c.commit.message.includes('new') || c.commit.message.includes('New') || c.commit.message.includes('Add') ? '✨' : c.commit.message.includes('diary') || c.commit.message.includes('Diary') ? '📝' : '🔨'}</span>
+        <div style="flex:1;min-width:0">
+          <div style="font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${c.commit.message.split('\n')[0]}</div>
+          <div style="font-size:11px;color:var(--muted)">${timeAgo(c.commit.author.date)} · ${c.sha.slice(0,7)}</div>
+        </div>
+      </div>
+    `).join('');
+  } catch (e) {
+    el.innerHTML = '<p class="help">Feed unavailable</p>';
+  }
+})();
