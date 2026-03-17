@@ -272,7 +272,7 @@
           <p class="card-quote">"I want my AI assistant to just work."<br/>"我只想让 AI 先跑起来。"</p>
           <p class="card-desc">Safe defaults, one memory plugin, core skills only. Copy the prompt, paste it, get a working setup in 30 seconds.</p>
           <details class="prompt-preview"><summary>Preview prompt / 预览</summary><code>Set up my OpenClaw with safe defaults. Keep only core plugins, enable memory, install beginner skills, show verification commands...</code></details>
-          <button data-copy="beginner">Copy prompt / 复制</button>
+          <button data-copy="beginner" aria-label="Copy beginner prompt">Copy prompt / 复制</button>
         </article>
         <article class="card advance">
           <div class="card-icon">⚡</div>
@@ -280,7 +280,7 @@
           <p class="card-quote">"I want to trust what my AI tells me."<br/>"我要能信任 AI 的输出。"</p>
           <p class="card-desc">Add verification loops, context warnings, and rollback plans. Your agent becomes reliable, not just fast.</p>
           <details class="prompt-preview"><summary>Preview prompt / 预览</summary><code>Make my OpenClaw more reliable. Add context warnings, verification checklist, document roles/tools, add rollback steps...</code></details>
-          <button data-copy="advance">Copy prompt / 复制</button>
+          <button data-copy="advance" aria-label="Copy advance prompt">Copy prompt / 复制</button>
         </article>
         <article class="card extreme">
           <div class="card-icon">🚀</div>
@@ -288,7 +288,7 @@
           <p class="card-quote">"I want my AI to run itself."<br/>"我要 AI 自己跑起来。"</p>
           <p class="card-desc">Multi-agent routing, memory governance, approval gates, incident response. Full autonomous operation.</p>
           <details class="prompt-preview"><summary>Preview prompt / 预览</summary><code>Design my OpenClaw for autonomous operation. Multi-agent routing, memory scopes, approval gates, incident response...</code></details>
-          <button data-copy="extreme">Copy prompt / 复制</button>
+          <button data-copy="extreme" aria-label="Copy extreme prompt">Copy prompt / 复制</button>
         </article>
       </div>
     </section>
@@ -421,7 +421,7 @@
         <a class="cta primary" href="#journey">Get Started / 开始</a>
         <a class="cta" href="https://github.com/Septoff21/openclaw-newbie-baseline" target="_blank">⭐ Star on GitHub</a>
         <a class="cta" href="./diary.html">📖 Read the Diary / 读日记</a>
-        <button class="cta" onclick="if(navigator.share){navigator.share({title:'OpenClaw Playground',text:'Learn OpenClaw by copying prompts!',url:location.href})}else{window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent('Check out OpenClaw Playground 🦞 — learn AI agents by copying prompts! '+location.href),'_blank')}">📤 Share / 分享</button>
+        <button class="cta" aria-label="Share this site" onclick="if(navigator.share){navigator.share({title:'OpenClaw Playground',text:'Learn OpenClaw by copying prompts!',url:location.href})}else{window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent('Check out OpenClaw Playground 🦞 — learn AI agents by copying prompts! '+location.href),'_blank')}">📤 Share / 分享</button>
       </div>
     </section>
   </main>

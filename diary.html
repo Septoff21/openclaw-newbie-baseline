@@ -71,7 +71,7 @@
 
 ### 明天的计划
 - （优先级最高的事情）</pre>
-      <button class="cta primary" onclick="navigator.clipboard.writeText(document.getElementById('diary-template').textContent);this.textContent='已复制！';setTimeout(()=>this.textContent='复制模板',1200)">复制模板 / Copy template</button>
+      <button class="cta primary" aria-label="Copy to clipboard" onclick="navigator.clipboard.writeText(document.getElementById('diary-template').textContent);this.textContent='已复制！';setTimeout(()=>this.textContent='复制模板',1200)">复制模板 / Copy template</button>
     </section>
 
     <section class="panel" id="entries">
@@ -92,7 +92,7 @@
   --tz "Asia/Kuala_Lumpur" \
   --message "Write today's diary entry based on memory/YYYY-MM-DD.md. Chinese, personal, under 400 words." \
   --announce</pre>
-      <button class="cta" onclick="navigator.clipboard.writeText(document.getElementById('diary-cron').textContent);this.textContent='Copied! ✓'">📋 Copy cron command / 复制命令</button>
+      <button class="cta" aria-label="Copy to clipboard" onclick="navigator.clipboard.writeText(document.getElementById('diary-cron').textContent);this.textContent='Copied! ✓'">📋 Copy cron command / 复制命令</button>
     </section>
 
     <section class="panel" style="border-left:4px solid var(--blue);background:linear-gradient(90deg,var(--blue-light),var(--bg-card))">
