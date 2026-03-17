@@ -1,0 +1,19 @@
+// GitHub Stats — live star/fork/issue count
+(async () => {
+  const els = {
+    stars: document.getElementById('gh-stars'),
+    forks: document.getElementById('gh-forks'),
+    issues: document.getElementById('gh-issues'),
+    updated: document.getElementById('gh-updated')
+  };
+  
+  try {
+    const data = await fetch('https://api.github.com/repos/Septoff21/openclaw-newbie-baseline').then(r => r.json());
+    if (els.stars) els.stars.textContent = data.stargazers_count || 0;
+    if (els.forks) els.forks.textContent = data.forks_count || 0;
+    if (els.issues) els.issues.textContent = data.open_issues_count || 0;
+    if (els.updated) els.updated.textContent = new Date(data.pushed_at).toLocaleDateString('en-US', {month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'});
+  } catch (e) {
+    console.log('GitHub API unavailable');
+  }
+})();
