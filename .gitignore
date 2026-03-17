@@ -1,0 +1,6 @@
+# Script output (not for live site)
+model-watch/
+*.tmp
+*.log
+.DS_Store
+Thumbs.db

@@ -111,9 +111,11 @@ h1{font-size:clamp(32px,6vw,50px);font-weight:900;line-height:1.12;margin-bottom
 /* ===== Buttons ===== */
 .cta,.btn{
   display:inline-flex;align-items:center;justify-content:center;gap:6px;
-  padding:11px 18px;border-radius:var(--radius-sm);font-size:14px;font-weight:700;
+  padding:12px 20px;border-radius:var(--radius-sm);font-size:14px;font-weight:700;
   cursor:pointer;text-decoration:none;border:1.5px solid var(--stroke);
   background:var(--white);color:var(--fg2);transition:.2s all;white-space:nowrap;
+  min-height:44px; /* mobile touch target */
+  -webkit-tap-highlight-color:transparent;
 }
 .cta:hover,.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);border-color:var(--blue);color:var(--blue)}
 .cta.primary,.btn.primary{background:var(--red);color:var(--white);border-color:var(--red)}
@@ -317,3 +319,18 @@ footer a{color:var(--blue)}
   .mobnav a .mobnav-icon{font-size:20px}
   .verify-locks{grid-template-columns:1fr}
 }
+
+/* ===== Performance & Polish ===== */
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+img{max-width:100%;height:auto;display:block}
+a{transition:color .2s,border-color .2s}
+:focus-visible{outline:2px solid var(--blue);outline-offset:2px;border-radius:4px}
+.card,.char-card,.agent-card,.diary-entry{will-change:transform}
+.card:hover,.char-card:hover,.agent-card:hover{transform:translateY(-3px)}
+
+/* Skeleton loading for async content */
+.skeleton{background:linear-gradient(90deg,var(--stroke-light) 25%,var(--bg) 50%,var(--stroke-light) 75%);background-size:200% 100%;animation:skeleton-shimmer 1.5s infinite;border-radius:8px}
+@keyframes skeleton-shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+
+/* Print styles */
+@media print{.topnav,.mobnav,.hero-cta,.cta-final,.toast{display:none!important}body{background:#fff;color:#000}}
