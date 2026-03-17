@@ -6,7 +6,11 @@
       "repo": "Cluka-399/openclaw-skills-explorer",
       "url": "https://Cluka-399.github.io/openclaw-skills-explorer/",
       "desc": "Browse and discover OpenClaw skills — card-based directory.",
-      "tags": ["directory", "skills", "live"],
+      "tags": [
+        "directory",
+        "skills",
+        "live"
+      ],
       "status": "verified",
       "verifiedAt": "2026-03-16"
     },
@@ -15,7 +19,11 @@
       "repo": "ninehills/jack-diary",
       "url": "https://ninehills.github.io/jack-diary/",
       "desc": "Personal agent diary — public daily log of an OpenClaw instance.",
-      "tags": ["diary", "personal", "live"],
+      "tags": [
+        "diary",
+        "personal",
+        "live"
+      ],
       "status": "verified",
       "verifiedAt": "2026-03-16"
     },
@@ -24,7 +32,12 @@
       "repo": "Septoff21/openclaw-newbie-baseline",
       "url": "https://septoff21.github.io/openclaw-newbie-baseline/",
       "desc": "Beginner-first onboarding + ecosystem directory + daily model watch. You are here.",
-      "tags": ["onboarding", "directory", "models", "live"],
+      "tags": [
+        "onboarding",
+        "directory",
+        "models",
+        "live"
+      ],
       "status": "verified",
       "verifiedAt": "2026-03-17"
     },
@@ -33,7 +46,11 @@
       "repo": "langbot-app/LangBot",
       "url": "https://langbot.app",
       "desc": "Production-grade agentic IM bots — Discord, Slack, Telegram, WeChat, Feishu. Plugin system + knowledge base.",
-      "tags": ["im-bot", "multi-platform", "live"],
+      "tags": [
+        "im-bot",
+        "multi-platform",
+        "live"
+      ],
       "status": "verified",
       "verifiedAt": "2026-03-16"
     },
@@ -42,7 +59,11 @@
       "repo": "qwibitai/nanoclaw",
       "url": "https://nanoclaw.dev/blog/nanoclaw-docker-sandboxes",
       "desc": "Lightweight OpenClaw alternative in Docker sandboxes. WhatsApp, Telegram, Slack, Discord, Gmail.",
-      "tags": ["lightweight", "docker", "live"],
+      "tags": [
+        "lightweight",
+        "docker",
+        "live"
+      ],
       "status": "verified",
       "verifiedAt": "2026-03-16"
     },
@@ -51,7 +72,10 @@
       "repo": "xigpz/openclaw-console",
       "url": "",
       "desc": "Visual admin panel for OpenClaw — config, model, and skills management.",
-      "tags": ["admin", "dashboard"],
+      "tags": [
+        "admin",
+        "dashboard"
+      ],
       "status": "repo-only",
       "verifiedAt": null
     },
@@ -60,7 +84,10 @@
       "repo": "zhuowater/lobster-guard",
       "url": "",
       "desc": "AI Agent security gateway — prompt injection detection, content audit, user-ID routing.",
-      "tags": ["security", "gateway"],
+      "tags": [
+        "security",
+        "gateway"
+      ],
       "status": "repo-only",
       "verifiedAt": null
     },
@@ -69,7 +96,10 @@
       "repo": "EverMind-AI/EverMemOS",
       "url": "",
       "desc": "Long-term memory for 24/7 OpenClaw agents across LLMs and platforms.",
-      "tags": ["memory", "infrastructure"],
+      "tags": [
+        "memory",
+        "infrastructure"
+      ],
       "status": "repo-only",
       "verifiedAt": null
     },
@@ -78,7 +108,11 @@
       "repo": "VoltAgent/awesome-openclaw-skills",
       "url": "",
       "desc": "5,400+ skills filtered and categorized from the official OpenClaw Skills Registry.",
-      "tags": ["skills", "directory", "awesome-list"],
+      "tags": [
+        "skills",
+        "directory",
+        "awesome-list"
+      ],
       "status": "repo-only",
       "verifiedAt": null
     },
@@ -87,7 +121,10 @@
       "repo": "xianyu110/awesome-openclaw-tutorial",
       "url": "",
       "desc": "Comprehensive Chinese tutorial — install, config, real cases, and pitfalls.",
-      "tags": ["tutorial", "chinese"],
+      "tags": [
+        "tutorial",
+        "chinese"
+      ],
       "status": "repo-only",
       "verifiedAt": null
     },
@@ -96,7 +133,10 @@
       "repo": "Garygaoxiang/openclaw-self-healing-monitor",
       "url": "",
       "desc": "Auto-recovery monitoring script for OpenClaw with Telegram notifications.",
-      "tags": ["monitoring", "reliability"],
+      "tags": [
+        "monitoring",
+        "reliability"
+      ],
       "status": "repo-only",
       "verifiedAt": null
     },
@@ -105,7 +145,10 @@
       "repo": "HKUDS/nanobot",
       "url": "",
       "desc": "Ultra-lightweight OpenClaw alternative — minimal footprint.",
-      "tags": ["lightweight", "alternative"],
+      "tags": [
+        "lightweight",
+        "alternative"
+      ],
       "status": "repo-only",
       "verifiedAt": null
     },
@@ -114,7 +157,10 @@
       "repo": "ProSkillsMD/proskills",
       "url": "",
       "desc": "Community-curated OpenClaw skill listings — browse, submit, and contribute.",
-      "tags": ["skills", "community"],
+      "tags": [
+        "skills",
+        "community"
+      ],
       "status": "repo-only",
       "verifiedAt": null
     },
@@ -123,7 +169,11 @@
       "repo": "AstrBotDevs/AstrBot",
       "url": "https://astrbot.app",
       "desc": "Agentic IM chatbot infrastructure integrating many IM platforms, LLMs, and plugins.",
-      "tags": ["im-bot", "infrastructure", "live"],
+      "tags": [
+        "im-bot",
+        "infrastructure",
+        "live"
+      ],
       "status": "verified",
       "verifiedAt": "2026-03-16"
     },
@@ -132,7 +182,11 @@
       "repo": "hesamsheikh/awesome-openclaw-usecases",
       "url": "",
       "desc": "Community collection of 40+ real use cases: automation, content creation, server ops, personal assistant.",
-      "tags": ["use-cases", "chinese", "awesome-list"],
+      "tags": [
+        "use-cases",
+        "chinese",
+        "awesome-list"
+      ],
       "status": "repo-only",
       "verifiedAt": null
     },
@@ -141,7 +195,11 @@
       "repo": "justlovemaki/openclaw-docker-cn-im",
       "url": "",
       "desc": "Docker version with Chinese IM platforms pre-configured: Feishu, DingTalk, QQ, WeCom.",
-      "tags": ["docker", "chinese", "im-bot"],
+      "tags": [
+        "docker",
+        "chinese",
+        "im-bot"
+      ],
       "status": "repo-only",
       "verifiedAt": null
     },
@@ -150,7 +208,10 @@
       "repo": "miaoxworld/OpenClawInstaller",
       "url": "",
       "desc": "One-click deployment tool for OpenClaw. Simplifies initial setup.",
-      "tags": ["installer", "beginner-friendly"],
+      "tags": [
+        "installer",
+        "beginner-friendly"
+      ],
       "status": "repo-only",
       "verifiedAt": null
     },
@@ -159,7 +220,10 @@
       "repo": "abhi1693/openclaw-mission-control",
       "url": "",
       "desc": "AI Agent Orchestration Dashboard — manage agents, assign tasks, coordinate multi-agent collaboration.",
-      "tags": ["dashboard", "multi-agent"],
+      "tags": [
+        "dashboard",
+        "multi-agent"
+      ],
       "status": "repo-only",
       "verifiedAt": null
     },
@@ -168,7 +232,11 @@
       "repo": "mengjian-github/openclaw101",
       "url": "",
       "desc": "7-day learning course for OpenClaw. Comprehensive Chinese tutorial with daily exercises.",
-      "tags": ["tutorial", "chinese", "beginner-friendly"],
+      "tags": [
+        "tutorial",
+        "chinese",
+        "beginner-friendly"
+      ],
       "status": "repo-only",
       "verifiedAt": null
     },
@@ -177,7 +245,122 @@
       "repo": "AlexAnys/awesome-openclaw-usecases-zh",
       "url": "",
       "desc": "40+ real Chinese scenarios: office automation, content creation, server maintenance, knowledge management.",
-      "tags": ["use-cases", "chinese", "beginner-friendly"],
+      "tags": [
+        "use-cases",
+        "chinese",
+        "beginner-friendly"
+      ],
+      "status": "repo-only",
+      "verifiedAt": null
+    },
+    {
+      "name": "OpenClaw Nerve",
+      "repo": "daggerhashimoto/openclaw-nerve",
+      "url": "",
+      "desc": "Real-time web cockpit: voice conversations, agent kanban, workspace control, sub-agent sessions, usage charts.",
+      "tags": [
+        "dashboard",
+        "monitoring"
+      ],
+      "status": "repo-only",
+      "verifiedAt": null
+    },
+    {
+      "name": "CC Switch",
+      "repo": "farion1231/cc-switch",
+      "url": "",
+      "desc": "Cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode, OpenClaw & Gemini CLI.",
+      "tags": [
+        "desktop",
+        "multi-agent"
+      ],
+      "status": "repo-only",
+      "verifiedAt": null
+    },
+    {
+      "name": "1Panel (OpenClaw Deploy)",
+      "repo": "1Panel-dev/1Panel",
+      "url": "",
+      "desc": "VPS control panel with one-click OpenClaw deployment. Take full control of your server.",
+      "tags": [
+        "deployment",
+        "vps",
+        "beginner-friendly"
+      ],
+      "status": "repo-only",
+      "verifiedAt": null
+    },
+    {
+      "name": "ZeroClaw",
+      "repo": "zeroclaw-labs/zeroclaw",
+      "url": "",
+      "desc": "Fast, small, fully autonomous AI assistant infrastructure — deploy anywhere, swap anything.",
+      "tags": [
+        "lightweight",
+        "infrastructure"
+      ],
+      "status": "repo-only",
+      "verifiedAt": null
+    },
+    {
+      "name": "OpenViking",
+      "repo": "volcengine/OpenViking",
+      "url": "",
+      "desc": "Context database for AI Agents — manages memory, resources, skills via filesystem paradigm.",
+      "tags": [
+        "memory",
+        "infrastructure"
+      ],
+      "status": "repo-only",
+      "verifiedAt": null
+    },
+    {
+      "name": "AionUi",
+      "repo": "iOfficeAI/AionUi",
+      "url": "",
+      "desc": "Free, local, open-source cowork app for Gemini CLI, Claude Code, Codex, OpenCode and more.",
+      "tags": [
+        "desktop",
+        "ui",
+        "multi-agent"
+      ],
+      "status": "repo-only",
+      "verifiedAt": null
+    },
+    {
+      "name": "OpenClaw Skills Archive",
+      "repo": "openclaw/skills",
+      "url": "",
+      "desc": "All versions of all skills on clawhub.com — official archive. Browse skill source code.",
+      "tags": [
+        "skills",
+        "official"
+      ],
+      "status": "repo-only",
+      "verifiedAt": null
+    },
+    {
+      "name": "Clawdbot Skills (CN)",
+      "repo": "clawdbot-ai/awesome-openclaw-skills-zh",
+      "url": "",
+      "desc": "Chinese official skill library — translated, categorized by scenario, supports Chinese natural language.",
+      "tags": [
+        "skills",
+        "chinese",
+        "beginner-friendly"
+      ],
+      "status": "repo-only",
+      "verifiedAt": null
+    },
+    {
+      "name": "OpenClaw RL",
+      "repo": "Gen-Verse/OpenClaw-RL",
+      "url": "",
+      "desc": "Train any agent simply by talking. RL-based agent training through conversation.",
+      "tags": [
+        "training",
+        "research"
+      ],
       "status": "repo-only",
       "verifiedAt": null
     }
