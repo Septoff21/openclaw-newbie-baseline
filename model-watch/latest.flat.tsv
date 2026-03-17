@@ -273,7 +273,7 @@ qwen/qwen3.5-27b	Qwen: Qwen3.5-27B	262144	0.000000195	0.00000156
 qwen/qwen3.5-35b-a3b	Qwen: Qwen3.5-35B-A3B	262144	0.0000001625	0.0000013
 qwen/qwen3.5-397b-a17b	Qwen: Qwen3.5 397B A17B	262144	0.00000039	0.00000234
 qwen/qwen3.5-9b	Qwen: Qwen3.5-9B	256000	0.00000005	0.00000015
-qwen/qwen3.5-flash-02-23	Qwen: Qwen3.5-Flash	1000000	0.0000001	0.0000004
+qwen/qwen3.5-flash-02-23	Qwen: Qwen3.5-Flash	1000000	0.000000065	0.00000026
 qwen/qwen3.5-plus-02-15	Qwen: Qwen3.5 Plus 2026-02-15	1000000	0.00000026	0.00000156
 qwen/qwen3-8b	Qwen: Qwen3 8B	40960	0.00000005	0.0000004
 qwen/qwen3-coder-30b-a3b-instruct	Qwen: Qwen3 Coder 30B A3B Instruct	160000	0.00000007	0.00000027
@@ -282,7 +282,7 @@ qwen/qwen3-coder:free	Qwen: Qwen3 Coder 480B A35B (free)	262000	0	0
 qwen/qwen3-coder-next	Qwen: Qwen3 Coder Next	262144	0.00000012	0.00000075
 qwen/qwen3-coder-plus	Qwen: Qwen3 Coder Plus	1000000	0.00000065	0.00000325
 qwen/qwen3-coder	Qwen: Qwen3 Coder 480B A35B	262144	0.00000022	0.000001
-qwen/qwen3-max	Qwen: Qwen3 Max	262144	0.0000012	0.000006
+qwen/qwen3-max	Qwen: Qwen3 Max	262144	0.00000078	0.0000039
 qwen/qwen3-max-thinking	Qwen: Qwen3 Max Thinking	262144	0.00000078	0.0000039
 qwen/qwen3-next-80b-a3b-instruct:free	Qwen: Qwen3 Next 80B A3B Instruct (free)	262144	0	0
 qwen/qwen3-next-80b-a3b-instruct	Qwen: Qwen3 Next 80B A3B Instruct	131072	0.00000009	0.0000011
@@ -297,9 +297,9 @@ qwen/qwen3-vl-8b-thinking	Qwen: Qwen3 VL 8B Thinking	131072	0.000000117	0.000001
 qwen/qwen-max	Qwen: Qwen-Max 	32768	0.00000104	0.00000416
 qwen/qwen-plus-2025-07-28	Qwen: Qwen Plus 0728	1000000	0.00000026	0.00000078
 qwen/qwen-plus-2025-07-28:thinking	Qwen: Qwen Plus 0728 (thinking)	1000000	0.00000026	0.00000078
-qwen/qwen-plus	Qwen: Qwen-Plus	1000000	0.0000004	0.0000012
+qwen/qwen-plus	Qwen: Qwen-Plus	1000000	0.00000026	0.00000078
 qwen/qwen-turbo	Qwen: Qwen-Turbo	131072	0.0000000325	0.00000013
-qwen/qwen-vl-max	Qwen: Qwen VL Max	131072	0.0000008	0.0000032
+qwen/qwen-vl-max	Qwen: Qwen VL Max	131072	0.00000052	0.00000208
 qwen/qwen-vl-plus	Qwen: Qwen VL Plus	131072	0.0000001365	0.0000004095
 qwen/qwq-32b	Qwen: QwQ 32B	32768	0.00000015	0.0000004
 relace/relace-apply-3	Relace: Relace Apply 3	256000	0.00000085	0.00000125
