@@ -302,6 +302,22 @@ footer a{color:var(--blue)}
   .topnav{display:none}.mobnav{display:flex!important}
   body{padding-bottom:96px!important}
   html{scroll-padding-bottom:96px}
+  .search-wrap{display:none!important} /* Search only on desktop, mobnav has links */
+  .hero{padding:48px 16px 24px}
+  h1{font-size:26px!important}
+  .subtitle{font-size:14px!important}
+  .panel{margin:8px;padding:14px;border-radius:12px}
+  .section-block{padding:16px 8px}
+  .card{padding:16px}
+  .char-grid{grid-template-columns:1fr}
+  .tour-steps{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:8px}
+  .tour-step{min-width:80px;flex-shrink:0}
+  .agent-row{flex-direction:column;gap:2px}
+  .agent-label{min-width:auto;font-size:12px}
+  .dir-card{padding:14px}
+  .model-card{padding:14px}
+  footer{font-size:11px;padding:16px}
+}
   .hero{padding-top:64px}
   .hero-scene{max-width:280px;padding:16px}
   .scene-lobster,.scene-brain,.scene-check{font-size:32px}
@@ -349,6 +365,23 @@ a{transition:color .2s,border-color .2s}
 :focus-visible{outline:2px solid var(--blue);outline-offset:2px;border-radius:4px}
 .card,.char-card,.agent-card,.diary-entry{will-change:transform}
 .card:hover,.char-card:hover,.agent-card:hover{transform:translateY(-3px)}
+
+/* Button click feedback */
+.cta:active,.btn:active{transform:scale(0.96);transition:.1s}
+button:active{transform:scale(0.96)}
+
+/* Card press effect on mobile */
+@media(hover:none){
+  .card:active,.dir-card:active,.model-card:active{transform:scale(0.98);transition:.1s}
+}
+
+/* Loading state */
+.loading{opacity:0.6;pointer-events:none;position:relative}
+.loading::after{content:'⏳';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:24px}
+
+/* Toast animation */
+.toast{animation:toast-in .3s ease}
+@keyframes toast-in{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 
 /* Skeleton loading for async content */
 .skeleton{background:linear-gradient(90deg,var(--stroke-light) 25%,var(--bg) 50%,var(--stroke-light) 75%);background-size:200% 100%;animation:skeleton-shimmer 1.5s infinite;border-radius:8px}

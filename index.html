@@ -329,7 +329,11 @@
     <section class="panel" style="border-left:4px solid var(--green);background:linear-gradient(90deg,var(--green-light),var(--bg-card))">
       <h3>📡 Live Build Feed / 实时构建动态</h3>
       <p class="help">Latest commits from this repo. See what changed today.<br/>仓库最新提交。看看今天改了什么。</p>
-      <div id="live-feed"><p class="help">Loading feed...</p></div>
+      <div id="live-feed">
+        <div style="display:flex;gap:10px;padding:8px 0"><span class="skeleton" style="width:20px;height:20px"></span><div style="flex:1"><div class="skeleton" style="height:14px;width:80%;margin-bottom:6px"></div><div class="skeleton" style="height:10px;width:40%"></div></div></div>
+        <div style="display:flex;gap:10px;padding:8px 0"><span class="skeleton" style="width:20px;height:20px"></span><div style="flex:1"><div class="skeleton" style="height:14px;width:70%;margin-bottom:6px"></div><div class="skeleton" style="height:10px;width:35%"></div></div></div>
+        <div style="display:flex;gap:10px;padding:8px 0"><span class="skeleton" style="width:20px;height:20px"></span><div style="flex:1"><div class="skeleton" style="height:14px;width:60%;margin-bottom:6px"></div><div class="skeleton" style="height:10px;width:30%"></div></div></div>
+      </div>
     </section>
     <script>if('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js');</script>
   <script src="./js/darkmode.js"></script>
