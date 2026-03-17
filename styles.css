@@ -221,6 +221,26 @@ ol,ul{padding-left:20px}li{margin:7px 0;font-size:14px;line-height:1.7}
 footer{text-align:center;padding:24px;color:var(--muted);font-size:12px;border-top:1px solid var(--stroke-light);margin-top:24px}
 footer a{color:var(--blue)}
 
+/* ===== Agent Roster ===== */
+.agent-roster{display:flex;flex-direction:column;gap:16px}
+.agent-card{padding:20px;border-radius:var(--radius);background:var(--bg-card);border:1.5px solid var(--stroke);box-shadow:var(--shadow);transition:.3s}
+.agent-card:hover{box-shadow:var(--shadow-md)}
+.agent-card-critic{border-color:#fca5a5;background:linear-gradient(90deg,#fef2f2,var(--bg-card))}
+.agent-card-header{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.agent-avatar{width:56px;height:56px;border-radius:14px;object-fit:cover}
+.agent-avatar-emoji{font-size:36px;display:flex;align-items:center;justify-content:center;background:var(--bg);border:1.5px solid var(--stroke)}
+.agent-card h3{font-size:16px;font-weight:800;margin:0}
+.agent-title{font-size:12px;color:var(--muted);font-weight:600;display:block;margin-top:2px}
+.agent-status{font-size:11px;font-weight:700}
+.agent-status.online{color:#27ae60}
+.agent-status.idle{color:#f59e0b}
+.agent-status.scheduled{color:var(--blue)}
+.agent-details{display:flex;flex-direction:column;gap:6px}
+.agent-row{display:flex;gap:10px;font-size:13px;line-height:1.5}
+.agent-label{font-weight:700;min-width:120px;flex-shrink:0;color:var(--fg)}
+.agent-row span:last-child{color:var(--fg2)}
+.agent-row code{background:var(--bg);padding:1px 6px;border-radius:4px;font-size:11px}
+
 /* ===== Site Tour ===== */
 .tour-steps{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;padding:10px 0}
 .tour-step{flex:1;min-width:100px;max-width:140px;text-align:center;padding:16px 10px;border-radius:var(--radius);background:var(--bg-card);border:1.5px solid var(--stroke);transition:.3s transform,.3s box-shadow;position:relative}

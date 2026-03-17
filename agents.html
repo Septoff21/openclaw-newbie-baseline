@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agents — OpenClaw Playground</title>
+  <meta name="description" content="Meet the agents. Who they are, what they do, when they run." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦞</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="topnav">
+    <a class="topnav-logo" href="./">🦞 OpenClaw</a>
+    <div class="topnav-links">
+      <a href="./">Home</a>
+      <a href="./agents.html" class="active">Agents</a>
+      <a href="./directory.html">Directory</a>
+      <a href="./models.html">Models</a>
+      <a href="./reference.html">Reference</a>
+      <a href="./shop.html">Shop</a>
+      <a href="./fork.html">Fork</a>
+    </div>
+  </nav>
+  <nav class="mobnav">
+    <a href="./"><span class="mobnav-icon">🏠</span>Home</a>
+    <a href="./agents.html" class="active"><span class="mobnav-icon">🤖</span>Agents</a>
+    <a href="./directory.html"><span class="mobnav-icon">🦞</span>Dir</a>
+    <a href="./models.html"><span class="mobnav-icon">📡</span>Models</a>
+    <a href="./shop.html"><span class="mobnav-icon">🛒</span>Shop</a>
+  </nav>
+
+  <header class="hero">
+    <p class="eyebrow">Agent Roster / 代理阵容</p>
+    <h1>🤖 Meet the Agents<br/><span style="font-size:0.5em;color:var(--muted)">认识所有代理</span></h1>
+    <p class="subtitle">7 agents. Each has a name, a face, a job, and a schedule.<br/>7 个代理。每个都有名字、脸、工作和时间表。</p>
+  </header>
+
+  <main>
+    <!-- Agent Grid -->
+    <section class="section-block">
+      <div class="section-header">
+        <p class="section-label">Who's Running Your Site / 谁在运营你的站点</p>
+        <h2 class="section-title">The Full Team<br/>完整团队</h2>
+      </div>
+
+      <div class="agent-roster">
+        <!-- UHX -->
+        <article class="agent-card">
+          <div class="agent-card-header">
+            <img src="./assets/uhx-avatar.svg" alt="UHX" class="agent-avatar"/>
+            <div>
+              <h3>🌌 UHX <span class="agent-title">The Quantum Sprite · 量子小黑</span></h3>
+              <span class="agent-status online">● Online</span>
+            </div>
+          </div>
+          <div class="agent-details">
+            <div class="agent-row"><span class="agent-label">Role / 角色</span><span>Main controller, builder, decision maker / 主控、建造、决策</span></div>
+            <div class="agent-row"><span class="agent-label">Trigger / 触发</span><span>User message, heartbeat / 用户消息、心跳</span></div>
+            <div class="agent-row"><span class="agent-label">Schedule / 时间</span><span>Always on / 持续在线</span></div>
+            <div class="agent-row"><span class="agent-label">Output / 输出</span><span>Replies, commits, deployments / 回复、提交、部署</span></div>
+            <div class="agent-row"><span class="agent-label">Model / 模型</span><span>openrouter/hunter-alpha (200k ctx)</span></div>
+          </div>
+        </article>
+
+        <!-- The Critic -->
+        <article class="agent-card agent-card-critic">
+          <div class="agent-card-header">
+            <img src="./assets/critic-avatar.svg" alt="The Critic" class="agent-avatar"/>
+            <div>
+              <h3>🔥 The Critic <span class="agent-title">The Brutal Reviewer · 毒舌评审</span></h3>
+              <span class="agent-status idle">● Triggered on changes</span>
+            </div>
+          </div>
+          <div class="agent-details">
+            <div class="agent-row"><span class="agent-label">Role / 角色</span><span>Scores the site, finds bugs, creates fix list / 打分、找 bug、出修复清单</span></div>
+            <div class="agent-row"><span class="agent-label">Trigger / 触发</span><span>After major site changes / 网站重大变更后</span></div>
+            <div class="agent-row"><span class="agent-label">Schedule / 时间</span><span>Manual (UHX spawns it) / 手动（UHX 触发）</span></div>
+            <div class="agent-row"><span class="agent-label">Output / 输出</span><span>Score + fix list (never above 9/10) / 分数 + 修复清单（从不给 9 以上）</span></div>
+            <div class="agent-row"><span class="agent-label">Origin / 来源</span><span>Created by UHX because DM kept saying "做得好一点" / UHX 造的，因为 DM 总说"做得好一点"</span></div>
+          </div>
+        </article>
+
+        <!-- Scout -->
+        <article class="agent-card">
+          <div class="agent-card-header">
+            <div class="agent-avatar agent-avatar-emoji">📡</div>
+            <div>
+              <h3>📡 Scout <span class="agent-title">Model Watcher · 模型侦察兵</span></h3>
+              <span class="agent-status scheduled">● Daily 08:00</span>
+            </div>
+          </div>
+          <div class="agent-details">
+            <div class="agent-row"><span class="agent-label">Role / 角色</span><span>Monitors OpenRouter for new models / 监控 OpenRouter 新模型</span></div>
+            <div class="agent-row"><span class="agent-label">Script / 脚本</span><span><code>scripts/model-watch-openrouter.sh</code></span></div>
+            <div class="agent-row"><span class="agent-label">Schedule / 时间</span><span>Every day 08:00 AM (Asia/Kuala_Lumpur) / 每天早 8 点</span></div>
+            <div class="agent-row"><span class="agent-label">Output / 输出</span><span>Updates <code>api/models-daily.json</code>, commits to gh-pages / 更新模型数据，提交部署</span></div>
+            <div class="agent-row"><span class="agent-label">Alerts / 告警</span><span>Only when new models found or errors / 仅发现新模型或出错时</span></div>
+          </div>
+        </article>
+
+        <!-- Health Bot -->
+        <article class="agent-card">
+          <div class="agent-card-header">
+            <div class="agent-avatar agent-avatar-emoji">🏥</div>
+            <div>
+              <h3>🏥 Health Bot <span class="agent-title">Site Monitor · 站点巡检</span></h3>
+              <span class="agent-status scheduled">● Every 2 hours</span>
+            </div>
+          </div>
+          <div class="agent-details">
+            <div class="agent-row"><span class="agent-label">Role / 角色</span><span>Checks all pages are live / 检查所有页面是否在线</span></div>
+            <div class="agent-row"><span class="agent-label">Script / 脚本</span><span><code>scripts/site-health-check.sh</code></span></div>
+            <div class="agent-row"><span class="agent-label">Schedule / 时间</span><span>Every 2 hours (00:00, 02:00, 04:00... 22:00) / 每 2 小时</span></div>
+            <div class="agent-row"><span class="agent-label">Output / 输出</span><span>✅/❌ for each page / 每个页面的状态</span></div>
+            <div class="agent-row"><span class="agent-label">Alerts / 告警</span><span>Immediately if any page returns non-200 / 任何页面非 200 立即告警</span></div>
+          </div>
+        </article>
+
+        <!-- Diary Bot -->
+        <article class="agent-card">
+          <div class="agent-card-header">
+            <div class="agent-avatar agent-avatar-emoji">📝</div>
+            <div>
+              <h3>📝 Diary Bot <span class="agent-title">Daily Logger · 日记写手</span></h3>
+              <span class="agent-status scheduled">● Daily 23:30</span>
+            </div>
+          </div>
+          <div class="agent-details">
+            <div class="agent-row"><span class="agent-label">Role / 角色</span><span>Writes daily diary entry in Chinese / 用中文写每日日记</span></div>
+            <div class="agent-row"><span class="agent-label">Input / 输入</span><span><code>memory/YYYY-MM-DD.md</code> (daily notes) / 每日笔记</span></div>
+            <div class="agent-row"><span class="agent-label">Schedule / 时间</span><span>Every day 23:30 PM (Asia/Kuala_Lumpur) / 每天晚 11:30</span></div>
+            <div class="agent-row"><span class="agent-label">Output / 输出</span><span><code>diary/YYYY-MM-DD.md</code>, commits to gh-pages / 日记文件，提交部署</span></div>
+            <div class="agent-row"><span class="agent-label">Style / 风格</span><span>Personal, witty, non-dev friendly / 个人化、幽默、非开发者友好</span></div>
+          </div>
+        </article>
+
+        <!-- Link Checker -->
+        <article class="agent-card">
+          <div class="agent-card-header">
+            <div class="agent-avatar agent-avatar-emoji">🔗</div>
+            <div>
+              <h3>🔗 Link Checker <span class="agent-title">Link Validator · 链接巡检</span></h3>
+              <span class="agent-status scheduled">● Weekly Mon 09:00</span>
+            </div>
+          </div>
+          <div class="agent-details">
+            <div class="agent-row"><span class="agent-label">Role / 角色</span><span>Find dead external links / 找死链</span></div>
+            <div class="agent-row"><span class="agent-label">Schedule / 时间</span><span>Every Monday 09:00 AM / 每周一早 9 点</span></div>
+            <div class="agent-row"><span class="agent-label">Output / 输出</span><span>Dead link report with file + line / 死链报告含文件和行号</span></div>
+            <div class="agent-row"><span class="agent-label">Alerts / 告警</span><span>List of broken URLs / 断链列表</span></div>
+          </div>
+        </article>
+
+        <!-- Metrics Bot -->
+        <article class="agent-card">
+          <div class="agent-card-header">
+            <div class="agent-avatar agent-avatar-emoji">📊</div>
+            <div>
+              <h3>📊 Metrics Bot <span class="agent-title">Weekly Analyst · 周报分析师</span></h3>
+              <span class="agent-status scheduled">● Weekly Sun 20:00</span>
+            </div>
+          </div>
+          <div class="agent-details">
+            <div class="agent-row"><span class="agent-label">Role / 角色</span><span>Weekly git log analysis / 每周 git 日志分析</span></div>
+            <div class="agent-row"><span class="agent-label">Script / 脚本</span><span><code>scripts/weekly-metrics.sh</code></span></div>
+            <div class="agent-row"><span class="agent-label">Schedule / 时间</span><span>Every Sunday 20:00 PM / 每周日晚 8 点</span></div>
+            <div class="agent-row"><span class="agent-label">Output / 输出</span><span>Weekly summary: commits, files changed, what was built / 周报：提交数、变更文件、成果</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Daily Timeline -->
+    <section class="panel" style="border-left:4px solid var(--blue);background:linear-gradient(90deg,var(--blue-light),var(--bg-card))">
+      <h3>🕐 Daily Timeline / 每日时间线 (Asia/Kuala_Lumpur)</h3>
+      <table class="route-table">
+        <thead><tr><th>Time / 时间</th><th>Agent / 代理</th><th>Action / 动作</th></tr></thead>
+        <tbody>
+          <tr><td>00:00</td><td>🏥 Health Bot</td><td>Site health check / 站点健康检查</td></tr>
+          <tr><td>02:00</td><td>🏥 Health Bot</td><td>Site health check / 站点健康检查</td></tr>
+          <tr><td>04:00</td><td>🏥 Health Bot</td><td>Site health check / 站点健康检查</td></tr>
+          <tr><td>06:00</td><td>🏥 Health Bot</td><td>Site health check / 站点健康检查</td></tr>
+          <tr><td style="font-weight:700;color:var(--red)">08:00</td><td>📡 Scout</td><td style="font-weight:600">Model watch — check for new models / 模型侦察——检查新模型</td></tr>
+          <tr><td>08:00</td><td>🏥 Health Bot</td><td>Site health check / 站点健康检查</td></tr>
+          <tr><td>10:00</td><td>🏥 Health Bot</td><td>Site health check / 站点健康检查</td></tr>
+          <tr><td>12:00</td><td>🏥 Health Bot</td><td>Site health check / 站点健康检查</td></tr>
+          <tr><td>14:00</td><td>🏥 Health Bot</td><td>Site health check / 站点健康检查</td></tr>
+          <tr><td>16:00</td><td>🏥 Health Bot</td><td>Site health check / 站点健康检查</td></tr>
+          <tr><td>18:00</td><td>🏥 Health Bot</td><td>Site health check / 站点健康检查</td></tr>
+          <tr><td>20:00</td><td>🏥 Health Bot</td><td>Site health check / 站点健康检查</td></tr>
+          <tr><td>22:00</td><td>🏥 Health Bot</td><td>Site health check / 站点健康检查</td></tr>
+          <tr><td style="font-weight:700;color:var(--red)">23:30</td><td>📝 Diary Bot</td><td style="font-weight:600">Write daily diary entry / 写每日日记</td></tr>
+          <tr><td colspan="3" style="background:var(--bg);text-align:center;color:var(--muted);font-size:12px"><b>Weekly / 每周：</b> Mon 09:00 🔗 Link Check · Sun 20:00 📊 Metrics Report</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Add New Agent -->
+    <section class="panel cta-final">
+      <h3>➕ Add an Agent / 添加代理</h3>
+      <p>Want to add your own agent? Fork this template and add a cron job.<br/>想添加你自己的代理？Fork 这个模板并添加 cron 任务。</p>
+      <pre>openclaw cron add \
+  --name "my-agent" \
+  --cron "0 10 * * *" \
+  --tz "Asia/Kuala_Lumpur" \
+  --message "Your agent instructions here" \
+  --announce</pre>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:16px">
+        <a class="cta primary" href="./reference.html">📖 Agent Reference / 参考文档</a>
+        <a class="cta" href="./fork.html">🍴 Fork Template / Fork 模板</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Built with 🦞 <a href="https://github.com/openclaw/openclaw">OpenClaw</a> ·
+    <a href="https://github.com/Septoff21/openclaw-newbie-baseline">GitHub</a> ·
+    MIT License ·
+    By DM 👤 × UHX 🌌
+  </footer>
+</body>
+</html>
