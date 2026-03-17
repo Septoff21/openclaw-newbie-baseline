@@ -28,7 +28,7 @@
         <div class="dir-actions">
           ${it.url?`<a class="cta primary" href="${it.url}" target="_blank" rel="noopener">🔗 Open</a>`:''}
           <a class="cta" href="https://github.com/${it.repo}" target="_blank" rel="noopener">📦 Repo</a>
-          <button class="cta" data-copy-prompt="${it.name}">📋 Copy</button>
+          <button class="cta" data-copy-prompt="${it.name}" title="Copy a prompt to explore this project in OpenClaw">📋 Copy Prompt</button>
           <button class="cta" data-share="${it.name}" data-url="${it.url||''}">📤 Share</button>
         </div>
       </article>
