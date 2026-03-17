@@ -1,5 +1,5 @@
 // Service Worker — offline support for OpenClaw Playground
-const CACHE_NAME = 'openclaw-playground-v1';
+const CACHE_NAME = 'openclaw-playground-v2';
 const ASSETS = [
   './',
   './styles.css',
@@ -7,6 +7,17 @@ const ASSETS = [
   './js/search.js',
   './js/live-feed.js',
   './js/diary-page.js',
+  './js/models-page.js',
+  './js/directory-page.js',
+  './js/audience-wizard.js',
+  './js/wizard.js',
+  './js/animations.js',
+  './js/feedback.js',
+  './js/github-stats.js',
+  './js/shortcuts.js',
+  './js/terminal-demo.js',
+  './js/ux-polish.js',
+  './js/welcome.js',
   './assets/dm-avatar.svg',
   './assets/uhx-avatar.svg',
   './assets/critic-avatar.svg',
@@ -19,7 +30,10 @@ const ASSETS = [
   './reference.html',
   './shop.html',
   './fork.html',
-  './changelog.html'
+  './faq.html',
+  './free-models.html',
+  './changelog.html',
+  './404.html'
 ];
 
 // Install — cache core assets
