@@ -5,7 +5,7 @@
       "name": "OpenClaw Skills Explorer",
       "repo": "Cluka-399/openclaw-skills-explorer",
       "url": "https://Cluka-399.github.io/openclaw-skills-explorer/",
-      "desc": "Browse and discover OpenClaw skills — card-based directory.",
+      "desc": "Browse and discover OpenClaw skills — card-based directory.\n可视化浏览和发现 OpenClaw 技能——卡片式目录",
       "tags": [
         "directory",
         "skills",
@@ -18,7 +18,7 @@
       "name": "Jack Diary",
       "repo": "ninehills/jack-diary",
       "url": "https://ninehills.github.io/jack-diary/",
-      "desc": "Personal agent diary — public daily log of an OpenClaw instance.",
+      "desc": "Personal agent diary — public daily log of an OpenClaw instance.\n个人 agent 日记——公开记录 OpenClaw 每日运行",
       "tags": [
         "diary",
         "personal",
@@ -45,7 +45,7 @@
       "name": "LangBot",
       "repo": "langbot-app/LangBot",
       "url": "https://langbot.app",
-      "desc": "Production-grade agentic IM bots — Discord, Slack, Telegram, WeChat, Feishu. Plugin system + knowledge base.",
+      "desc": "Production-grade agentic IM bots — Discord, Slack, Telegram, WeChat, Feishu. Plugin system + knowledge base.\n生产级 IM 机器人开发平台——Discord/Slack/Telegram/微信/飞书/钉钉/QQ",
       "tags": [
         "im-bot",
         "multi-platform",
@@ -58,7 +58,7 @@
       "name": "Nanoclaw",
       "repo": "qwibitai/nanoclaw",
       "url": "https://nanoclaw.dev/blog/nanoclaw-docker-sandboxes",
-      "desc": "Lightweight OpenClaw alternative in Docker sandboxes. WhatsApp, Telegram, Slack, Discord, Gmail.",
+      "desc": "Lightweight OpenClaw alternative in Docker sandboxes. WhatsApp, Telegram, Slack, Discord, Gmail.\n轻量级 OpenClaw 替代方案，运行在 Docker 沙箱中",
       "tags": [
         "lightweight",
         "docker",
@@ -71,7 +71,7 @@
       "name": "OpenClaw Console",
       "repo": "xigpz/openclaw-console",
       "url": "",
-      "desc": "Visual admin panel for OpenClaw — config, model, and skills management.",
+      "desc": "Visual admin panel for OpenClaw — config, model, and skills management.\n可视化管理面板——配置、模型、技能管理",
       "tags": [
         "admin",
         "dashboard"
@@ -83,7 +83,7 @@
       "name": "Lobster Guard",
       "repo": "zhuowater/lobster-guard",
       "url": "",
-      "desc": "AI Agent security gateway — prompt injection detection, content audit, user-ID routing.",
+      "desc": "AI Agent security gateway — prompt injection detection, content audit, user-ID routing.\nAI Agent 安全网关——提示词注入检测、内容审计",
       "tags": [
         "security",
         "gateway"
@@ -95,7 +95,7 @@
       "name": "EverMemOS",
       "repo": "EverMind-AI/EverMemOS",
       "url": "",
-      "desc": "Long-term memory for 24/7 OpenClaw agents across LLMs and platforms.",
+      "desc": "Long-term memory for 24/7 OpenClaw agents across LLMs and platforms.\n24/7 agent 的长期记忆系统，跨 LLM 和平台",
       "tags": [
         "memory",
         "infrastructure"
@@ -107,7 +107,7 @@
       "name": "Awesome OpenClaw Skills",
       "repo": "VoltAgent/awesome-openclaw-skills",
       "url": "",
-      "desc": "5,400+ skills filtered and categorized from the official OpenClaw Skills Registry.",
+      "desc": "5,400+ skills filtered and categorized from the official OpenClaw Skills Registry.\n5400+ 精选技能，从官方注册表中筛选分类",
       "tags": [
         "skills",
         "directory",
@@ -120,7 +120,7 @@
       "name": "Awesome OpenClaw Tutorial (CN)",
       "repo": "xianyu110/awesome-openclaw-tutorial",
       "url": "",
-      "desc": "Comprehensive Chinese tutorial — install, config, real cases, and pitfalls.",
+      "desc": "Comprehensive Chinese tutorial — install, config, real cases, and pitfalls.\n全面的中文教程——安装、配置、实战案例、避坑指南",
       "tags": [
         "tutorial",
         "chinese"
@@ -132,7 +132,7 @@
       "name": "OpenClaw Self-Healing Monitor",
       "repo": "Garygaoxiang/openclaw-self-healing-monitor",
       "url": "",
-      "desc": "Auto-recovery monitoring script for OpenClaw with Telegram notifications.",
+      "desc": "Auto-recovery monitoring script for OpenClaw with Telegram notifications.\n自动恢复监控脚本，支持 Telegram 通知",
       "tags": [
         "monitoring",
         "reliability"
@@ -144,7 +144,7 @@
       "name": "Nanobot",
       "repo": "HKUDS/nanobot",
       "url": "",
-      "desc": "Ultra-lightweight OpenClaw alternative — minimal footprint.",
+      "desc": "Ultra-lightweight OpenClaw alternative — minimal footprint.\n超轻量 OpenClaw 替代方案——最小占用",
       "tags": [
         "lightweight",
         "alternative"
@@ -156,7 +156,7 @@
       "name": "ProSkills.md",
       "repo": "ProSkillsMD/proskills",
       "url": "",
-      "desc": "Community-curated OpenClaw skill listings — browse, submit, and contribute.",
+      "desc": "Community-curated OpenClaw skill listings — browse, submit, and contribute.\n社区策划的技能列表——浏览、提交、贡献",
       "tags": [
         "skills",
         "community"
@@ -168,7 +168,7 @@
       "name": "AstrBot",
       "repo": "AstrBotDevs/AstrBot",
       "url": "https://astrbot.app",
-      "desc": "Agentic IM chatbot infrastructure integrating many IM platforms, LLMs, and plugins.",
+      "desc": "Agentic IM chatbot infrastructure integrating many IM platforms, LLMs, and plugins.\n多平台 IM 聊天机器人基础设施——支持大量 IM 平台、LLM、插件",
       "tags": [
         "im-bot",
         "infrastructure",
@@ -380,7 +380,7 @@
       "name": "LangBot",
       "repo": "langbot-app/LangBot",
       "url": "https://langbot.app",
-      "desc": "Production-grade IM bot platform — Discord/Slack/Telegram/WeChat/Feishu/DingTalk/QQ. Plugin system + knowledge base.",
+      "desc": "Production-grade IM bot platform — Discord/Slack/Telegram/WeChat/Feishu/DingTalk/QQ. Plugin system + knowledge base.\n生产级 IM 机器人开发平台——Discord/Slack/Telegram/微信/飞书/钉钉/QQ",
       "tags": [
         "im-bot",
         "multi-platform",
@@ -393,7 +393,7 @@
       "name": "Nanobot",
       "repo": "HKUDS/nanobot",
       "url": "",
-      "desc": "Ultra-lightweight OpenClaw alternative. Minimal footprint, maximum efficiency.",
+      "desc": "Ultra-lightweight OpenClaw alternative. Minimal footprint, maximum efficiency.\n超轻量 OpenClaw 替代方案——最小占用",
       "tags": [
         "lightweight",
         "alternative"
