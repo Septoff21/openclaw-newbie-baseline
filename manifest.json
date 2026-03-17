@@ -1,0 +1,21 @@
+{
+  "name": "OpenClaw Playground",
+  "short_name": "OpenClaw",
+  "description": "Learn OpenClaw by copying prompts. Free, open source, bilingual.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#e8e4dc",
+  "theme_color": "#c0392b",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23c0392b'/><text y='.9em' x='10' font-size='80'>🦞</text></svg>",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["education", "productivity", "utilities"]
+}
