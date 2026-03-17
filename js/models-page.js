@@ -2,9 +2,9 @@
   const data=await fetch('./api/models-daily.json').then(r=>r.json());
 
   document.getElementById('snapshot-summary').innerHTML=`
-    <div class="stat"><b>${data.total}</b><span>Total models</span></div>
-    <div class="stat"><b>${data.newCount}</b><span>New today</span></div>
-    <div class="stat"><b>${data.models.length}</b><span>Top newest</span></div>
+    <div class="stat"><b>${data.total}</b><span>Total models / 总模型数</span></div>
+    <div class="stat"><b>${data.newCount}</b><span>New today / 今日新增</span></div>
+    <div class="stat"><b>${data.models.length}</b><span>Top newest / 最新</span></div>
   `;
 
   const modalityIcon=m=>{
@@ -30,8 +30,8 @@
         <span>Out: ${priceLabel(m.cPrice)}</span>
       </div>
       <div style="margin-top:6px;display:flex;gap:6px;flex-wrap:wrap">
-        <button class="cta" style="font-size:11px;padding:5px 10px" onclick="var cmd='openclaw config set model.default ${m.id}';navigator.clipboard.writeText(cmd);this.textContent='Copied! ✓';setTimeout(()=>this.textContent='📋 Copy config command',1200)">📋 Copy config command</button>
-        <code style="font-size:10px;color:var(--muted);padding:5px;background:var(--bg);border-radius:6px;align-self:center">Paste this after installing OpenClaw</code>
+        <button class="cta" style="font-size:11px;padding:5px 10px" onclick="var cmd='openclaw config set model.default ${m.id}';navigator.clipboard.writeText(cmd);this.textContent='Copied! ✓ 已复制！';setTimeout(()=>this.textContent='📋 Copy config / 复制配置',1200)">📋 Copy config / 复制配置</button>
+        <code style="font-size:10px;color:var(--muted);padding:5px;background:var(--bg);border-radius:6px;align-self:center">Paste after installing OpenClaw / 安装后粘贴</code>
       </div>
     </article>
   `).join('');
@@ -39,7 +39,7 @@
   // Add click-to-copy for model IDs
   document.querySelectorAll('.model-id').forEach(el=>{
     el.style.cursor='pointer';
-    el.title='Click to copy';
+    el.title='Click to copy / 点击复制';
     el.addEventListener('click',()=>{
       navigator.clipboard.writeText(el.textContent);
       const orig=el.style.color;

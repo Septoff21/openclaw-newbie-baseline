@@ -6,10 +6,10 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦞</text></svg>" />
   <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦞</text></svg>" />
   <title>Models — OpenClaw Playground</title>
-  <meta name="description" content="Daily model watch from OpenRouter. New models, verification status, and task routing." />
+  <meta name="description" content="Daily model watch from OpenRouter. New models, verification status, and task routing. / OpenRouter 每日模型监控。新模型、验证状态和任务路由。" />
   <link rel="canonical" href="https://septoff21.github.io/openclaw-newbie-baseline/models.html" />
-  <meta property="og:title" content="Daily Model Watch — OpenClaw Playground" />
-  <meta property="og:description" content="Daily model watch from OpenRouter. New models, verification status, and task routing." />
+  <meta property="og:title" content="Daily Model Watch — OpenClaw Playground / 每日模型监控" />
+  <meta property="og:description" content="Daily model watch from OpenRouter. New models, verification status, and task routing. / OpenRouter 每日模型监控。新模型、验证状态和任务路由。" />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -73,31 +73,31 @@
     <section class="panel">
       <h3>Verification Status / 验证状态</h3>
       <div class="badge-legend">
-        <span class="badge verified">Verified</span> = ran our test prompts + evidence logged
-        <span class="badge unverified">Unverified</span> = listed but not yet tested
+        <span class="badge verified">Verified 已验证</span> = ran our test prompts + evidence logged / 已跑测试提示词 + 有日志证据
+        <span class="badge unverified">Unverified 未验证</span> = listed but not yet tested / 已收录但尚未测试
       </div>
       <div class="route-table-wrapper"><table class="route-table">
-        <thead><tr><th>Model</th><th>Status</th><th>Type</th><th>Last Checked</th></tr></thead>
+        <thead><tr><th>Model / 模型</th><th>Status / 状态</th><th>Type / 类型</th><th>Last Checked / 上次检查</th></tr></thead>
         <tbody>
-          <tr><td>openrouter/hunter-alpha</td><td><span class="badge verified">Verified</span></td><td>Daily ops, agentic</td><td>2026-03-16</td></tr>
-          <tr><td>openrouter/healer-alpha</td><td><span class="badge unverified">Unverified</span></td><td>Multimodal</td><td>—</td></tr>
-          <tr><td>z-ai/glm-5-turbo</td><td><span class="badge unverified">Unverified</span></td><td>Reasoning</td><td>—</td></tr>
-          <tr><td>openai/gpt-5.4</td><td><span class="badge unverified">Unverified</span></td><td>General</td><td>—</td></tr>
-          <tr><td>google/gemini-3.1-flash-lite-preview</td><td><span class="badge unverified">Unverified</span></td><td>Fast/cheap</td><td>—</td></tr>
+          <tr><td>openrouter/hunter-alpha</td><td><span class="badge verified">Verified 已验证</span></td><td>Daily ops, agentic / 日常运维、代理</td><td>2026-03-16</td></tr>
+          <tr><td>openrouter/healer-alpha</td><td><span class="badge unverified">Unverified 未验证</span></td><td>Multimodal / 多模态</td><td>—</td></tr>
+          <tr><td>z-ai/glm-5-turbo</td><td><span class="badge unverified">Unverified 未验证</span></td><td>Reasoning / 推理</td><td>—</td></tr>
+          <tr><td>openai/gpt-5.4</td><td><span class="badge unverified">Unverified 未验证</span></td><td>General / 通用</td><td>—</td></tr>
+          <tr><td>google/gemini-3.1-flash-lite-preview</td><td><span class="badge unverified">Unverified 未验证</span></td><td>Fast/cheap / 快速/便宜</td><td>—</td></tr>
         </tbody>
       </table></div>
     </section>
 
     <section class="panel" style="border-left:4px solid #e67e22;background:linear-gradient(90deg,#fef3e2,var(--bg-card))">
-      <h3>⚠️ Context Warning: Different Models Behave Differently</h3>
-      <p class="help">Not all models handle high context the same way. Watch for these behaviors:</p>
+      <h3>⚠️ Context Warning: Different Models Behave Differently<br/><span style="font-size:0.6em;color:var(--muted)">上下文警告：不同模型行为不同</span></h3>
+      <p class="help">Not all models handle high context the same way. Watch for these behaviors: / 不同模型处理高上下文的方式不同，注意这些行为：</p>
       <div class="route-table-wrapper"><table class="route-table">
-        <thead><tr><th>Model Type</th><th>Context Limit</th><th>Behavior at 70%+</th><th>Behavior at 90%+</th></tr></thead>
+        <thead><tr><th>Model Type / 模型类型</th><th>Context Limit / 上下文限制</th><th>Behavior at 70%+ / 70%+ 行为</th><th>Behavior at 90%+ / 90%+ 行为</th></tr></thead>
         <tbody>
-          <tr><td>Free (Hunter Alpha)</td><td>200k</td><td>Generally stable</td><td>May truncate older context</td></tr>
-          <tr><td>Premium (GPT-5.4, Claude)</td><td>128k-1M</td><td>Good retention</td><td>Graceful degradation</td></tr>
-          <tr><td>Flash (Gemini Lite)</td><td>1M+</td><td>Fast but shallow</td><td>May hallucinate details</td></tr>
-          <tr><td>Reasoning (GLM-5, O-series)</td><td>64k-200k</td><td>Best for analysis</td><td>Slower, more careful</td></tr>
+          <tr><td>Free (Hunter Alpha) / 免费</td><td>200k</td><td>Generally stable / 通常稳定</td><td>May truncate older context / 可能截断旧上下文</td></tr>
+          <tr><td>Premium (GPT-5.4, Claude) / 付费</td><td>128k-1M</td><td>Good retention / 保留良好</td><td>Graceful degradation / 优雅降级</td></tr>
+          <tr><td>Flash (Gemini Lite) / 快速</td><td>1M+</td><td>Fast but shallow / 快但浅</td><td>May hallucinate details / 可能编造细节</td></tr>
+          <tr><td>Reasoning (GLM-5, O-series) / 推理</td><td>64k-200k</td><td>Best for analysis / 最适合分析</td><td>Slower, more careful / 更慢、更谨慎</td></tr>
         </tbody>
       </table></div>
       <p style="margin-top:10px"><b>💡 Plain language / 大白话：</b><br/>
@@ -109,12 +109,12 @@
     <section class="panel">
       <h3>Task Routing (Verified Only) / 任务路由（仅已验证）</h3>
       <div class="route-table-wrapper"><table class="route-table">
-        <thead><tr><th>Task Type</th><th>Preferred Model</th><th>Status</th></tr></thead>
+        <thead><tr><th>Task Type / 任务类型</th><th>Preferred Model / 首选模型</th><th>Status / 状态</th></tr></thead>
         <tbody id="route-body">
-          <tr><td>Fast daily ops</td><td>openrouter/hunter-alpha</td><td><span class="badge verified">Verified</span> 2026-03-16</td></tr>
-          <tr><td>Tool-heavy workflow</td><td colspan="2" class="muted">Awaiting verification — <a href="https://github.com/Septoff21/openclaw-newbie-baseline/issues" target="_blank">Help us verify →</a></td></tr>
-          <tr><td>Long-context planning</td><td colspan="2" class="muted">Awaiting verification — <a href="https://github.com/Septoff21/openclaw-newbie-baseline/issues" target="_blank">Help us verify →</a></td></tr>
-          <tr><td>High-reasoning analysis</td><td colspan="2" class="muted">Awaiting verification — <a href="https://github.com/Septoff21/openclaw-newbie-baseline/issues" target="_blank">Help us verify →</a></td></tr>
+          <tr><td>Fast daily ops / 快速日常运维</td><td>openrouter/hunter-alpha</td><td><span class="badge verified">Verified 已验证</span> 2026-03-16</td></tr>
+          <tr><td>Tool-heavy workflow / 工具密集工作流</td><td colspan="2" class="muted">Awaiting verification — 等待验证 — <a href="https://github.com/Septoff21/openclaw-newbie-baseline/issues" target="_blank">Help us verify / 帮我们验证 →</a></td></tr>
+          <tr><td>Long-context planning / 长上下文规划</td><td colspan="2" class="muted">Awaiting verification — 等待验证 — <a href="https://github.com/Septoff21/openclaw-newbie-baseline/issues" target="_blank">Help us verify / 帮我们验证 →</a></td></tr>
+          <tr><td>High-reasoning analysis / 高推理分析</td><td colspan="2" class="muted">Awaiting verification — 等待验证 — <a href="https://github.com/Septoff21/openclaw-newbie-baseline/issues" target="_blank">Help us verify / 帮我们验证 →</a></td></tr>
         </tbody>
       </table></div>
     </section>
