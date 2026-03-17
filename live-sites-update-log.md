@@ -19,7 +19,7 @@
 - Live URL to verify: `https://septoff21.github.io/openclaw-newbie-baseline/`
 
 ### Next step
-- Add a compact “copyable model-selection prompt” card (speed vs cost vs context)
+- Add a compact "copyable model-selection prompt" card (speed vs cost vs context)
 - Add one-click mobile screenshot proof checklist block
 
 ## 2026-03-18 (iteration continue pass)
@@ -47,4 +47,27 @@
 
 ### Next step
 - Connect curated JSON directly to `directory.html` renderer (single source of truth)
-- Add a “target audience chooser” mini wizard (user / builder / monetizer)
+
+## 2026-03-18 (iteration pass 2 — audience chooser)
+
+### What changed
+1. Replaced static "User View + Builder View" section with **interactive Audience Chooser Wizard**
+   - 3-step flow: Pick Role (User / Builder / Monetizer) → Pick Level (Beginner / Advance / Extreme) → Get customized prompt
+   - 9 unique copy-ready prompts (3 roles × 3 levels)
+   - Each prompt tailored to the persona's actual goal
+2. Added JS: `js/audience-wizard.js`
+3. Added CSS: wizard-specific styles (responsive grid, hover states, dark mode support)
+
+### Why
+- Static cards were passive; wizard drives action (pick → copy → paste)
+- Monetizer path was missing from previous "User / Builder" binary
+- Aligns with DM's brief: "给别人可复制的自然语言 md/json，改掉一些自己的东西进行二创"
+
+### Verification
+- Local: `index.html` updated with `<div id="audience-wizard">` + JS include
+- CSS: new `.wizard-*` classes added to `styles.css`
+- Deployed: gh-pages push (to be confirmed)
+
+### Next step
+- Connect curated JSON to `directory.html` for single source of truth
+- Add model context warning card (prominent, copyable)
