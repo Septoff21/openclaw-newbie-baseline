@@ -1,0 +1,56 @@
+// Keyboard shortcuts for OpenClaw Playground
+(function() {
+  const shortcuts = {
+    '/': () => document.getElementById('search-input')?.focus(),
+    'h': () => location.href = './',
+    'g': () => location.href = './agents.html',
+    'd': () => location.href = './directory.html',
+    'm': () => location.href = './models.html',
+    's': () => location.href = './shop.html',
+    '?': () => toggleHelp(),
+    'Escape': () => {
+      document.getElementById('search-input')?.blur();
+      document.getElementById('shortcuts-help')?.remove();
+    }
+  };
+
+  function toggleHelp() {
+    let help = document.getElementById('shortcuts-help');
+    if (help) { help.remove(); return; }
+    help = document.createElement('div');
+    help.id = 'shortcuts-help';
+    help.style.cssText = 'position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--bg-card);border:2px solid var(--stroke);border-radius:16px;padding:24px;box-shadow:var(--shadow-lg);z-index:10000;max-width:320px;width:90%';
+    help.innerHTML = `
+      <h3 style="margin:0 0 12px;font-size:16px">⌨️ Keyboard Shortcuts</h3>
+      <div style="display:grid;grid-template-columns:1fr 2fr;gap:6px;font-size:13px">
+        <kbd style="background:var(--bg);padding:2px 8px;border-radius:4px;text-align:center">/</kbd><span>Search / 搜索</span>
+        <kbd style="background:var(--bg);padding:2px 8px;border-radius:4px;text-align:center">h</kbd><span>Home / 首页</span>
+        <kbd style="background:var(--bg);padding:2px 8px;border-radius:4px;text-align:center">g</kbd><span>Agents / 代理</span>
+        <kbd style="background:var(--bg);padding:2px 8px;border-radius:4px;text-align:center">d</kbd><span>Directory / 目录</span>
+        <kbd style="background:var(--bg);padding:2px 8px;border-radius:4px;text-align:center">m</kbd><span>Models / 模型</span>
+        <kbd style="background:var(--bg);padding:2px 8px;border-radius:4px;text-align:center">s</kbd><span>Shop / 商店</span>
+        <kbd style="background:var(--bg);padding:2px 8px;border-radius:4px;text-align:center">?</kbd><span>This help / 帮助</span>
+        <kbd style="background:var(--bg);padding:2px 8px;border-radius:4px;text-align:center">Esc</kbd><span>Close / 关闭</span>
+      </div>
+      <p style="margin:12px 0 0;font-size:11px;color:var(--muted)">Press Esc to close</p>
+    `;
+    help.onclick = (e) => { if (e.target === help) help.remove(); };
+    document.body.appendChild(help);
+  }
+
+  document.addEventListener('keydown', (e) => {
+    // Don't trigger in inputs
+    if (e.target.matches('input,textarea')) return;
+    const fn = shortcuts[e.key];
+    if (fn) { e.preventDefault(); fn(); }
+  });
+
+  // Add ? hint to footer
+  const footer = document.querySelector('footer');
+  if (footer) {
+    const hint = document.createElement('span');
+    hint.style.cssText = 'margin-left:8px;font-size:10px;opacity:0.5';
+    hint.textContent = 'Press ? for shortcuts';
+    footer.appendChild(hint);
+  }
+})();

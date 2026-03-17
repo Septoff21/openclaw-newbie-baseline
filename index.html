@@ -42,6 +42,7 @@
   </script>
 </head>
 <body>
+  <a href="#main" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:10px;background:var(--red);color:#fff;font-weight:700" onfocus="this.style.position='fixed';this.style.left='10px';this.style.top='10px';this.style.width='auto';this.style.height='auto'" onblur="this.style.position='absolute';this.style.left='-9999px'">Skip to main content / 跳到主内容</a>
   <nav class="topnav">
     <a class="topnav-logo" href="./">🦞 OpenClaw</a>
     <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
@@ -96,7 +97,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <!-- Our Story -->
     <section class="section-block" id="story">
       <div class="section-header">
@@ -325,6 +326,7 @@
   <script src="./js/search.js"></script>
   <script src="./js/live-feed.js"></script>
   <script src="./js/animations.js"></script>
+  <script src="./js/shortcuts.js"></script>
 
     <!-- Bottom CTA -->
     <section class="panel cta-final">
