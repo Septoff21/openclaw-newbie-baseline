@@ -10,6 +10,7 @@
   <meta property="og:type" content="website" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦞</text></svg>" />
   <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦞</text></svg>" />
+  <link rel="alternate" type="application/rss+xml" title="OpenClaw Playground Diary" href="./feed.xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600;700;900&display=swap" rel="stylesheet" />
@@ -20,6 +21,10 @@
   <nav class="topnav">
     <a class="topnav-logo" href="./">🦞 OpenClaw</a>
     <div class="topnav-links">
+      <div class="search-wrap" style="position:relative">
+        <input type="text" id="search-input" placeholder="🔍 Search... (press /)" style="padding:6px 12px;border-radius:8px;border:1.5px solid var(--stroke);background:var(--bg);font-size:13px;width:140px;transition:width .3s" onfocus="this.style.width='200px'" onblur="setTimeout(()=>this.style.width='140px',200)"/>
+        <div id="search-results" style="display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg-card);border:1.5px solid var(--stroke);border-radius:12px;box-shadow:var(--shadow-md);z-index:100;margin-top:4px;min-width:220px"></div>
+      </div>
       <a href="./" class="active">Home</a>
       <a href="./agents.html">Agents</a>
       <a href="./directory.html">Directory</a>
@@ -290,7 +295,8 @@
       <p class="help">Latest commits from this repo. See what changed today.<br/>仓库最新提交。看看今天改了什么。</p>
       <div id="live-feed"><p class="help">Loading feed...</p></div>
     </section>
-    <script src="./js/live-feed.js"></script>
+    <script src="./js/search.js"></script>
+  <script src="./js/live-feed.js"></script>
 
     <!-- Bottom CTA -->
     <section class="panel cta-final">
