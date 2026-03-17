@@ -11,10 +11,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="./js/darkmode.js"></script>
+  <link rel="manifest" href="./manifest.json" />
+  <meta name="theme-color" content="#c0392b" />
 </head>
 <body>
   <nav class="topnav">
     <a class="topnav-logo" href="./">🦞 OpenClaw</a>
+    <button id="theme-toggle" aria-label="Toggle dark mode" style="background:none;border:1.5px solid var(--stroke);border-radius:8px;padding:4px 8px;cursor:pointer;font-size:16px">🌙</button>
     <div class="topnav-links">
       <a href="./">Home</a>
       <a href="./agents.html" class="active">Agents</a>
