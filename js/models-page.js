@@ -29,7 +29,10 @@
         <span>In: ${priceLabel(m.pPrice)}</span>
         <span>Out: ${priceLabel(m.cPrice)}</span>
       </div>
-      <div style="margin-top:6px"><button class="cta" style="font-size:11px;padding:5px 10px" onclick="navigator.clipboard.writeText('${m.id}');this.textContent='Copied! ✓';setTimeout(()=>this.textContent='📋 Copy ID',1200)">📋 Copy ID</button></div>
+      <div style="margin-top:6px;display:flex;gap:6px;flex-wrap:wrap">
+        <button class="cta" style="font-size:11px;padding:5px 10px" onclick="var cmd='openclaw config set model.default ${m.id}';navigator.clipboard.writeText(cmd);this.textContent='Copied! ✓';setTimeout(()=>this.textContent='📋 Copy config command',1200)">📋 Copy config command</button>
+        <code style="font-size:10px;color:var(--muted);padding:5px;background:var(--bg);border-radius:6px;align-self:center">Paste this after installing OpenClaw</code>
+      </div>
     </article>
   `).join('');
 

@@ -130,6 +130,42 @@
       <p class="help" style="margin-top:8px">These are conservative estimates. Top sellers on ClawHub report 10x these numbers.<br/>这是保守估计。ClawHub 头部卖家报告 10 倍于此的数字。</p>
     </section>
 
+    <!-- Worked Example -->
+    <section class="panel" style="border-left:4px solid var(--green);background:linear-gradient(90deg,var(--green-light),var(--bg-card))">
+      <h3>✅ Complete Example: Build a "Daily Weather" Skill in 10 Minutes / 完整案例：10 分钟做一个"每日天气"技能</h3>
+      <p class="help">Follow these exact steps. No guessing. No "figure it out." / 跟着这些步骤走。不需要猜测。</p>
+      <div style="margin:12px 0">
+        <p><b>Step 1: Create the skill file / 创建技能文件</b></p>
+        <p style="font-size:13px;color:var(--muted)">Create a file called <code>skills/weather-summary/SKILL.md</code> in your OpenClaw folder:</p>
+        <pre id="skill-example"># SKILL.md — Weather Summary Skill
+
+## What it does
+Summarizes today's weather in a friendly one-liner.
+
+## How to use
+Say: "What's the weather like today in [your city]?"
+
+## Script
+Runs `curl wttr.in/{city}?format=3` and returns the result.
+
+## Monetization
+Free version: 1 city. Paid ($2/mo): unlimited cities + alerts.</pre>
+        <button class="cta" onclick="navigator.clipboard.writeText(document.getElementById('skill-example').textContent);this.textContent='Copied! ✓'">📋 Copy skill template / 复制技能模板</button>
+      </div>
+      <div style="margin:12px 0">
+        <p><b>Step 2: Test it locally / 本地测试</b></p>
+        <pre>openclaw skills test weather-summary</pre>
+      </div>
+      <div style="margin:12px 0">
+        <p><b>Step 3: Publish to ClawHub / 发布到 ClawHub</b></p>
+        <pre>clawhub publish skills/weather-summary --price free</pre>
+      </div>
+      <div style="margin:12px 0">
+        <p><b>Step 4: Share / 分享</b></p>
+        <p style="font-size:13px">Your skill is now live! Share the link: <code>clawhub.com/skills/your-username/weather-summary</code></p>
+      </div>
+    </section>
+
     <!-- Starter Template -->
     <section class="panel">
       <h3>📋 Starter Template / 起步模板</h3>
