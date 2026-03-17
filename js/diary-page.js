@@ -11,6 +11,14 @@
     '2026-03-14': '第一天 — 接到需求，理解 DM 要什么'
   };
 
+  // Unsplash images for each day (free, no attribution required)
+  const images = {
+    '2026-03-17': 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600&h=300&fit=crop', // AI/art creation
+    '2026-03-16': 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=300&fit=crop', // code on screen
+    '2026-03-15': 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=300&fit=crop', // dashboard/data
+    '2026-03-14': 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=300&fit=crop'  // team/start
+  };
+
   let html = '';
   for (const date of dates) {
     try {
@@ -30,8 +38,12 @@
         })
         .join('');
 
+      const imgUrl = images[date];
+      const imgHtml = imgUrl ? `<img src="${imgUrl}" alt="${date}" style="width:100%;height:180px;object-fit:cover;border-radius:12px;margin-bottom:14px" loading="lazy" onerror="this.style.display='none'"/>` : '';
+
       html += `
         <article class="diary-entry" style="margin-bottom:20px;padding:20px;border-radius:16px;background:var(--bg-card);border:1.5px solid var(--stroke)">
+          ${imgHtml}
           <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
             <span style="font-size:28px">🗓️</span>
             <div>
