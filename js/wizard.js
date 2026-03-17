@@ -1,0 +1,68 @@
+// Onboarding Wizard — step-by-step guide for first-timers
+(function() {
+  const KEY = 'openclaw-wizard-done';
+  if (localStorage.getItem(KEY)) return;
+
+  const steps = [
+    {
+      title: '👋 Welcome! / 欢迎！',
+      text: 'This site helps you set up an AI agent in 5 minutes. Let me show you around.<br/>这个站点帮你 5 分钟设置 AI agent。让我带你看看。',
+      target: null
+    },
+    {
+      title: '📋 Step 1: Copy a Prompt / 第一步：复制提示词',
+      text: 'Choose your level (Beginner/Advance/Extreme) and copy the prompt.<br/>选择你的级别（新手/进阶/极客）并复制提示词。',
+      target: '#journey'
+    },
+    {
+      title: '🤖 Step 2: Meet Your Agents / 第二步：认识你的代理',
+      text: 'See all 7 agents that will work for you — each has a schedule and job.<br/>看看为你工作的 7 个代理——每个都有时间表和任务。',
+      target: null
+    },
+    {
+      title: '✅ Step 3: Verify / 第三步：验证',
+      text: 'Always verify AI output with the 4-Lock system. Never trust blindly.<br/>用四锁系统验证 AI 输出。永远不要盲目信任。',
+      target: null
+    },
+    {
+      title: '🚀 You\'re Ready! / 准备好了！',
+      text: 'Press <kbd>?</kbd> anytime for keyboard shortcuts. Happy building!<br/>随时按 <kbd>?</kbd> 查看快捷键。开始吧！',
+      target: null
+    }
+  ];
+
+  let current = 0;
+  const overlay = document.createElement('div');
+  overlay.style.cssText = 'position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);z-index:99999;display:flex;align-items:center;justify-content:center;animation:toast-in .3s ease';
+
+  function render() {
+    const s = steps[current];
+    const pct = Math.round(((current + 1) / steps.length) * 100);
+    overlay.innerHTML = `
+      <div style="background:var(--bg-card);border-radius:20px;padding:28px;max-width:420px;width:90%;box-shadow:var(--shadow-lg);text-align:center">
+        <h3 style="margin:0 0 12px;font-size:18px">${s.title}</h3>
+        <p style="font-size:14px;line-height:1.6;color:var(--fg2);margin:0 0 16px">${s.text}</p>
+        <div style="height:4px;background:var(--stroke);border-radius:2px;margin-bottom:16px"><div style="height:100%;width:${pct}%;background:var(--red);border-radius:2px;transition:.3s"></div></div>
+        <div style="display:flex;gap:8px;justify-content:center">
+          ${current > 0 ? '<button onclick="window._wizardPrev()" style="padding:8px 16px;border:1.5px solid var(--stroke);border-radius:8px;background:var(--bg);cursor:pointer;font-weight:600">← Back</button>' : ''}
+          ${current < steps.length - 1 
+            ? '<button onclick="window._wizardNext()" style="padding:8px 20px;background:var(--red);color:#fff;border:none;border-radius:8px;cursor:pointer;font-weight:700">Next →</button>'
+            : '<button onclick="window._wizardDone()" style="padding:8px 20px;background:var(--green);color:#fff;border:none;border-radius:8px;cursor:pointer;font-weight:700">🎉 Start!</button>'}
+          <button onclick="window._wizardSkip()" style="padding:8px 12px;border:1.5px solid var(--stroke);border-radius:8px;background:transparent;cursor:pointer;color:var(--muted)">Skip</button>
+        </div>
+        <p style="font-size:11px;color:var(--muted);margin:12px 0 0">${current + 1} / ${steps.length}</p>
+      </div>
+    `;
+  }
+
+  window._wizardNext = () => { current++; render(); };
+  window._wizardPrev = () => { current--; render(); };
+  window._wizardDone = () => { overlay.remove(); localStorage.setItem(KEY, '1'); };
+  window._wizardSkip = () => { overlay.remove(); localStorage.setItem(KEY, '1'); };
+
+  // Show after 3 seconds
+  setTimeout(() => {
+    document.body.appendChild(overlay);
+    render();
+  }, 3000);
+})();
