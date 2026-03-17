@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e8e4dc"/>
+      <stop offset="100%" stop-color="#d8d4cc"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Decorative elements -->
+  <circle cx="100" cy="100" r="60" fill="#c0392b" opacity="0.08"/>
+  <circle cx="1100" cy="530" r="80" fill="#2874a6" opacity="0.08"/>
+  <!-- Main content -->
+  <text x="600" y="200" text-anchor="middle" font-family="system-ui,sans-serif" font-size="72" font-weight="900" fill="#1a1a1a">🦞 OpenClaw Playground</text>
+  <text x="600" y="300" text-anchor="middle" font-family="system-ui,sans-serif" font-size="32" fill="#5a6c7d">Learn by Copying · 中英双语 · Free & Open Source</text>
+  <text x="600" y="380" text-anchor="middle" font-family="system-ui,sans-serif" font-size="24" fill="#6b6b6b">From zero to AI agent in 5 minutes</text>
+  <!-- Three path indicators -->
+  <rect x="250" y="430" width="200" height="60" rx="12" fill="#27ae60" opacity="0.9"/>
+  <text x="350" y="468" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" font-weight="700" fill="#fff">🌱 Beginner</text>
+  <rect x="500" y="430" width="200" height="60" rx="12" fill="#e67e22" opacity="0.9"/>
+  <text x="600" y="468" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" font-weight="700" fill="#fff">⚡ Advance</text>
+  <rect x="750" y="430" width="200" height="60" rx="12" fill="#c0392b" opacity="0.9"/>
+  <text x="850" y="468" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" font-weight="700" fill="#fff">🚀 Extreme</text>
+  <!-- Footer -->
+  <text x="600" y="570" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#95a5a6">Built with OpenClaw · By DM × UHX</text>
+</svg>
