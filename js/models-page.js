@@ -29,6 +29,19 @@
         <span>In: ${priceLabel(m.pPrice)}</span>
         <span>Out: ${priceLabel(m.cPrice)}</span>
       </div>
+      <div style="margin-top:6px"><button class="cta" style="font-size:11px;padding:5px 10px" onclick="navigator.clipboard.writeText('${m.id}');this.textContent='Copied! ✓';setTimeout(()=>this.textContent='📋 Copy ID',1200)">📋 Copy ID</button></div>
     </article>
   `).join('');
+
+  // Add click-to-copy for model IDs
+  document.querySelectorAll('.model-id').forEach(el=>{
+    el.style.cursor='pointer';
+    el.title='Click to copy';
+    el.addEventListener('click',()=>{
+      navigator.clipboard.writeText(el.textContent);
+      const orig=el.style.color;
+      el.style.color='var(--green)';
+      setTimeout(()=>el.style.color=orig,800);
+    });
+  });
 })();

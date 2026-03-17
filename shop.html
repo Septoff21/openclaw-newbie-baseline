@@ -130,6 +130,24 @@
       <p class="help" style="margin-top:8px">These are conservative estimates. Top sellers on ClawHub report 10x these numbers.<br/>这是保守估计。ClawHub 头部卖家报告 10 倍于此的数字。</p>
     </section>
 
+    <!-- Starter Template -->
+    <section class="panel">
+      <h3>📋 Starter Template / 起步模板</h3>
+      <p class="help">Copy this prompt to start building your first monetizable skill:<br/>复制这个提示词，开始构建你的第一个可变现技能：</p>
+      <pre id="shop-prompt">I want to build a monetizable OpenClaw skill. Help me:
+
+1. Identify a problem I can solve with AI (calendar, email, content, data)
+2. Create a skill package (SKILL.md + scripts/)
+3. Test it locally with `openclaw skills test`
+4. Package it for ClawHub with `clawhub publish`
+5. Set a price (or free for exposure)
+6. Write a README with install instructions and screenshots
+
+My skill idea: [DESCRIBE YOUR IDEA HERE]
+My target users: [WHO IS THIS FOR?]</pre>
+      <button class="cta primary" onclick="navigator.clipboard.writeText(document.getElementById('shop-prompt').textContent);this.textContent='Copied! ✓'">📋 Copy prompt / 复制提示词</button>
+    </section>
+
     <!-- CTA -->
     <section class="panel cta-final">
       <h3>🦞 Ready to Build Your First Skill? / 准备好造第一个技能了吗？</h3>

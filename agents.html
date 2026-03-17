@@ -207,12 +207,13 @@
     <section class="panel cta-final">
       <h3>➕ Add an Agent / 添加代理</h3>
       <p>Want to add your own agent? Fork this template and add a cron job.<br/>想添加你自己的代理？Fork 这个模板并添加 cron 任务。</p>
-      <pre>openclaw cron add \
+      <pre id="add-agent-cmd">openclaw cron add \
   --name "my-agent" \
   --cron "0 10 * * *" \
   --tz "Asia/Kuala_Lumpur" \
   --message "Your agent instructions here" \
   --announce</pre>
+      <button class="cta" onclick="navigator.clipboard.writeText(document.getElementById('add-agent-cmd').textContent);this.textContent='Copied! ✓'">📋 Copy command / 复制命令</button>
       <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:16px">
         <a class="cta primary" href="./reference.html">📖 Agent Reference / 参考文档</a>
         <a class="cta" href="./fork.html">🍴 Fork Template / Fork 模板</a>
