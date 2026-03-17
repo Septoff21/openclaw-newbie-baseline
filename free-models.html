@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Models Guide — OpenClaw Playground</title>
+  <meta name="description" content="Complete guide to free and cheap AI models for OpenClaw. Save money without sacrificing quality." />
+  <link rel="canonical" href="https://septoff21.github.io/openclaw-newbie-baseline/free-models.html" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦞</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="./manifest.json" />
+  <meta name="theme-color" content="#c0392b" />
+  <meta property="og:title" content="Free Models Guide — OpenClaw Playground" />
+  <meta property="og:type" content="website" />
+  <script src="./js/darkmode.js"></script>
+</head>
+<body>
+  <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+  <nav class="topnav">
+    <a class="topnav-logo" href="./">🦞 OpenClaw</a>
+    <div class="topnav-links">
+      <a href="./">Home</a>
+      <a href="./agents.html">Agents</a>
+      <a href="./quickstart.html">Start</a>
+      <a href="./directory.html">Directory</a>
+      <a href="./models.html">Models</a>
+      <a href="./free-models.html" class="active">Free Models</a>
+      <a href="./faq.html">FAQ</a>
+      <a href="./shop.html">Shop</a>
+      <a href="./fork.html">Fork</a>
+    </div>
+  </nav>
+  <nav class="mobnav">
+    <a href="./"><span class="mobnav-icon">🏠</span>Home</a>
+    <a href="./agents.html"><span class="mobnav-icon">🤖</span>Agents</a>
+    <a href="./directory.html"><span class="mobnav-icon">🦞</span>Dir</a>
+    <a href="./models.html"><span class="mobnav-icon">📡</span>Models</a>
+    <a href="./shop.html"><span class="mobnav-icon">🛒</span>Shop</a>
+  </nav>
+
+  <header class="hero">
+    <p class="eyebrow">Save Money / 省钱指南</p>
+    <h1>💰 Free & Cheap Models<br/><span style="font-size:0.5em;color:var(--muted)">免费和便宜的模型对比</span></h1>
+    <p class="subtitle">Run your AI agent for $0/month. Here's how.<br/>每月 $0 运行你的 AI agent。方法在这里。</p>
+  </header>
+
+  <main>
+    <!-- The Big Picture -->
+    <section class="panel" style="border-left:4px solid var(--green);background:linear-gradient(90deg,var(--green-light),var(--bg-card))">
+      <h3>🎯 The Bottom Line / 结论先行</h3>
+      <p style="font-size:15px;line-height:1.8">
+        <b>For daily tasks (chat, email, scheduling):</b> Use <b>free models</b> via OpenRouter. $0/month.<br/>
+        <b>日常任务（聊天、邮件、日程）：</b>用 OpenRouter 的<b>免费模型</b>。$0/月。<br/><br/>
+        <b>For complex reasoning (analysis, planning):</b> Use <b>GPT-5.4 or GLM-5 Turbo</b> when needed. ~$5-10/month.<br/>
+        <b>复杂推理（分析、规划）：</b>需要时用 <b>GPT-5.4 或 GLM-5 Turbo</b>。~$5-10/月。<br/><br/>
+        <b>Most users spend $0-5/month.</b> You only pay when you exceed free tier limits.<br/>
+        <b>大多数用户每月花 $0-5。</b>只有超过免费额度才付费。
+      </p>
+    </section>
+
+    <!-- Free Models Comparison -->
+    <section class="panel">
+      <h3>🆓 Free Models Comparison / 免费模型对比</h3>
+      <table class="route-table">
+        <thead>
+          <tr><th>Model / 模型</th><th>Context / 上下文</th><th>Speed / 速度</th><th>Best For / 最适合</th><th>Limit / 限制</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>openrouter/hunter-alpha</b><br/><span style="font-size:11px;color:var(--muted)">Our pick / 我们的选择 ⭐</span></td>
+            <td>200K</td>
+            <td>⚡ Fast</td>
+            <td>Daily ops, chat, tasks<br/>日常运营、聊天、任务</td>
+            <td>Generous free tier</td>
+          </tr>
+          <tr>
+            <td><b>openrouter/healer-alpha</b></td>
+            <td>262K</td>
+            <td>⚡ Fast</td>
+            <td>Multimodal (image+audio+video)<br/>多模态（图片+音频+视频）</td>
+            <td>Generous free tier</td>
+          </tr>
+          <tr>
+            <td><b>google/gemini-3.1-flash-lite</b></td>
+            <td>1M+</td>
+            <td>🚀 Ultra fast</td>
+            <td>Long documents, quick summaries<br/>长文档、快速摘要</td>
+            <td>Rate limited</td>
+          </tr>
+          <tr>
+            <td><b>openrouter/sonoma-dusk-alpha</b></td>
+            <td>2M</td>
+            <td>⚡ Fast</td>
+            <td>Massive context tasks<br/>超大上下文任务</td>
+            <td>New, limited history</td>
+          </tr>
+          <tr>
+            <td><b>qwen/qwen3-235b-a22b-04-25:free</b></td>
+            <td>131K</td>
+            <td>🔄 Medium</td>
+            <td>Code, reasoning<br/>代码、推理</td>
+            <td>Community rate limit</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Cost Comparison -->
+    <section class="panel">
+      <h3>💸 Cost Comparison: Free vs Paid / 费用对比：免费 vs 付费</h3>
+      <table class="route-table">
+        <thead>
+          <tr><th>Tier / 等级</th><th>Price / 价格</th><th>Models / 模型</th><th>When to Use / 什么时候用</th></tr>
+        </thead>
+        <tbody>
+          <tr style="background:var(--green-light)">
+            <td><b>🆓 Free</b></td>
+            <td>$0</td>
+            <td>Hunter Alpha, Healer Alpha, Gemini Flash Lite, Qwen Free</td>
+            <td>90% of daily tasks<br/>90% 的日常任务</td>
+          </tr>
+          <tr style="background:var(--blue-light)">
+            <td><b>💵 Cheap</b></td>
+            <td>$0.000001-0.00001/token</td>
+            <td>GPT-5.4 Mini, Claude Sonnet, GLM-5 Turbo</td>
+            <td>Complex analysis, code review<br/>复杂分析、代码审查</td>
+          </tr>
+          <tr style="background:var(--orange-light)">
+            <td><b>💎 Premium</b></td>
+            <td>$0.00003+/token</td>
+            <td>GPT-5.4, Claude Opus, O3</td>
+            <td>Critical decisions, one-off tasks<br/>关键决策、一次性任务</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Save Cost Tips -->
+    <section class="panel">
+      <h3>🧠 7 Ways to Save Money / 7 个省钱方法</h3>
+      <ol style="font-size:14px;line-height:2">
+        <li><b>Start with free models</b> — Hunter Alpha handles 90% of tasks fine<br/><b>从免费模型开始</b>——Hunter Alpha 能处理 90% 的任务</li>
+        <li><b>Use context warnings</b> — Don't let models forget and waste tokens<br/><b>使用上下文警告</b>——别让模型忘记东西浪费 token</li>
+        <li><b>Summarize before switching</b> — Compress context before using expensive models<br/><b>切换前总结</b>——用贵模型之前先压缩上下文</li>
+        <li><b>Batch similar tasks</b> — One long prompt > ten short ones<br/><b>批处理相似任务</b>——一个长提示 > 十个短提示</li>
+        <li><b>Set daily limits</b> — OpenRouter lets you cap spending<br/><b>设置每日限额</b>——OpenRouter 可以限制支出</li>
+        <li><b>Cache common responses</b> — Don't re-ask the same questions<br/><b>缓存常见回答</b>——别重复问同样的问题</li>
+        <li><b>Monitor usage weekly</b> — Check your OpenRouter dashboard<br/><b>每周监控用量</b>——查看 OpenRouter 仪表盘</li>
+      </ol>
+    </section>
+
+    <!-- Recommended Setup -->
+    <section class="panel" style="border-left:4px solid var(--blue);background:linear-gradient(90deg,var(--blue-light),var(--bg-card))">
+      <h3>⚙️ Recommended Setup / 推荐配置</h3>
+      <pre id="cost-config"># OpenClaw cost-optimized config
+
+# Default: free model for daily tasks
+openclaw config set model.default openrouter/hunter-alpha
+
+# Fallback: cheap model for complex tasks
+openclaw config set model.fallback openrouter/gpt-5.4-mini
+
+# Emergency: premium for critical decisions only
+openclaw config set model.premium openrouter/gpt-5.4
+
+# Set daily spending limit ($1/day max)
+openclaw config set billing.dailyLimit 1.00
+
+# Enable context warnings (auto-compress at 70%)
+openclaw config set context.warningThreshold 70
+openclaw config set context.autoCompress true</pre>
+      <button class="cta" onclick="navigator.clipboard.writeText(document.getElementById('cost-config').textContent);this.textContent='Copied! ✓'">📋 Copy config / 复制配置</button>
+    </section>
+
+    <section class="panel cta-final">
+      <h3>🦞 Start Free Today / 今天免费开始</h3>
+      <p>No credit card needed. Start with free models, upgrade only when you need to.<br/>无需信用卡。从免费模型开始，需要时再升级。</p>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+        <a class="cta primary" href="./quickstart.html">🚀 Quick Start / 快速开始</a>
+        <a class="cta" href="./models.html">📡 All Models / 所有模型</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Built with 🦞 <a href="https://github.com/openclaw/openclaw">OpenClaw</a> ·
+    <a href="https://github.com/Septoff21/openclaw-newbie-baseline">GitHub</a> ·
+    MIT License ·
+    By DM 👤 × UHX 🌌
+  </footer>
+  <script src="./js/ux-polish.js"></script>
+</body>
+</html>
