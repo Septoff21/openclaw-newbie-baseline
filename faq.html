@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ — OpenClaw Playground</title>
+  <meta name="description" content="Frequently asked questions about OpenClaw. Answered in plain language." />
+  <link rel="canonical" href="https://septoff21.github.io/openclaw-newbie-baseline/faq.html" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦞</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="./manifest.json" />
+  <meta name="theme-color" content="#c0392b" />
+  <script src="./js/darkmode.js"></script>
+</head>
+<body>
+  <button id="theme-toggle" aria-label="Toggle dark mode" style="background:none;border:1.5px solid var(--stroke);border-radius:8px;padding:4px 8px;cursor:pointer;font-size:16px">🌙</button>
+  <nav class="topnav">
+    <a class="topnav-logo" href="./">🦞 OpenClaw</a>
+    <div class="topnav-links">
+      <a href="./">Home</a>
+      <a href="./agents.html">Agents</a>
+      <a href="./quickstart.html">Start</a>
+      <a href="./directory.html">Directory</a>
+      <a href="./models.html">Models</a>
+      <a href="./faq.html" class="active">FAQ</a>
+      <a href="./reference.html">Reference</a>
+      <a href="./shop.html">Shop</a>
+      <a href="./fork.html">Fork</a>
+    </div>
+  </nav>
+  <nav class="mobnav">
+    <a href="./"><span class="mobnav-icon">🏠</span>Home</a>
+    <a href="./agents.html"><span class="mobnav-icon">🤖</span>Agents</a>
+    <a href="./directory.html"><span class="mobnav-icon">🦞</span>Dir</a>
+    <a href="./models.html"><span class="mobnav-icon">📡</span>Models</a>
+    <a href="./shop.html"><span class="mobnav-icon">🛒</span>Shop</a>
+  </nav>
+
+  <header class="hero">
+    <p class="eyebrow">FAQ / 常见问题</p>
+    <h1>❓ Frequently Asked Questions<br/><span style="font-size:0.5em;color:var(--muted)">常见问题解答</span></h1>
+    <p class="subtitle">Real questions, plain answers. No jargon.<br/>真实问题，大白话回答。没有术语。</p>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h3>🤔 What is OpenClaw? / OpenClaw 是什么？</h3>
+      <p>OpenClaw is a free tool that lets you have an AI assistant that lives on your computer. It can read your emails, manage your calendar, chat with you on Telegram/WhatsApp/Discord, and do tasks automatically — like a personal robot that never sleeps.</p>
+      <p>OpenClaw 是一个免费工具，让你在自己的电脑上拥有一个 AI 助手。它可以读邮件、管日历、在 Telegram/WhatsApp/Discord 上跟你聊天，还能自动执行任务——就像一个永不休息的私人机器人。</p>
+    </section>
+
+    <section class="panel">
+      <h3>💰 Does it cost money? / 要钱吗？</h3>
+      <p><b>OpenClaw itself is 100% free.</b> It's open source — you can download, use, and modify it without paying anything.</p>
+      <p><b>OpenClaw 本身 100% 免费。</b>它是开源的——你可以免费下载、使用、修改。</p>
+      <p>However, you need an <b>API key</b> for the AI brain. The cheapest option is <a href="https://openrouter.ai/keys" target="_blank">OpenRouter</a> — they have free models that work great for daily tasks.</p>
+      <p>但是你需要一个 <b>API 密钥</b>给 AI 大脑用。最便宜的选择是 <a href="https://openrouter.ai/keys" target="_blank">OpenRouter</a>——他们有免费模型，日常任务完全够用。</p>
+    </section>
+
+    <section class="panel">
+      <h3>🔧 Do I need to know how to code? / 我需要会编程吗？</h3>
+      <p><b>No.</b> If you can copy-paste and follow step-by-step instructions, you can use OpenClaw. Our <a href="./quickstart.html">Quick Start guide</a> walks you through everything.</p>
+      <p><b>不需要。</b>如果你会复制粘贴、跟着步骤走，就能用 OpenClaw。我们的<a href="./quickstart.html">快速指南</a>会手把手教你。</p>
+      <p>That said, if you know some coding, you can do more advanced things. That's why we have Beginner → Advance → Extreme paths.</p>
+      <p>当然，如果你会一点编程，可以做更高级的事。所以我们有新手 → 进阶 → 极客三条路径。</p>
+    </section>
+
+    <section class="panel">
+      <h3>📱 Can I use it on my phone? / 手机能用吗？</h3>
+      <p>OpenClaw runs on your computer, but you <b>interact with it through messaging apps</b> — Telegram, WhatsApp, Discord, iMessage. So yes, you use it from your phone all day, even though the "brain" is on your computer.</p>
+      <p>OpenClaw 运行在你的电脑上，但你<b>通过聊天软件跟它互动</b>——Telegram、WhatsApp、Discord、iMessage。所以没错，你整天都可以在手机上用它，虽然"大脑"在电脑上。</p>
+    </section>
+
+    <section class="panel">
+      <h3>🦞 What's the difference between OpenClaw and ChatGPT? / OpenClaw 和 ChatGPT 有什么区别？</h3>
+      <p>ChatGPT is a website you visit. OpenClaw is an <b>assistant that works for you</b> — it has access to your tools (email, calendar, files), runs on your schedule, and can do things automatically. Think of ChatGPT as a vending machine, and OpenClaw as a personal chef.</p>
+      <p>ChatGPT 是一个你访问的网站。OpenClaw 是一个<b>为你工作的助手</b>——它可以访问你的工具（邮件、日历、文件），按你的日程运行，还能自动做事。ChatGPT 是自动贩卖机，OpenClaw 是私人厨师。</p>
+    </section>
+
+    <section class="panel">
+      <h3>🔒 Is it safe? / 安全吗？</h3>
+      <p>OpenClaw runs <b>on your own computer</b> — your data never leaves your machine unless you tell it to. You control what it can and can't access. It's more private than any cloud-based AI service.</p>
+      <p>OpenClaw 运行在<b>你自己的电脑上</b>——除非你允许，你的数据不会离开你的机器。你能控制它能访问什么、不能访问什么。比任何云端 AI 服务都更私密。</p>
+    </section>
+
+    <section class="panel">
+      <h3>⏱️ How long does setup take? / 安装要多久？</h3>
+      <p>Following our <a href="./quickstart.html">Quick Start guide</a>, about <b>5 minutes</b> to get a basic setup running. 15-30 minutes if you want to customize everything.</p>
+      <p>按照我们的<a href="./quickstart.html">快速指南</a>，大概<b>5 分钟</b>就能跑起来基本配置。如果你想自定义一切，大概 15-30 分钟。</p>
+    </section>
+
+    <section class="panel">
+      <h3>💸 Can I really make money with this? / 真的能赚钱吗？</h3>
+      <p>Yes, through the <a href="./shop.html">Claw Shop</a> ecosystem: sell custom skills, offer managed hosting, or consult for businesses. See our <a href="./shop.html">monetization paths</a> for details.</p>
+      <p>可以，通过 <a href="./shop.html">Claw Shop</a> 生态：卖自定义技能、提供托管服务、或为企业做咨询。详情见<a href="./shop.html">变现路径</a>。</p>
+    </section>
+
+    <section class="panel">
+      <h3>🆘 Where do I get help? / 去哪里求助？</h3>
+      <ul>
+        <li><b>Discord</b>: <a href="https://discord.com/invite/clawd" target="_blank">discord.com/invite/clawd</a> — active community</li>
+        <li><b>GitHub</b>: <a href="https://github.com/openclaw/openclaw/issues" target="_blank">openclaw/openclaw issues</a></li>
+        <li><b>Docs</b>: <a href="https://docs.openclaw.ai" target="_blank">docs.openclaw.ai</a></li>
+        <li><b>This site</b>: Press <kbd>?</kbd> for keyboard shortcuts</li>
+      </ul>
+    </section>
+
+    <section class="panel cta-final">
+      <h3>🦞 Ready? / 准备好了？</h3>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:16px">
+        <a class="cta primary" href="./quickstart.html">🚀 Quick Start / 快速开始</a>
+        <a class="cta" href="./agents.html">🤖 Meet the Agents / 认识代理</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Built with 🦞 <a href="https://github.com/openclaw/openclaw">OpenClaw</a> ·
+    <a href="https://github.com/Septoff21/openclaw-newbie-baseline">GitHub</a> ·
+    MIT License ·
+    By DM 👤 × UHX 🌌
+    <span style="margin-left:8px;font-size:10px;opacity:0.5">Press ? for shortcuts</span>
+  </footer>
+  <script src="./js/ux-polish.js"></script>
+</body>
+</html>
