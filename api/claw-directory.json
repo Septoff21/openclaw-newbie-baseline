@@ -375,6 +375,65 @@
       ],
       "status": "repo-only",
       "verifiedAt": null
+    },
+    {
+      "name": "OpenClaw TUI",
+      "repo": "openclaw/openclaw-tui",
+      "url": "https://github.com/openclaw/openclaw-tui",
+      "desc": "Terminal UI for OpenClaw. Manage agents from your terminal. / 终端界面管理 Agent。",
+      "status": "repo-only",
+      "tags": [
+        "tools",
+        "beginner"
+      ],
+      "verifiedAt": null
+    },
+    {
+      "name": "OpenClaw Bridge",
+      "repo": "openclaw/bridge",
+      "url": "https://github.com/openclaw/bridge",
+      "desc": "Connect OpenClaw to 20+ platforms (Telegram, Discord, Slack, WeChat). / 连接 20+ 平台。",
+      "status": "repo-only",
+      "tags": [
+        "tools",
+        "verified"
+      ],
+      "verifiedAt": null
+    },
+    {
+      "name": "ClawBot (CN)",
+      "repo": "clawdbot-ai/clawdbot",
+      "url": "https://github.com/clawdbot-ai/clawdbot",
+      "desc": "Chinese-first OpenClaw wrapper with WeChat/Feishu integration. / 中文优先的 OpenClaw 封装，支持微信/飞书。",
+      "status": "repo-only",
+      "tags": [
+        "skills",
+        "beginner"
+      ],
+      "verifiedAt": null
+    },
+    {
+      "name": "OpenClaw Analytics",
+      "repo": "openclaw/analytics",
+      "url": "https://github.com/openclaw/analytics",
+      "desc": "Usage analytics dashboard for your OpenClaw instance. Track tokens, costs, and agent activity. / 用量分析仪表盘。",
+      "status": "repo-only",
+      "tags": [
+        "tools"
+      ],
+      "verifiedAt": null
+    },
+    {
+      "name": "OpenClaw Cron",
+      "repo": "openclaw/cron",
+      "url": "https://github.com/openclaw/cron",
+      "desc": "Schedule tasks for your OpenClaw agent. Cron jobs, one-time reminders, recurring workflows. / 定时任务、提醒、工作流。",
+      "status": "repo-only",
+      "tags": [
+        "tools",
+        "security"
+      ],
+      "verifiedAt": null
     }
   ]
 }

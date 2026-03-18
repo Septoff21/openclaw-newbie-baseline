@@ -73,7 +73,7 @@
     <section class="panel" id="step1">
       <h3>Step 1: Install OpenClaw / 安装 OpenClaw <span style="float:right;color:var(--muted)">⏱ 2 min</span></h3>
       <p class="help">Open your terminal (Terminal on Mac/Linux, PowerShell on Windows) and paste this:<br/>打开终端（Mac/Linux 用 Terminal，Windows 用 PowerShell）并粘贴：</p>
-      <pre>npm install -g openclaw && openclaw doctor</pre>
+      <pre data-lang="bash">npm install -g openclaw && openclaw doctor</pre>
       <p class="help">This installs OpenClaw and checks your system. If you see ✅, you're good.<br/>这会安装 OpenClaw 并检查系统。如果看到 ✅ 就没问题。</p>
       <details>
         <summary style="cursor:pointer;font-weight:600;color:var(--blue)">🔧 Troubleshooting / 常见问题</summary>
@@ -89,7 +89,7 @@
     <section class="panel" id="step2">
       <h3>Step 2: Configure / 配置 <span style="float:right;color:var(--muted)">⏱ 1 min</span></h3>
       <p class="help">Set up your API key. We recommend OpenRouter (one key for all models):<br/>设置 API 密钥。推荐 OpenRouter（一个密钥用所有模型）：</p>
-      <pre>openclaw config set model.provider openrouter
+      <pre data-lang="bash">openclaw config set model.provider openrouter
 openclaw config set model.apiKey "your-api-key-here"</pre>
       <p class="help">Get a free API key at <a href="https://openrouter.ai/keys" target="_blank">openrouter.ai/keys</a> 🔑<br/>免费获取密钥：<a href="https://openrouter.ai/keys" target="_blank">openrouter.ai/keys</a></p>
     </section>
@@ -126,7 +126,7 @@ Create these files and show me the result.</pre>
     <section class="panel" id="step4">
       <h3>Step 4: Verify / 验证 <span style="float:right;color:var(--muted)">⏱ 30 sec</span></h3>
       <p class="help">Run these commands to make sure everything works:<br/>运行这些命令确保一切正常：</p>
-      <pre>openclaw status        # Should show "running"
+      <pre data-lang="bash">openclaw status        # Should show "running"
 openclaw chat "Hello"  # Should get a response</pre>
       <p class="help">If both work → 🎉 your agent is alive!<br/>如果两个都工作 → 🎉 你的 agent 活了！</p>
     </section>
