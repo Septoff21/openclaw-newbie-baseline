@@ -392,3 +392,264 @@ footer{
 [data-theme="dark"] .card,[data-theme="dark"] .dir-blog-card{
   box-shadow:0 4px 16px rgba(0,0,0,.4);
 }
+
+/* === Visual Overhaul v3 — Replace emoji thumbs with gradient art === */
+
+/* Directory/Featured card thumbnails — abstract gradient art, no emoji */
+.dir-card-thumb{
+  position:relative;
+  overflow:hidden;
+}
+.dir-card-thumb::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  opacity:0.15;
+  background:
+    radial-gradient(circle at 20% 30%, var(--red) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, var(--blue) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, var(--orange) 0%, transparent 60%);
+}
+.dir-card-thumb span.thumb-icon{
+  position:relative;
+  z-index:1;
+  font-size:48px;
+  filter:grayscale(0.2);
+}
+
+/* Category-specific gradient art */
+.cat-directory .dir-card-thumb::before{background:radial-gradient(circle at 30% 40%,#3498db,transparent 60%),radial-gradient(circle at 70% 60%,#2ecc71,transparent 50%)}
+.cat-skills .dir-card-thumb::before{background:radial-gradient(circle at 40% 30%,#9b59b6,transparent 60%),radial-gradient(circle at 80% 80%,#e74c3c,transparent 50%)}
+.cat-live .dir-card-thumb::before{background:radial-gradient(circle at 50% 50%,#27ae60,transparent 60%),radial-gradient(circle at 20% 80%,#2ecc71,transparent 50%)}
+.cat-security .dir-card-thumb::before{background:radial-gradient(circle at 30% 50%,#c0392b,transparent 60%),radial-gradient(circle at 80% 30%,#e74c3c,transparent 50%)}
+.cat-diary .dir-card-thumb::before{background:radial-gradient(circle at 40% 60%,#e67e22,transparent 60%),radial-gradient(circle at 70% 20%,#f39c12,transparent 50%)}
+.cat-automation .dir-card-thumb::before{background:radial-gradient(circle at 50% 40%,#f39c12,transparent 60%),radial-gradient(circle at 20% 70%,#e67e22,transparent 50%)}
+.cat-chat .dir-card-thumb::before{background:radial-gradient(circle at 30% 30%,#2980b9,transparent 60%),radial-gradient(circle at 80% 70%,#3498db,transparent 50%)}
+.cat-deploy .dir-card-thumb::before{background:radial-gradient(circle at 40% 40%,#e74c3c,transparent 60%),radial-gradient(circle at 70% 70%,#c0392b,transparent 50%)}
+.cat-analytics .dir-card-thumb::before{background:radial-gradient(circle at 50% 30%,#8e44ad,transparent 60%),radial-gradient(circle at 30% 80%,#9b59b6,transparent 50%)}
+.cat-onboarding .dir-card-thumb::before{background:radial-gradient(circle at 40% 50%,#16a085,transparent 60%),radial-gradient(circle at 80% 30%,#1abc9c,transparent 50%)}
+.cat-im-bot .dir-card-thumb::before{background:radial-gradient(circle at 30% 40%,#2980b9,transparent 60%),radial-gradient(circle at 70% 60%,#3498db,transparent 50%)}
+
+/* Hero gradient text — more vibrant */
+.hero h1 span{
+  background:linear-gradient(135deg,var(--red) 0%,var(--blue) 50%,var(--purple) 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+
+/* CTA buttons — gradient background on primary */
+.cta.primary{
+  background:linear-gradient(135deg,var(--red),var(--red-dark));
+  border:none;
+}
+
+/* Section divider — subtle gradient line */
+.section-block+.section-block{
+  border-top:none;
+  position:relative;
+}
+.section-block+.section-block::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  width:60px;
+  height:2px;
+  background:linear-gradient(90deg,var(--red),var(--blue));
+  border-radius:1px;
+  opacity:0.4;
+}
+
+/* Nav active state — gradient underline */
+.topnav-links a.active{
+  background:var(--red);
+  box-shadow:0 2px 8px rgba(192,57,43,.2);
+}
+
+/* ============================================
+   V2 Design System — Visual Overhaul Pass
+   Clean tokens, consistent rhythm, better type
+   ============================================ */
+
+/* Typography Scale (modular, 1.25 ratio) */
+:root {
+  --text-xs: 0.694rem;    /* 11px */
+  --text-sm: 0.833rem;    /* 13px */
+  --text-base: 1rem;      /* 16px */
+  --text-md: 1.25rem;     /* 20px */
+  --text-lg: 1.563rem;    /* 25px */
+  --text-xl: 1.953rem;    /* 31px */
+  --text-2xl: 2.441rem;   /* 39px */
+  --text-3xl: 3.052rem;   /* 49px */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --radius-card: 16px;
+  --radius-btn: 10px;
+  --radius-badge: 99px;
+  --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Clean base */
+body {
+  font-size: var(--text-base);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Panel cleanup — consistent card rhythm */
+.panel {
+  padding: var(--space-lg);
+  border-radius: var(--radius-card);
+  margin: var(--space-md) 0;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+.panel:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+.panel h3 {
+  font-size: var(--text-md);
+  font-weight: 800;
+  margin-bottom: var(--space-sm);
+  letter-spacing: -0.3px;
+}
+
+/* Card system — unified */
+.card, .dir-blog-card, .model-card, .featured-card {
+  border-radius: var(--radius-card);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+.card:hover, .dir-blog-card:hover, .model-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+}
+
+/* Button system — consistent */
+.cta, .btn {
+  border-radius: var(--radius-btn);
+  font-weight: 600;
+  transition: all var(--transition);
+  letter-spacing: 0;
+}
+.cta:hover, .btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.cta.primary, .btn.primary {
+  box-shadow: 0 2px 8px rgba(192,57,43,0.2);
+}
+.cta.primary:hover, .btn.primary:hover {
+  box-shadow: 0 6px 20px rgba(192,57,43,0.3);
+  transform: translateY(-2px);
+}
+
+/* Badge system */
+.badge, .tag, .dir-card-tags .tag {
+  border-radius: var(--radius-badge);
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+/* Section rhythm */
+.section-block {
+  padding: var(--space-3xl) 0;
+}
+.section-block + .section-block {
+  padding-top: var(--space-2xl);
+}
+.section-title {
+  font-size: var(--text-xl);
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+/* Hero cleanup */
+.hero {
+  padding: calc(var(--nav-h) + var(--space-3xl)) var(--space-lg) var(--space-2xl);
+}
+.hero h1 {
+  font-size: clamp(var(--text-xl), 5vw, var(--text-2xl));
+  letter-spacing: -1.5px;
+}
+
+/* Directory cards — tighter, cleaner */
+.dir-card-thumb {
+  height: 120px;
+  font-size: 48px;
+}
+.dir-card-body {
+  padding: var(--space-md) var(--space-lg) var(--space-lg);
+}
+.dir-card-title {
+  font-size: var(--text-base);
+  font-weight: 700;
+}
+.dir-card-desc {
+  font-size: var(--text-sm);
+}
+
+/* Footer cleanup */
+footer {
+  padding: var(--space-xl) var(--space-md);
+  font-size: var(--text-xs);
+  border-top: 1px solid var(--stroke-light);
+  margin-top: var(--space-xl);
+}
+
+/* Consistent focus states */
+:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Smooth scroll anchoring */
+html {
+  scroll-padding-top: calc(var(--nav-h) + var(--space-md));
+}
+
+/* Dark mode refinements */
+[data-theme="dark"] .panel:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+[data-theme="dark"] .card:hover,
+[data-theme="dark"] .dir-blog-card:hover,
+[data-theme="dark"] .model-card:hover {
+  box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+}
+
+/* Inline style replacements — extract common patterns */
+.stat-big {
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--orange);
+}
+.text-muted { color: var(--muted); }
+.text-green { color: var(--green); font-weight: 700; }
+.text-red { color: var(--red); }
+.text-blue { color: var(--blue); }
+.text-sm { font-size: var(--text-sm); }
+.text-xs { font-size: var(--text-xs); }
+.fw-800 { font-weight: 800; }
+.fw-700 { font-weight: 700; }
+.flex-center { display: flex; align-items: center; }
+.flex-between { display: flex; justify-content: space-between; align-items: center; }
+.gap-sm { gap: var(--space-sm); }
+.gap-md { gap: var(--space-md); }
+.mb-sm { margin-bottom: var(--space-sm); }
+.mb-md { margin-bottom: var(--space-md); }
+.mb-lg { margin-bottom: var(--space-lg); }
+.mt-md { margin-top: var(--space-md); }
+.mt-lg { margin-top: var(--space-lg); }
+.rounded-lg { border-radius: var(--radius-card); }
+.rounded-full { border-radius: var(--radius-badge); }
+.no-decoration { text-decoration: none; }
+.emoji-icon { font-size: 28px; }

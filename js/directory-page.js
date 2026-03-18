@@ -66,7 +66,7 @@
           const emoji = getEmoji(it.tags);
           return `
             <a class="featured-card" href="${it.url||'https://github.com/'+it.repo}" target="_blank" rel="noopener">
-              <div class="featured-thumb cat-${cat.key}">${emoji}</div>
+              <div class="featured-thumb cat-${cat.key}"><span class="thumb-icon">${emoji}</span></div>
               <div class="featured-body">
                 <span class="dir-card-category verified-cat">✅ ${cat.label}</span>
                 <h3 class="featured-title">${it.name}</h3>
@@ -92,7 +92,7 @@
       const isVerified = it.status==='verified';
       return `
         <article class="dir-blog-card">
-          <div class="dir-card-thumb cat-${cat.key}">${emoji}</div>
+          <div class="dir-card-thumb cat-${cat.key}"><span class="thumb-icon">${emoji}</span></div>
           <div class="dir-card-body">
             <span class="dir-card-category ${isVerified?'verified-cat':''}">
               ${isVerified?'✅':'📦'} ${cat.label}
