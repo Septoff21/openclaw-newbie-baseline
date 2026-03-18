@@ -37,6 +37,7 @@ const ASSETS = [
   './fork.html',
   './faq.html',
   './troubleshooting.html',
+  './prompts.html',
   './free-models.html',
   './changelog.html',
   './404.html'

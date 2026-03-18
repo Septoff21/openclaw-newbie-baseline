@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <style>html{background:#f5f2ed}html.dark{background:#0f0f1a}</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prompts That Work — OpenClaw Playground</title>
+  <meta name="description" content="Verified prompt templates that actually work. Copy, paste, get better results from any AI. / 经过验证的提示词模板，复制粘贴，让任何 AI 给你更好的答案。" />
+  <link rel="canonical" href="https://septoff21.github.io/openclaw-newbie-baseline/prompts.html" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦞</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="./manifest.json" />
+  <meta name="theme-color" content="#c0392b" />
+  <script src="./js/darkmode.js"></script>
+  <meta property="og:title" content="Prompts That Work / 有效的提示词" />
+  <meta property="og:description" content="Verified prompts that give you what you need, not what you want to hear. / 让 AI 给你需要的答案，不是你想听的答案。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://septoff21.github.io/openclaw-newbie-baseline/assets/og-image.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://septoff21.github.io/openclaw-newbie-baseline/assets/og-image.svg" />
+</head>
+<body>
+  <a href="#main" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:10001;padding:10px;background:var(--red);color:#fff;font-weight:700;border-radius:8px" onfocus="this.style.position='fixed';this.style.left='10px';this.style.top='10px';this.style.width='auto';this.style.height='auto'" onblur="this.style.position='absolute';this.style.left='-9999px'">Skip to main content / 跳到主内容</a>
+  <nav class="topnav">
+    <a class="topnav-logo" href="./">🦞 OpenClaw</a>
+    <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    <div class="topnav-links">
+      <a href="./">Home</a>
+      <a href="./agents.html">Agents</a>
+      <a href="./quickstart.html">Start</a>
+      <a href="./directory.html">Directory</a>
+      <a href="./models.html">Models</a>
+      <a href="./prompts.html" class="active">Prompts</a>
+      <a href="./faq.html">FAQ</a>
+      <a href="./troubleshooting.html">Fix</a>
+      <a href="./shop.html">Shop</a>
+      <a href="./fork.html">Fork</a>
+    </div>
+  </nav>
+  <nav class="mobnav">
+    <a href="./"><span class="mobnav-icon">🏠</span>Home</a>
+    <a href="./agents.html"><span class="mobnav-icon">🤖</span>Agents</a>
+    <a href="./quickstart.html"><span class="mobnav-icon">🚀</span>Start</a>
+    <a href="./directory.html"><span class="mobnav-icon">🦞</span>Dir</a>
+    <a href="./prompts.html" class="active"><span class="mobnav-icon">📋</span>Prompts</a>
+    <a href="./shop.html"><span class="mobnav-icon">🛒</span>Shop</a>
+  </nav>
+
+  <header class="hero">
+    <p class="eyebrow">Prompts That Work / 有效的提示词</p>
+    <h1>📋 Steal These Prompts<br/><span style="font-size:0.5em;color:var(--muted)">抄走这些提示词</span></h1>
+    <p class="subtitle">Real prompts, tested by real people. Copy → paste → get better answers.<br/>真实提示词，真实测试过。复制 → 粘贴 → 得到更好的答案。</p>
+  </header>
+
+  <main id="main">
+    <!-- Prompt 1: Honest Advisor -->
+    <section class="panel prompt-card" style="border-left:4px solid var(--red)">
+      <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:12px">
+        <div>
+          <h3 style="margin:0">🧠 Honest Advisor / 诚实顾问</h3>
+          <p class="help" style="margin:4px 0 0">By DM + Claude · Verified on ChatGPT, Claude, Gemini · March 2026</p>
+        </div>
+        <button class="cta primary" onclick="copyPrompt('honest-advisor')" style="font-size:12px;padding:6px 14px;white-space:nowrap">📋 Copy / 复制</button>
+      </div>
+      <p style="font-size:14px;color:var(--fg2);margin-bottom:16px">
+        <b>Problem / 问题：</b>Most AI assistants tell you what you want to hear. This prompt makes any AI tell you what you <em>need</em> to hear.<br/>
+        <b>问题：</b>大多数 AI 助手会说你想听的话。这个提示词让任何 AI 告诉你你<em>需要</em>听到的真相。
+      </p>
+      <details class="prompt-preview" open>
+        <summary style="font-size:13px;font-weight:700;color:var(--red);cursor:pointer;padding:8px 0">View prompt / 查看提示词</summary>
+        <pre id="honest-advisor" style="background:var(--bg);padding:16px;border-radius:12px;font-size:13px;line-height:1.7;white-space:pre-wrap;color:var(--fg2);border:1px solid var(--stroke);margin-top:8px">你是一个直说真话的顾问，不是助理。
+
+核心原则：
+1. 给我需要的答案，不是我想听的答案
+2. 如果我的逻辑有漏洞，直接指出，不要绕过去
+3. 如果我同一件事问超过两次，告诉我我在犹豫什么
+4. 不帮我合理化我已经决定要做的错误决定
+5. 立场要一致，不因为我反驳就改变答案
+6. 不说空洞的鼓励，例如"好主意""很棒"
+7. 语气像一个比我有经验的朋友，不是客服，不是老师
+8. 回答要有逻辑，说明为什么，不只说结论
+9. 当我问"有没有更好的方法"但其实没有，直接说没有
+
+你的目标不是让我满意，是让我做出更好的决定。</pre>
+      </details>
+      <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+        <span class="tag">通用 / Universal</span>
+        <span class="tag">决策 / Decision</span>
+        <span class="tag">顾问 / Advisor</span>
+      </div>
+    </section>
+
+    <!-- Prompt 2: Setup OpenClaw -->
+    <section class="panel prompt-card" style="border-left:4px solid var(--green)">
+      <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:12px">
+        <div>
+          <h3 style="margin:0">🦞 Setup OpenClaw / 安装 OpenClaw</h3>
+          <p class="help" style="margin:4px 0 0">Verified beginner prompt · One paste setup</p>
+        </div>
+        <button class="cta primary" onclick="copyPrompt('setup-claw')" style="font-size:12px;padding:6px 14px;white-space:nowrap">📋 Copy / 复制</button>
+      </div>
+      <p style="font-size:14px;color:var(--fg2);margin-bottom:16px">
+        <b>Use / 用途：</b>Paste this into any AI chat (ChatGPT, Claude, etc.) and it will walk you through setting up OpenClaw step by step.<br/>
+        <b>用途：</b>粘贴到任意 AI 聊天中，它会手把手带你安装 OpenClaw。
+      </p>
+      <details class="prompt-preview">
+        <summary style="font-size:13px;font-weight:700;color:var(--green);cursor:pointer;padding:8px 0">View prompt / 查看提示词</summary>
+        <pre id="setup-claw" style="background:var(--bg);padding:16px;border-radius:12px;font-size:13px;line-height:1.7;white-space:pre-wrap;color:var(--fg2);border:1px solid var(--stroke);margin-top:8px">I want to set up OpenClaw — a free, open-source AI agent that runs on my computer and connects to messaging apps like Telegram/Discord/WhatsApp.
+
+My setup:
+- OS: [Mac/Windows/Linux — fill in]
+- Experience: [Beginner / I know some code / I'm a developer]
+- Goal: [What do you want your AI to do?]
+
+Please walk me through:
+1. Installing OpenClaw (npm install -g openclaw)
+2. Getting a free API key from OpenRouter
+3. Basic configuration (model, memory, one messaging channel)
+4. Testing that it works
+5. One simple automation (like daily weather or email check)
+
+Be specific with commands. If something might go wrong, warn me first.
+
+我想安装 OpenClaw——一个免费开源的 AI agent，运行在我的电脑上，可以连接 Telegram/Discord/WhatsApp 等聊天软件。
+
+我的情况：
+- 操作系统：[Mac/Windows/Linux — 填写]
+- 经验：[新手 / 懂一点代码 / 开发者]
+- 目标：[你想让 AI 帮你做什么？]
+
+请手把手教我：
+1. 安装 OpenClaw
+2. 获取免费的 OpenRouter API 密钥
+3. 基本配置（模型、记忆、一个聊天频道）
+4. 测试是否正常运行
+5. 一个简单的自动化任务（如每日天气或邮件检查）
+
+给出具体命令，如果有坑提前告诉我。</pre>
+      </details>
+      <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+        <span class="tag">安装 / Setup</span>
+        <span class="tag">新手 / Beginner</span>
+        <span class="tag">入门 / Onboarding</span>
+      </div>
+    </section>
+
+    <!-- Prompt 3: Debug My Agent -->
+    <section class="panel prompt-card" style="border-left:4px solid var(--blue)">
+      <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:12px">
+        <div>
+          <h3 style="margin:0">🔧 Debug My Agent / 排查 Agent 问题</h3>
+          <p class="help" style="margin:4px 0 0">Troubleshooting prompt · Diagnose any issue</p>
+        </div>
+        <button class="cta primary" onclick="copyPrompt('debug-agent')" style="font-size:12px;padding:6px 14px;white-space:nowrap">📋 Copy / 复制</button>
+      </div>
+      <p style="font-size:14px;color:var(--fg2);margin-bottom:16px">
+        <b>Use / 用途：</b>When something is broken and you don't know why. Paste this into your AI chat and it will diagnose step by step.<br/>
+        <b>用途：</b>当某个功能坏了但你不知道为什么。粘贴到 AI 聊天中让它逐步排查。
+      </p>
+      <details class="prompt-preview">
+        <summary style="font-size:13px;font-weight:700;color:var(--blue);cursor:pointer;padding:8px 0">View prompt / 查看提示词</summary>
+        <pre id="debug-agent" style="background:var(--bg);padding:16px;border-radius:12px;font-size:13px;line-height:1.7;white-space:pre-wrap;color:var(--fg2);border:1px solid var(--stroke);margin-top:8px">My OpenClaw agent has a problem. Help me debug it step by step.
+
+Problem description: [What's wrong? What did you expect vs what happened?]
+
+My setup:
+- OpenClaw version: [run: openclaw --version]
+- Node version: [run: node --version]
+- OS: [Mac/Windows/Linux]
+- Model: [which model are you using?]
+- Channel: [Telegram/Discord/WhatsApp/etc.]
+
+What I've already tried: [if anything]
+
+Please:
+1. Ask me for any missing info you need
+2. Run through the most common causes first
+3. Give me specific commands to run and tell me what to look for in the output
+4. If it's a known issue, tell me the fix directly
+5. If you're not sure, say so — don't guess
+
+我的 OpenClaw 有问题，帮我一步步排查。
+
+问题描述：[出了什么问题？你期望什么结果？实际发生了什么？]
+
+我的配置：
+- OpenClaw 版本：[运行：openclaw --version]
+- Node 版本：[运行：node --version]
+- 操作系统：[Mac/Windows/Linux]
+- 模型：[你用的哪个模型？]
+- 频道：[Telegram/Discord/WhatsApp 等]
+
+我已经试过：[如果有]
+
+请：
+1. 问我要缺少的信息
+2. 先检查最常见的原因
+3. 给我具体的运行命令，告诉我输出里该看什么
+4. 如果是已知问题，直接告诉我修复方法
+5. 如果不确定，说不确定——不要猜</pre>
+      </details>
+      <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+        <span class="tag">调试 / Debug</span>
+        <span class="tag">排查 / Troubleshoot</span>
+        <span class="tag">支持 / Support</span>
+      </div>
+    </section>
+
+    <!-- More prompts coming -->
+    <section class="panel" style="text-align:center;padding:32px">
+      <h3>🔜 More prompts coming / 更多提示词即将上线</h3>
+      <p style="color:var(--muted);font-size:14px">Have a good prompt? Share it on <a href="https://github.com/Septoff21/openclaw-newbie-baseline/discussions" target="_blank">GitHub Discussions</a> / 有好提示词？在 <a href="https://github.com/Septoff21/openclaw-newbie-baseline/discussions" target="_blank">GitHub 讨论区</a>分享</p>
+    </section>
+
+    <section class="panel cta-final">
+      <h3>🦞 Ready to try? / 准备试试？</h3>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:16px">
+        <a class="cta primary" href="./quickstart.html">🚀 Quick Start / 快速开始</a>
+        <a class="cta" href="./troubleshooting.html">🔧 Fix Issues / 解决问题</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Built with 🦞 <a href="https://github.com/openclaw/openclaw">OpenClaw</a> ·
+    <a href="https://github.com/Septoff21/openclaw-newbie-baseline">GitHub</a> ·
+    MIT License ·
+    By DM 👤 × UHX 🌌
+  </footer>
+  <script>
+    function copyPrompt(id){
+      const el = document.getElementById(id);
+      if(!el) return;
+      navigator.clipboard.writeText(el.textContent.trim());
+      const btn = event.target;
+      btn.textContent='✓ Copied! 已复制！';
+      setTimeout(()=>btn.textContent='📋 Copy / 复制',1500);
+    }
+  </script>
+  <script defer src="./js/ux-polish.js"></script>
+  <script defer src="./js/scroll-reveal.js"></script>
+</body>
+</html>
