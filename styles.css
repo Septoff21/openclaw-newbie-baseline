@@ -653,3 +653,16 @@ html {
 .rounded-full { border-radius: var(--radius-badge); }
 .no-decoration { text-decoration: none; }
 .emoji-icon { font-size: 28px; }
+
+/* Mobile polish hotfix (2026-03-19) */
+@media (max-width: 768px){
+  .hero{padding:48px 16px 28px !important;}
+  .hero h1, h1{font-size:28px !important;line-height:1.2 !important;}
+  .subtitle{font-size:14px !important;line-height:1.6 !important;}
+  .section-header{margin-bottom:20px !important;padding:0 8px;}
+  .section-title{font-size:24px !important;line-height:1.25 !important;}
+  .panel{margin:10px 8px !important;padding:16px 14px !important;border-radius:14px !important;}
+  .section-block{padding:28px 0 !important;}
+  .grid{gap:12px !important;}
+  .cta,.btn{min-height:46px !important;}
+}
