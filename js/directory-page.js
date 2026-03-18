@@ -155,7 +155,7 @@
     if(copyBtn){
       const name = copyBtn.dataset.copyPrompt;
       const prompt = `I want to explore ${name}. Give me a 1-paragraph overview, then list the steps to install and run it in OpenClaw. Include verification commands.\n\n我想了解 ${name}。给我一段概述，然后列出在 OpenClaw 中安装和运行的步骤。包含验证命令。`;
-      navigator.clipboard.writeText(prompt);
+      try{navigator.clipboard.writeText(prompt);}catch(e){console.error('Copy failed:',e);}
       copyBtn.textContent='✓';
       setTimeout(()=>copyBtn.textContent='📋',1200);
     }

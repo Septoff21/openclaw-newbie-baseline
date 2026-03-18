@@ -36,7 +36,7 @@
           <span>Out:${priceLabel(m.cPrice)}</span>
         </div>
         <div style="margin-top:6px;display:flex;gap:6px;flex-wrap:wrap">
-          <button class="cta" style="font-size:11px;padding:5px 10px" onclick="var cmd='openclaw config set model.default ${m.id}';navigator.clipboard.writeText(cmd);this.textContent='Copied! ✓';setTimeout(()=>this.textContent='📋 Copy config',1200)">📋 Copy config / 复制配置</button>
+          <button class="cta model-copy-btn" style="font-size:11px;padding:5px 10px" data-cmd="openclaw config set model.default ${m.id}">📋 Copy config / 复制配置</button>
           <code style="font-size:10px;color:var(--muted);padding:5px;background:var(--bg);border-radius:6px;align-self:center">Paste after installing / 安装后粘贴</code>
         </div>
       </article>
@@ -45,10 +45,17 @@
       el.style.cursor='pointer';
       el.title='Click to copy / 点击复制';
       el.addEventListener('click',()=>{
-        navigator.clipboard.writeText(el.textContent);
+        try{navigator.clipboard.writeText(el.textContent);}catch(e){console.error('Copy failed:',e);}
         const orig=el.style.color;
         el.style.color='var(--green)';
         setTimeout(()=>el.style.color=orig,800);
+      });
+    });
+    listEl.querySelectorAll('.model-copy-btn').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        try{navigator.clipboard.writeText(btn.dataset.cmd);}catch(e){console.error('Copy failed:',e);}
+        btn.textContent='Copied! ✓';
+        setTimeout(()=>btn.textContent='📋 Copy config / 复制配置',1200);
       });
     });
   }catch(e){
