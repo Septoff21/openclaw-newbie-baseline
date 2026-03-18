@@ -54,7 +54,7 @@
   <a href="#main" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:10001;padding:10px;background:var(--red);color:#fff;font-weight:700;border-radius:8px" onfocus="this.style.position='fixed';this.style.left='10px';this.style.top='10px';this.style.width='auto';this.style.height='auto'" onblur="this.style.position='absolute';this.style.left='-9999px'">Skip to main content / 跳到主内容</a>
   <!-- Announcement Bar -->
   <div style="background:linear-gradient(90deg,var(--red),var(--blue));color:#fff;text-align:center;padding:8px 16px;font-size:13px;font-weight:600;position:fixed;top:0;left:0;right:0;z-index:1001">
-    🆕 Directory 35 projects · All pages bilingual · Code syntax highlighting <a href="./changelog.html" style="color:#fff;text-decoration:underline">See what's new →</a>
+    🆕 Directory: featured verified cards + live search · New Troubleshooting page <a href="./changelog.html" style="color:#fff;text-decoration:underline">See what's new →</a>
   </div>
   <nav class="topnav" style="top:36px">
     <a class="topnav-logo" href="./">🦞 OpenClaw</a>
@@ -336,6 +336,20 @@
         <span>🕐 <b id="gh-updated">—</b></span>
       </div>
       <script defer src="./js/github-stats.js"></script>
+    <script defer src="./js/homepage-cases.js"></script>
+    </section>
+
+    <!-- Real Cases / 真实案例 -->
+    <section class="section-block" id="real-cases">
+      <div class="section-header">
+        <p class="section-label">Real Cases / 真实案例</p>
+        <h2 class="section-title">Built with OpenClaw<br/>用 OpenClaw 构建的项目</h2>
+        <p class="subtitle">Live projects you can visit right now. / 现在就能访问的真实项目。</p>
+      </div>
+      <div id="homepage-cases" class="dir-blog-grid" style="max-width:1000px;margin:0 auto"></div>
+      <div style="text-align:center;margin-top:20px">
+        <a class="cta" href="./directory.html">📂 See all 35 projects / 查看全部项目 →</a>
+      </div>
     </section>
 
     <!-- Wall of Love -->

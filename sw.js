@@ -20,6 +20,7 @@ const ASSETS = [
   './js/terminal-demo.js',
   './js/ux-polish.js',
   './js/scroll-reveal.js',
+  './js/homepage-cases.js',
   './js/welcome.js',
   './assets/dm-avatar.svg',
   './assets/uhx-avatar.svg',
