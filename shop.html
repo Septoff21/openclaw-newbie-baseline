@@ -145,7 +145,7 @@
       <div style="margin:12px 0">
         <p><b>Step 1: Create the skill file / 创建技能文件</b></p>
         <p style="font-size:13px;color:var(--muted)">Create a file called <code>skills/weather-summary/SKILL.md</code> in your OpenClaw folder:</p>
-        <pre id="skill-example"># SKILL.md — Weather Summary Skill
+        <pre id="skill-example" data-lang="markdown"># SKILL.md — Weather Summary Skill
 
 ## What it does
 Summarizes today's weather in a friendly one-liner.
@@ -162,11 +162,11 @@ Free version: 1 city. Paid ($2/mo): unlimited cities + alerts.</pre>
       </div>
       <div style="margin:12px 0">
         <p><b>Step 2: Test it locally / 本地测试</b></p>
-        <pre>openclaw skills test weather-summary</pre>
+        <pre data-lang="bash">openclaw skills test weather-summary</pre>
       </div>
       <div style="margin:12px 0">
         <p><b>Step 3: Publish to ClawHub / 发布到 ClawHub</b></p>
-        <pre>clawhub publish skills/weather-summary --price free</pre>
+        <pre data-lang="bash">clawhub publish skills/weather-summary --price free</pre>
       </div>
       <div style="margin:12px 0">
         <p><b>Step 4: Share / 分享</b></p>
@@ -178,7 +178,7 @@ Free version: 1 city. Paid ($2/mo): unlimited cities + alerts.</pre>
     <section class="panel">
       <h3>📋 Starter Template / 起步模板</h3>
       <p class="help">Copy this prompt to start building your first monetizable skill:<br/>复制这个提示词，开始构建你的第一个可变现技能：</p>
-      <pre id="shop-prompt">I want to build a monetizable OpenClaw skill. Help me:
+      <pre id="shop-prompt" data-lang="prompt">I want to build a monetizable OpenClaw skill. Help me:
 
 1. Identify a problem I can solve with AI (calendar, email, content, data)
 2. Create a skill package (SKILL.md + scripts/)
