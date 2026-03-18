@@ -275,6 +275,7 @@ footer a:hover{text-decoration:underline}
 @media(hover:none){.card:active,.dir-card:active,.model-card:active{transform:scale(0.98);transition:.1s}}
 
 /* Page enter animation */
+html,body{overflow-x:hidden}
 body{animation:page-in .4s ease}
 @keyframes page-in{from{opacity:0}to{opacity:1}}
 
