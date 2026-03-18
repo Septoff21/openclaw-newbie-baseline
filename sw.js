@@ -57,23 +57,39 @@ self.addEventListener('activate', (e) => {
   self.clients.claim();
 });
 
-// Fetch — cache first, network fallback
+// Fetch — network first for HTML, cache first for static assets
 self.addEventListener('fetch', (e) => {
   // Skip non-GET and API calls
   if (e.request.method !== 'GET') return;
   if (e.request.url.includes('api.github.com')) return; // Always fresh for live feed
 
-  e.respondWith(
-    caches.match(e.request).then(cached => {
-      const fetched = fetch(e.request).then(resp => {
+  const url = new URL(e.request.url);
+  const isHTML = e.request.headers.get('accept')?.includes('text/html') || url.pathname.endsWith('.html') || url.pathname === '/' || !url.pathname.includes('.');
+
+  if (isHTML) {
+    // Network first — always try to get latest HTML, fallback to cache if offline
+    e.respondWith(
+      fetch(e.request).then(resp => {
         if (resp.ok) {
           const clone = resp.clone();
           caches.open(CACHE_NAME).then(cache => cache.put(e.request, clone));
         }
         return resp;
-      }).catch(() => cached); // Offline fallback
-
-      return cached || fetched;
-    })
-  );
+      }).catch(() => caches.match(e.request))
+    );
+  } else {
+    // Cache first — static assets (CSS, JS, images) change less often
+    e.respondWith(
+      caches.match(e.request).then(cached => {
+        const fetched = fetch(e.request).then(resp => {
+          if (resp.ok) {
+            const clone = resp.clone();
+            caches.open(CACHE_NAME).then(cache => cache.put(e.request, clone));
+          }
+          return resp;
+        }).catch(() => cached);
+        return cached || fetched;
+      })
+    );
+  }
 });
