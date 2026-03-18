@@ -1,5 +1,5 @@
 // Service Worker — offline support for OpenClaw Playground
-const CACHE_NAME = 'openclaw-playground-v5';
+const CACHE_NAME = 'openclaw-playground-v6';
 const ASSETS = [
   './',
   './styles.css',

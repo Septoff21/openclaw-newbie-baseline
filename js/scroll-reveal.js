@@ -91,6 +91,15 @@
   // Init
   function init(){
     markReveal();
+
+    // Performance guard: disable reveal animations on low-motion/mobile contexts
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var mobile = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+    if(reduceMotion || mobile){
+      document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('visible'); });
+      return;
+    }
+
     document.querySelectorAll('.reveal').forEach(function(el){
       observer.observe(el);
     });
