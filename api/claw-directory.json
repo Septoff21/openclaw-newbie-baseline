@@ -375,31 +375,6 @@
       ],
       "status": "repo-only",
       "verifiedAt": null
-    },
-    {
-      "name": "LangBot",
-      "repo": "langbot-app/LangBot",
-      "url": "https://langbot.app",
-      "desc": "Production-grade IM bot platform — Discord/Slack/Telegram/WeChat/Feishu/DingTalk/QQ. Plugin system + knowledge base.\n生产级 IM 机器人开发平台——Discord/Slack/Telegram/微信/飞书/钉钉/QQ",
-      "tags": [
-        "im-bot",
-        "multi-platform",
-        "live"
-      ],
-      "status": "verified",
-      "verifiedAt": "2026-03-18"
-    },
-    {
-      "name": "Nanobot",
-      "repo": "HKUDS/nanobot",
-      "url": "",
-      "desc": "Ultra-lightweight OpenClaw alternative. Minimal footprint, maximum efficiency.\n超轻量 OpenClaw 替代方案——最小占用",
-      "tags": [
-        "lightweight",
-        "alternative"
-      ],
-      "status": "repo-only",
-      "verifiedAt": null
     }
   ]
 }
