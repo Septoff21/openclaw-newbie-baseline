@@ -456,7 +456,7 @@
     </section>
 
     <script>if('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js');</script>
-  <script src="./js/darkmode.js"></script>
+  <script>(function(){const KEY="openclaw-theme";const btn=document.getElementById("theme-toggle");function getTheme(){const saved=localStorage.getItem(KEY);if(saved)return saved;return window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";}function applyTheme(theme){document.documentElement.setAttribute("data-theme",theme);localStorage.setItem(KEY,theme);if(btn)btn.textContent=theme==="dark"?"☀️":"🌙";}applyTheme(getTheme());if(btn){btn.addEventListener("click",()=>{const current=document.documentElement.getAttribute("data-theme");applyTheme(current==="dark"?"light":"dark");});}})();</script>
   <script defer src="./js/search.js"></script>
   <script defer src="./js/live-feed.js"></script>
   <script defer src="./js/animations.js"></script>
