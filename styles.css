@@ -56,6 +56,16 @@
   background:linear-gradient(135deg,var(--bg),var(--bg-card));
   position:relative;
 }
+.dir-card-thumb.cat-directory{background:linear-gradient(135deg,#e8f4f8,#f5f2ed)}
+.dir-card-thumb.cat-skills{background:linear-gradient(135deg,#f5eef8,#f5f2ed)}
+.dir-card-thumb.cat-live{background:linear-gradient(135deg,#e8f8f0,#f5f2ed)}
+.dir-card-thumb.cat-security{background:linear-gradient(135deg,#fef2f2,#f5f2ed)}
+.dir-card-thumb.cat-diary{background:linear-gradient(135deg,#fff8e7,#f5f2ed)}
+.dir-card-thumb.cat-automation{background:linear-gradient(135deg,#eef6ff,#f5f2ed)}
+.dir-card-thumb.cat-chat{background:linear-gradient(135deg,#eef9ff,#f5f2ed)}
+.dir-card-thumb.cat-monitor{background:linear-gradient(135deg,#f0f9ff,#f5f2ed)}
+.dir-card-thumb.cat-deploy{background:linear-gradient(135deg,#fff3e6,#f5f2ed)}
+.dir-card-thumb.cat-analytics{background:linear-gradient(135deg,#f3f0ff,#f5f2ed)}
 .dir-card-thumb::after{
   content:'';
   position:absolute;

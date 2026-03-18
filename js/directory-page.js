@@ -47,7 +47,7 @@
       const isVerified = it.status==='verified';
       return `
         <article class="dir-blog-card">
-          <div class="dir-card-thumb">${emoji}</div>
+          <div class="dir-card-thumb cat-${cat.key}">${emoji}</div>
           <div class="dir-card-body">
             <span class="dir-card-category ${isVerified?'verified-cat':''}">
               ${isVerified?'✅':'📦'} ${cat.label}
