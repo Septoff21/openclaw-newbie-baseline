@@ -1,5 +1,5 @@
 // Service Worker — offline support for OpenClaw Playground
-const CACHE_NAME = 'openclaw-playground-v3';
+const CACHE_NAME = 'openclaw-playground-v4';
 const ASSETS = [
   './',
   './styles.css',
@@ -19,6 +19,7 @@ const ASSETS = [
   './js/shortcuts.js',
   './js/terminal-demo.js',
   './js/ux-polish.js',
+  './js/scroll-reveal.js',
   './js/welcome.js',
   './assets/dm-avatar.svg',
   './assets/uhx-avatar.svg',
@@ -34,6 +35,7 @@ const ASSETS = [
   './shop.html',
   './fork.html',
   './faq.html',
+  './troubleshooting.html',
   './free-models.html',
   './changelog.html',
   './404.html'

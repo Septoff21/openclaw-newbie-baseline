@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <style>html{background:#f5f2ed}html.dark{background:#0f0f1a}</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Troubleshooting — OpenClaw Playground</title>
+  <meta name="description" content="Something broken? Fix it in 2 minutes. Common OpenClaw errors and their solutions. / 出问题了？2 分钟修复。OpenClaw 常见错误和解决方案。" />
+  <link rel="canonical" href="https://septoff21.github.io/openclaw-newbie-baseline/troubleshooting.html" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦞</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="./manifest.json" />
+  <meta name="theme-color" content="#c0392b" />
+  <script src="./js/darkmode.js"></script>
+  <meta property="og:title" content="Troubleshooting — OpenClaw Playground / 故障排除" />
+  <meta property="og:description" content="Something broken? Fix it in 2 minutes. Step-by-step solutions. / 出问题了？2 分钟修复。分步解决方案。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://septoff21.github.io/openclaw-newbie-baseline/assets/og-image.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://septoff21.github.io/openclaw-newbie-baseline/assets/og-image.svg" />
+</head>
+<body>
+  <a href="#main" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:10001;padding:10px;background:var(--red);color:#fff;font-weight:700;border-radius:8px" onfocus="this.style.position='fixed';this.style.left='10px';this.style.top='10px';this.style.width='auto';this.style.height='auto'" onblur="this.style.position='absolute';this.style.left='-9999px'">Skip to main content / 跳到主内容</a>
+  <nav class="topnav">
+    <a class="topnav-logo" href="./">🦞 OpenClaw</a>
+    <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    <div class="topnav-links">
+      <a href="./">Home</a>
+      <a href="./agents.html">Agents</a>
+      <a href="./quickstart.html">Start</a>
+      <a href="./directory.html">Directory</a>
+      <a href="./models.html">Models</a>
+      <a href="./free-models.html">Free Models</a>
+      <a href="./faq.html">FAQ</a>
+      <a href="./troubleshooting.html" class="active">Fix</a>
+      <a href="./reference.html">Reference</a>
+      <a href="./shop.html">Shop</a>
+      <a href="./fork.html">Fork</a>
+    </div>
+  </nav>
+  <nav class="mobnav">
+    <a href="./"><span class="mobnav-icon">🏠</span>Home</a>
+    <a href="./agents.html"><span class="mobnav-icon">🤖</span>Agents</a>
+    <a href="./quickstart.html"><span class="mobnav-icon">🚀</span>Start</a>
+    <a href="./directory.html"><span class="mobnav-icon">🦞</span>Dir</a>
+    <a href="./models.html"><span class="mobnav-icon">📡</span>Models</a>
+    <a href="./shop.html"><span class="mobnav-icon">🛒</span>Shop</a>
+  </nav>
+
+  <header class="hero">
+    <p class="eyebrow">Troubleshooting / 故障排除</p>
+    <h1>🔧 Something Broken? Let's Fix It<br/><span style="font-size:0.5em;color:var(--muted)">出问题了？我们来修</span></h1>
+    <p class="subtitle">Find your error below. Follow the steps. Done in 2 minutes.<br/>在下面找到你的错误。跟着步骤走。2 分钟搞定。</p>
+  </header>
+
+  <main id="main">
+    <!-- Quick Diagnostics -->
+    <section class="panel" style="border-left:4px solid var(--blue)">
+      <h3>🩺 Quick Diagnostics / 快速诊断</h3>
+      <p>Run these first — they catch 80% of issues / 先跑这些——解决 80% 的问题：</p>
+      <pre class="code-block" data-lang="bash"><code><span class="comment"># Check if OpenClaw is installed / 检查是否已安装</span>
+<span class="cmd">openclaw</span> <span class="flag">--version</span>
+
+<span class="comment"># Check gateway status / 检查网关状态</span>
+<span class="cmd">openclaw</span> gateway status
+
+<span class="comment"># Check your config / 检查配置</span>
+<span class="cmd">openclaw</span> status
+
+<span class="comment"># View recent logs / 查看最近日志</span>
+<span class="cmd">openclaw</span> logs <span class="flag">--tail</span> <span class="str">50</span></code></pre>
+    </section>
+
+    <!-- Error 1: command not found -->
+    <section class="panel">
+      <h3>❌ "command not found: openclaw"</h3>
+      <p><b>Cause / 原因：</b>OpenClaw is not installed or not in your PATH. / OpenClaw 没装好或不在 PATH 里。</p>
+      <p><b>Fix / 修复：</b></p>
+      <pre class="code-block" data-lang="bash"><code><span class="comment"># Install OpenClaw globally / 全局安装</span>
+<span class="cmd">npm</span> install <span class="flag">-g</span> openclaw
+
+<span class="comment"># If you get permission errors / 如果提示权限错误</span>
+<span class="cmd">sudo</span> npm install <span class="flag">-g</span> openclaw
+
+<span class="comment"># Or use npx instead / 或者用 npx</span>
+<span class="cmd">npx</span> openclaw status</code></pre>
+      <p class="help">Still not working? Check Node.js version: <code>node --version</code> — need v18+ / 还不行？检查 Node.js 版本：需要 v18+</p>
+    </section>
+
+    <!-- Error 2: Gateway won't start -->
+    <section class="panel">
+      <h3>🚫 Gateway won't start / 网关启动不了</h3>
+      <p><b>Cause / 原因：</b>Port conflict, missing config, or permission issue. / 端口冲突、配置缺失或权限问题。</p>
+      <p><b>Fix / 修复：</b></p>
+      <pre class="code-block" data-lang="bash"><code><span class="comment"># Check what's using the port / 检查谁在用这个端口</span>
+<span class="cmd">lsof</span> <span class="flag">-i</span> :18789
+
+<span class="comment"># Kill the conflicting process / 杀掉冲突进程</span>
+<span class="cmd">kill</span> $(lsof -t -i:18789)
+
+<span class="comment"># Try starting again / 重新启动</span>
+<span class="cmd">openclaw</span> gateway start
+
+<span class="comment"># If config is missing / 如果配置缺失</span>
+<span class="cmd">openclaw</span> init</code></pre>
+    </section>
+
+    <!-- Error 3: API key errors -->
+    <section class="panel">
+      <h3>🔑 "Invalid API key" / API 密钥错误</h3>
+      <p><b>Cause / 原因：</b>Wrong key, expired key, or not set. / 密钥错误、过期或没设置。</p>
+      <p><b>Fix / 修复：</b></p>
+      <pre class="code-block" data-lang="bash"><code><span class="comment"># Check current config / 查看当前配置</span>
+<span class="cmd">openclaw</span> config get apiKeys
+
+<span class="comment"># Set your OpenRouter key / 设置 OpenRouter 密钥</span>
+<span class="cmd">openclaw</span> config set apiKeys.openrouter <span class="str">"sk-or-..."</span>
+
+<span class="comment"># Restart gateway / 重启网关</span>
+<span class="cmd">openclaw</span> gateway restart</code></pre>
+      <p class="help">Get a free key at <a href="https://openrouter.ai/keys" target="_blank">openrouter.ai/keys</a> / 在这里获取免费密钥</p>
+    </section>
+
+    <!-- Error 4: Model not responding -->
+    <section class="panel">
+      <h3>🤖 Model not responding / 模型没反应</h3>
+      <p><b>Cause / 原因：</b>Model is down, rate limited, or misconfigured. / 模型宕机、限流或配置错误。</p>
+      <p><b>Fix / 修复：</b></p>
+      <pre class="code-block" data-lang="bash"><code><span class="comment"># Check which model is active / 检查当前模型</span>
+<span class="cmd">openclaw</span> config get model
+
+<span class="comment"># Switch to a reliable free model / 切换到可靠的免费模型</span>
+<span class="cmd">openclaw</span> config set model <span class="str">"google/gemini-2.0-flash-001"</span>
+
+<span class="comment"># Test it / 测试一下</span>
+<span class="cmd">openclaw</span> chat <span class="str">"Say hello"</span></code></pre>
+      <p class="help">Check <a href="./models.html">Models page</a> for verified working configs / 查看<a href="./models.html">模型页面</a>获取已验证的配置</p>
+    </section>
+
+    <!-- Error 5: Memory not working -->
+    <section class="panel">
+      <h3>🧠 Memory not saving / 记忆没保存</h3>
+      <p><b>Cause / 原因：</b>Memory plugin not configured or DB path invalid. / 记忆插件没配置好或数据库路径无效。</p>
+      <p><b>Fix / 修复：</b></p>
+      <pre class="code-block" data-lang="bash"><code><span class="comment"># Check memory config / 检查记忆配置</span>
+<span class="cmd">openclaw</span> config get memory
+
+<span class="comment"># Enable memory / 启用记忆</span>
+<span class="cmd">openclaw</span> config set memory.enabled <span class="str">true</span>
+
+<span class="comment"># Set a valid DB path / 设置有效路径</span>
+<span class="cmd">openclaw</span> config set memory.dbPath <span class="str">"~/.openclaw/memory"</span>
+
+<span class="comment"># Restart / 重启</span>
+<span class="cmd">openclaw</span> gateway restart</code></pre>
+    </section>
+
+    <!-- Error 6: Messaging not connecting -->
+    <section class="panel">
+      <h3>💬 Telegram/Discord not working / 聊天软件连不上</h3>
+      <p><b>Cause / 原因：</b>Bot token wrong, webhook not set, or channel not configured. / Bot token 错误、webhook 没设置或频道没配置。</p>
+      <p><b>Fix / 修复（以 Telegram 为例）：</b></p>
+      <pre class="code-block" data-lang="bash"><code><span class="comment"># Verify bot token / 验证 bot token</span>
+<span class="cmd">openclaw</span> config get channels.telegram.token
+
+<span class="comment"># Re-set token / 重新设置 token</span>
+<span class="cmd">openclaw</span> config set channels.telegram.token <span class="str">"123456:ABC..."</span>
+
+<span class="comment"># Enable channel / 启用频道</span>
+<span class="cmd">openclaw</span> config set channels.telegram.enabled <span class="str">true</span>
+
+<span class="comment"># Restart and check / 重启并检查</span>
+<span class="cmd">openclaw</span> gateway restart
+<span class="cmd">openclaw</span> logs <span class="flag">--tail</span> <span class="str">20</span></code></pre>
+      <p class="help">For Discord, you also need a channel ID. See <a href="https://docs.openclaw.ai" target="_blank">docs.openclaw.ai</a> for each platform. / Discord 还需要频道 ID。</p>
+    </section>
+
+    <!-- Error 7: Permission denied -->
+    <section class="panel">
+      <h3>🔒 "Permission denied" / 权限不足</h3>
+      <p><b>Cause / 原因：</b>File ownership or npm global permissions. / 文件归属或 npm 全局权限问题。</p>
+      <p><b>Fix / 修复：</b></p>
+      <pre class="code-block" data-lang="bash"><code><span class="comment"># Fix npm global permissions / 修复 npm 全局权限</span>
+<span class="cmd">mkdir</span> <span class="flag">-p</span> ~/.npm-global
+<span class="cmd">npm</span> config set prefix <span class="str">'~/.npm-global'</span>
+<span class="cmd">echo</span> <span class="str">'export PATH=~/.npm-global/bin:$PATH'</span> >> ~/.bashrc
+<span class="cmd">source</span> ~/.bashrc
+
+<span class="comment"># Reinstall / 重新安装</span>
+<span class="cmd">npm</span> install <span class="flag">-g</span> openclaw</code></pre>
+    </section>
+
+    <!-- Error 8: Slow responses -->
+    <section class="panel">
+      <h3>🐢 Responses are slow / 回复很慢</h3>
+      <p><b>Cause / 原因：</b>Model too large, network issues, or thinking mode on. / 模型太大、网络问题或 thinking 模式开启。</p>
+      <p><b>Fix / 修复：</b></p>
+      <pre class="code-block" data-lang="bash"><code><span class="comment"># Switch to a faster model / 切换到更快的模型</span>
+<span class="cmd">openclaw</span> config set model <span class="str">"google/gemini-2.0-flash-001"</span>
+
+<span class="comment"># Disable thinking mode / 关闭思考模式</span>
+<span class="cmd">openclaw</span> config set thinking <span class="str">false</span>
+
+<span class="comment"># Check network / 检查网络</span>
+<span class="cmd">curl</span> <span class="flag">-o</span> /dev/null <span class="flag">-w</span> <span class="str">"%{time_total}s"</span> https://openrouter.ai</code></pre>
+      <p class="help">Free models are slower than paid ones. That's normal. / 免费模型比付费的慢。这很正常。</p>
+    </section>
+
+    <!-- Still stuck -->
+    <section class="panel" style="border-left:4px solid var(--red)">
+      <h3>🆘 Still stuck? / 还没解决？</h3>
+      <ol>
+        <li><b>Discord</b> — <a href="https://discord.com/invite/clawd" target="_blank">discord.com/invite/clawd</a> — paste your error, someone will help / 粘贴你的错误，有人会帮忙</li>
+        <li><b>GitHub Issues</b> — <a href="https://github.com/openclaw/openclaw/issues" target="_blank">openclaw/openclaw/issues</a></li>
+        <li><b>Docs</b> — <a href="https://docs.openclaw.ai" target="_blank">docs.openclaw.ai</a></li>
+      </ol>
+      <p style="margin-top:12px">When asking for help, always include / 求助时请附上：</p>
+      <pre class="code-block" data-lang="bash"><code><span class="cmd">openclaw</span> <span class="flag">--version</span>
+<span class="cmd">node</span> <span class="flag">--version</span>
+<span class="cmd">openclaw</span> status
+<span class="cmd">openclaw</span> logs <span class="flag">--tail</span> <span class="str">30</span></code></pre>
+    </section>
+
+    <section class="panel cta-final">
+      <h3>🦞 Back on track? / 搞定了？</h3>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:16px">
+        <a class="cta primary" href="./quickstart.html">🚀 Quick Start / 快速开始</a>
+        <a class="cta" href="./faq.html">❓ FAQ / 常见问题</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Built with 🦞 <a href="https://github.com/openclaw/openclaw">OpenClaw</a> ·
+    <a href="https://github.com/Septoff21/openclaw-newbie-baseline">GitHub</a> ·
+    MIT License ·
+    By DM 👤 × UHX 🌌
+    <span style="margin-left:8px;font-size:10px;opacity:0.5">Press ? for shortcuts</span>
+  </footer>
+  <script defer src="./js/ux-polish.js"></script>
+  <script defer src="./js/scroll-reveal.js"></script>
+</body>
+</html>

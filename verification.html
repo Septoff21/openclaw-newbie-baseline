@@ -37,6 +37,7 @@
       <a href="./models.html">Models</a>
       <a href="./free-models.html">Free Models</a>
       <a href="./faq.html" class="active">FAQ</a>
+      <a href="./troubleshooting.html">Fix</a>
       <a href="./reference.html">Reference</a>
       <a href="./shop.html">Shop</a>
       <a href="./fork.html">Fork</a>
@@ -49,7 +50,6 @@
     <a href="./directory.html"><span class="mobnav-icon">🦞</span>Dir</a>
     <a href="./models.html"><span class="mobnav-icon">📡</span>Models</a>
     <a href="./shop.html"><span class="mobnav-icon">🛒</span>Shop</a>
-  </nav>
   <header class="hero">
     <p class="eyebrow">Verification / 验证系统</p>
     <h1>✅ Verification Guide<br/><span style="font-size:0.5em;color:var(--muted)">验证指南</span></h1>
@@ -69,7 +69,6 @@
         <li><b>Tool failures / 工具失败：</b>tool calls can silently fail or produce partial results / 工具调用可能静默失败</li>
       </ul>
     </section>
-
     <section class="panel" id="checklist">
       <h3>4-Lock Verification / 四锁验证</h3>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:12px 0">
@@ -82,33 +81,23 @@
           <div style="font-size:24px;margin-bottom:6px">🔍</div>
           <b>Evidence Lock / 证据锁</b>
           <p style="font-size:12px;color:var(--muted);margin:4px 0 0">Exact commands, URLs, file paths / 精确命令、URL、文件路径</p>
-        </div>
         <div style="padding:14px;border-radius:12px;border:2px solid #e67e22;background:#fef3e2">
           <div style="font-size:24px;margin-bottom:6px">📊</div>
           <b>Result Lock / 结果锁</b>
           <p style="font-size:12px;color:var(--muted);margin:4px 0 0">Before/after or status code proof / 前后对比或状态码证明</p>
-        </div>
         <div style="padding:14px;border-radius:12px;border:2px solid var(--red);background:var(--red-light)">
           <div style="font-size:24px;margin-bottom:6px">⚠️</div>
           <b>Risk Lock / 风险锁</b>
           <p style="font-size:12px;color:var(--muted);margin:4px 0 0">Blockers and rollback plan / 阻塞项与回滚方案</p>
-        </div>
       </div>
-    </section>
-
-    <section class="panel">
       <h3>Copy-paste: Verification Prompt / 复制粘贴：验证提示词</h3>
       <pre id="verify-prompt" data-lang="prompt">After completing the task, provide:
 1. Scope lock: What was the original goal?
 2. Evidence lock: List all commands/URLs used with exact output
 3. Result lock: What changed? Show before/after proof
 4. Risk lock: Any blockers? What's the rollback plan?
-
 If any lock is missing, say "INCOMPLETE" and explain what's missing.</pre>
       <button class="cta primary" aria-label="Copy to clipboard" onclick="navigator.clipboard.writeText(document.getElementById('verify-prompt').textContent);this.textContent='Copied! ✓ 已复制！';setTimeout(()=>this.textContent='Copy verification prompt / 复制验证提示词',1200)">Copy verification prompt / 复制验证提示词</button>
-    </section>
-
-    <section class="panel">
       <h3>Context Warning Ladder / 上下文警告阶梯</h3>
       <p class="help">When your context usage hits these thresholds, take action:</p>
       <table class="route-table">
@@ -119,34 +108,22 @@ If any lock is missing, say "INCOMPLETE" and explain what's missing.</pre>
           <tr><td>🔴 Critical</td><td>95%</td><td>Stop, save state, start fresh session / 停止、保存状态、开新对话</td></tr>
         </tbody>
       </table>
-    </section>
-
     <section class="panel" style="border-left:4px solid var(--red);background:linear-gradient(90deg,rgba(192,57,43,0.04),var(--bg-card))">
       <h3>🚩 Red Flags / 危险信号 (immediately re-verify / 立即重新验证)</h3>
-      <ul>
         <li>❌ Agent claims a URL is live but won't show status code / 声称链接在线但不显示状态码</li>
         <li>❌ Agent says "it works" without showing output / 说"能用"但不展示输出</li>
         <li>❌ Agent skips the plan/progress/blocker/summary flow / 跳过计划/进度/阻塞/总结流程</li>
         <li>❌ Agent uses vague phrases like "should be fine" / 用模糊词汇如"应该没问题"</li>
         <li>❌ Agent refuses to provide verification commands / 拒绝提供验证命令</li>
-      </ul>
-    </section>
   </main>
-
   <footer>
     Built with 🦞 <a href="https://github.com/openclaw/openclaw" style="color:var(--blue)">OpenClaw</a> · 
     <a href="https://github.com/Septoff21/openclaw-newbie-baseline" style="color:var(--blue)">GitHub</a> · 
     MIT License
   </footer>
+  <script defer src="./js/scroll-reveal.js"></script>
 </body>
 </html>
 html>
 l>
 https://github.com/openclaw/openclaw" style="color:var(--blue)">OpenClaw</a> · 
-    <a href="https://github.com/Septoff21/openclaw-newbie-baseline" style="color:var(--blue)">GitHub</a> · 
-    MIT License
-  </footer>
-</body>
-</html>
-html>
-l>
