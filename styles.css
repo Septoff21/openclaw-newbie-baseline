@@ -243,3 +243,23 @@
   .featured-grid{grid-template-columns:1fr;gap:12px}
   .featured-thumb{width:80px;min-height:80px;font-size:32px}
 }
+
+/* === Extracted inline styles (index.html cleanup) === */
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:10001;padding:10px;background:var(--red);color:#fff;font-weight:700;border-radius:8px}
+.skip-link:focus{position:fixed;left:10px;top:10px;width:auto;height:auto}
+.announcement-bar{background:linear-gradient(90deg,var(--red),var(--blue));color:#fff;text-align:center;padding:8px 16px;font-size:13px;font-weight:600;position:fixed;top:0;left:0;right:0;z-index:1001}
+.announcement-bar a{color:#fff;text-decoration:underline}
+.search-input{padding:6px 12px;border-radius:8px;border:1.5px solid var(--stroke);background:var(--bg);font-size:13px;width:140px;transition:width .3s}
+.search-input:focus{width:200px!important}
+.search-results{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg-card);border:1.5px solid var(--stroke);border-radius:12px;box-shadow:var(--shadow-md);z-index:100;margin-top:4px;min-width:220px}
+.stat-number{font-size:20px;font-weight:900}
+.stat-red{color:var(--red)}
+.stat-blue{color:var(--blue)}
+.stat-green{color:var(--green)}
+.stat-orange{color:#e67e22}
+.hero-stat-row{display:flex;gap:16px;justify-content:center;margin-top:12px;font-size:13px;color:var(--muted);flex-wrap:wrap}
+.cases-container{max-width:1000px;margin:0 auto}
+.cases-cta{text-align:center;margin-top:20px}
+.card-border-green{border-left:4px solid var(--green)}
+.card-border-blue{border-left:4px solid var(--blue)}
+.card-desc-cn{margin-top:6px}

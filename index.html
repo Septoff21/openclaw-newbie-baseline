@@ -51,18 +51,18 @@
   </script>
 </head>
 <body>
-  <a href="#main" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:10001;padding:10px;background:var(--red);color:#fff;font-weight:700;border-radius:8px" onfocus="this.style.position='fixed';this.style.left='10px';this.style.top='10px';this.style.width='auto';this.style.height='auto'" onblur="this.style.position='absolute';this.style.left='-9999px'">Skip to main content / 跳到主内容</a>
+  <a href="#main" class="skip-link" onfocus="this.style.position='fixed';this.style.left='10px';this.style.top='10px';this.style.width='auto';this.style.height='auto'" onblur="this.style.position='absolute';this.style.left='-9999px'">Skip to main content / 跳到主内容</a>
   <!-- Announcement Bar -->
-  <div style="background:linear-gradient(90deg,var(--red),var(--blue));color:#fff;text-align:center;padding:8px 16px;font-size:13px;font-weight:600;position:fixed;top:0;left:0;right:0;z-index:1001">
-    🆕 Directory: featured verified cards + live search · New Troubleshooting page <a href="./changelog.html" style="color:#fff;text-decoration:underline">See what's new →</a>
+  <div class="announcement-bar">
+    🆕 Directory: featured verified cards + live search · New Troubleshooting page <a href="./changelog.html" >See what's new →</a>
   </div>
-  <nav class="topnav" style="top:36px">
+  <nav class="topnav announcement-offset">
     <a class="topnav-logo" href="./">🦞 OpenClaw</a>
     <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
     <div class="topnav-links">
       <div class="search-wrap" style="position:relative">
-        <input type="text" id="search-input" placeholder="🔍 Search... (press /)" style="padding:6px 12px;border-radius:8px;border:1.5px solid var(--stroke);background:var(--bg);font-size:13px;width:140px;transition:width .3s" onfocus="this.style.width='200px'" onblur="setTimeout(()=>this.style.width='140px',200)"/>
-        <div id="search-results" style="display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg-card);border:1.5px solid var(--stroke);border-radius:12px;box-shadow:var(--shadow-md);z-index:100;margin-top:4px;min-width:220px"></div>
+        <input type="text" id="search-input" placeholder="🔍 Search... (press /)" class="search-input"/>
+        <div id="search-results" class="search-results"></div>
       </div>
       <a href="./" class="active">Home</a>
       <a href="./agents.html">Agents</a>
@@ -324,12 +324,12 @@
     <section class="panel" id="stats">
       <h3>📊 Site Stats / 站点统计</h3>
       <div class="status-grid">
-        <div class="status-item"><span style="font-size:20px;font-weight:900;color:var(--red)">13</span><span>Pages / 页面</span></div>
-        <div class="status-item"><span style="font-size:20px;font-weight:900;color:var(--blue)">7</span><span>Agents / 代理</span></div>
-        <div class="status-item"><span style="font-size:20px;font-weight:900;color:var(--green)">5</span><span>Cron Jobs</span></div>
-        <div class="status-item"><span style="font-size:20px;font-weight:900;color:#e67e22">32</span><span>Projects / 项目</span></div>
+        <div class="status-item"><span class="stat-number stat-red">13</span><span>Pages / 页面</span></div>
+        <div class="status-item"><span class="stat-number stat-blue">7</span><span>Agents / 代理</span></div>
+        <div class="status-item"><span class="stat-number stat-green">5</span><span>Cron Jobs</span></div>
+        <div class="status-item"><span class="stat-number stat-orange">32</span><span>Projects / 项目</span></div>
       </div>
-      <div style="display:flex;gap:16px;justify-content:center;margin-top:12px;font-size:13px;color:var(--muted);flex-wrap:wrap">
+      <div class="hero-stat-row">
         <span>⭐ <b id="gh-stars">—</b> stars</span>
         <span>🍴 <b id="gh-forks">—</b> forks</span>
         <span>📋 <b id="gh-issues">—</b> issues</span>
@@ -346,7 +346,7 @@
         <h2 class="section-title">Built with OpenClaw<br/>用 OpenClaw 构建的项目</h2>
         <p class="subtitle">Live projects you can visit right now. / 现在就能访问的真实项目。</p>
       </div>
-      <div id="homepage-cases" class="dir-blog-grid" style="max-width:1000px;margin:0 auto"></div>
+      <div id="homepage-cases" class="dir-blog-grid cases-container"></div>
       <div style="text-align:center;margin-top:20px">
         <a class="cta" href="./directory.html">📂 See all 35 projects / 查看全部项目 →</a>
       </div>
@@ -359,23 +359,23 @@
         <h2 class="section-title">Not Another AI Tool<br/>不是又一个 AI 工具</h2>
       </div>
       <div class="grid">
-        <article class="card beginner" style="border-left:4px solid var(--green)">
+        <article class="card beginner card-border-green">
           <div class="card-icon">🆓</div>
           <h2>Free to Start / 免费开始</h2>
           <p class="card-desc">OpenClaw itself is free and open source. Use free models via OpenRouter — no credit card, no subscription, no catch. Start building in 5 minutes.</p>
-          <p class="card-desc" style="margin-top:6px">OpenClaw 本身免费开源。通过 OpenRouter 使用免费模型——无需信用卡、无需订阅。5 分钟开始。</p>
+          <p class="card-desc card-desc-cn">OpenClaw 本身免费开源。通过 OpenRouter 使用免费模型——无需信用卡、无需订阅。5 分钟开始。</p>
         </article>
-        <article class="card advance" style="border-left:4px solid var(--blue)">
+        <article class="card advance card-border-blue">
           <div class="card-icon">📋</div>
           <h2>Copy-Paste Setup / 复制粘贴</h2>
           <p class="card-desc">No configuration files to write from scratch. Copy a prompt, paste it into any AI chat, and get a working agent. Customize after it works.</p>
-          <p class="card-desc" style="margin-top:6px">不用从零写配置文件。复制提示词，粘贴到 AI 聊天，就有一个能用的 agent。跑起来之后再自定义。</p>
+          <p class="card-desc card-desc-cn">不用从零写配置文件。复制提示词，粘贴到 AI 聊天，就有一个能用的 agent。跑起来之后再自定义。</p>
         </article>
         <article class="card extreme" style="border-left:4px solid var(--red)">
           <div class="card-icon">🔌</div>
           <h2>Plugin Ecosystem / 插件生态</h2>
           <p class="card-desc">35+ projects in our directory. Skills for calendar, email, security, monitoring. Or build your own and sell it on Claw Shop.</p>
-          <p class="card-desc" style="margin-top:6px">目录里有 35+ 项目。日历、邮件、安全、监控的技能。或者自己做一个，在 Claw Shop 上卖。</p>
+          <p class="card-desc card-desc-cn">目录里有 35+ 项目。日历、邮件、安全、监控的技能。或者自己做一个，在 Claw Shop 上卖。</p>
         </article>
       </div>
     </section>
