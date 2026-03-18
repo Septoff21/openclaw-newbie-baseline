@@ -75,18 +75,18 @@
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:12px 0">
         <div style="padding:14px;border-radius:12px;border:2px solid var(--green);background:var(--green-light)">
           <div style="font-size:24px;margin-bottom:6px">🔒</div>
-          <b>Scope Lock</b>
-          <p style="font-size:12px;color:var(--muted);margin:4px 0 0">Restate the goal in one sentence</p>
+          <b>Scope Lock / 范围锁</b>
+          <p style="font-size:12px;color:var(--muted);margin:4px 0 0">Restate the goal in one sentence / 一句话重述目标</p>
         </div>
         <div style="padding:14px;border-radius:12px;border:2px solid var(--blue);background:var(--blue-light)">
           <div style="font-size:24px;margin-bottom:6px">🔍</div>
-          <b>Evidence Lock</b>
-          <p style="font-size:12px;color:var(--muted);margin:4px 0 0">Exact commands, URLs, file paths</p>
+          <b>Evidence Lock / 证据锁</b>
+          <p style="font-size:12px;color:var(--muted);margin:4px 0 0">Exact commands, URLs, file paths / 精确命令、URL、文件路径</p>
         </div>
         <div style="padding:14px;border-radius:12px;border:2px solid #e67e22;background:#fef3e2">
           <div style="font-size:24px;margin-bottom:6px">📊</div>
-          <b>Result Lock</b>
-          <p style="font-size:12px;color:var(--muted);margin:4px 0 0">Before/after or status code proof</p>
+          <b>Result Lock / 结果锁</b>
+          <p style="font-size:12px;color:var(--muted);margin:4px 0 0">Before/after or status code proof / 前后对比或状态码证明</p>
         </div>
         <div style="padding:14px;border-radius:12px;border:2px solid var(--red);background:var(--red-light)">
           <div style="font-size:24px;margin-bottom:6px">⚠️</div>
@@ -105,18 +105,18 @@
 4. Risk lock: Any blockers? What's the rollback plan?
 
 If any lock is missing, say "INCOMPLETE" and explain what's missing.</pre>
-      <button class="cta primary" aria-label="Copy to clipboard" onclick="navigator.clipboard.writeText(document.getElementById('verify-prompt').textContent);this.textContent='Copied!';setTimeout(()=>this.textContent='Copy verification prompt',1200)">Copy verification prompt</button>
+      <button class="cta primary" aria-label="Copy to clipboard" onclick="navigator.clipboard.writeText(document.getElementById('verify-prompt').textContent);this.textContent='Copied! ✓ 已复制！';setTimeout(()=>this.textContent='Copy verification prompt / 复制验证提示词',1200)">Copy verification prompt / 复制验证提示词</button>
     </section>
 
     <section class="panel">
       <h3>Context Warning Ladder / 上下文警告阶梯</h3>
       <p class="help">When your context usage hits these thresholds, take action:</p>
       <table class="route-table">
-        <thead><tr><th>Level</th><th>Threshold</th><th>Action</th></tr></thead>
+        <thead><tr><th>Level / 级别</th><th>Threshold / 阈值</th><th>Action / 操作</th></tr></thead>
         <tbody>
-          <tr><td>🟡 Caution</td><td>70%</td><td>Start summarizing, prepare to compress</td></tr>
-          <tr><td>🟠 Warning</td><td>85%</td><td>Compress context, drop non-essential history</td></tr>
-          <tr><td>🔴 Critical</td><td>95%</td><td>Stop, save state, start fresh session</td></tr>
+          <tr><td>🟡 Caution</td><td>70%</td><td>Start summarizing, prepare to compress / 开始总结，准备压缩</td></tr>
+          <tr><td>🟠 Warning</td><td>85%</td><td>Compress context, drop non-essential history / 压缩上下文，丢弃非必要历史</td></tr>
+          <tr><td>🔴 Critical</td><td>95%</td><td>Stop, save state, start fresh session / 停止、保存状态、开新对话</td></tr>
         </tbody>
       </table>
     </section>
