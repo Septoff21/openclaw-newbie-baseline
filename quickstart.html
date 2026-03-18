@@ -24,10 +24,10 @@
   <meta name="twitter:image" content="https://septoff21.github.io/openclaw-newbie-baseline/assets/og-image.svg" />
 </head>
 <body>
-  <a href="#main" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:10001;padding:10px;background:var(--red);color:#fff;font-weight:700;border-radius:8px" onfocus="this.style.position='fixed';this.style.left='10px';this.style.top='10px';this.style.width='auto';this.style.height='auto'" onblur="this.style.position='absolute';this.style.left='-9999px'">Skip to main content / 跳到主内容</a>
+  <a href="#main" class="skip-link">Skip to main content / 跳到主内容</a>
   <nav class="topnav">
     <a class="topnav-logo" href="./">🦞 OpenClaw</a>
-    <button id="theme-toggle" aria-label="Toggle dark mode" style="background:none;border:1.5px solid var(--stroke);border-radius:8px;padding:4px 8px;cursor:pointer;font-size:16px">🌙</button>
+    <button id="theme-toggle" aria-label="Toggle dark mode" class="theme-toggle-btn">🌙</button>
     <div class="topnav-links">
       <a href="./">Home</a>
       <a href="./agents.html">Agents</a>
@@ -54,13 +54,13 @@
 
   <header class="hero">
     <p class="eyebrow">5 Minutes / 5 分钟</p>
-    <h1>🚀 Quick Start<br/><span style="font-size:0.5em;color:var(--muted)">快速开始</span></h1>
+    <h1>🚀 Quick Start<br/><span class="small-subtitle text-muted">快速开始</span></h1>
     <p class="subtitle">From zero to AI agent in 5 minutes. Copy, paste, done.<br/>从零到 AI agent 只需 5 分钟。复制、粘贴、完成。</p>
   </header>
 
   <main id="main">
     <!-- Before you start -->
-    <section class="panel" style="border-left:4px solid var(--orange);background:linear-gradient(90deg,var(--orange-light),var(--bg-card))">
+    <section class="panel panel-orange section-highlight-orange">
       <h3>📦 Before You Start / 开始之前</h3>
       <p>You need these 3 things (that's all): / 你只需要这 3 样东西：</p>
       <ol>
@@ -68,18 +68,18 @@
         <li><b>5 minutes</b> of uninterrupted time / 5 分钟不被打断的时间</li>
         <li><b>A free API key</b> from <a href="https://openrouter.ai/keys" target="_blank">openrouter.ai/keys</a> (we'll show you how) / <a href="https://openrouter.ai/keys" target="_blank">openrouter.ai/keys</a> 的免费 API 密钥（我们会教你）</li>
       </ol>
-      <p style="font-size:13px;color:var(--muted)"><b>Don't know what a terminal is?</b> On Mac: press Cmd+Space, type "Terminal", press Enter. On Windows: press Win+R, type "powershell", press Enter. That's it! / <b>不知道终端是什么？</b> Mac：按 Cmd+Space，输入"Terminal"，按回车。Windows：按 Win+R，输入"powershell"，按回车。</p>
+      <p class="text-md text-muted"><b>Don't know what a terminal is?</b> On Mac: press Cmd+Space, type "Terminal", press Enter. On Windows: press Win+R, type "powershell", press Enter. That's it! / <b>不知道终端是什么？</b> Mac：按 Cmd+Space，输入"Terminal"，按回车。Windows：按 Win+R，输入"powershell"，按回车。</p>
     </section>
 
     <!-- Step 1 -->
     <section class="panel" id="step1">
-      <h3>Step 1: Install OpenClaw / 安装 OpenClaw <span style="float:right;color:var(--muted)">⏱ 2 min</span></h3>
+      <h3>Step 1: Install OpenClaw / 安装 OpenClaw <span class="text-muted float-right">⏱ 2 min</span></h3>
       <p class="help">Open your terminal (Terminal on Mac/Linux, PowerShell on Windows) and paste this:<br/>打开终端（Mac/Linux 用 Terminal，Windows 用 PowerShell）并粘贴：</p>
       <pre data-lang="bash"><span class="cmd">npm install</span> <span class="flag">-g</span> openclaw <span class="op"><pre data-lang="bash">npm install -g openclaw && openclaw doctor</pre><pre data-lang="bash">npm install -g openclaw && openclaw doctor</pre></span> <span class="cmd">openclaw</span> doctor</pre>
       <p class="help">This installs OpenClaw and checks your system. If you see ✅, you're good.<br/>这会安装 OpenClaw 并检查系统。如果看到 ✅ 就没问题。</p>
       <details>
-        <summary style="cursor:pointer;font-weight:600;color:var(--blue)">🔧 Troubleshooting / 常见问题</summary>
-        <ul style="margin-top:8px;font-size:13px">
+        <summary class="text-blue font-600 cursor-pointer">🔧 Troubleshooting / 常见问题</summary>
+        <ul class="mt-sm text-md">
           <li><b>"command not found"</b> — Install Node.js first from <a href="https://nodejs.org" target="_blank">nodejs.org</a></li>
           <li><b>Permission denied</b> — Try <code>sudo npm install -g openclaw</code></li>
           <li><b>Windows errors</b> — Run PowerShell as Administrator</li>
@@ -89,7 +89,7 @@
 
     <!-- Step 2 -->
     <section class="panel" id="step2">
-      <h3>Step 2: Configure / 配置 <span style="float:right;color:var(--muted)">⏱ 1 min</span></h3>
+      <h3>Step 2: Configure / 配置 <span class="float-right text-muted">⏱ 1 min</span></h3>
       <p class="help">Set up your API key. We recommend OpenRouter (one key for all models):<br/>设置 API 密钥。推荐 OpenRouter（一个密钥用所有模型）：</p>
       <pre data-lang="bash"><span class="cmd">openclaw config set</span> model.provider <span class="str">openrouter</span>
 <span class="cmd">openclaw config set</span> model.apiKey <span class="str">"your-api-key-here"</span></pre>
@@ -98,7 +98,7 @@
 
     <!-- Step 3 -->
     <section class="panel" id="step3">
-      <h3>Step 3: Give It a Soul / 给它一个灵魂 <span style="float:right;color:var(--muted)">⏱ 1 min</span></h3>
+      <h3>Step 3: Give It a Soul / 给它一个灵魂 <span class="float-right text-muted">⏱ 1 min</span></h3>
       <p class="help">Copy this prompt and paste it into your AI chat. This sets up your agent's personality:<br/>复制此提示词并粘贴到 AI 聊天中。这会设置你 agent 的人格：</p>
       <pre id="soul-prompt" data-lang="prompt">Set up my OpenClaw agent with these files:
 
@@ -126,7 +126,7 @@ Create these files and show me the result.</pre>
 
     <!-- Step 4 -->
     <section class="panel" id="step4">
-      <h3>Step 4: Verify / 验证 <span style="float:right;color:var(--muted)">⏱ 30 sec</span></h3>
+      <h3>Step 4: Verify / 验证 <span class="float-right text-muted">⏱ 30 sec</span></h3>
       <p class="help">Run these commands to make sure everything works:<br/>运行这些命令确保一切正常：</p>
       <pre data-lang="bash"><span class="cmd">openclaw status</span>        <span class="comment"># Should show "running"</span>
 <span class="cmd">openclaw chat</span> <span class="str">"Hello"</span>  <span class="comment"># Should get a response</span></pre>
@@ -135,24 +135,24 @@ Create these files and show me the result.</pre>
 
     <!-- Step 5 -->
     <section class="panel" id="step5">
-      <h3>Step 5: Connect / 连接 <span style="float:right;color:var(--muted)">⏱ 1 min</span></h3>
+      <h3>Step 5: Connect / 连接 <span class="float-right text-muted">⏱ 1 min</span></h3>
       <p class="help">Connect your agent to a messaging platform:<br/>将你的 agent 连接到消息平台：</p>
-      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr))">
-        <article class="card beginner" style="padding:16px">
+      <div class="grid grid-150">
+        <article class="card beginner p-16">
           <h4>📱 Telegram</h4>
-          <code style="font-size:11px">openclaw connect telegram</code>
+          <code class="code-xs">openclaw connect telegram</code>
         </article>
-        <article class="card advance" style="padding:16px">
+        <article class="card advance p-16">
           <h4>💬 WhatsApp</h4>
-          <code style="font-size:11px">openclaw connect whatsapp</code>
+          <code class="code-xs">openclaw connect whatsapp</code>
         </article>
-        <article class="card advance" style="padding:16px">
+        <article class="card advance p-16">
           <h4>🎮 Discord</h4>
-          <code style="font-size:11px">openclaw connect discord</code>
+          <code class="code-xs">openclaw connect discord</code>
         </article>
-        <article class="card extreme" style="padding:16px">
+        <article class="card extreme p-16">
           <h4>🍎 iMessage</h4>
-          <code style="font-size:11px">openclaw connect imessage</code>
+          <code class="code-xs">openclaw connect imessage</code>
         </article>
       </div>
     </section>
@@ -160,7 +160,7 @@ Create these files and show me the result.</pre>
     <!-- What's Next -->
     <section class="panel cta-final">
       <h3>🦞 What's Next? / 接下来做什么？</h3>
-      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:16px">
+      <div class="center-actions">
         <a class="cta primary" href="./reference.html">📖 Read Reference / 读参考</a>
         <a class="cta" href="./verification.html">✅ Learn Verification / 学验证</a>
         <a class="cta" href="./shop.html">🛒 Monetize / 变现</a>

@@ -841,3 +841,14 @@ html {
 
 /* Status grid override for verify-locks */
 .verify-locks-inline { grid-template-columns: 1fr; }
+
+/* quick inline-style replacements */
+.float-right{float:right}
+.cursor-pointer{cursor:pointer}
+.grid-150{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.p-16{padding:16px}
+.code-xs{font-size:11px}
+.center-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+.theme-toggle-btn{background:none;border:1.5px solid var(--stroke);border-radius:8px;padding:4px 8px;cursor:pointer;font-size:16px}
+.section-highlight-orange{background:linear-gradient(90deg,var(--orange-light),var(--bg-card))}
+.small-subtitle{font-size:0.5em}
