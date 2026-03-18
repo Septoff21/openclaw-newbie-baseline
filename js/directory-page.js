@@ -1,7 +1,16 @@
 (async()=>{
   const grid = document.getElementById('directory-grid');
   if(!grid) return;
-  const data = await fetch('./api/claw-directory.json').then(r=>r.json());
+  let data;
+  try{
+    const resp = await fetch('./api/claw-directory.json');
+    if(!resp.ok) throw new Error('Directory API '+resp.status);
+    data = await resp.json();
+  }catch(e){
+    console.error('directory-page:',e);
+    grid.innerHTML='<p style="text-align:center;color:var(--muted);padding:40px">Failed to load projects. / 项目加载失败。</p>';
+    return;
+  }
   const items = data.items || [];
   const total = items.length;
   const verified = items.filter(i=>i.status==='verified');
