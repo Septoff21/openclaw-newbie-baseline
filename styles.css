@@ -666,3 +666,10 @@ html {
   .grid{gap:12px !important;}
   .cta,.btn{min-height:46px !important;}
 }
+
+/* Heartbeat Round A (2026-03-19): card rhythm unification */
+@media (min-width: 769px){
+  .section-block{padding:48px 0 !important;}
+  .panel{margin:16px 0 !important;}
+  .grid,.dir-blog-grid,.featured-grid{gap:20px !important;}
+}
