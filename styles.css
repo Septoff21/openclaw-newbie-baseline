@@ -611,6 +611,25 @@ footer {
   border-radius: 4px;
 }
 
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .scroll-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .scene-img-uhx {
+    animation: none !important;
+  }
+}
+
 /* Smooth scroll anchoring */
 html {
   scroll-padding-top: calc(var(--nav-h) + var(--space-md));
