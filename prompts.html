@@ -67,7 +67,7 @@
           <h3 class="mb-0">🧠 Honest Advisor / 诚实顾问</h3>
           <p class="help mt-xs">By DM + Claude · Verified on ChatGPT, Claude, Gemini · March 2026</p>
         </div>
-        <button class="cta primary btn-compact" onclick="copyPrompt('honest-advisor')">📋 Copy / 复制</button>
+        <button class="cta primary btn-compact" onclick="copyPrompt('honest-advisor', this)">📋 Copy / 复制</button>
       </div>
       <p class="body-text mb-lg">
         <b>Problem / 问题：</b>Most AI assistants tell you what you want to hear. This prompt makes any AI tell you what you <em>need</em> to hear.<br/>
@@ -158,7 +158,7 @@ Be specific with commands. If something might go wrong, warn me first.
           <h3 class="mb-0">🔧 Debug My Agent / 排查 Agent 问题</h3>
           <p class="help mt-xs">Troubleshooting prompt · Diagnose any issue</p>
         </div>
-        <button class="cta primary btn-compact" onclick="copyPrompt('debug-agent')">📋 Copy / 复制</button>
+        <button class="cta primary btn-compact" onclick="copyPrompt('debug-agent', this)">📋 Copy / 复制</button>
       </div>
       <p class="body-text mb-lg">
         <b>Use / 用途：</b>When something is broken and you don't know why. Paste this into your AI chat and it will diagnose step by step.<br/>
@@ -234,13 +234,20 @@ Please:
     MIT License ·
     By DM 👤 × UHX 🌌
   </footer>
+  <div id="copy-status" class="sr-only" aria-live="polite" aria-atomic="true"></div>
   <script>
-    function copyPrompt(id){
+    async function copyPrompt(id, btn){
       const el = document.getElementById(id);
-      if(!el) return;
-      navigator.clipboard.writeText(el.textContent.trim());
-      const btn = event.target;
-      btn.textContent='✓ Copied! 已复制！';
+      if(!el || !btn) return;
+      const status = document.getElementById('copy-status');
+      try {
+        await navigator.clipboard.writeText(el.textContent.trim());
+        btn.textContent='✓ Copied! 已复制！';
+        if (status) status.textContent = 'Prompt copied to clipboard. 提示词已复制到剪贴板。';
+      } catch (e) {
+        btn.textContent='❌ Copy failed / 复制失败';
+        if (status) status.textContent = 'Copy failed. Please copy manually. 复制失败，请手动复制。';
+      }
       setTimeout(()=>btn.textContent='📋 Copy / 复制',1500);
     }
   </script>
