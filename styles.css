@@ -736,3 +736,10 @@ html {
   .panel{margin:16px 0 !important;}
   .grid,.dir-blog-grid,.featured-grid{gap:20px !important;}
 }
+/* Heartbeat Round E (2026-03-19): Real Cases card animations */
+.cases-card{animation:case-in .5s ease both}
+@keyframes case-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.cases-container{min-height:120px}
+.cases-credibility{text-align:center;padding:12px 0 0;font-size:11px;color:var(--muted)}
+.cases-credibility a{color:var(--blue);text-decoration:none}
+.cases-credibility a:hover{text-decoration:underline}
