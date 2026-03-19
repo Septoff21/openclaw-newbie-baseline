@@ -216,18 +216,6 @@
       "verifiedAt": null
     },
     {
-      "name": "OpenClaw Mission Control",
-      "repo": "abhi1693/openclaw-mission-control",
-      "url": "",
-      "desc": "AI Agent Orchestration Dashboard — manage agents, assign tasks, coordinate multi-agent collaboration.",
-      "tags": [
-        "dashboard",
-        "multi-agent"
-      ],
-      "status": "repo-only",
-      "verifiedAt": null
-    },
-    {
       "name": "OpenClaw 101 (CN)",
       "repo": "mengjian-github/openclaw101",
       "url": "",
@@ -434,6 +422,21 @@
         "security"
       ],
       "verifiedAt": null
+    },
+    {
+      "name": "Mission Control (Cognitive Core Edition)",
+      "repo": "",
+      "url": "http://127.0.0.1:3090",
+      "desc": "AI代理编排仪表盘 — 含Cognitive Core（知识图谱 + 修复账本 + 思维流）+ JARVIS视觉 + TTS交互层。基于 Mission Control 二开。/ AI agent orchestration dashboard with Cognitive Core, JARVIS visual overhaul, and TTS integration.",
+      "tags": [
+        "dashboard",
+        "multi-agent",
+        "cognitive-core",
+        "tts",
+        "jarvis"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-03-19"
     }
   ]
 }
