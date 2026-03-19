@@ -56,16 +56,36 @@
 
   function renderFeatured(list){
     if(!list.length){featuredWrap.innerHTML='';return;}
+    const top = list.slice(0,5);
+    const hero = top[0];
+    const rest = top.slice(1);
+    const heroCat = getCategory(hero.tags);
+    const heroEmoji = getEmoji(hero.tags);
     featuredWrap.innerHTML = `
-      <div style="margin-bottom:8px">
-        <span style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--green)">✅ Featured Verified / 精选已验证</span>
+      <div style="margin-bottom:8px;display:flex;align-items:center;gap:8px">
+        <span style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--green)">⭐ Top Verified / 精选已验证</span>
+        <span style="font-size:11px;color:var(--muted)">${list.length} verified total</span>
       </div>
       <div class="featured-grid">
-        ${list.map(it=>{
+        <a class="featured-hero" href="${hero.url||'https://github.com/'+hero.repo}" target="_blank" rel="noopener">
+          <span class="featured-rank">🏆 #1</span>
+          <div class="featured-thumb cat-${heroCat.key}"><span class="thumb-icon">${heroEmoji}</span></div>
+          <div class="featured-body">
+            <span class="dir-card-category verified-cat">✅ ${heroCat.label}</span>
+            <h3 class="featured-title">${hero.name}</h3>
+            <p class="featured-desc">${hero.desc||'No description.'}</p>
+            <div class="featured-meta">
+              <span>${hero.verifiedAt?'Verified '+hero.verifiedAt:''}</span>
+              <span class="featured-arrow">Visit →</span>
+            </div>
+          </div>
+        </a>
+        ${rest.map((it,i)=>{
           const cat = getCategory(it.tags);
           const emoji = getEmoji(it.tags);
           return `
             <a class="featured-card" href="${it.url||'https://github.com/'+it.repo}" target="_blank" rel="noopener">
+              <span class="featured-rank">#${i+2}</span>
               <div class="featured-thumb cat-${cat.key}"><span class="thumb-icon">${emoji}</span></div>
               <div class="featured-body">
                 <span class="dir-card-category verified-cat">✅ ${cat.label}</span>
