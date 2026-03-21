@@ -64,7 +64,7 @@
   <main id="main">
     <!-- Quick Diagnostics -->
     <section class="panel" style="border-left:4px solid var(--blue)">
-      <h3>🩺 Quick Diagnostics / 快速诊断</h3>
+      <h2>🩺 Quick Diagnostics / 快速诊断</h2>
       <p>Run these first — they catch 80% of issues / 先跑这些——解决 80% 的问题：</p>
       <pre class="code-block" data-lang="bash"><code><span class="comment"># Check if OpenClaw is installed / 检查是否已安装</span>
 <span class="cmd">openclaw</span> <span class="flag">--version</span>
@@ -81,7 +81,7 @@
 
     <!-- Error 1: command not found -->
     <section class="panel">
-      <h3>❌ "command not found: openclaw"</h3>
+      <h2>❌ "command not found: openclaw"</h2>
       <p><b>Cause / 原因：</b>OpenClaw is not installed or not in your PATH. / OpenClaw 没装好或不在 PATH 里。</p>
       <p><b>Fix / 修复：</b></p>
       <pre class="code-block" data-lang="bash"><code><span class="comment"># Install OpenClaw globally / 全局安装</span>
@@ -97,7 +97,7 @@
 
     <!-- Error 2: Gateway won't start -->
     <section class="panel">
-      <h3>🚫 Gateway won't start / 网关启动不了</h3>
+      <h2>🚫 Gateway won't start / 网关启动不了</h2>
       <p><b>Cause / 原因：</b>Port conflict, missing config, or permission issue. / 端口冲突、配置缺失或权限问题。</p>
       <p><b>Fix / 修复：</b></p>
       <pre class="code-block" data-lang="bash"><code><span class="comment"># Check what's using the port / 检查谁在用这个端口</span>
@@ -115,7 +115,7 @@
 
     <!-- Error 3: API key errors -->
     <section class="panel">
-      <h3>🔑 "Invalid API key" / API 密钥错误</h3>
+      <h2>🔑 "Invalid API key" / API 密钥错误</h2>
       <p><b>Cause / 原因：</b>Wrong key, expired key, or not set. / 密钥错误、过期或没设置。</p>
       <p><b>Fix / 修复：</b></p>
       <pre class="code-block" data-lang="bash"><code><span class="comment"># Check current config / 查看当前配置</span>
@@ -131,7 +131,7 @@
 
     <!-- Error 4: Model not responding -->
     <section class="panel">
-      <h3>🤖 Model not responding / 模型没反应</h3>
+      <h2>🤖 Model not responding / 模型没反应</h2>
       <p><b>Cause / 原因：</b>Model is down, rate limited, or misconfigured. / 模型宕机、限流或配置错误。</p>
       <p><b>Fix / 修复：</b></p>
       <pre class="code-block" data-lang="bash"><code><span class="comment"># Check which model is active / 检查当前模型</span>
@@ -147,7 +147,7 @@
 
     <!-- Error 5: Memory not working -->
     <section class="panel">
-      <h3>🧠 Memory not saving / 记忆没保存</h3>
+      <h2>🧠 Memory not saving / 记忆没保存</h2>
       <p><b>Cause / 原因：</b>Memory plugin not configured or DB path invalid. / 记忆插件没配置好或数据库路径无效。</p>
       <p><b>Fix / 修复：</b></p>
       <pre class="code-block" data-lang="bash"><code><span class="comment"># Check memory config / 检查记忆配置</span>
@@ -165,7 +165,7 @@
 
     <!-- Error 6: Messaging not connecting -->
     <section class="panel">
-      <h3>💬 Telegram/Discord not working / 聊天软件连不上</h3>
+      <h2>💬 Telegram/Discord not working / 聊天软件连不上</h2>
       <p><b>Cause / 原因：</b>Bot token wrong, webhook not set, or channel not configured. / Bot token 错误、webhook 没设置或频道没配置。</p>
       <p><b>Fix / 修复（以 Telegram 为例）：</b></p>
       <pre class="code-block" data-lang="bash"><code><span class="comment"># Verify bot token / 验证 bot token</span>
@@ -185,7 +185,7 @@
 
     <!-- Error 7: Permission denied -->
     <section class="panel">
-      <h3>🔒 "Permission denied" / 权限不足</h3>
+      <h2>🔒 "Permission denied" / 权限不足</h2>
       <p><b>Cause / 原因：</b>File ownership or npm global permissions. / 文件归属或 npm 全局权限问题。</p>
       <p><b>Fix / 修复：</b></p>
       <pre class="code-block" data-lang="bash"><code><span class="comment"># Fix npm global permissions / 修复 npm 全局权限</span>
@@ -200,7 +200,7 @@
 
     <!-- Error 8: Slow responses -->
     <section class="panel">
-      <h3>🐢 Responses are slow / 回复很慢</h3>
+      <h2>🐢 Responses are slow / 回复很慢</h2>
       <p><b>Cause / 原因：</b>Model too large, network issues, or thinking mode on. / 模型太大、网络问题或 thinking 模式开启。</p>
       <p><b>Fix / 修复：</b></p>
       <pre class="code-block" data-lang="bash"><code><span class="comment"># Switch to a faster model / 切换到更快的模型</span>
@@ -216,7 +216,7 @@
 
     <!-- Still stuck -->
     <section class="panel" style="border-left:4px solid var(--red)">
-      <h3>🆘 Still stuck? / 还没解决？</h3>
+      <h2>🆘 Still stuck? / 还没解决？</h2>
       <ol>
         <li><b>Discord</b> — <a href="https://discord.com/invite/clawd" target="_blank" rel="noopener noreferrer">discord.com/invite/clawd</a> — paste your error, someone will help / 粘贴你的错误，有人会帮忙</li>
         <li><b>GitHub Issues</b> — <a href="https://github.com/openclaw/openclaw/issues" target="_blank" rel="noopener noreferrer">openclaw/openclaw/issues</a></li>
@@ -230,7 +230,7 @@
     </section>
 
     <section class="panel cta-final">
-      <h3>🦞 Back on track? / 搞定了？</h3>
+      <h2>🦞 Back on track? / 搞定了？</h2>
       <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:16px">
         <a class="cta primary" href="./quickstart.html">🚀 Quick Start / 快速开始</a>
         <a class="cta" href="./faq.html">❓ FAQ / 常见问题</a>
