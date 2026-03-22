@@ -21,6 +21,9 @@
   <script>(function(){const KEY="openclaw-theme";const btn=document.getElementById("theme-toggle");function getTheme(){const saved=localStorage.getItem(KEY);if(saved)return saved;return window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";}function applyTheme(theme){document.documentElement.setAttribute("data-theme",theme);localStorage.setItem(KEY,theme);if(btn)btn.textContent=theme==="dark"?"☀️":"🌙";}applyTheme(getTheme());if(btn){btn.addEventListener("click",()=>{const current=document.documentElement.getAttribute("data-theme");applyTheme(current==="dark"?"light":"dark");});}})();</script>
 
   <meta property="og:image" content="https://septoff21.github.io/openclaw-newbie-baseline/assets/og-image.svg" />
+  <meta property="og:title" content="404 — Page Not Found / 页面未找到" />
+  <meta property="og:description" content="Page not found. Return to OpenClaw Playground. / 页面未找到。返回首页。" />
+  <meta property="og:url" content="https://septoff21.github.io/openclaw-newbie-baseline/404.html" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://septoff21.github.io/openclaw-newbie-baseline/assets/og-image.svg" />
 </head>

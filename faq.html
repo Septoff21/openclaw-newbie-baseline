@@ -21,6 +21,7 @@
   <script>(function(){const KEY="openclaw-theme";const btn=document.getElementById("theme-toggle");function getTheme(){const saved=localStorage.getItem(KEY);if(saved)return saved;return window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";}function applyTheme(theme){document.documentElement.setAttribute("data-theme",theme);localStorage.setItem(KEY,theme);if(btn)btn.textContent=theme==="dark"?"☀️":"🌙";}applyTheme(getTheme());if(btn){btn.addEventListener("click",()=>{const current=document.documentElement.getAttribute("data-theme");applyTheme(current==="dark"?"light":"dark");});}})();</script>
 
   <meta property="og:title" content="FAQ — OpenClaw Playground / 常见问题" />
+  <meta property="og:url" content="https://septoff21.github.io/openclaw-newbie-baseline/faq.html" />
   <meta property="og:description" content="Real answers to real questions. What is it, cost, setup, safety. / 真实问答：这是什么、费用、设置、安全。" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://septoff21.github.io/openclaw-newbie-baseline/assets/og-image.svg" />
