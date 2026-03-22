@@ -279,6 +279,16 @@
         <li>Start with one agent, get it working well, then scale up</li>
       </ul>
 
+      <h3>😴 What happens when I'm away? / 我不在的时候 Agent 在干嘛？</h3>
+      <ul>
+        <li><b>Heartbeats</b>: your agent wakes up every ~30 minutes to check emails, calendar, weather — and only messages you if something matters</li>
+        <li><b>Cron jobs</b>: schedule exact tasks (daily report at 9 AM, weekly cleanup, price monitoring)</li>
+        <li><b>Silent mode</b>: if nothing's urgent, your agent just says "HEARTBEAT_OK" and goes back to sleep — no spam</li>
+        <li><b>Memory</b>: everything important gets written to files, so your agent remembers even after restarts</li>
+        <li><b>Proactive alerts</b>: important email, calendar event in 2 hours, or something unusual → your agent reaches out to you</li>
+        <li>You set the rules in HEARTBEAT.md — your agent follows them strictly</li>
+      </ul>
+
     <section class="panel cta-final">
       <h3>🦞 Ready? / 准备好了？</h3>
       <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:16px">
