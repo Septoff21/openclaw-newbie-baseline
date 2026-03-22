@@ -106,14 +106,14 @@ If any lock is missing, say "INCOMPLETE" and explain what's missing.</pre>
       <button class="cta primary" aria-label="Copy to clipboard" onclick="navigator.clipboard.writeText(document.getElementById('verify-prompt').textContent);this.textContent='Copied! ✓ 已复制！';setTimeout(()=>this.textContent='Copy verification prompt / 复制验证提示词',1200)">Copy verification prompt / 复制验证提示词</button>
       <h2>Context Warning Ladder / 上下文警告阶梯</h2>
       <p class="help">When your context usage hits these thresholds, take action:</p>
-      <table class="route-table">
+      <div class="route-table-wrapper"><table class="route-table">
         <thead><tr><th>Level / 级别</th><th>Threshold / 阈值</th><th>Action / 操作</th></tr></thead>
         <tbody>
           <tr><td>🟡 Caution</td><td>70%</td><td>Start summarizing, prepare to compress / 开始总结，准备压缩</td></tr>
           <tr><td>🟠 Warning</td><td>85%</td><td>Compress context, drop non-essential history / 压缩上下文，丢弃非必要历史</td></tr>
           <tr><td>🔴 Critical</td><td>95%</td><td>Stop, save state, start fresh session / 停止、保存状态、开新对话</td></tr>
         </tbody>
-      </table>
+      </table></div>
     <section class="panel" style="border-left:4px solid var(--red);background:linear-gradient(90deg,rgba(192,57,43,0.04),var(--bg-card))">
       <h2>🚩 Red Flags / 危险信号 (immediately re-verify / 立即重新验证)</h2>
         <li>❌ Agent claims a URL is live but won't show status code / 声称链接在线但不显示状态码</li>
