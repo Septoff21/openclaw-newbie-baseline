@@ -1,5 +1,5 @@
 {
-  "date": "2026-03-17",
+  "date": "2026-03-22",
   "items": [
     {
       "name": "OpenClaw Skills Explorer",
@@ -437,6 +437,32 @@
       ],
       "status": "verified",
       "verifiedAt": "2026-03-19"
+    },
+    {
+      "name": "Obsidian Skills",
+      "repo": "kepano/obsidian-skills",
+      "url": "https://github.com/kepano/obsidian-skills",
+      "desc": "Teach your agent to use Obsidian — Markdown, Bases, JSON Canvas, and CLI. /\n教你的 Agent 使用 Obsidian——Markdown、Bases、JSON Canvas 和 CLI。",
+      "tags": [
+        "skills",
+        "obsidian",
+        "repo-only"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-03-22"
+    },
+    {
+      "name": "Lobster Workflow Engine",
+      "repo": "openclaw/lobster",
+      "url": "https://docs.openclaw.ai/tools/lobster",
+      "desc": "Typed workflow shell for OpenClaw — compose skills into pipelines and safe automations. /\nOpenClaw 工作流引擎——将技能组合为可复用的管道和安全自动化。",
+      "tags": [
+        "tools",
+        "skills",
+        "live"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-03-22"
     }
   ]
 }
