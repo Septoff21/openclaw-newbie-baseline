@@ -165,7 +165,7 @@
     <section class="panel" style="border-left:4px solid #e67e22;background:linear-gradient(90deg,#fef3e2,var(--bg-card))">
       <h2>⚠️ Model Context Warnings / 模型上下文提醒</h2>
       <p class="help">Different models behave differently at high context. Know the limits.<br/>不同模型在高上下文下表现不同。了解极限。</p>
-      <table class="route-table">
+<div class="route-table-wrapper"><table class="route-table">
         <thead><tr><th>Signal / 信号</th><th>Meaning / 含义</th><th>Action / 行动</th></tr></thead>
         <tbody>
           <tr><td>Context > 70%</td><td>Model may start forgetting early details / 模型可能开始忘记早期细节</td><td>Start summarizing / 开始总结</td></tr>
@@ -173,7 +173,7 @@
           <tr><td>Context > 95%</td><td>Critical — model may hallucinate or lose coherence</td><td>New session immediately / 立即新会话</td></tr>
           <tr><td>Free models at limit</td><td>More aggressive truncation than premium</td><td>Switch to premium for complex tasks / 复杂任务切换到付费模型</td></tr>
         </tbody>
-      </table>
+      </table></div>
       <p style="margin-top:10px"><b>Tip / 提示：</b> Run <code>/status</code> anytime to check your context usage.<br/>随时运行 <code>/status</code> 检查上下文用量。</p>
     </section>
 
@@ -181,7 +181,7 @@
     <section class="panel" id="architecture">
       <h2>🏗️ Agent Architecture / 代理架构</h2>
       <p class="help">How our agents are organized (UHX as example).<br/>我们的代理如何组织（以 UHX 为例）。</p>
-      <table class="route-table">
+<div class="route-table-wrapper"><table class="route-table">
         <thead><tr><th>Agent / 代理</th><th>Role / 角色</th><th>Trigger / 触发</th><th>Output / 输出</th></tr></thead>
         <tbody>
           <tr><td>🌌 UHX (Main)</td><td>Decision maker, builder, communicator</td><td>User message / heartbeat</td><td>Replies, commits, deployments</td></tr>
@@ -192,7 +192,7 @@
           <tr><td>🔗 Link Checker</td><td>External link validator</td><td>Cron: weekly Mon 09:00</td><td>Dead link report</td></tr>
           <tr><td>📊 Metrics Bot</td><td>Weekly analytics</td><td>Cron: weekly Sun 20:00</td><td>Weekly summary</td></tr>
         </tbody>
-      </table>
+      </table></div>
     </section>
   </main>
 
