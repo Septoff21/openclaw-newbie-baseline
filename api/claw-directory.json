@@ -493,6 +493,47 @@
       ],
       "status": "verified",
       "verifiedAt": "2026-03-23"
+    },
+    {
+      "name": "Airi",
+      "repo": "moeru-ai/airi",
+      "url": "https://airi.moeru.ai/docs/",
+      "desc": "AI companion framework with multimodal capabilities — voice, vision, and personality. ⭐35k+\n多模态 AI 伴侣框架——语音、视觉、人格化交互",
+      "tags": [
+        "ai-companion",
+        "multimodal",
+        "live"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-03-23"
+    },
+    {
+      "name": "ChatGPT on WeChat",
+      "repo": "zhayujie/chatgpt-on-wechat",
+      "url": "https://cowagent.ai",
+      "desc": "Deploy ChatGPT/LLM on WeChat, Official Account, DingTalk, Feishu — most popular CN AI bot. ⭐42k+\n将 ChatGPT/LLM 接入微信、公众号、钉钉、飞书——最受欢迎的中文 AI 机器人",
+      "tags": [
+        "im-bot",
+        "wechat",
+        "chinese",
+        "live"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-03-23"
+    },
+    {
+      "name": "SiYuan Note",
+      "repo": "siyuan-note/siyuan",
+      "url": "https://b3log.org/siyuan",
+      "desc": "Privacy-first knowledge management with block refs and local AI. Open source Notion alternative. ⭐42k+\n隐私优先的知识管理——块级引用、本地 AI，开源 Notion 替代方案",
+      "tags": [
+        "knowledge",
+        "notes",
+        "privacy",
+        "live"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-03-23"
     }
   ]
 }
