@@ -209,7 +209,7 @@
       "name": "OpenClaw Installer",
       "repo": "miaoxworld/OpenClawInstaller",
       "url": "",
-      "desc": "One-click deployment tool for OpenClaw. Simplifies initial setup.",
+      "desc": "One-click deployment tool for OpenClaw. Simplifies initial setup.\nOpenClaw 一键部署工具，简化初始安装流程",
       "tags": [
         "installer",
         "beginner-friendly"
@@ -248,7 +248,7 @@
       "name": "OpenClaw Nerve",
       "repo": "daggerhashimoto/openclaw-nerve",
       "url": "",
-      "desc": "Real-time web cockpit: voice conversations, agent kanban, workspace control, sub-agent sessions, usage charts.",
+      "desc": "Real-time web cockpit: voice conversations, agent kanban, workspace control, sub-agent sessions, usage charts.\n实时 Web 控制面板——语音对话、Agent 看板、工作区管理、子 Agent 会话、用量图表",
       "tags": [
         "dashboard",
         "monitoring"
@@ -260,7 +260,7 @@
       "name": "CC Switch",
       "repo": "farion1231/cc-switch",
       "url": "",
-      "desc": "Cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode, OpenClaw & Gemini CLI.",
+      "desc": "Cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode, OpenClaw & Gemini CLI.\n跨平台桌面 All-in-One 助手——支持 Claude Code、Codex、OpenCode、OpenClaw 和 Gemini CLI",
       "tags": [
         "desktop",
         "multi-agent"
@@ -272,7 +272,7 @@
       "name": "1Panel (OpenClaw Deploy)",
       "repo": "1Panel-dev/1Panel",
       "url": "",
-      "desc": "VPS control panel with one-click OpenClaw deployment. Take full control of your server.",
+      "desc": "VPS control panel with one-click OpenClaw deployment. Take full control of your server.\nVPS 控制面板，一键部署 OpenClaw，全面掌控你的服务器",
       "tags": [
         "deployment",
         "vps",
@@ -285,7 +285,7 @@
       "name": "ZeroClaw",
       "repo": "zeroclaw-labs/zeroclaw",
       "url": "",
-      "desc": "Fast, small, fully autonomous AI assistant infrastructure — deploy anywhere, swap anything.",
+      "desc": "Fast, small, fully autonomous AI assistant infrastructure — deploy anywhere, swap anything.\n快速、轻量、完全自主的 AI 助手基础设施——随处部署，任意替换",
       "tags": [
         "lightweight",
         "infrastructure"
@@ -297,7 +297,7 @@
       "name": "OpenViking",
       "repo": "volcengine/OpenViking",
       "url": "",
-      "desc": "Context database for AI Agents — manages memory, resources, skills via filesystem paradigm.",
+      "desc": "Context database for AI Agents — manages memory, resources, skills via filesystem paradigm.\nAI Agent 上下文数据库——通过文件系统范式管理记忆、资源、技能",
       "tags": [
         "memory",
         "infrastructure"
@@ -309,7 +309,7 @@
       "name": "AionUi",
       "repo": "iOfficeAI/AionUi",
       "url": "",
-      "desc": "Free, local, open-source cowork app for Gemini CLI, Claude Code, Codex, OpenCode and more.",
+      "desc": "Free, local, open-source cowork app for Gemini CLI, Claude Code, Codex, OpenCode and more.\n免费、本地、开源协作应用——支持 Gemini CLI、Claude Code、Codex、OpenCode 等",
       "tags": [
         "desktop",
         "ui",
@@ -322,7 +322,7 @@
       "name": "OpenClaw Skills Archive",
       "repo": "openclaw/skills",
       "url": "",
-      "desc": "All versions of all skills on clawhub.com — official archive. Browse skill source code.",
+      "desc": "All versions of all skills on clawhub.com — official archive. Browse skill source code.\nclawhub.com 上所有技能的所有版本——官方存档，可浏览技能源码",
       "tags": [
         "skills",
         "official"
@@ -347,7 +347,7 @@
       "name": "OpenClaw RL",
       "repo": "Gen-Verse/OpenClaw-RL",
       "url": "",
-      "desc": "Train any agent simply by talking. RL-based agent training through conversation.",
+      "desc": "Train any agent simply by talking. RL-based agent training through conversation.\n通过对话训练 Agent——基于 RL 的 Agent 对话式训练",
       "tags": [
         "training",
         "research"
@@ -359,7 +359,7 @@
       "name": "Cherry Studio",
       "repo": "CherryHQ/cherry-studio",
       "url": "",
-      "desc": "AI productivity studio with 300+ assistants. Unified access to frontier LLMs.",
+      "desc": "AI productivity studio with 300+ assistants. Unified access to frontier LLMs.\nAI 生产力工作室，300+ 助手，统一访问前沿 LLM",
       "tags": [
         "desktop",
         "multi-model"
