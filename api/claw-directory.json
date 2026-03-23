@@ -1,5 +1,5 @@
 {
-  "date": "2026-03-22",
+  "date": "2026-03-23",
   "items": [
     {
       "name": "OpenClaw Skills Explorer",
@@ -106,27 +106,29 @@
     {
       "name": "Awesome OpenClaw Skills",
       "repo": "VoltAgent/awesome-openclaw-skills",
-      "url": "",
+      "url": "https://clawskills.sh/",
       "desc": "5,400+ skills filtered and categorized from the official OpenClaw Skills Registry.\n5400+ 精选技能，从官方注册表中筛选分类",
       "tags": [
         "skills",
         "directory",
-        "awesome-list"
+        "awesome-list",
+        "live"
       ],
-      "status": "repo-only",
-      "verifiedAt": null
+      "status": "verified",
+      "verifiedAt": "2026-03-23"
     },
     {
       "name": "Awesome OpenClaw Tutorial (CN)",
       "repo": "xianyu110/awesome-openclaw-tutorial",
-      "url": "",
+      "url": "https://awesome.tryopenclaw.asia/",
       "desc": "Comprehensive Chinese tutorial — install, config, real cases, and pitfalls.\n全面的中文教程——安装、配置、实战案例、避坑指南",
       "tags": [
         "tutorial",
-        "chinese"
+        "chinese",
+        "live"
       ],
-      "status": "repo-only",
-      "verifiedAt": null
+      "status": "verified",
+      "verifiedAt": "2026-03-23"
     },
     {
       "name": "OpenClaw Self-Healing Monitor",
@@ -218,15 +220,16 @@
     {
       "name": "OpenClaw 101 (CN)",
       "repo": "mengjian-github/openclaw101",
-      "url": "",
-      "desc": "7-day learning course for OpenClaw. Comprehensive Chinese tutorial with daily exercises.",
+      "url": "https://openclaw101.dev/",
+      "desc": "7-day learning course for OpenClaw. Comprehensive Chinese tutorial with daily exercises.\n7 天学会 OpenClaw，全面中文教程，每日练习",
       "tags": [
         "tutorial",
         "chinese",
-        "beginner-friendly"
+        "beginner-friendly",
+        "live"
       ],
-      "status": "repo-only",
-      "verifiedAt": null
+      "status": "verified",
+      "verifiedAt": "2026-03-23"
     },
     {
       "name": "OpenClaw Use Cases (CN)",
@@ -463,6 +466,33 @@
       ],
       "status": "verified",
       "verifiedAt": "2026-03-22"
+    },
+    {
+      "name": "ClawHub",
+      "repo": "openclaw/clawhub",
+      "url": "https://clawhub.ai",
+      "desc": "Official skill directory for OpenClaw — search, install, and publish skills. ⭐6.6k.\n官方技能目录——搜索、安装、发布技能",
+      "tags": [
+        "skills",
+        "directory",
+        "official",
+        "live"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-03-23"
+    },
+    {
+      "name": "Clawith",
+      "repo": "dataelement/Clawith",
+      "url": "https://www.clawith.ai",
+      "desc": "OpenClaw for Teams — collaborative AI agent platform with team management. ⭐2k+.\n团队版 OpenClaw——协作 AI agent 平台，含团队管理",
+      "tags": [
+        "teams",
+        "collaboration",
+        "live"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-03-23"
     }
   ]
 }
