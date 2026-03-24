@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Claw Directory Cards</title>
+<style>
+body{font-family:Inter,system-ui;background:#f7f8ff;margin:0;padding:24px;color:#1f2340}
+h1{margin:0 0 12px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.card{background:#fff;border:1px solid #e9ebff;border-radius:14px;padding:14px;box-shadow:0 8px 20px #5b66ff12}
+.tag{display:inline-block;font-size:12px;background:#eef2ff;color:#334;padding:4px 8px;border-radius:999px;margin-right:6px}
+a{color:#3b5cff;text-decoration:none}
+.small{color:#667; font-size:13px}
+</style></head><body>
+<h1>Claw Website Directory</h1>
+<p class="small">Filtered cards for style reference and beginner-friendly iteration.</p>
+<div id="grid" class="grid"></div>
+<script>
+fetch('./claw-directory.json').then(r=>r.json()).then(data=>{
+  const grid=document.getElementById('grid');
+  data.forEach(item=>{
+    const el=document.createElement('article');
+    el.className='card';
+    el.innerHTML=`<h3>${item.name}</h3>
+      <p><span class='tag'>${item.style}</span><span class='tag'>${item.audience}</span></p>
+      <p class='small'>Purpose: ${item.purpose}</p>
+      <p class='small'>Borrow: ${(item.borrow||[]).join(' · ')}</p>
+      <p><a href='${item.url}' target='_blank'>Open website ↗</a></p>`;
+    grid.appendChild(el);
+  })
+}).catch(()=>{document.getElementById('grid').innerHTML='<p>Directory JSON not found yet.</p>'})
+</script>
+</body></html>
