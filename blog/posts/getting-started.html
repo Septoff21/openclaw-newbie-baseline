@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Getting Started with OpenClaw — OpenClaw Playground</title>
+  <link rel="stylesheet" href="../../styles.css" />
+  <style>
+    .post { max-width: 800px; margin: 2rem auto; padding: 0 1rem; line-height: 1.7; }
+    .post h1 { margin-bottom: 0.25rem; }
+    .post-meta { font-size: 0.9rem; color: var(--text-muted, #586069); margin-bottom: 2rem; }
+    .post h2 { margin-top: 2rem; }
+    .post pre { background: var(--bg-secondary, #f6f8fa); padding: 1rem; border-radius: 6px; overflow-x: auto; }
+    .post code { font-family: monospace; font-size: 0.9em; }
+    .post .tip { background: #f0fff4; border-left: 4px solid #28a745; padding: 1rem; margin: 1rem 0; border-radius: 0 4px 4px 0; }
+  </style>
+</head>
+<body>
+  <div id="nav-container"></div>
+  <script src="../../js/nav.js" defer></script>
+
+  <article class="post">
+    <h1>Getting Started with OpenClaw — 5 分钟上手</h1>
+    <div class="post-meta">2026-03-24 · tutorial · 3 min read</div>
+
+    <p>Welcome! This guide gets you from zero to running your first OpenClaw agent in under 5 minutes. Let's go.</p>
+    <p>欢迎！本指南帮你从零开始，在 5 分钟内运行第一个 OpenClaw agent。</p>
+
+    <h2>Step 1: Prerequisites / 前置条件</h2>
+    <ul>
+      <li>Node.js 20+ installed</li>
+      <li>A terminal (Terminal, iTerm, or VS Code terminal)</li>
+    </ul>
+
+    <h2>Step 2: Install / 安装</h2>
+    <pre><code>npm install -g openclaw
+openclaw init
+openclaw configure</code></pre>
+
+    <div class="tip">
+      <strong>💡 Tip:</strong> During <code>openclaw configure</code>, select your preferred model. Free models work great for learning! / 配置时选择你喜欢的模型，免费模型就够学习用了！
+    </div>
+
+    <h2>Step 3: Run Your First Task / 运行第一个任务</h2>
+    <pre><code>openclaw run "Say hello and tell me a joke"</code></pre>
+    <p>That's it! Your agent will respond with a greeting and a joke. You've just run your first AI agent task.</p>
+    <p>就是这样！你的 agent 会回复一句问候和一个笑话。你已经完成了第一个任务。</p>
+
+    <h2>Step 4: Next Steps / 下一步</h2>
+    <ul>
+      <li><a href="../../quickstart.html">Quick Start Guide</a> — 更多配置技巧</li>
+      <li><a href="../../agents.html">Agent Examples</a> — 看看别人怎么用</li>
+      <li><a href="../../prompts.html">Prompt Library</a> — 复制提示词直接用</li>
+    </ul>
+  </article>
+
+  <footer style="text-align:center;padding:2rem;opacity:0.6">
+    <a href="./">← Back to Blog</a> · <a href="../../">Home</a>
+  </footer>
+</body>
+</html>
