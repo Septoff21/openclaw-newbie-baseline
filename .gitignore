@@ -1,0 +1,38 @@
+# UHX Project .gitignore
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment
+.env
+.env.local
+*.key
+*.pem
+
+# Screenshots (large)
+claw-analysis/screenshots/
+
+# Model watch data (large, regenerated daily)
+model-watch/*.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.bak
+*~
+
+# Logs
+*.log
