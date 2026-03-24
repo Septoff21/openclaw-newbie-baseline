@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Claw Live Sites</title>
+  <style>
+    body{font-family:Inter,system-ui;background:#fcfaf7;margin:0;color:#20243b}
+    .wrap{max-width:1100px;margin:0 auto;padding:24px}
+    h1{margin:0 0 6px;font-size:34px}
+    .sub{margin:0 0 16px;color:#616b86}
+    .toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:16px}
+    .chip{border:1px solid #e8e3da;background:#fff;padding:7px 12px;border-radius:999px;cursor:pointer}
+    input,select{border:1px solid #e8e3da;background:#fff;padding:8px 10px;border-radius:10px}
+    .list{display:grid;gap:12px}
+    .item{background:#fff;border:1px solid #ece8df;border-radius:14px;padding:14px;box-shadow:0 8px 18px #0000000e}
+    .top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+    .repo{font-weight:800}
+    .meta{font-size:12px;color:#6a718b;margin-top:4px}
+    .badge{font-size:11px;background:#eef2ff;color:#4051d0;border-radius:999px;padding:3px 8px}
+    .desc{margin:8px 0;color:#4c5570;font-size:14px}
+    a{color:#3458ff;text-decoration:none;word-break:break-all}
+    .count{font-size:13px;color:#5f6881}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Claw Live Sites</h1>
+    <p class="sub">Curated from GitHub claw/openclaw repos with deployable URLs in description/homepage/README. Built for beginner-friendly discovery.</p>
+    <div class="toolbar">
+      <span class="count" id="count">Loading…</span>
+      <button class="chip" data-t="all">All</button>
+      <button class="chip" data-t="site">Site</button>
+      <button class="chip" data-t="docs">Docs</button>
+      <button class="chip" data-t="app">App</button>
+      <button class="chip" data-t="blog">Blog</button>
+      <input id="q" placeholder="Search repo/domain" />
+      <button class="chip" id="clear">Clear</button>
+      <select id="sort">
+        <option value="stars">Sort: Stars</option>
+        <option value="repo">Sort: Repo A-Z</option>
+      </select>
+    </div>
+    <p id="state" class="sub" style="margin:8px 0 10px"></p>
+    <section id="list" class="list"></section>
+  </div>
+
+  <script>
+    let data=[]; let type='all';
+    const list=document.getElementById('list');
+    const count=document.getElementById('count');
+    const q=document.getElementById('q');
+    const sort=document.getElementById('sort');
+
+    function render(){
+      const kw=(q.value||'').toLowerCase().trim();
+      let arr=data.filter(x=> (type==='all'||x.type===type) && (!kw || (x.repo+' '+x.domain+' '+(x.description||'')).toLowerCase().includes(kw)));
+      if(sort.value==='repo') arr.sort((a,b)=>a.repo.localeCompare(b.repo));
+      else arr.sort((a,b)=>b.stars-a.stars);
+      count.textContent=`${arr.length} results`; document.getElementById("state").textContent = arr.length? "Showing curated live sites" : "No results. Try broadening filters.";
+      list.innerHTML='';
+      arr.forEach(x=>{
+        const el=document.createElement('article'); el.className='item';
+        el.innerHTML=`<div class="top"><div><div class="repo">${x.repo}</div><div class="meta">⭐ ${x.stars} · ${x.domain}</div></div><span class="badge">${x.type}</span></div>
+          <p class="desc">${x.description||'No description provided.'}</p>
+          <a href="${x.url}" target="_blank">${x.url} ↗</a>`;
+        list.appendChild(el);
+      });
+    }
+
+    fetch('./claw-live-sites.json').then(r=>r.json()).then(d=>{data=d;render();});
+    document.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{type=b.dataset.t;render();});
+    q.addEventListener('input',render);
+    sort.addEventListener('change',render);
+    document.getElementById('clear').onclick=()=>{type='all';q.value='';sort.value='stars';render();};
+  </script>
+</body>
+</html>
