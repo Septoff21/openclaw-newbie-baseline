@@ -1,23 +1,42 @@
-# OpenClaw Newbie Baseline
+# OpenClaw Playground
 
-A beginner-first, copy-and-run OpenClaw project.
+**From Zero to Autonomous** — Beginner-first OpenClaw reference site with copy-ready prompts, verified workflows, and forkable templates.
 
-## Quick Links
-- Live site: `https://septoff21.github.io/openclaw-newbie-baseline/`
-- Live claw directory: `https://septoff21.github.io/openclaw-newbie-baseline/claw-live-sites.html`
+## Quick Start
 
-## Repository Structure
-- `site/` → published static frontend
-- `docs/guides/` → starter/blueprint guides
-- `docs/research/` → ecosystem research outputs
-- `docs/` → operating docs, maintenance, playbooks
-- `frontend-kit/` → style cards + copy prompts + image prompts
-- `scripts/` → refresh/update automation
-- `claw-analysis/` → source analysis files and snapshots
-- `beginner/` → beginner copy prompts
-- `claw-newbie/` → sharing scaffold copy set
+```bash
+npm install
+npm run dev     # Development at http://localhost:3000
+npm run build   # Production build
+```
 
-## Maintenance
-- Update data: `scripts/update-live-sites.py`
-- Smart refresh: `scripts/proactive-refresh.sh`
-- Publish: GitHub Pages from `gh-pages` (generated from `site/`)
+## Pages
+
+| Route | Description |
+|-------|-------------|
+| `/` | Landing page — 3-tier journey (Beginner → Advance → Extremely) |
+| `/blog` | Tutorials and guides |
+| `/blog/[slug]` | Individual blog posts |
+| `/guides` | Setup guides index |
+| `/guides/[slug]` | Individual guide (Beginner/Advanced/Agent Blueprint/UHX Doc) |
+| `/directory` | Community directory |
+
+## Project Structure
+
+```
+src/
+├── app/              # Next.js App Router pages
+├── components/       # Reusable UI components
+├── data/             # Static content (prompts, blog posts)
+├── lib/              # Data utilities (guides, blog)
+└── globals.css       # Tailwind styles
+_legacy/              # Original HTML site (preserved for reference)
+```
+
+## Deploy
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Septoff21/openclaw-newbie-baseline)
+
+## License
+
+MIT — Free to fork and customize.
