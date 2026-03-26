@@ -105,7 +105,6 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
   const post = blogPosts.find((p) => p.slug === slug);
   const toc = useMemo(() => (post ? extractToc(post.content) : []), [post]);
 
-  // Find prev/next posts
   const currentIndex = blogPosts.findIndex((p) => p.slug === slug);
   const prevPost = currentIndex > 0 ? blogPosts[currentIndex - 1] : null;
   const nextPost = currentIndex < blogPosts.length - 1 ? blogPosts[currentIndex + 1] : null;
@@ -131,8 +130,7 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
           <span>·</span>
           <span>⏱ {post.readTime} read</span>
         </div>
-        <h1 className="text-3xl font-extrabold leading-tight tracking-tight">{post.title}</h1>
-        {/* Share buttons */}
+        <h1 className="text-3xl font-extrabold leading-tight" style={{ letterSpacing: '-0.03em' }}>{post.title}</h1>
         <div className="mt-4">
           <ShareButtons title={post.title} slug={post.slug} />
         </div>
@@ -191,6 +189,11 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
         </article>
       </div>
 
+      {/* Bottom share */}
+      <div className="mt-8 flex justify-center">
+        <ShareButtons title={post.title} slug={post.slug} />
+      </div>
+
       {/* Prev/Next navigation */}
       <hr className="my-8 border-white/10" />
       <div className="flex justify-between gap-4 text-sm">
@@ -211,7 +214,7 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
       {/* Back to top */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className={`fixed bottom-6 right-6 z-50 flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-[#0f1020]/90 backdrop-blur-xl text-white shadow-lg transition-all hover:bg-primary/20 hover:border-primary/30 ${
+        className={`fixed bottom-6 right-6 z-50 flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-[#0A0A0A]/90 backdrop-blur-xl text-white shadow-lg transition-all hover:bg-primary/20 hover:border-primary/30 ${
           showBackToTop ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
         }`}
         aria-label="Back to top"

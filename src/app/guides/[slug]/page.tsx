@@ -55,15 +55,21 @@ function CodeBlockWithCopy({ children, className }: { children: React.ReactNode;
 
 export default function GuidePage({ params }: { params: Promise<{ slug: string }> }) {
   const [slug, setSlug] = useState<string>("");
+  const [showBackToTop, setShowBackToTop] = useState(false);
 
   useEffect(() => {
     params.then((p) => setSlug(p.slug));
   }, [params]);
 
+  useEffect(() => {
+    const onScroll = () => setShowBackToTop(window.scrollY > 400);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   const guide = slug ? getGuideBySlug(slug) : null;
   const toc = useMemo(() => (guide ? extractToc(guide.content) : []), [guide]);
 
-  // Find prev/next guides
   const allGuides = getAllGuides();
   const currentIndex = allGuides.findIndex((g) => g.slug === slug);
   const prevGuide = currentIndex > 0 ? allGuides[currentIndex - 1] : null;
@@ -81,7 +87,7 @@ export default function GuidePage({ params }: { params: Promise<{ slug: string }
         ← Back to Guides
       </Link>
 
-      <h1 className="mb-2 text-3xl font-extrabold leading-tight">{guide.meta.title}</h1>
+      <h1 className="mb-2 text-3xl font-extrabold leading-tight" style={{ letterSpacing: '-0.03em' }}>{guide.meta.title}</h1>
       <p className="mb-8 text-muted">{guide.meta.description}</p>
 
       {/* Content with TOC */}
@@ -91,7 +97,7 @@ export default function GuidePage({ params }: { params: Promise<{ slug: string }
           <nav className="lg:w-56 flex-shrink-0 order-last lg:order-first">
             <div className="lg:sticky lg:top-20">
               <h3 className="mb-3 text-xs font-bold uppercase tracking-widest text-muted">
-                目录
+                Table of Contents
               </h3>
               <div className="space-y-0.5">
                 {toc.map((item) => (
@@ -141,17 +147,28 @@ export default function GuidePage({ params }: { params: Promise<{ slug: string }
       <div className="flex justify-between gap-4 text-sm">
         {prevGuide ? (
           <Link href={`/guides/${prevGuide.slug}`} className="glass-card p-4 flex-1 transition hover:-translate-y-0.5">
-            <span className="text-xs text-muted">← 上一篇</span>
+            <span className="text-xs text-muted">← Previous</span>
             <div className="font-semibold text-white mt-1">{prevGuide.title}</div>
           </Link>
         ) : <div />}
         {nextGuide ? (
           <Link href={`/guides/${nextGuide.slug}`} className="glass-card p-4 flex-1 text-right transition hover:-translate-y-0.5">
-            <span className="text-xs text-muted">下一篇 →</span>
+            <span className="text-xs text-muted">Next →</span>
             <div className="font-semibold text-white mt-1">{nextGuide.title}</div>
           </Link>
         ) : <div />}
       </div>
+
+      {/* Back to top */}
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className={`fixed bottom-6 right-6 z-50 flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-[#0A0A0A]/90 backdrop-blur-xl text-white shadow-lg transition-all hover:bg-primary/20 hover:border-primary/30 ${
+          showBackToTop ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
+        }`}
+        aria-label="Back to top"
+      >
+        ↑
+      </button>
     </div>
   );
 }

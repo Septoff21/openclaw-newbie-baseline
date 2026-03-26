@@ -26,9 +26,9 @@ const btnBgMap: Record<string, string> = {
 };
 
 const iconMap: Record<string, string> = {
-  accent: "⚡",
-  "accent-blue": "🔧",
-  "accent-pink": "🏗️",
+  accent: "🚀",
+  "accent-blue": "⚡",
+  "accent-pink": "🏆",
 };
 
 const bulletColorMap: Record<string, string> = {
@@ -37,9 +37,16 @@ const bulletColorMap: Record<string, string> = {
   "accent-pink": "text-accent-pink/70",
 };
 
+const previewBgMap: Record<string, string> = {
+  accent: "border-emerald-500/20",
+  "accent-blue": "border-cyan-500/20",
+  "accent-pink": "border-pink-500/20",
+};
+
 export default function TierCard({ tier }: TierCardProps) {
   const prompt = prompts[tier];
   const [copied, setCopied] = useState(false);
+  const [showPreview, setShowPreview] = useState(false);
 
   const handleCopy = async () => {
     await navigator.clipboard.writeText(prompt.text);
@@ -49,12 +56,12 @@ export default function TierCard({ tier }: TierCardProps) {
 
   return (
     <article
-      className={`glass-card ${borderMap[prompt.color]} flex flex-col p-6 animate-fade-in-up`}
+      className={`glass-card hover:border-blue-500/30 hover:translate-y-[-2px] transition-all duration-200 ${borderMap[prompt.color]} flex flex-col p-6 animate-fade-in-up`}
       style={{ animationDelay: tier === "beginner" ? "0s" : tier === "advance" ? "0.08s" : "0.16s" }}
     >
       <div className="flex items-center gap-2 mb-2">
-        <span className="text-2xl">{iconMap[prompt.color]}</span>
-        <h2 className={`text-xl font-bold tracking-tight ${colorMap[prompt.color]}`}>{prompt.label}</h2>
+        <span className="text-3xl">{iconMap[prompt.color]}</span>
+        <h2 className={`text-xl font-bold tracking-tight ${colorMap[prompt.color]}`} style={{ letterSpacing: '-0.03em' }}>{prompt.label}</h2>
       </div>
       <p className="mb-4 text-sm text-muted leading-relaxed">{prompt.description}</p>
 
@@ -70,6 +77,23 @@ export default function TierCard({ tier }: TierCardProps) {
         </ul>
       )}
 
+      {/* Preview toggle */}
+      <button
+        onClick={() => setShowPreview(!showPreview)}
+        className="mb-3 w-full rounded-lg border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-medium text-muted transition-all hover:bg-white/[0.08] hover:text-white"
+      >
+        {showPreview ? "🔼 Hide Prompt" : "👁 Preview Prompt"}
+      </button>
+
+      {/* Prompt preview */}
+      {showPreview && (
+        <div className={`mb-4 rounded-lg border ${previewBgMap[prompt.color]} bg-black/30 p-4`}>
+          <pre className="whitespace-pre-wrap text-xs text-muted leading-relaxed" style={{ fontFamily: 'inherit' }}>
+            {prompt.text}
+          </pre>
+        </div>
+      )}
+
       <button
         onClick={handleCopy}
         className={`w-full rounded-lg px-4 py-3 text-sm font-bold transition-all shadow-md ${
@@ -77,11 +101,12 @@ export default function TierCard({ tier }: TierCardProps) {
             ? "bg-green-500/30 text-green-300 shadow-green-500/20"
             : btnBgMap[prompt.color]
         }`}
+        style={{ transition: 'all 0.2s ease' }}
       >
-        {copied ? "✓ Copied!" : "📋 Copy prompt"}
+        {copied ? "✅ Copied!" : "📋 Copy Prompt"}
       </button>
       <p className="mt-2.5 text-center text-[11px] text-muted/60">
-        Copy this prompt and paste into your OpenClaw chat
+        Copy and paste into your OpenClaw chat
       </p>
     </article>
   );
