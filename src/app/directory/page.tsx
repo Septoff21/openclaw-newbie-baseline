@@ -1,44 +1,45 @@
-import Link from "next/link";
+import { siteConfig } from "@/config/site";
+import { CommunityLink } from "@/types";
 
-const communityLinks = [
+const communityLinks: CommunityLink[] = [
   {
     name: "GitHub",
-    url: "https://github.com/openclaw/openclaw",
+    url: siteConfig.social.github,
     description: "Source code, issues, and community contributions",
     icon: "🐙",
     tags: ["source", "community"],
   },
   {
     name: "Discord",
-    url: "https://discord.gg/clawd",
+    url: siteConfig.social.discord,
     description: "Join the community — ask questions, share setups, get help",
     icon: "💬",
     tags: ["chat", "support"],
   },
   {
     name: "ClawHub",
-    url: "https://clawhub.com",
+    url: siteConfig.social.clawhub,
     description: "AI Agent skill marketplace — search, install, publish skills",
     icon: "🧩",
     tags: ["marketplace", "skills"],
   },
   {
     name: "Documentation",
-    url: "https://docs.openclaw.ai",
+    url: siteConfig.social.docs,
     description: "Official docs, API reference, and configuration guides",
     icon: "📖",
     tags: ["docs", "reference"],
   },
   {
     name: "OpenClaw Website",
-    url: "https://openclaw.ai",
+    url: siteConfig.social.website,
     description: "Official website with news, announcements, and downloads",
     icon: "🌐",
     tags: ["official"],
   },
   {
     name: "Baseline Template",
-    url: "https://github.com/openclaw/openclaw-newbie-baseline",
+    url: siteConfig.social.templateRepo,
     description: "This site's source — fork it and make it yours",
     icon: "📦",
     tags: ["template", "starter"],
@@ -48,7 +49,12 @@ const communityLinks = [
 export default function DirectoryPage() {
   return (
     <div className="page-transition px-5 py-10">
-      <h1 className="mb-2 text-3xl font-extrabold" style={{ letterSpacing: '-0.03em' }}>Community Links</h1>
+      <h1
+        className="mb-2 text-3xl font-extrabold"
+        style={{ letterSpacing: "-0.03em" }}
+      >
+        Community Links
+      </h1>
       <p className="mb-8 text-muted">
         GitHub, Discord, ClawHub, Docs — everything you need to get started.
       </p>
@@ -65,7 +71,12 @@ export default function DirectoryPage() {
           >
             <div className="flex items-center gap-2 mb-2">
               <span className="text-2xl">{link.icon}</span>
-              <h2 className="text-lg font-bold text-white" style={{ letterSpacing: '-0.02em' }}>{link.name}</h2>
+              <h2
+                className="text-lg font-bold text-white"
+                style={{ letterSpacing: "-0.02em" }}
+              >
+                {link.name}
+              </h2>
             </div>
             <p className="mb-3 text-sm text-muted">{link.description}</p>
             <div className="flex flex-wrap gap-1.5">
@@ -83,11 +94,16 @@ export default function DirectoryPage() {
       </div>
 
       <div className="glass-card mx-auto mt-8 max-w-[1200px] p-6 text-center">
-        <h3 className="mb-2 text-lg font-bold" style={{ letterSpacing: '-0.02em' }}>Built Something?</h3>
+        <h3
+          className="mb-2 text-lg font-bold"
+          style={{ letterSpacing: "-0.02em" }}
+        >
+          Built Something?
+        </h3>
         <p className="text-sm text-muted">
           Built a site with OpenClaw?{" "}
           <a
-            href="https://github.com/openclaw/openclaw-newbie-baseline"
+            href={siteConfig.social.templateRepo}
             target="_blank"
             rel="noopener noreferrer"
             className="text-sky-300 hover:text-sky-200 underline underline-offset-2"

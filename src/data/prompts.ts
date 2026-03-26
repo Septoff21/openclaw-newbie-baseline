@@ -1,4 +1,6 @@
-export const prompts = {
+import { PromptData, PromptTier } from "@/types";
+
+export const prompts: Record<PromptTier, PromptData> = {
   beginner: {
     label: "Quick Start",
     color: "accent",
@@ -53,6 +55,6 @@ Do now:
 4) Define incident response + audit trails
 Return: architecture map + phased rollout checklist.`,
   },
-} as const;
+};
 
-export type PromptTier = keyof typeof prompts;
+export type { PromptTier };

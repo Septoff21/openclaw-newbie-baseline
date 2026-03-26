@@ -2,33 +2,29 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "OpenClaw Playground — Build Your AI Agent Team",
-  description:
-    "Free, open source templates for OpenClaw. Copy, customize, deploy your AI agent team.",
-  icons: {
-    icon: "/favicon.ico",
-  },
+  title: `${siteConfig.name} — ${siteConfig.tagline}`,
+  description: siteConfig.description,
+  icons: { icon: "/favicon.ico" },
   openGraph: {
-    title: "OpenClaw Playground",
-    description: "Build Your AI Agent Team — Copy, Paste, Deploy",
-    url: "https://claw-baseline.vercel.app",
-    siteName: "OpenClaw Playground",
+    title: siteConfig.name,
+    description: siteConfig.copyTagline,
+    url: siteConfig.url,
+    siteName: siteConfig.name,
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "OpenClaw Playground",
-    description: "Build Your AI Agent Team — Copy, Paste, Deploy",
+    title: siteConfig.name,
+    description: siteConfig.copyTagline,
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className="dark">
       <body className="font-sans antialiased">
