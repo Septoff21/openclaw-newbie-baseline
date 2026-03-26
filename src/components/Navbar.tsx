@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
 
 const navLinks = [
   { href: "/", label: "Home", icon: "🏠" },
@@ -12,9 +13,32 @@ const navLinks = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  };
+
+  // Scroll detection
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Close on route change
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-white/10 bg-[#0f1020]/80 backdrop-blur-xl">
+    <nav className={`sticky top-0 z-50 border-b transition-all duration-300 ${
+      scrolled
+        ? "border-white/15 bg-[#0f1020]/90 backdrop-blur-xl shadow-lg shadow-black/10"
+        : "border-white/10 bg-[#0f1020]/80 backdrop-blur-xl"
+    }`}>
       <div className="mx-auto flex max-w-5xl items-center justify-between px-5 py-3">
         <Link href="/" className="flex items-center gap-2 font-extrabold text-lg text-white">
           <span className="text-2xl">🦞</span>
@@ -27,7 +51,11 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm text-muted transition-colors hover:text-white"
+              className={`text-sm transition-all duration-200 ${
+                isActive(link.href)
+                  ? "text-white font-medium border-b-2 border-primary pb-0.5"
+                  : "text-muted hover:text-white"
+              }`}
             >
               {link.icon} {link.label}
             </Link>
@@ -51,20 +79,27 @@ export default function Navbar() {
       </div>
 
       {/* Mobile menu */}
-      {open && (
-        <div className="border-t border-white/10 bg-[#0f1020]/95 backdrop-blur-xl sm:hidden">
-          {navLinks.map((link) => (
+      <div className={`overflow-hidden transition-all duration-300 sm:hidden ${
+        open ? "max-h-80" : "max-h-0"
+      }`}>
+        <div className="border-t border-white/10 bg-[#0f1020]/95 backdrop-blur-xl">
+          {navLinks.map((link, i) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="block px-5 py-3 text-sm text-muted transition-colors hover:bg-white/5 hover:text-white"
+              className={`block px-5 py-3 text-sm transition-all duration-200 ${
+                isActive(link.href)
+                  ? "bg-primary/10 text-white font-medium"
+                  : "text-muted hover:bg-white/5 hover:text-white"
+              }`}
+              style={{ transitionDelay: open ? `${i * 30}ms` : "0ms" }}
             >
               {link.icon} {link.label}
             </Link>
           ))}
         </div>
-      )}
+      </div>
     </nav>
   );
 }

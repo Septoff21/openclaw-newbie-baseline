@@ -18,6 +18,8 @@
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.01em;
 }
 
 body {
@@ -27,6 +29,7 @@ body {
     var(--bg);
   color: var(--fg);
   min-height: 100vh;
+  line-height: 1.7;
 }
 
 ::selection {
@@ -88,9 +91,9 @@ body {
 .prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; }
 .prose h3 { font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; }
 .prose h4 { font-size: 1.1rem; font-weight: 600; margin-top: 1.25rem; margin-bottom: 0.5rem; }
-.prose p { margin-bottom: 1rem; line-height: 1.75; }
+.prose p { margin-bottom: 1rem; line-height: 1.8; }
 .prose ul, .prose ol { padding-left: 1.5rem; margin-bottom: 1rem; }
-.prose li { margin-bottom: 0.5rem; line-height: 1.6; }
+.prose li { margin-bottom: 0.5rem; line-height: 1.7; }
 .prose code {
   background: rgba(106, 92, 255, 0.15);
   padding: 2px 6px;
@@ -104,6 +107,7 @@ body {
   overflow-x: auto;
   margin-bottom: 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
 }
 .prose pre code {
   background: none;
@@ -145,3 +149,88 @@ body {
   border-color: rgba(255, 255, 255, 0.1);
   margin: 2rem 0;
 }
+
+/* ── Page transition ── */
+@keyframes page-enter {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.page-transition {
+  animation: page-enter 0.4s ease-out both;
+}
+
+/* ── Fade-in animation ── */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-out both;
+}
+
+/* ── Difficulty badges ── */
+.badge-beginner {
+  background: rgba(70, 255, 179, 0.15);
+  color: #46ffb3;
+  border: 1px solid rgba(70, 255, 179, 0.25);
+}
+.badge-advanced {
+  background: rgba(0, 212, 255, 0.15);
+  color: #00d4ff;
+  border: 1px solid rgba(0, 212, 255, 0.25);
+}
+.badge-expert {
+  background: rgba(255, 61, 154, 0.15);
+  color: #ff3d9a;
+  border: 1px solid rgba(255, 61, 154, 0.25);
+}
+
+/* ── Code copy button ── */
+.code-copy-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  border-radius: 6px;
+  background: rgba(106, 92, 255, 0.2);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  opacity: 0;
+}
+.prose pre:hover .code-copy-btn,
+.code-block-wrapper:hover .code-copy-btn {
+  opacity: 1;
+}
+.code-copy-btn:hover {
+  background: rgba(106, 92, 255, 0.4);
+}
+
+/* ── TOC ── */
+.toc-link {
+  display: block;
+  padding: 0.25rem 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+  border-left: 2px solid transparent;
+  padding-left: 0.75rem;
+}
+.toc-link:hover {
+  color: #fff;
+  border-left-color: var(--primary);
+}
+.toc-link.toc-h3 {
+  padding-left: 1.5rem;
+  font-size: 0.75rem;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #555; }

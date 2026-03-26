@@ -12,16 +12,36 @@ export default function HeroSection() {
         <strong className="text-white">&quot;I can run it&quot;</strong> →{" "}
         <strong className="text-white">&quot;I can customize it&quot;</strong>
       </p>
+
+      {/* 3-Stage Flow */}
+      <div className="mx-auto mb-8 flex max-w-lg items-center justify-center gap-3 sm:gap-4">
+        {[
+          { icon: "🌱", label: "Beginner", color: "text-accent" },
+          { icon: "⚙️", label: "Advance", color: "text-accent-blue" },
+          { icon: "🚀", label: "Extremely", color: "text-accent-pink" },
+        ].map((s, i) => (
+          <div key={s.label} className="flex items-center gap-3 sm:gap-4">
+            <div className="flex flex-col items-center gap-1">
+              <span className="text-2xl">{s.icon}</span>
+              <span className={`text-xs font-bold ${s.color}`}>{s.label}</span>
+            </div>
+            {i < 2 && (
+              <span className="text-lg text-white/20">→</span>
+            )}
+          </div>
+        ))}
+      </div>
+
       <div className="mb-5 flex flex-wrap justify-center gap-3">
         <a
           href="#journey"
-          className="inline-block rounded-xl bg-primary px-5 py-3 text-sm font-bold text-white transition-all hover:bg-primary-hover hover:shadow-[0_0_20px_rgba(106,92,255,0.3)] hover:-translate-y-0.5"
+          className="inline-block rounded-xl bg-primary px-6 py-3 text-sm font-bold text-white shadow-lg shadow-primary/25 transition-all hover:bg-primary-hover hover:shadow-primary/40 hover:-translate-y-0.5"
         >
           Start with Beginner
         </a>
         <a
           href="#verify-checklist"
-          className="inline-block rounded-xl border border-white/12 bg-white/10 px-5 py-3 text-sm font-bold text-white transition-all hover:bg-white/[0.18] hover:-translate-y-0.5"
+          className="inline-block rounded-xl border border-white/12 bg-white/10 px-6 py-3 text-sm font-bold text-white transition-all hover:bg-white/[0.18] hover:-translate-y-0.5"
         >
           Use verification checklist
         </a>

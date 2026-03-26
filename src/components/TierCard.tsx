@@ -24,6 +24,12 @@ const btnBgMap: Record<string, string> = {
   "accent-pink": "bg-pink-500/20 hover:bg-pink-500/30 text-accent-pink",
 };
 
+const iconMap: Record<string, string> = {
+  accent: "🌱",
+  "accent-blue": "⚙️",
+  "accent-pink": "🚀",
+};
+
 export default function TierCard({ tier }: TierCardProps) {
   const prompt = prompts[tier];
 
@@ -40,18 +46,24 @@ export default function TierCard({ tier }: TierCardProps) {
 
   return (
     <article
-      className={`glass-card ${borderMap[prompt.color]} flex flex-col p-5`}
+      className={`glass-card ${borderMap[prompt.color]} flex flex-col p-5 animate-fade-in-up`}
       style={{ animationDelay: tier === "beginner" ? "0s" : tier === "advance" ? "0.08s" : "0.16s" }}
     >
-      <h2 className={`text-xl font-bold ${colorMap[prompt.color]}`}>{prompt.label}</h2>
+      <div className="flex items-center gap-2 mb-2">
+        <span className="text-2xl">{iconMap[prompt.color]}</span>
+        <h2 className={`text-xl font-bold ${colorMap[prompt.color]}`}>{prompt.label}</h2>
+      </div>
       <p className="mb-4 flex-1 text-sm text-muted">{prompt.description}</p>
       <button
         id={`copy-btn-${tier}`}
         onClick={handleCopy}
-        className={`w-full rounded-lg px-4 py-2.5 text-sm font-bold transition-all ${btnBgMap[prompt.color]}`}
+        className={`w-full rounded-lg px-4 py-3 text-sm font-bold transition-all shadow-md ${btnBgMap[prompt.color]}`}
       >
-        Copy prompt
+        📋 Copy prompt
       </button>
+      <p className="mt-3 text-center text-xs text-muted">
+        复制后粘贴到 OpenClaw 即可执行
+      </p>
     </article>
   );
 }
