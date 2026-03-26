@@ -42,7 +42,7 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-5xl items-center justify-between px-5 py-3">
         <Link href="/" className="flex items-center gap-2 font-extrabold text-lg text-white">
           <span className="text-2xl">🦞</span>
-          <span className="hidden sm:inline">OpenClaw Playground</span>
+          <span className="hidden sm:inline">OpenClaw Baseline</span>
         </Link>
 
         {/* Desktop nav */}

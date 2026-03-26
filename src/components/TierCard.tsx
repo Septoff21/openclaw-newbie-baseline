@@ -1,6 +1,7 @@
 "use client";
 
 import { prompts, PromptTier } from "@/data/prompts";
+import { useState } from "react";
 
 interface TierCardProps {
   tier: PromptTier;
@@ -25,44 +26,62 @@ const btnBgMap: Record<string, string> = {
 };
 
 const iconMap: Record<string, string> = {
-  accent: "🌱",
-  "accent-blue": "⚙️",
-  "accent-pink": "🚀",
+  accent: "⚡",
+  "accent-blue": "🔧",
+  "accent-pink": "🏗️",
+};
+
+const bulletColorMap: Record<string, string> = {
+  accent: "text-accent/70",
+  "accent-blue": "text-accent-blue/70",
+  "accent-pink": "text-accent-pink/70",
 };
 
 export default function TierCard({ tier }: TierCardProps) {
   const prompt = prompts[tier];
+  const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
     await navigator.clipboard.writeText(prompt.text);
-    const btn = document.getElementById(`copy-btn-${tier}`);
-    if (btn) {
-      btn.textContent = "✓ Copied!";
-      setTimeout(() => {
-        btn.textContent = "Copy prompt";
-      }, 1500);
-    }
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
   };
 
   return (
     <article
-      className={`glass-card ${borderMap[prompt.color]} flex flex-col p-5 animate-fade-in-up`}
+      className={`glass-card ${borderMap[prompt.color]} flex flex-col p-6 animate-fade-in-up`}
       style={{ animationDelay: tier === "beginner" ? "0s" : tier === "advance" ? "0.08s" : "0.16s" }}
     >
       <div className="flex items-center gap-2 mb-2">
         <span className="text-2xl">{iconMap[prompt.color]}</span>
-        <h2 className={`text-xl font-bold ${colorMap[prompt.color]}`}>{prompt.label}</h2>
+        <h2 className={`text-xl font-bold tracking-tight ${colorMap[prompt.color]}`}>{prompt.label}</h2>
       </div>
-      <p className="mb-4 flex-1 text-sm text-muted">{prompt.description}</p>
+      <p className="mb-4 text-sm text-muted leading-relaxed">{prompt.description}</p>
+
+      {/* Bullet points */}
+      {"bullets" in prompt && Array.isArray((prompt as any).bullets) && (
+        <ul className="mb-5 space-y-2 flex-1">
+          {(prompt as any).bullets.map((bullet: string, i: number) => (
+            <li key={i} className="flex items-start gap-2 text-sm text-muted">
+              <span className={`mt-0.5 text-xs ${bulletColorMap[prompt.color]}`}>●</span>
+              <span>{bullet}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+
       <button
-        id={`copy-btn-${tier}`}
         onClick={handleCopy}
-        className={`w-full rounded-lg px-4 py-3 text-sm font-bold transition-all shadow-md ${btnBgMap[prompt.color]}`}
+        className={`w-full rounded-lg px-4 py-3 text-sm font-bold transition-all shadow-md ${
+          copied
+            ? "bg-green-500/30 text-green-300 shadow-green-500/20"
+            : btnBgMap[prompt.color]
+        }`}
       >
-        📋 Copy prompt
+        {copied ? "✓ Copied!" : "📋 Copy prompt"}
       </button>
-      <p className="mt-3 text-center text-xs text-muted">
-        复制后粘贴到 OpenClaw 即可执行
+      <p className="mt-2.5 text-center text-[11px] text-muted/60">
+        Copy this prompt and paste into your OpenClaw chat
       </p>
     </article>
   );

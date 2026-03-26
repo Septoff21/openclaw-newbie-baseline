@@ -20,7 +20,7 @@ function extractToc(markdown: string): TocItem[] {
     const match = line.match(/^(#{2,3})\s+(.+)/);
     if (match) {
       const level = match[1].length;
-      const text = match[2].replace(/[*_`]/g, "");
+      const text = match[2].replace(/[\*_`]/g, "");
       const id = text.toLowerCase().replace(/[^\w\u4e00-\u9fff]+/g, "-").replace(/^-|-$/g, "");
       items.push({ id, text, level });
     }
@@ -46,7 +46,6 @@ function CodeBlockWithCopy({ children, className }: { children: React.ReactNode;
       <button
         onClick={handleCopy}
         className="code-copy-btn"
-        style={{ opacity: undefined }}
       >
         {copied ? "✓ Copied" : "Copy"}
       </button>
@@ -54,12 +53,54 @@ function CodeBlockWithCopy({ children, className }: { children: React.ReactNode;
   );
 }
 
+function ShareButtons({ title, slug }: { title: string; slug: string }) {
+  const [copied, setCopied] = useState(false);
+  const url = typeof window !== "undefined" ? `${window.location.origin}/blog/${slug}` : `/blog/${slug}`;
+
+  const handleCopyLink = async () => {
+    await navigator.clipboard.writeText(url);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  return (
+    <div className="flex items-center gap-2">
+      <span className="text-xs text-muted font-medium">Share:</span>
+      <a
+        href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="rounded-lg bg-white/[0.06] px-3 py-1.5 text-xs font-medium text-muted transition-all hover:bg-sky-500/20 hover:text-sky-300"
+      >
+        𝕏 Twitter
+      </a>
+      <button
+        onClick={handleCopyLink}
+        className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-all ${
+          copied
+            ? "bg-green-500/20 text-green-300"
+            : "bg-white/[0.06] text-muted hover:bg-white/[0.12] hover:text-white"
+        }`}
+      >
+        {copied ? "✓ Copied!" : "🔗 Copy Link"}
+      </button>
+    </div>
+  );
+}
+
 export default function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const [slug, setSlug] = useState<string>("");
+  const [showBackToTop, setShowBackToTop] = useState(false);
 
   useEffect(() => {
     params.then((p) => setSlug(p.slug));
   }, [params]);
+
+  useEffect(() => {
+    const onScroll = () => setShowBackToTop(window.scrollY > 400);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const post = blogPosts.find((p) => p.slug === slug);
   const toc = useMemo(() => (post ? extractToc(post.content) : []), [post]);
@@ -90,7 +131,11 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
           <span>·</span>
           <span>⏱ {post.readTime} read</span>
         </div>
-        <h1 className="text-3xl font-extrabold leading-tight">{post.title}</h1>
+        <h1 className="text-3xl font-extrabold leading-tight tracking-tight">{post.title}</h1>
+        {/* Share buttons */}
+        <div className="mt-4">
+          <ShareButtons title={post.title} slug={post.slug} />
+        </div>
       </div>
 
       {/* Content with TOC sidebar */}
@@ -100,7 +145,7 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
           <nav className="lg:w-56 flex-shrink-0 order-last lg:order-first">
             <div className="lg:sticky lg:top-20">
               <h3 className="mb-3 text-xs font-bold uppercase tracking-widest text-muted">
-                目录
+                Table of Contents
               </h3>
               <div className="space-y-0.5">
                 {toc.map((item) => (
@@ -130,12 +175,12 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
                 return <code className={className} {...props}>{children}</code>;
               },
               h2({ children }) {
-                const text = String(children).replace(/[*_`]/g, "");
+                const text = String(children).replace(/[\*_`]/g, "");
                 const id = text.toLowerCase().replace(/[^\w\u4e00-\u9fff]+/g, "-").replace(/^-|-$/g, "");
                 return <h2 id={id}>{children}</h2>;
               },
               h3({ children }) {
-                const text = String(children).replace(/[*_`]/g, "");
+                const text = String(children).replace(/[\*_`]/g, "");
                 const id = text.toLowerCase().replace(/[^\w\u4e00-\u9fff]+/g, "-").replace(/^-|-$/g, "");
                 return <h3 id={id}>{children}</h3>;
               },
@@ -151,17 +196,28 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
       <div className="flex justify-between gap-4 text-sm">
         {prevPost ? (
           <Link href={`/blog/${prevPost.slug}`} className="glass-card p-4 flex-1 transition hover:-translate-y-0.5">
-            <span className="text-xs text-muted">← 上一篇</span>
+            <span className="text-xs text-muted">← Previous</span>
             <div className="font-semibold text-white mt-1">{prevPost.title}</div>
           </Link>
         ) : <div />}
         {nextPost ? (
           <Link href={`/blog/${nextPost.slug}`} className="glass-card p-4 flex-1 text-right transition hover:-translate-y-0.5">
-            <span className="text-xs text-muted">下一篇 →</span>
+            <span className="text-xs text-muted">Next →</span>
             <div className="font-semibold text-white mt-1">{nextPost.title}</div>
           </Link>
         ) : <div />}
       </div>
+
+      {/* Back to top */}
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className={`fixed bottom-6 right-6 z-50 flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-[#0f1020]/90 backdrop-blur-xl text-white shadow-lg transition-all hover:bg-primary/20 hover:border-primary/30 ${
+          showBackToTop ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
+        }`}
+        aria-label="Back to top"
+      >
+        ↑
+      </button>
     </div>
   );
 }

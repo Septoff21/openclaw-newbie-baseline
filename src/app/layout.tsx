@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "OpenClaw Playground — From Zero to Autonomous",
+  title: "OpenClaw Baseline — Build Your AI Agent Team",
   description:
     "Beginner-first, copy-and-run OpenClaw project. Free, open source, natural language, no-code friendly.",
 };

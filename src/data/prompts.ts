@@ -1,8 +1,13 @@
 export const prompts = {
   beginner: {
-    label: "Beginner",
+    label: "Quick Start",
     color: "accent",
-    description: "Quick start with copy-ready prompts and safe defaults.",
+    description: "Get running in 5 minutes with safe defaults and copy-ready prompts.",
+    bullets: [
+      "Audit plugins & enable safe core only",
+      "One-click memory setup with auto-capture",
+      "Install essential beginner skills",
+    ],
     text: `You are my OpenClaw setup copilot.
 Goal: beginner-safe baseline.
 Do now:
@@ -13,9 +18,14 @@ Do now:
 Always report: plan/progress/blocker/final summary.`,
   },
   advance: {
-    label: "Advance",
+    label: "Power User",
     color: "accent-blue",
     description: "Add verification, context warnings, and workflow automation.",
+    bullets: [
+      "Context warning ladder (70/85/95%)",
+      "Anti-hallucination verification checklist",
+      "Role, agent & tool baseline docs",
+    ],
     text: `You are my OpenClaw operations copilot.
 Goal: improve reliability and trust.
 Do now:
@@ -26,9 +36,14 @@ Do now:
 Return only actionable markdown + validation commands.`,
   },
   extreme: {
-    label: "Extremely",
+    label: "Expert Mode",
     color: "accent-pink",
-    description: "Multi-agent, routing, memory strategy, and governance.",
+    description: "Multi-agent routing, memory strategy, governance, and audit trails.",
+    bullets: [
+      "Multi-agent routing & isolation policy",
+      "Memory scopes, lifecycle & governance",
+      "Approval gates & incident response",
+    ],
     text: `You are my OpenClaw architecture copilot.
 Goal: autonomous but governed operation.
 Do now:
